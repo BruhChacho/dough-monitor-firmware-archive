@@ -1,0 +1,654 @@
+{
+  "discovered_at_utc": "2026-10-13T06:45:52.905910+00:00",
+  "note": "Dough product page HTML was fetched with TLS verification disabled because the site certificate was expired; all Shopify package downloads used normal TLS verification.",
+  "entries": [
+    {
+      "family": "Spectrum One",
+      "model": "ES07D03",
+      "component": "scaler",
+      "version": "Beta 03",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+      "status": "downloaded",
+      "published_on_page": "Jul 31, 2024",
+      "vendor_sha256": "b227596f273214f00de3176f40fdbbd97d0d6e5216cb1fd02f6bf63b14772db0",
+      "size_bytes": 3894825,
+      "sha256": "b227596f273214f00de3176f40fdbbd97d0d6e5216cb1fd02f6bf63b14772db0",
+      "zip_members": [
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/instructions.pdf",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/MStarISPTool_Setup_v0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07D03",
+      "component": "scaler",
+      "version": "v.108",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_108.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_108.zip",
+      "status": "downloaded",
+      "published_on_page": "Oct 25, 2023",
+      "vendor_sha256": "06eafe9eb83a117a22002832efce255902ccdccefae07a20e5ed44b2d11a19f8",
+      "size_bytes": 4090085,
+      "sha256": "06eafe9eb83a117a22002832efce255902ccdccefae07a20e5ed44b2d11a19f8",
+      "zip_members": [
+        "ES07D03_V108_rev1148_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07D03",
+      "component": "scaler",
+      "version": "v.106",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_106.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_106.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 21, 2022",
+      "vendor_sha256": "f0040fd38cb1785afbf02ec742f8c424b4aaebdeff9a7bffb97f797df7176f91",
+      "size_bytes": 4085730,
+      "sha256": "f0040fd38cb1785afbf02ec742f8c424b4aaebdeff9a7bffb97f797df7176f91",
+      "zip_members": [
+        "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07D03",
+      "component": "scaler",
+      "version": "v.105",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_105.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_105.zip",
+      "status": "downloaded",
+      "published_on_page": "Dec 22, 2021",
+      "vendor_sha256": "d95de1784ceb799e92ea5cffaf7acf1aae0a64011f4915bab61e47b464d07cca",
+      "size_bytes": 3561078,
+      "sha256": "d95de1784ceb799e92ea5cffaf7acf1aae0a64011f4915bab61e47b464d07cca",
+      "zip_members": [
+        "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07D03",
+      "component": "usb",
+      "version": "USB Firmware v.19.02",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_usb_fw_06A4-0A.89.19.02.zip?v=1747338190",
+      "local_path": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.19.02.zip",
+      "status": "downloaded",
+      "published_on_page": "Aug 31, 2022",
+      "vendor_sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "size_bytes": 1203109,
+      "sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07D03",
+      "component": "usb",
+      "version": "USB Firmware v.17.02",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_usb_fw_06A4-0A.89.17.02.zip?v=1747338191",
+      "local_path": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.17.02.zip",
+      "status": "downloaded",
+      "published_on_page": "Apr 12, 2022",
+      "vendor_sha256": "c734affb14d5ca50756beba91d7c511d76f52e91dbc986d9a1d0cbb0dcbca7fa",
+      "size_bytes": 1166758,
+      "sha256": "c734affb14d5ca50756beba91d7c511d76f52e91dbc986d9a1d0cbb0dcbca7fa",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_17_02_Lehui_20210804.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07DC9",
+      "component": "scaler",
+      "version": "v.101",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07dc9_scaler_fw_101.zip?v=1747338248",
+      "local_path": "downloads/official/spectrum_one_es07dc9_scaler_fw_101.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 10, 2023",
+      "vendor_sha256": "8a09f42099596e3d5f90451db562c0a9fd7c79ba7fa77a7875eb9462db4a7cd9",
+      "size_bytes": 4053346,
+      "sha256": "8a09f42099596e3d5f90451db562c0a9fd7c79ba7fa77a7875eb9462db4a7cd9",
+      "zip_members": [
+        "ES07DC9_V101_rev1148_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07DC9",
+      "component": "usb",
+      "version": "USB Firmware v.19.02",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_usb_fw_06A4-0A.89.19.02.zip?v=1747338190",
+      "local_path": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.19.02.zip",
+      "status": "downloaded",
+      "published_on_page": "Aug 31, 2022",
+      "vendor_sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "size_bytes": 1203109,
+      "sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07DC9",
+      "component": "scaler",
+      "version": "Beta 03",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+      "status": "downloaded",
+      "published_on_page": "Jul 31, 2024",
+      "vendor_sha256": "b227596f273214f00de3176f40fdbbd97d0d6e5216cb1fd02f6bf63b14772db0",
+      "size_bytes": 3894825,
+      "sha256": "b227596f273214f00de3176f40fdbbd97d0d6e5216cb1fd02f6bf63b14772db0",
+      "zip_members": [
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/instructions.pdf",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/MStarISPTool_Setup_v0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07E30",
+      "component": "scaler",
+      "version": "v.108",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_108.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_108.zip",
+      "status": "downloaded",
+      "published_on_page": "Oct 25, 2023",
+      "vendor_sha256": "06eafe9eb83a117a22002832efce255902ccdccefae07a20e5ed44b2d11a19f8",
+      "size_bytes": 4090085,
+      "sha256": "06eafe9eb83a117a22002832efce255902ccdccefae07a20e5ed44b2d11a19f8",
+      "zip_members": [
+        "ES07D03_V108_rev1148_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07E30",
+      "component": "usb",
+      "version": "USB Firmware v.19.02",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_usb_fw_06A4-0A.89.19.02.zip?v=1747338190",
+      "local_path": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.19.02.zip",
+      "status": "downloaded",
+      "published_on_page": "Aug 31, 2022",
+      "vendor_sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "size_bytes": 1203109,
+      "sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum One",
+      "model": "ES07E30",
+      "component": "scaler",
+      "version": "Beta 03",
+      "source_page": "https://dough.tech/products/spectrum-4k-144hz",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip?v=1747338238",
+      "local_path": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+      "status": "downloaded",
+      "published_on_page": "Jul 31, 2024",
+      "vendor_sha256": "b227596f273214f00de3176f40fdbbd97d0d6e5216cb1fd02f6bf63b14772db0",
+      "size_bytes": 3894825,
+      "sha256": "b227596f273214f00de3176f40fdbbd97d0d6e5216cb1fd02f6bf63b14772db0",
+      "zip_members": [
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/instructions.pdf",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/MStarISPTool_Setup_v0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E2D",
+      "component": "scaler",
+      "version": "v.005",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/Efb6_GH2x4pHrl1CJw2FFcQBaR67WB1edDDw_7QOf2Y63A?e=b4cbFu",
+      "local_path": null,
+      "status": "external_link",
+      "published_on_page": "Feb 29, 2024",
+      "vendor_sha256": "52e0f3bbe7b87c2763f99cb21a95f02d198f69a48cb3edde5036149440aabcad"
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E2D",
+      "component": "scaler",
+      "version": "v.008",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/ESGsRymnCzpKr4suhBavLc4Bt0H7GEpeWeXDJV28-dMaIQ?e=94lhbw",
+      "local_path": null,
+      "status": "external_link",
+      "published_on_page": "May 06, 2024",
+      "vendor_sha256": "ad1948c4d95d966a505d068c5cfb108e1ca84153dbb25e6574de68d939420987"
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E2F",
+      "component": "scaler",
+      "version": "v.005",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/Efb6_GH2x4pHrl1CJw2FFcQBaR67WB1edDDw_7QOf2Y63A?e=b4cbFu",
+      "local_path": null,
+      "status": "external_link",
+      "published_on_page": "Feb 29, 2024",
+      "vendor_sha256": "52e0f3bbe7b87c2763f99cb21a95f02d198f69a48cb3edde5036149440aabcad"
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E2F",
+      "component": "scaler",
+      "version": "v.008",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/ESGsRymnCzpKr4suhBavLc4Bt0H7GEpeWeXDJV28-dMaIQ?e=94lhbw",
+      "local_path": null,
+      "status": "external_link",
+      "published_on_page": "May 06, 2024",
+      "vendor_sha256": "ad1948c4d95d966a505d068c5cfb108e1ca84153dbb25e6574de68d939420987"
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E91",
+      "component": "scaler",
+      "version": "v.1.0.13",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07e91_scaler_fw_1013.zip?v=1747338385",
+      "local_path": "downloads/official/spectrum_black_es07e91_scaler_fw_1013.zip",
+      "status": "downloaded",
+      "published_on_page": "Jan 24, 2025",
+      "vendor_sha256": "7f4ed3ec9c68f89ba7add19325da975a8a539954e9415f5a7a2daa9927d13ef6",
+      "size_bytes": 1338603,
+      "sha256": "7f4ed3ec9c68f89ba7add19325da975a8a539954e9415f5a7a2daa9927d13ef6",
+      "zip_members": [
+        "dough_es07e91_v1.0.13_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E91",
+      "component": "scaler",
+      "version": "v.1.0.6",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07e91_scaler_fw_1006.zip?v=1747338385",
+      "local_path": "downloads/official/spectrum_black_es07e91_scaler_fw_1006.zip",
+      "status": "downloaded",
+      "published_on_page": "Nov 19, 2024",
+      "vendor_sha256": "e573a4f2ba3ba36470c83f59bfaf88f543810f3fc028769c76bf4e234910c8e6",
+      "size_bytes": 1326502,
+      "sha256": "e573a4f2ba3ba36470c83f59bfaf88f543810f3fc028769c76bf4e234910c8e6",
+      "zip_members": [
+        "dough_es07e91_v1.0.6_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E91",
+      "component": "scaler",
+      "version": "v.1.0.14",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07e91_scaler_fw_1014.zip?v=1747338385",
+      "local_path": "downloads/official/spectrum_black_es07e91_scaler_fw_1014.zip",
+      "status": "downloaded",
+      "published_on_page": "Feb 26, 2025",
+      "vendor_sha256": "742e716ce4a2d3ce26095f9140ee5a6b6fe39b78620c83cacaa23ef06333e6c6",
+      "size_bytes": 1343461,
+      "sha256": "742e716ce4a2d3ce26095f9140ee5a6b6fe39b78620c83cacaa23ef06333e6c6",
+      "zip_members": [
+        "dough_es07e91_v1.0.14_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E91",
+      "component": "scaler",
+      "version": "v.1.0.16",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07e91_scaler_fw_1016.zip?v=1747338385",
+      "local_path": "downloads/official/spectrum_black_es07e91_scaler_fw_1016.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 12, 2025",
+      "vendor_sha256": "3a8342bcd5345d16bf541ef9171ffc93af8d787776df317cef0488bb52128264",
+      "size_bytes": 1363392,
+      "sha256": "3a8342bcd5345d16bf541ef9171ffc93af8d787776df317cef0488bb52128264",
+      "zip_members": [
+        "dough_es07e91_v1.0.16_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E91",
+      "component": "scaler",
+      "version": "v.1.0.17",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07e91_scaler_fw_1017.zip?v=1747338385",
+      "local_path": "downloads/official/spectrum_black_es07e91_scaler_fw_1017.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 18, 2025",
+      "vendor_sha256": "f5853d82a025a3ffa17e17275d80afd585ab678aec73379c110aba1db3f48213",
+      "size_bytes": 1348188,
+      "sha256": "f5853d82a025a3ffa17e17275d80afd585ab678aec73379c110aba1db3f48213",
+      "zip_members": [
+        "dough_es07e91_v1.0.17_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07E91",
+      "component": "scaler",
+      "version": "v.1.0.19",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07e91_scaler_fw_1019.zip?v=1747338385",
+      "local_path": "downloads/official/spectrum_black_es07e91_scaler_fw_1019.zip",
+      "status": "downloaded",
+      "published_on_page": "May 09, 2025",
+      "vendor_sha256": "1e51bd2ade0f3e6ae800f52de3d63710cfbf1f31e1e7cd7ead402c7ba8560e58",
+      "size_bytes": 1350163,
+      "sha256": "1e51bd2ade0f3e6ae800f52de3d63710cfbf1f31e1e7cd7ead402c7ba8560e58",
+      "zip_members": [
+        "dough_es07e91_v1.0.19_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFE",
+      "component": "scaler",
+      "version": "v.1.0.13",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efe_scaler_fw_1013.zip?v=1747338435",
+      "local_path": "downloads/official/spectrum_black_es07efe_scaler_fw_1013.zip",
+      "status": "downloaded",
+      "published_on_page": "Jan 24, 2025",
+      "vendor_sha256": "5290c37c81f6903652ed509255baeb7bf0fe8eb9d3286aba30c09af0d97ca9a7",
+      "size_bytes": 1338604,
+      "sha256": "5290c37c81f6903652ed509255baeb7bf0fe8eb9d3286aba30c09af0d97ca9a7",
+      "zip_members": [
+        "dough_es07efe_v1.0.13_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFE",
+      "component": "scaler",
+      "version": "v.1.0.14",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efe_scaler_fw_1014.zip?v=1747338434",
+      "local_path": "downloads/official/spectrum_black_es07efe_scaler_fw_1014.zip",
+      "status": "downloaded",
+      "published_on_page": "Feb 26, 2025",
+      "vendor_sha256": "82fc1c7a5204b2fa2cf783bb4ee872358c71f3b07db3c04ee4d5f4d44129d8d3",
+      "size_bytes": 1343465,
+      "sha256": "82fc1c7a5204b2fa2cf783bb4ee872358c71f3b07db3c04ee4d5f4d44129d8d3",
+      "zip_members": [
+        "dough_es07efe_v1.0.14_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFE",
+      "component": "scaler",
+      "version": "v.1.0.16",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efe_scaler_fw_1016.zip?v=1747338435",
+      "local_path": "downloads/official/spectrum_black_es07efe_scaler_fw_1016.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 12, 2025",
+      "vendor_sha256": "baa3099f2b6be0c2564ea5e096b36854c1b743409d2df2d76159059845439e6f",
+      "size_bytes": 1363394,
+      "sha256": "baa3099f2b6be0c2564ea5e096b36854c1b743409d2df2d76159059845439e6f",
+      "zip_members": [
+        "dough_es07efe_v1.0.16_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFE",
+      "component": "scaler",
+      "version": "v.1.0.17",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efe_scaler_fw_1017.zip?v=1747338436",
+      "local_path": "downloads/official/spectrum_black_es07efe_scaler_fw_1017.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 18, 2025",
+      "vendor_sha256": "da772ab35a7caa00c30f462c80b53bad6598770050436e93ad084a915d0f8834",
+      "size_bytes": 1348186,
+      "sha256": "da772ab35a7caa00c30f462c80b53bad6598770050436e93ad084a915d0f8834",
+      "zip_members": [
+        "dough_es07efe_v1.0.17_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFE",
+      "component": "scaler",
+      "version": "v.1.0.19",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efe_scaler_fw_1019.zip?v=1747338435",
+      "local_path": "downloads/official/spectrum_black_es07efe_scaler_fw_1019.zip",
+      "status": "downloaded",
+      "published_on_page": "May 09, 2025",
+      "vendor_sha256": "bbf4f3a35c5ca68c3f429e57927819430716632c44547e099ca9bad9fbc9ae87",
+      "size_bytes": 1350164,
+      "sha256": "bbf4f3a35c5ca68c3f429e57927819430716632c44547e099ca9bad9fbc9ae87",
+      "zip_members": [
+        "dough_es07efe_v1.0.19_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EF5",
+      "component": "scaler",
+      "version": "v.1.0.14",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07ef5_scaler_fw_1014.zip?v=1747338312",
+      "local_path": "downloads/official/spectrum_black_es07ef5_scaler_fw_1014.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 03, 2025",
+      "vendor_sha256": "67a5c5e21c8ddbbc3c425f9cb461c05ebfd0f7ebabca749a8027167e70b941f5",
+      "size_bytes": 1335814,
+      "sha256": "67a5c5e21c8ddbbc3c425f9cb461c05ebfd0f7ebabca749a8027167e70b941f5",
+      "zip_members": [
+        "dough_es07ef5_v1.0.14_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EF5",
+      "component": "scaler",
+      "version": "v.1.0.16",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07ef5_scaler_fw_1016.zip?v=1747338311",
+      "local_path": "downloads/official/spectrum_black_es07ef5_scaler_fw_1016.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 12, 2025",
+      "vendor_sha256": "90037f7132777c447db5fe27099dc26e4259cb737a5c429f8e9f4febdf0e486f",
+      "size_bytes": 1361057,
+      "sha256": "90037f7132777c447db5fe27099dc26e4259cb737a5c429f8e9f4febdf0e486f",
+      "zip_members": [
+        "dough_es07ef5_v1.0.16_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EF5",
+      "component": "scaler",
+      "version": "v.1.0.17",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07ef5_scaler_fw_1017.zip?v=1747338312",
+      "local_path": "downloads/official/spectrum_black_es07ef5_scaler_fw_1017.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 18, 2025",
+      "vendor_sha256": "3adcfe133103111e2660c2a34f515d50caa8bb91846e360a59f19f1d50df197e",
+      "size_bytes": 1346547,
+      "sha256": "3adcfe133103111e2660c2a34f515d50caa8bb91846e360a59f19f1d50df197e",
+      "zip_members": [
+        "dough_es07ef5_v1.0.17_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EF5",
+      "component": "scaler",
+      "version": "v.1.0.19",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07ef5_scaler_fw_1019.zip?v=1747338312",
+      "local_path": "downloads/official/spectrum_black_es07ef5_scaler_fw_1019.zip",
+      "status": "downloaded",
+      "published_on_page": "May 09, 2025",
+      "vendor_sha256": "8ee8101929631d7dd2f31b248c93affdf3a5c57ae42020bb0246515159850cf8",
+      "size_bytes": 1349737,
+      "sha256": "8ee8101929631d7dd2f31b248c93affdf3a5c57ae42020bb0246515159850cf8",
+      "zip_members": [
+        "dough_es07ef5_v1.0.19_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFB",
+      "component": "scaler",
+      "version": "v.1.0.14",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efb_scaler_fw_1014.zip?v=1747338344",
+      "local_path": "downloads/official/spectrum_black_es07efb_scaler_fw_1014.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 03, 2025",
+      "vendor_sha256": "60ce610445b3c67f89dca9b93124adc410b439df2d1d220707586c9ef3b1fc0c",
+      "size_bytes": 1335814,
+      "sha256": "60ce610445b3c67f89dca9b93124adc410b439df2d1d220707586c9ef3b1fc0c",
+      "zip_members": [
+        "dough_es07efb_v1.0.14_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFB",
+      "component": "scaler",
+      "version": "v.1.0.16",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efb_scaler_fw_1016.zip?v=1747338344",
+      "local_path": "downloads/official/spectrum_black_es07efb_scaler_fw_1016.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 12, 2025",
+      "vendor_sha256": "21812293fb6365b6e92579f9b55237dd9c7b189a6a20a710e3cb7d7ae58ce649",
+      "size_bytes": 1361057,
+      "sha256": "21812293fb6365b6e92579f9b55237dd9c7b189a6a20a710e3cb7d7ae58ce649",
+      "zip_members": [
+        "dough_es07efb_v1.0.16_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFB",
+      "component": "scaler",
+      "version": "v.1.0.17",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efb_scaler_fw_1017.zip?v=1747338344",
+      "local_path": "downloads/official/spectrum_black_es07efb_scaler_fw_1017.zip",
+      "status": "downloaded",
+      "published_on_page": "Mar 18, 2025",
+      "vendor_sha256": "1836c7589ecca4e7fa17da50fba7bc52c43fd5440f2695bdd1a1b4dfbd60bc18",
+      "size_bytes": 1346547,
+      "sha256": "1836c7589ecca4e7fa17da50fba7bc52c43fd5440f2695bdd1a1b4dfbd60bc18",
+      "zip_members": [
+        "dough_es07efb_v1.0.17_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "family": "Spectrum Black",
+      "model": "ES07EFB",
+      "component": "scaler",
+      "version": "v.1.0.19",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://cdn.shopify.com/s/files/1/0919/4202/7635/files/spectrum_black_es07efb_scaler_fw_1019.zip?v=1747338344",
+      "local_path": "downloads/official/spectrum_black_es07efb_scaler_fw_1019.zip",
+      "status": "downloaded",
+      "published_on_page": "May 09, 2025",
+      "vendor_sha256": "55e5c4ecebbafbf9cd6aa8c989fd72273ab37f999ddecc9e118459cacf73964c",
+      "size_bytes": 1349737,
+      "sha256": "55e5c4ecebbafbf9cd6aa8c989fd72273ab37f999ddecc9e118459cacf73964c",
+      "zip_members": [
+        "dough_es07efb_v1.0.19_USB-update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "discovered_at_utc": "2026-10-13T06:47:18.062553+00:00",
+  "entries": [
+    {
+      "models": [
+        "ES07E2D",
+        "ES07E2F"
+      ],
+      "component": "scaler",
+      "version": "v.005",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/Efb6_GH2x4pHrl1CJw2FFcQBaR67WB1edDDw_7QOf2Y63A?e=b4cbFu",
+      "download_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/Efb6_GH2x4pHrl1CJw2FFcQBaR67WB1edDDw_7QOf2Y63A?download=1",
+      "vendor_sha256": "52e0f3bbe7b87c2763f99cb21a95f02d198f69a48cb3edde5036149440aabcad",
+      "local_path": "downloads/sharepoint/spectrum_black_27_scaler_fw_005.zip",
+      "size_bytes": 80181128,
+      "sha256": "52e0f3bbe7b87c2763f99cb21a95f02d198f69a48cb3edde5036149440aabcad",
+      "zip_members": [
+        "Dough Firmware Update tool v0.1.5.exe",
+        "ES07E2D v005 update tool for macOS.dmg",
+        "ES07E2D_v005_update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true,
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07E2D",
+        "ES07E2F"
+      ],
+      "component": "scaler",
+      "version": "v.008",
+      "source_page": "https://dough.tech/products/spectrum-black",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/ESGsRymnCzpKr4suhBavLc4Bt0H7GEpeWeXDJV28-dMaIQ?e=94lhbw",
+      "download_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/ESGsRymnCzpKr4suhBavLc4Bt0H7GEpeWeXDJV28-dMaIQ?download=1",
+      "vendor_sha256": "ad1948c4d95d966a505d068c5cfb108e1ca84153dbb25e6574de68d939420987",
+      "local_path": "downloads/sharepoint/spectrum_black_27_scaler_fw_008.zip",
+      "size_bytes": 81082328,
+      "sha256": "ad1948c4d95d966a505d068c5cfb108e1ca84153dbb25e6574de68d939420987",
+      "zip_members": [
+        "Dough Firmware Update tool v0.1.5.exe",
+        "es07e2d v008 update tool for macOS.dmg",
+        "es07e2d_v008_update.bin",
+        "instructions.pdf"
+      ],
+      "vendor_hash_match": true,
+      "status": "downloaded"
+    }
+  ]
+}

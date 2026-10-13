@@ -1,0 +1,38 @@
+{
+  "discovered_at_utc": "2026-10-13T06:45:13.018503+00:00",
+  "entries": [
+    {
+      "model": "ES07D03",
+      "component": "scaler",
+      "version": "102",
+      "source_page": "https://www.touslesdrivers.com/index.php?v_code=69501&v_langue=en&v_page=23",
+      "source_url": "https://cdn.shopify.com/s/files/1/0288/8695/8215/files/spectrum_es07d03_fw_102.zip",
+      "mirror_url": "https://fichiers.touslesdrivers.com/69501/spectrum_es07d03_fw_102.zip",
+      "local_path": "downloads/tld/spectrum_es07d03_fw_102.zip",
+      "size_bytes": 3332706,
+      "sha256": "fb2a7e577c07bb6dd7bb90e868c51f86d98dc0ed60c40a2f991fbe071379262d",
+      "zip_members": [
+        "BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "model": "ES07D03",
+      "component": "usb",
+      "version": "06A4/0A.89.18.02",
+      "source_page": "https://www.touslesdrivers.com/index.php?v_code=71599&v_langue=en&v_page=23",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03_usb_fw_06A4-0A.89.18.02.zip",
+      "mirror_url": "https://fichiers.touslesdrivers.com/71599/spectrum_es07d03_usb_fw_06A4-0A.89.18.02.zip",
+      "local_path": "downloads/tld/spectrum_es07d03_usb_fw_06A4-0A.89.18.02.zip",
+      "size_bytes": 1192359,
+      "sha256": "32bad0b1cb52c07f161c4640b2d3dfada3146e51f365a973c9ab3eff75a84381",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_18_02_VLI_Hub_PD_FW_Upgrade_Tool.exe"
+      ],
+      "status": "downloaded"
+    }
+  ]
+}

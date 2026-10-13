@@ -1,0 +1,23 @@
+{
+  "discovered_at_utc": "2026-10-13T06:56:50.665032+00:00",
+  "entries": [
+    {
+      "models": [
+        "ES07E2D"
+      ],
+      "component": "scaler",
+      "version": "Beta 006",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://evet1.sharepoint.com/:u:/s/DoughTeam/EdeynoUPKh5DsPnNeYlhxFwBlCvFi2VqFubNYyJCR5bpTA?download=1",
+      "local_path": "downloads/sharepoint/spectrum_black_27_beta006.zip",
+      "size_bytes": 73996300,
+      "sha256": "2ed8096373e136ac2a95b5965a73ecd969e0a8845f4f35877fcbc5a60cd0f607",
+      "zip_members": [
+        "Dough Firmware Update tool v0.1.5.exe",
+        "QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin.7z",
+        "instructions.pdf"
+      ],
+      "status": "downloaded"
+    }
+  ]
+}

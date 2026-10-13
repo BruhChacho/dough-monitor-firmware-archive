@@ -1,0 +1,132 @@
+{
+  "discovered_at_utc": "2026-10-13T06:47:59.634188+00:00",
+  "entries": [
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "108",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07d03_scaler_fw_108_98bc9b51-b121-42aa-9ea8-76233332cc72.zip?v=1690840553",
+      "local_path": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_108_98bc9b51-b121-42aa-9ea8-76233332cc72.zip",
+      "size_bytes": 4090085,
+      "sha256": "06eafe9eb83a117a22002832efce255902ccdccefae07a20e5ed44b2d11a19f8",
+      "zip_members": [
+        "ES07D03_V108_rev1148_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07DC9"
+      ],
+      "component": "scaler",
+      "version": "101",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07dc9_scaler_fw_101_632e5593-443e-487d-975c-29fa3b0dd012.zip?v=1690840529",
+      "local_path": "downloads/reddit-2023/spectrum_es07dc9_scaler_fw_101_632e5593-443e-487d-975c-29fa3b0dd012.zip",
+      "size_bytes": 4053346,
+      "sha256": "8a09f42099596e3d5f90451db562c0a9fd7c79ba7fa77a7875eb9462db4a7cd9",
+      "zip_members": [
+        "ES07DC9_V101_rev1148_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07D02"
+      ],
+      "component": "scaler",
+      "version": "101",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07d02_scaler_fw_101.zip?v=1692801994",
+      "local_path": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_101.zip",
+      "size_bytes": 3995303,
+      "sha256": "fcb298863617ec1194a63cf54bbd74d77562ebbbabc343e0a6566442c48b7f63",
+      "zip_members": [
+        "ES07D02_V101_rev1148_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07D03",
+        "ES07DC9"
+      ],
+      "component": "usb",
+      "version": "06A4/0A.89.19.02",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02_1.zip?v=1690840446",
+      "local_path": "downloads/reddit-2023/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02_1.zip",
+      "size_bytes": 1203109,
+      "sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07D02"
+      ],
+      "component": "scaler",
+      "version": "Beta01 rev1167",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07d02_scaler_fw_1167_Beta01.zip?v=1694620704",
+      "local_path": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_1167_Beta01.zip",
+      "size_bytes": 3996150,
+      "sha256": "eb6d1dda4791554fdfbcb93f106e88dd95737f33f215780f4f132520efc8a555",
+      "zip_members": [
+        "ES07D02_Beta01_rev1167_USB_update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "Beta01 rev1149",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/15etlh9/firmware/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07d03_scaler_fw_1149_Beta01.zip?v=1690839643",
+      "local_path": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1149_Beta01.zip",
+      "size_bytes": 4089684,
+      "sha256": "07c1901344205152f1a958b3f5d738fb1251729ff5558c8436d00bacef95a957",
+      "zip_members": [
+        "ES07D03_Beta01_rev1149_USB_update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "Beta02 rev1169",
+      "source_page": "https://www.reddit.com/r/doughcommunity/comments/17lmham/beta_2_firmware_open_beta_testing_es07d03_matte/",
+      "source_url": "https://cdn.shopify.com/s/files/1/0728/3153/3351/files/spectrum_es07d03_scaler_fw_1169_Beta02_2.zip?v=1698873101",
+      "local_path": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1169_Beta02_2.zip",
+      "size_bytes": 3788158,
+      "sha256": "aac4ed75201336a0500c3ca9210e849d4ba822303eec2e30301f3fae8c73299c",
+      "zip_members": [
+        "spectrum_es07d03_scaler_fw_1169_Beta02/",
+        "spectrum_es07d03_scaler_fw_1169_Beta02/ES07D03_Beta02_rev1169_USB_update.bin",
+        "spectrum_es07d03_scaler_fw_1169_Beta02/instructions.pdf",
+        "spectrum_es07d03_scaler_fw_1169_Beta02/MStarISPTool_Setup_v0.0.0.5.exe"
+      ],
+      "status": "downloaded"
+    }
+  ]
+}

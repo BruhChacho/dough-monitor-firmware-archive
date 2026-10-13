@@ -1,0 +1,145 @@
+{
+  "discovered_at_utc": "2026-10-13T06:55:55.863885+00:00",
+  "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+  "entries": [
+    {
+      "models": [
+        "ES07D03",
+        "ES07DC9"
+      ],
+      "component": "usb",
+      "version": "06A4-0A.89.19.02",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02.zip?v=1662352691",
+      "local_path": "downloads/legacy-2023/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02.zip",
+      "status": "downloaded",
+      "vendor_sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "size_bytes": 1203109,
+      "sha256": "13605e7587f2f4269b9d67c0bc253e159566b20395be5979f8a8b8883d14b19b",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "104",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03_fw_104.zip?v=4049541797322033377",
+      "local_path": "downloads/legacy-2023/spectrum_es07d03_fw_104.zip",
+      "status": "downloaded",
+      "vendor_sha256": "062997d8e07b5e72cfd7a53a755dfd2a94fcb51118def84bb23cc6110f721934",
+      "size_bytes": 3354704,
+      "sha256": "062997d8e07b5e72cfd7a53a755dfd2a94fcb51118def84bb23cc6110f721934",
+      "zip_members": [
+        "BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "105",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03_scaler_fw_105.zip?v=12451541606904990084",
+      "local_path": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_105.zip",
+      "status": "downloaded",
+      "vendor_sha256": "d95de1784ceb799e92ea5cffaf7acf1aae0a64011f4915bab61e47b464d07cca",
+      "size_bytes": 3561078,
+      "sha256": "d95de1784ceb799e92ea5cffaf7acf1aae0a64011f4915bab61e47b464d07cca",
+      "zip_members": [
+        "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "106",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03_scaler_fw_106.zip?v=13558556104063345330",
+      "local_path": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_106.zip",
+      "status": "downloaded",
+      "vendor_sha256": "f0040fd38cb1785afbf02ec742f8c424b4aaebdeff9a7bffb97f797df7176f91",
+      "size_bytes": 4085730,
+      "sha256": "f0040fd38cb1785afbf02ec742f8c424b4aaebdeff9a7bffb97f797df7176f91",
+      "zip_members": [
+        "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "scaler",
+      "version": "107",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03_scaler_fw_107.zip?v=10329679476609153603",
+      "local_path": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_107.zip",
+      "status": "downloaded",
+      "vendor_sha256": "33ce09e0a93f4bab955727801fd74f05923130bbcbc2dbc8c2f5dc3b42e391c5",
+      "size_bytes": 4087597,
+      "sha256": "33ce09e0a93f4bab955727801fd74f05923130bbcbc2dbc8c2f5dc3b42e391c5",
+      "zip_members": [
+        "BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "models": [
+        "ES07D03"
+      ],
+      "component": "usb",
+      "version": "06A4-0A.89.17.02",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07d03_usb_fw_06A4-0A.89.17.02.zip?v=3993257172941503949",
+      "local_path": "downloads/legacy-2023/spectrum_es07d03_usb_fw_06A4-0A.89.17.02.zip",
+      "status": "downloaded",
+      "vendor_sha256": "c734affb14d5ca50756beba91d7c511d76f52e91dbc986d9a1d0cbb0dcbca7fa",
+      "size_bytes": 1166758,
+      "sha256": "c734affb14d5ca50756beba91d7c511d76f52e91dbc986d9a1d0cbb0dcbca7fa",
+      "zip_members": [
+        "instructions.pdf",
+        "VL822_06A4_VL103R_89_17_02_Lehui_20210804.exe"
+      ],
+      "vendor_hash_match": true
+    },
+    {
+      "models": [
+        "ES07DC9"
+      ],
+      "component": "scaler",
+      "version": "100",
+      "source_page": "https://web.archive.org/web/20230811182459/https://intl.dough.tech/pages/downloads",
+      "source_url": "https://cdn.shopify.com/s/files/1/0292/5975/9756/files/spectrum_es07dc9_scaler_fw_100.zip?v=1661505268",
+      "local_path": "downloads/legacy-2023/spectrum_es07dc9_scaler_fw_100.zip",
+      "status": "downloaded",
+      "vendor_sha256": "7af9094cc8f3e0beaa08dc0629477ea4d570dd2962119de6dfdd829979f7f896",
+      "size_bytes": 4063215,
+      "sha256": "7af9094cc8f3e0beaa08dc0629477ea4d570dd2962119de6dfdd829979f7f896",
+      "zip_members": [
+        "ES07DC9_V100_rev1056_USB_update.bin",
+        "instructions.pdf",
+        "MStarISPTool_Setup_V0.0.0.5.exe"
+      ],
+      "vendor_hash_match": true
+    }
+  ]
+}
