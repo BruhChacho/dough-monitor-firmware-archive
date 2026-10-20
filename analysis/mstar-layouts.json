@@ -1,0 +1,613 @@
+[
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2e86a9",
+      "0x118729",
+      "0x0",
+      "0xd788e343",
+      "0x0",
+      "0x0",
+      "0x1ebe90",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x118729",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x118723",
+    "deflate_bytes": 937635,
+    "program_size": 2060200,
+    "trailer_hex": "a86f1f001d8c",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2074536,
+    "expanded_sha256": "b02e74d093cbbe9f12fa868f5b921a393300a1a0f07d07dba213d7f0280c60e4",
+    "candidate_expanded_end_address": "0x3fa7a8",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162",
+    "source_path": "analysis/extracted/5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162/ES07D02_V101_rev1148_USB update.bin",
+    "expanded_path": "analysis/extracted/5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_101.zip",
+        "member": "ES07D02_V101_rev1148_USB update.bin",
+        "models": [
+          "ES07D02"
+        ],
+        "version": "101",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1611
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2e86aa",
+      "0x11872a",
+      "0x0",
+      "0x1652ffd",
+      "0x0",
+      "0x0",
+      "0x1ebe90",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x11872a",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x118724",
+    "deflate_bytes": 937636,
+    "program_size": 2060208,
+    "trailer_hex": "b06f1f0029f6",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2074544,
+    "expanded_sha256": "7f2b13a07b0e7788d96e53433565570b0db4c872060a452c204c2d1d2c00cefb",
+    "candidate_expanded_end_address": "0x3fa7b0",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0",
+    "source_path": "analysis/extracted/e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0/ES07D02_Beta01_rev1167_USB_update.bin",
+    "expanded_path": "analysis/extracted/e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_1167_Beta01.zip",
+        "member": "ES07D02_Beta01_rev1167_USB_update.bin",
+        "models": [
+          "ES07D02"
+        ],
+        "version": "Beta01 rev1167",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1611
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f53ec",
+      "0x12546c",
+      "0x0",
+      "0xbfa55658",
+      "0x0",
+      "0x0",
+      "0x1f8bd0",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x12546c",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x125466",
+    "deflate_bytes": 990182,
+    "program_size": 2428736,
+    "trailer_hex": "400f25009aaf",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2443072,
+    "expanded_sha256": "832fa42bdb09090ba3df7f92d10efb1ea017a24e763a7acff5fb8a239f62d458",
+    "candidate_expanded_end_address": "0x454740",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e",
+    "source_path": "analysis/extracted/d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e/BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin",
+    "expanded_path": "analysis/extracted/d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/tld/spectrum_es07d03_fw_102.zip",
+        "member": "BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "102",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1665
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f21b3",
+      "0x122233",
+      "0x0",
+      "0x95d87048",
+      "0x0",
+      "0x0",
+      "0x1f5998",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x122233",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x12222d",
+    "deflate_bytes": 977325,
+    "program_size": 2405464,
+    "trailer_hex": "58b424009fe9",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2419800,
+    "expanded_sha256": "bfaf45cbab3926f62c3bd1744d25a6856cd9dd7468998f2269255627a961e704",
+    "candidate_expanded_end_address": "0x44ec58",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54",
+    "source_path": "analysis/extracted/62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54/BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin",
+    "expanded_path": "analysis/extracted/62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/legacy-2023/spectrum_es07d03_fw_104.zip",
+        "member": "BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "104",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1582
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f2769",
+      "0x1227e9",
+      "0x0",
+      "0xd1e86dd2",
+      "0x0",
+      "0x0",
+      "0x1f5f50",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x1227e9",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x1227e3",
+    "deflate_bytes": 978787,
+    "program_size": 2405576,
+    "trailer_hex": "c8b424009300",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2419912,
+    "expanded_sha256": "03bbb7c6a80f22437270d69f6eaf204a39a01f023751d8c1ef00be804c217668",
+    "candidate_expanded_end_address": "0x44ecc8",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9",
+    "source_path": "analysis/extracted/536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9/BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+    "expanded_path": "analysis/extracted/536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_105.zip",
+        "member": "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "105",
+        "component": "scaler"
+      },
+      {
+        "package": "downloads/official/spectrum_one_es07d03_scaler_fw_105.zip",
+        "member": "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "v.105",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1578
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f28df",
+      "0x12295f",
+      "0x0",
+      "0xdc85a37e",
+      "0x0",
+      "0x0",
+      "0x1f60c0",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x12295f",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x122959",
+    "deflate_bytes": 979161,
+    "program_size": 2405976,
+    "trailer_hex": "58b62400223c",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2420312,
+    "expanded_sha256": "b296f9e587205ea9e066557d938de00fe0a415deeb88317810cb068e7a77ffdc",
+    "candidate_expanded_end_address": "0x44ee58",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1",
+    "source_path": "analysis/extracted/199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1/BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+    "expanded_path": "analysis/extracted/199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_106.zip",
+        "member": "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "106",
+        "component": "scaler"
+      },
+      {
+        "package": "downloads/official/spectrum_one_es07d03_scaler_fw_106.zip",
+        "member": "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "v.106",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1581
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f28c6",
+      "0x122946",
+      "0x0",
+      "0xf793b39b",
+      "0x0",
+      "0x0",
+      "0x1f60a8",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x122946",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x122940",
+    "deflate_bytes": 979136,
+    "program_size": 2405976,
+    "trailer_hex": "58b624006dc8",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2420312,
+    "expanded_sha256": "235df62426cce864e9e4935e540fe4cf229682297aad34a49fb3e13a259129a7",
+    "candidate_expanded_end_address": "0x44ee58",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180",
+    "source_path": "analysis/extracted/ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180/BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin",
+    "expanded_path": "analysis/extracted/ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_107.zip",
+        "member": "BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "107",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1579
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f5a5a",
+      "0x125ada",
+      "0x0",
+      "0xf3613e44",
+      "0x0",
+      "0x0",
+      "0x1f9240",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x125ada",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x125ad4",
+    "deflate_bytes": 991828,
+    "program_size": 2426560,
+    "trailer_hex": "c00625006124",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2440896,
+    "expanded_sha256": "7497c89ce7784d74afd9a50272748821bde25b5c7c9c51efaff978450970bf86",
+    "candidate_expanded_end_address": "0x453ec0",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757",
+    "source_path": "analysis/extracted/136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757/ES07D03_V108_rev1148_USB update.bin",
+    "expanded_path": "analysis/extracted/136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_108_98bc9b51-b121-42aa-9ea8-76233332cc72.zip",
+        "member": "ES07D03_V108_rev1148_USB update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "108",
+        "component": "scaler"
+      },
+      {
+        "package": "downloads/official/spectrum_one_es07d03_scaler_fw_108.zip",
+        "member": "ES07D03_V108_rev1148_USB update.bin",
+        "models": [
+          "ES07D03",
+          "ES07E30"
+        ],
+        "version": "v.108",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1594
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f4c91",
+      "0x124d11",
+      "0x0",
+      "0x94cd4117",
+      "0x0",
+      "0x0",
+      "0x148470",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x124d11",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x124d0b",
+    "deflate_bytes": 988299,
+    "program_size": 2426488,
+    "trailer_hex": "78062500be15",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2440824,
+    "expanded_sha256": "ac1db6ea4d39f2e66fceebcc9be58ddd9dac04aafae077d03f6ad84b7cd51e9b",
+    "candidate_expanded_end_address": "0x453e78",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3",
+    "source_path": "analysis/extracted/d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+    "expanded_path": "analysis/extracted/d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+        "member": "spectrum_es07d03_scaler_fw_1169-E771_Beta03/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+        "models": [
+          "ES07D03",
+          "ES07DC9",
+          "ES07E30"
+        ],
+        "version": "Beta 03",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1567
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f59ad",
+      "0x125a2d",
+      "0x0",
+      "0x96c77a5b",
+      "0x0",
+      "0x0",
+      "0x1f9190",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x125a2d",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x125a27",
+    "deflate_bytes": 991655,
+    "program_size": 2426560,
+    "trailer_hex": "c0062500e4f2",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2440896,
+    "expanded_sha256": "554fec50b9fb6432cb1467b7912fdd27dbb52a31437bb16fe49836d8e9041c61",
+    "candidate_expanded_end_address": "0x453ec0",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3",
+    "source_path": "analysis/extracted/bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3/ES07D03_Beta01_rev1149_USB_update.bin",
+    "expanded_path": "analysis/extracted/bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1149_Beta01.zip",
+        "member": "ES07D03_Beta01_rev1149_USB_update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "Beta01 rev1149",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1594
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f4d21",
+      "0x124da1",
+      "0x0",
+      "0xed4f2cf3",
+      "0x0",
+      "0x0",
+      "0x148500",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x124da1",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x124d9b",
+    "deflate_bytes": 988443,
+    "program_size": 2418296,
+    "trailer_hex": "78e624002e46",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2432632,
+    "expanded_sha256": "560644202f8457475ee156aadea7f760f61efec59cb6d0e949fbff1cc52ed17b",
+    "candidate_expanded_end_address": "0x451e78",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d",
+    "source_path": "analysis/extracted/ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d/ES07D03_Beta02_rev1169_USB_update.bin",
+    "expanded_path": "analysis/extracted/ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1169_Beta02_2.zip",
+        "member": "spectrum_es07d03_scaler_fw_1169_Beta02/ES07D03_Beta02_rev1169_USB_update.bin",
+        "models": [
+          "ES07D03"
+        ],
+        "version": "Beta02 rev1169",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1559
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f28b9",
+      "0x122939",
+      "0x0",
+      "0xfc8e1d62",
+      "0x0",
+      "0x0",
+      "0x1f60a0",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x122939",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x122933",
+    "deflate_bytes": 979123,
+    "program_size": 2405976,
+    "trailer_hex": "58b62400b076",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2420312,
+    "expanded_sha256": "aea061e316593d53dc3f2f44169fe93c0c081ed6a80d7406284b0b5b370522db",
+    "candidate_expanded_end_address": "0x44ee58",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b",
+    "source_path": "analysis/extracted/435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b/ES07DC9_V100_rev1056_USB_update.bin",
+    "expanded_path": "analysis/extracted/435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/legacy-2023/spectrum_es07dc9_scaler_fw_100.zip",
+        "member": "ES07DC9_V100_rev1056_USB_update.bin",
+        "models": [
+          "ES07DC9"
+        ],
+        "version": "100",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1579
+  },
+  {
+    "header_offset": "0x10000",
+    "header_words_le": [
+      "0x30080",
+      "0x200000",
+      "0x2f5a5b",
+      "0x125adb",
+      "0x0",
+      "0x68ea7417",
+      "0x0",
+      "0x0",
+      "0x1f9240",
+      "0x10000"
+    ],
+    "segment_start": "0x30080",
+    "segment_end_exclusive": "0x125adb",
+    "candidate_load_base": "0x200000",
+    "deflate_start": "0x33880",
+    "deflate_end_exclusive": "0x125ad5",
+    "deflate_bytes": 991829,
+    "program_size": 2426560,
+    "trailer_hex": "c0062500ddf3",
+    "trailer_length_matches": true,
+    "trailer_last_two_bytes_meaning": "unknown",
+    "expanded_size": 2440896,
+    "expanded_sha256": "eb33d20fec6006b092ab951bf1d194109c8d88fa53785ce45af77118d84c29bc",
+    "candidate_expanded_end_address": "0x453ec0",
+    "header_checksum_meaning": "unknown; not validated",
+    "source_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+    "source_path": "analysis/extracted/0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9/ES07DC9_V101_rev1148_USB update.bin",
+    "expanded_path": "analysis/extracted/0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9/expanded.aeon.bin",
+    "sources": [
+      {
+        "package": "downloads/reddit-2023/spectrum_es07dc9_scaler_fw_101_632e5593-443e-487d-975c-29fa3b0dd012.zip",
+        "member": "ES07DC9_V101_rev1148_USB update.bin",
+        "models": [
+          "ES07DC9"
+        ],
+        "version": "101",
+        "component": "scaler"
+      },
+      {
+        "package": "downloads/official/spectrum_one_es07dc9_scaler_fw_101.zip",
+        "member": "ES07DC9_V101_rev1148_USB update.bin",
+        "models": [
+          "ES07DC9"
+        ],
+        "version": "v.101",
+        "component": "scaler"
+      }
+    ],
+    "ascii_string_count": 1594
+  }
+]

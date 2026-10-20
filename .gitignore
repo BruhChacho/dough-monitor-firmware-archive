@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 *.part
 .venv/
+.tools/
+analysis/extracted/
+analysis/scratch/

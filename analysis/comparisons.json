@@ -1,0 +1,648 @@
+[
+  {
+    "label": "One matte v108 vs glossy v101, both rev1148",
+    "left_sha256": "136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757",
+    "right_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+    "raw_comparison": {
+      "left_size": 2069060,
+      "right_size": 2069060,
+      "different_bytes_in_overlap": 978768,
+      "nonoverlapping_bytes": 0,
+      "changed_64k_blocks": [
+        {
+          "offset": "0x10000",
+          "different_bytes": 6
+        },
+        {
+          "offset": "0x30000",
+          "different_bytes": 50816
+        },
+        {
+          "offset": "0x40000",
+          "different_bytes": 65235
+        },
+        {
+          "offset": "0x50000",
+          "different_bytes": 65205
+        },
+        {
+          "offset": "0x60000",
+          "different_bytes": 65172
+        },
+        {
+          "offset": "0x70000",
+          "different_bytes": 65049
+        },
+        {
+          "offset": "0x80000",
+          "different_bytes": 65184
+        },
+        {
+          "offset": "0x90000",
+          "different_bytes": 65124
+        },
+        {
+          "offset": "0xa0000",
+          "different_bytes": 65082
+        },
+        {
+          "offset": "0xb0000",
+          "different_bytes": 65214
+        },
+        {
+          "offset": "0xc0000",
+          "different_bytes": 65044
+        },
+        {
+          "offset": "0xd0000",
+          "different_bytes": 59290
+        },
+        {
+          "offset": "0xe0000",
+          "different_bytes": 65209
+        },
+        {
+          "offset": "0xf0000",
+          "different_bytes": 65147
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 64898
+        },
+        {
+          "offset": "0x110000",
+          "different_bytes": 64664
+        },
+        {
+          "offset": "0x120000",
+          "different_bytes": 22425
+        },
+        {
+          "offset": "0x1f0000",
+          "different_bytes": 4
+        }
+      ]
+    },
+    "expanded_comparison": {
+      "left_size": 2440896,
+      "right_size": 2440896,
+      "different_bytes_in_overlap": 711804,
+      "nonoverlapping_bytes": 0,
+      "changed_64k_blocks": [
+        {
+          "offset": "0x0",
+          "different_bytes": 235
+        },
+        {
+          "offset": "0x10000",
+          "different_bytes": 146
+        },
+        {
+          "offset": "0x20000",
+          "different_bytes": 472
+        },
+        {
+          "offset": "0x30000",
+          "different_bytes": 158
+        },
+        {
+          "offset": "0x40000",
+          "different_bytes": 157
+        },
+        {
+          "offset": "0x50000",
+          "different_bytes": 6016
+        },
+        {
+          "offset": "0x60000",
+          "different_bytes": 63412
+        },
+        {
+          "offset": "0x70000",
+          "different_bytes": 64309
+        },
+        {
+          "offset": "0x80000",
+          "different_bytes": 64563
+        },
+        {
+          "offset": "0x90000",
+          "different_bytes": 63805
+        },
+        {
+          "offset": "0xa0000",
+          "different_bytes": 61734
+        },
+        {
+          "offset": "0xb0000",
+          "different_bytes": 61571
+        },
+        {
+          "offset": "0xc0000",
+          "different_bytes": 35514
+        },
+        {
+          "offset": "0xd0000",
+          "different_bytes": 38443
+        },
+        {
+          "offset": "0xe0000",
+          "different_bytes": 40678
+        },
+        {
+          "offset": "0xf0000",
+          "different_bytes": 60591
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 36935
+        },
+        {
+          "offset": "0x110000",
+          "different_bytes": 35823
+        },
+        {
+          "offset": "0x120000",
+          "different_bytes": 38570
+        },
+        {
+          "offset": "0x130000",
+          "different_bytes": 38392
+        },
+        {
+          "offset": "0x1b0000",
+          "different_bytes": 219
+        },
+        {
+          "offset": "0x1c0000",
+          "different_bytes": 58
+        },
+        {
+          "offset": "0x250000",
+          "different_bytes": 3
+        }
+      ]
+    }
+  },
+  {
+    "label": "Black 32 matte vs Gorilla Glass v1.0.19",
+    "left_sha256": "c54e56344cf286648603514900ec63fdddad20409a931e5886f09e5b67fdcb5f",
+    "right_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40",
+    "raw_comparison": {
+      "left_size": 1638400,
+      "right_size": 1638400,
+      "different_bytes_in_overlap": 9,
+      "nonoverlapping_bytes": 0,
+      "changed_64k_blocks": [
+        {
+          "offset": "0x0",
+          "different_bytes": 1
+        },
+        {
+          "offset": "0xc0000",
+          "different_bytes": 5
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 2
+        },
+        {
+          "offset": "0x180000",
+          "different_bytes": 1
+        }
+      ],
+      "byte_changes": [
+        {
+          "offset": "0x33aa",
+          "left": "01",
+          "right": "00"
+        },
+        {
+          "offset": "0xcf077",
+          "left": "31",
+          "right": "30"
+        },
+        {
+          "offset": "0xcf085",
+          "left": "39",
+          "right": "46"
+        },
+        {
+          "offset": "0xcf086",
+          "left": "31",
+          "right": "45"
+        },
+        {
+          "offset": "0xcf311",
+          "left": "39",
+          "right": "46"
+        },
+        {
+          "offset": "0xcf312",
+          "left": "31",
+          "right": "45"
+        },
+        {
+          "offset": "0x10d734",
+          "left": "14",
+          "right": "1e"
+        },
+        {
+          "offset": "0x10d735",
+          "left": "0c",
+          "right": "1d"
+        },
+        {
+          "offset": "0x18ffff",
+          "left": "42",
+          "right": "fc"
+        }
+      ]
+    }
+  },
+  {
+    "label": "Black 27 480 Hz matte vs Gorilla Glass v1.0.19",
+    "left_sha256": "b92d11b588f13186bebdb832e4b5d0367c42726b64bf2b16ec4990a7aa05b4c9",
+    "right_sha256": "b8f861c600be4caf2c15f3966e59a5f99e83d93ae445eb2a5e290d15bdbcb95d",
+    "raw_comparison": {
+      "left_size": 1638400,
+      "right_size": 1638400,
+      "different_bytes_in_overlap": 4,
+      "nonoverlapping_bytes": 0,
+      "changed_64k_blocks": [
+        {
+          "offset": "0xc0000",
+          "different_bytes": 2
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 1
+        },
+        {
+          "offset": "0x180000",
+          "different_bytes": 1
+        }
+      ],
+      "byte_changes": [
+        {
+          "offset": "0xcf256",
+          "left": "35",
+          "right": "42"
+        },
+        {
+          "offset": "0xcf4e2",
+          "left": "35",
+          "right": "42"
+        },
+        {
+          "offset": "0x10a41d",
+          "left": "10",
+          "right": "1a"
+        },
+        {
+          "offset": "0x18ffff",
+          "left": "5b",
+          "right": "df"
+        }
+      ]
+    }
+  },
+  {
+    "label": "Black 32 Gorilla Glass v1.0.17 to v1.0.19",
+    "left_sha256": "2a806725741de3f7b444b2c0f64e842b0d8e67b452dc4775be018762a5e22db8",
+    "right_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40",
+    "raw_comparison": {
+      "left_size": 1638400,
+      "right_size": 1638400,
+      "different_bytes_in_overlap": 1005498,
+      "nonoverlapping_bytes": 0,
+      "changed_64k_blocks": [
+        {
+          "offset": "0x0",
+          "different_bytes": 35141
+        },
+        {
+          "offset": "0x10000",
+          "different_bytes": 63470
+        },
+        {
+          "offset": "0x20000",
+          "different_bytes": 64183
+        },
+        {
+          "offset": "0x30000",
+          "different_bytes": 63932
+        },
+        {
+          "offset": "0x40000",
+          "different_bytes": 63675
+        },
+        {
+          "offset": "0x50000",
+          "different_bytes": 63709
+        },
+        {
+          "offset": "0x60000",
+          "different_bytes": 63896
+        },
+        {
+          "offset": "0x70000",
+          "different_bytes": 64141
+        },
+        {
+          "offset": "0x80000",
+          "different_bytes": 63942
+        },
+        {
+          "offset": "0x90000",
+          "different_bytes": 63976
+        },
+        {
+          "offset": "0xa0000",
+          "different_bytes": 63902
+        },
+        {
+          "offset": "0xb0000",
+          "different_bytes": 63666
+        },
+        {
+          "offset": "0xc0000",
+          "different_bytes": 63715
+        },
+        {
+          "offset": "0xd0000",
+          "different_bytes": 10282
+        },
+        {
+          "offset": "0xe0000",
+          "different_bytes": 53606
+        },
+        {
+          "offset": "0xf0000",
+          "different_bytes": 60236
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 57916
+        },
+        {
+          "offset": "0x110000",
+          "different_bytes": 22109
+        },
+        {
+          "offset": "0x180000",
+          "different_bytes": 1
+        }
+      ]
+    }
+  },
+  {
+    "label": "One Beta02 to Beta03",
+    "left_sha256": "ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d",
+    "right_sha256": "d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3",
+    "raw_comparison": {
+      "left_size": 1344772,
+      "right_size": 1344628,
+      "different_bytes_in_overlap": 1081141,
+      "nonoverlapping_bytes": 144,
+      "changed_64k_blocks": [
+        {
+          "offset": "0x10000",
+          "different_bytes": 12
+        },
+        {
+          "offset": "0x30000",
+          "different_bytes": 50922
+        },
+        {
+          "offset": "0x40000",
+          "different_bytes": 65251
+        },
+        {
+          "offset": "0x50000",
+          "different_bytes": 65269
+        },
+        {
+          "offset": "0x60000",
+          "different_bytes": 65283
+        },
+        {
+          "offset": "0x70000",
+          "different_bytes": 65270
+        },
+        {
+          "offset": "0x80000",
+          "different_bytes": 65302
+        },
+        {
+          "offset": "0x90000",
+          "different_bytes": 65249
+        },
+        {
+          "offset": "0xa0000",
+          "different_bytes": 65275
+        },
+        {
+          "offset": "0xb0000",
+          "different_bytes": 65281
+        },
+        {
+          "offset": "0xc0000",
+          "different_bytes": 65182
+        },
+        {
+          "offset": "0xd0000",
+          "different_bytes": 65197
+        },
+        {
+          "offset": "0xe0000",
+          "different_bytes": 65250
+        },
+        {
+          "offset": "0xf0000",
+          "different_bytes": 65203
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 65213
+        },
+        {
+          "offset": "0x110000",
+          "different_bytes": 65196
+        },
+        {
+          "offset": "0x120000",
+          "different_bytes": 63984
+        },
+        {
+          "offset": "0x130000",
+          "different_bytes": 38438
+        },
+        {
+          "offset": "0x140000",
+          "different_bytes": 14364
+        }
+      ]
+    },
+    "expanded_comparison": {
+      "left_size": 2432632,
+      "right_size": 2440824,
+      "different_bytes_in_overlap": 1834314,
+      "nonoverlapping_bytes": 8192,
+      "changed_64k_blocks": [
+        {
+          "offset": "0x0",
+          "different_bytes": 47984
+        },
+        {
+          "offset": "0x10000",
+          "different_bytes": 64664
+        },
+        {
+          "offset": "0x20000",
+          "different_bytes": 64658
+        },
+        {
+          "offset": "0x30000",
+          "different_bytes": 64197
+        },
+        {
+          "offset": "0x40000",
+          "different_bytes": 64612
+        },
+        {
+          "offset": "0x50000",
+          "different_bytes": 63949
+        },
+        {
+          "offset": "0x60000",
+          "different_bytes": 64584
+        },
+        {
+          "offset": "0x70000",
+          "different_bytes": 64580
+        },
+        {
+          "offset": "0x80000",
+          "different_bytes": 64657
+        },
+        {
+          "offset": "0x90000",
+          "different_bytes": 63881
+        },
+        {
+          "offset": "0xa0000",
+          "different_bytes": 63218
+        },
+        {
+          "offset": "0xb0000",
+          "different_bytes": 61009
+        },
+        {
+          "offset": "0xc0000",
+          "different_bytes": 47668
+        },
+        {
+          "offset": "0xd0000",
+          "different_bytes": 38416
+        },
+        {
+          "offset": "0xe0000",
+          "different_bytes": 46479
+        },
+        {
+          "offset": "0xf0000",
+          "different_bytes": 58808
+        },
+        {
+          "offset": "0x100000",
+          "different_bytes": 46647
+        },
+        {
+          "offset": "0x110000",
+          "different_bytes": 33096
+        },
+        {
+          "offset": "0x120000",
+          "different_bytes": 45240
+        },
+        {
+          "offset": "0x130000",
+          "different_bytes": 52166
+        },
+        {
+          "offset": "0x140000",
+          "different_bytes": 25592
+        },
+        {
+          "offset": "0x150000",
+          "different_bytes": 16603
+        },
+        {
+          "offset": "0x160000",
+          "different_bytes": 16595
+        },
+        {
+          "offset": "0x170000",
+          "different_bytes": 16557
+        },
+        {
+          "offset": "0x180000",
+          "different_bytes": 16429
+        },
+        {
+          "offset": "0x190000",
+          "different_bytes": 16274
+        },
+        {
+          "offset": "0x1a0000",
+          "different_bytes": 16253
+        },
+        {
+          "offset": "0x1b0000",
+          "different_bytes": 52016
+        },
+        {
+          "offset": "0x1c0000",
+          "different_bytes": 54586
+        },
+        {
+          "offset": "0x1d0000",
+          "different_bytes": 41118
+        },
+        {
+          "offset": "0x1e0000",
+          "different_bytes": 57298
+        },
+        {
+          "offset": "0x1f0000",
+          "different_bytes": 55314
+        },
+        {
+          "offset": "0x200000",
+          "different_bytes": 61827
+        },
+        {
+          "offset": "0x210000",
+          "different_bytes": 65328
+        },
+        {
+          "offset": "0x220000",
+          "different_bytes": 65346
+        },
+        {
+          "offset": "0x230000",
+          "different_bytes": 65331
+        },
+        {
+          "offset": "0x240000",
+          "different_bytes": 64188
+        },
+        {
+          "offset": "0x250000",
+          "different_bytes": 7146
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,5 @@
+pefile==2024.8.26
+py7zr==1.1.4
+pypcode==4.0.1
+uncompyle6==3.9.3
+xdis==6.1.8

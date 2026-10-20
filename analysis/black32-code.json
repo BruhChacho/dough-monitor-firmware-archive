@@ -1,0 +1,397 @@
+[
+  {
+    "name": "dough_es07e91_v1.0.13_USB-update.bin",
+    "sha256": "9b5d1fb5483415d7e65c5dd72633f2e2abdf06bb32ac636cd14d1953b8df3cf3",
+    "model_id_routines": [],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07e91_v1.0.14_USB-update.bin",
+    "sha256": "15264923fad40f21deff5c25554382a3af89284e96760c702214e02a526f7446",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 01 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3201"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07e91_v1.0.16_USB-update.bin",
+    "sha256": "b452a95c3a0864e758f9d8fc371d0f1b543b6078986e01ea3107b7da5be194a2",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 01 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3201"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07e91_v1.0.17_USB-update.bin",
+    "sha256": "97a60bfc28cdc82a5ab0da557b311b2a5ad63ba6c7544748013bf02e0fd175ce",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 01 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3201"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07e91_v1.0.19_USB-update.bin",
+    "sha256": "c54e56344cf286648603514900ec63fdddad20409a931e5886f09e5b67fdcb5f",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 01 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3201"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [
+      {
+        "file_offset": "0xcef30",
+        "label": "target marker",
+        "bytes": "52 54 44 32 37 33 39 4c 55 46 2d 4d 33 32 45 00",
+        "ascii": "RTD2739LUF-M32E\u0000"
+      },
+      {
+        "file_offset": "0xcf074",
+        "label": "ASCII numeric ID",
+        "bytes": "33 32 30 31",
+        "ascii": "3201"
+      },
+      {
+        "file_offset": "0xcf080",
+        "label": "ASCII model",
+        "bytes": "45 53 30 37 45 39 31",
+        "ascii": "ES07E91"
+      },
+      {
+        "file_offset": "0xcf30c",
+        "label": "second ASCII model",
+        "bytes": "45 53 30 37 45 39 31",
+        "ascii": "ES07E91"
+      },
+      {
+        "file_offset": "0x10d72f",
+        "label": "candidate glyph-coded model",
+        "bytes": "1d 2b 0b 12 1d 14 0c",
+        "ascii": "\u001d+\u000b\u0012\u001d\u0014\f"
+      }
+    ],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07e91_v1.0.6_USB-update.bin",
+    "sha256": "96050da83c44a84f210af904ea5422708b319942073ff2b6a40415ed8ceaa4f4",
+    "model_id_routines": [],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07efe_v1.0.13_USB-update.bin",
+    "sha256": "9e1c93fb847531098f6011492ccb45a4a6e341a213f5845006b686293b6fb41b",
+    "model_id_routines": [],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07efe_v1.0.14_USB-update.bin",
+    "sha256": "17b28010b7f8ae4b00cc8c097d31d5673bd321bff1892550ba4551b3bfe455fa",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 00 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3200"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07efe_v1.0.16_USB-update.bin",
+    "sha256": "c8615dae1d88c98aa1a427669efec7a37d033f3e1e7e27eca3b5ce5121192bb9",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 00 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3200"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07efe_v1.0.17_USB-update.bin",
+    "sha256": "2a806725741de3f7b444b2c0f64e842b0d8e67b452dc4775be018762a5e22db8",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 00 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3200"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  },
+  {
+    "name": "dough_es07efe_v1.0.19_USB-update.bin",
+    "sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40",
+    "model_id_routines": [
+      {
+        "file_offset": "0x33a4",
+        "bytes": "14 f0 30 6a 06 f2 00 6b c5 f6 7a ca 20 e8 00 65",
+        "instructions": [
+          {
+            "file_offset": "0x33a4",
+            "mnemonic": "lui",
+            "operands": "v0, 0xa010"
+          },
+          {
+            "file_offset": "0x33a8",
+            "mnemonic": "li",
+            "operands": "v1, 0x3200"
+          },
+          {
+            "file_offset": "0x33ac",
+            "mnemonic": "sh",
+            "operands": "v1, 0x2eda(v0)"
+          },
+          {
+            "file_offset": "0x33b0",
+            "mnemonic": "jr",
+            "operands": "ra"
+          },
+          {
+            "file_offset": "0x33b2",
+            "mnemonic": "nop",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "identity_evidence": [
+      {
+        "file_offset": "0xcef30",
+        "label": "target marker",
+        "bytes": "52 54 44 32 37 33 39 4c 55 46 2d 4d 33 32 45 00",
+        "ascii": "RTD2739LUF-M32E\u0000"
+      },
+      {
+        "file_offset": "0xcf074",
+        "label": "ASCII numeric ID",
+        "bytes": "33 32 30 30",
+        "ascii": "3200"
+      },
+      {
+        "file_offset": "0xcf080",
+        "label": "ASCII model",
+        "bytes": "45 53 30 37 45 46 45",
+        "ascii": "ES07EFE"
+      },
+      {
+        "file_offset": "0xcf30c",
+        "label": "second ASCII model",
+        "bytes": "45 53 30 37 45 46 45",
+        "ascii": "ES07EFE"
+      },
+      {
+        "file_offset": "0x10d72f",
+        "label": "candidate glyph-coded model",
+        "bytes": "1d 2b 0b 12 1d 1e 1d",
+        "ascii": "\u001d+\u000b\u0012\u001d\u001e\u001d"
+      }
+    ],
+    "absence_meaning": "A missing signature does not establish absence of equivalent code"
+  }
+]

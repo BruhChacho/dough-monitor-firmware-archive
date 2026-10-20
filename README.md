@@ -9,7 +9,7 @@ An independent preservation project for publicly released firmware for Dough and
 3. Read the instructions inside the original ZIP before considering an update. The index records where Dough listed a package; it is not an independent compatibility certification.
 4. Compare the downloaded ZIP with its SHA256 in [MANIFEST.csv](MANIFEST.csv). On Windows, run `Get-FileHash -Algorithm SHA256 path\to\package.zip`; on macOS or Linux, run `shasum -a 256 path/to/package.zip`.
 
-Firmware updates can leave a monitor unusable if the wrong file is installed or the process is interrupted. Do not use a package solely because a model number appears in its filename. Some ZIPs include Windows updater executables or macOS disk images; this project has **not** executed or audited them. Beta firmware has its own risks and is labeled in the index.
+Firmware updates can leave a monitor unusable if the wrong file is installed or the process is interrupted. Do not use a package solely because a model number appears in its filename. Some ZIPs include Windows updater executables or macOS disk images; this project has **not** executed them. Initial static analysis is documented below and is not a complete safety audit. Beta firmware has its own risks and is labeled in the index.
 
 ## What is here
 
@@ -41,6 +41,12 @@ Source catalogs: [`catalog.json`](catalog.json) (current product pages), [`share
 
 ## Repository and rights
 
-ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cloning so the package files are fetched rather than only pointer files. The scripts and project documentation are offered under the [MIT license](LICENSE); firmware, updater programs, and vendor instructions inside `downloads/` remain the property of their respective rights holders. Their presence here does not make them open-source software or grant a firmware modification license. Rights holders can raise a specific concern through a repository issue.
+ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cloning so the package files are fetched rather than only pointer files. Original analysis scripts and project prose are offered under the [MIT license](LICENSE). Firmware, updater programs, vendor instructions, and firmware-derived code/data remain subject to their respective rights holders' rights, including reconstructed snippets under `analysis/`. Their presence here does not make the vendor firmware open-source software or grant a firmware modification license. Rights holders can raise a specific concern through a repository issue.
 
-This project is an independent community archive, not a support or warranty channel. The next research step is to inventory the binaries, identify hardware/platform variants and firmware containers, and document changes between versions without executing untrusted updaters on an owner’s monitor.
+## Reverse engineering
+
+The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
+
+Small annotated C reconstructions are available under [`analysis/reconstructed/`](analysis/reconstructed/). **A complete, buildable replacement firmware has not been recovered.** Extracted programs are generated locally from the preserved ZIPs; no monitor was flashed during analysis.
+
+This project is an independent community archive, not a support or warranty channel.

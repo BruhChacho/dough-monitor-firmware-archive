@@ -1,0 +1,1711 @@
+{
+  "package_count": 45,
+  "unique_members": 66,
+  "members": [
+    {
+      "sha256": "5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162",
+      "size_bytes": 2014868,
+      "local_path": "analysis/extracted/5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162/ES07D02_V101_rev1148_USB update.bin",
+      "names": [
+        "ES07D02_V101_rev1148_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_101.zip",
+          "member": "ES07D02_V101_rev1148_USB update.bin",
+          "models": [
+            "ES07D02"
+          ],
+          "version": "101",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "88fa90e874e6f029fc2b9a97c01ce24ab58d8cd8d8001189fd49a6a7fe746b80",
+      "size_bytes": 1289170,
+      "local_path": "analysis/extracted/88fa90e874e6f029fc2b9a97c01ce24ab58d8cd8d8001189fd49a6a7fe746b80/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_101.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D02"
+          ],
+          "version": "101",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_1167_Beta01.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D02"
+          ],
+          "version": "Beta01 rev1167",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "784f819ae89739c71e40ffa221116922b278a184cb249d4facf4684dfcd081bf",
+      "size_bytes": 1400184,
+      "local_path": "analysis/extracted/784f819ae89739c71e40ffa221116922b278a184cb249d4facf4684dfcd081bf/MStarISPTool_Setup_V0.0.0.5.exe",
+      "names": [
+        "MStarISPTool_Setup_V0.0.0.5.exe",
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/MStarISPTool_Setup_v0.0.0.5.exe",
+        "spectrum_es07d03_scaler_fw_1169_Beta02/MStarISPTool_Setup_v0.0.0.5.exe"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_101.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D02"
+          ],
+          "version": "101",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_1167_Beta01.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D02"
+          ],
+          "version": "Beta01 rev1167",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/tld/spectrum_es07d03_fw_102.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "102",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_fw_104.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "104",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_105.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "105",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_106.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "106",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_107.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "107",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_108_98bc9b51-b121-42aa-9ea8-76233332cc72.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "108",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+          "member": "spectrum_es07d03_scaler_fw_1169-E771_Beta03/MStarISPTool_Setup_v0.0.0.5.exe",
+          "models": [
+            "ES07D03",
+            "ES07DC9",
+            "ES07E30"
+          ],
+          "version": "Beta 03",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1149_Beta01.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "Beta01 rev1149",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1169_Beta02_2.zip",
+          "member": "spectrum_es07d03_scaler_fw_1169_Beta02/MStarISPTool_Setup_v0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "Beta02 rev1169",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_105.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "v.105",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_106.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "v.106",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_108.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07D03",
+            "ES07E30"
+          ],
+          "version": "v.108",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/legacy-2023/spectrum_es07dc9_scaler_fw_100.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "100",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07dc9_scaler_fw_101_632e5593-443e-487d-975c-29fa3b0dd012.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "101",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07dc9_scaler_fw_101.zip",
+          "member": "MStarISPTool_Setup_V0.0.0.5.exe",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "v.101",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0",
+      "size_bytes": 2014868,
+      "local_path": "analysis/extracted/e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0/ES07D02_Beta01_rev1167_USB_update.bin",
+      "names": [
+        "ES07D02_Beta01_rev1167_USB_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d02_scaler_fw_1167_Beta01.zip",
+          "member": "ES07D02_Beta01_rev1167_USB_update.bin",
+          "models": [
+            "ES07D02"
+          ],
+          "version": "Beta01 rev1167",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e",
+      "size_bytes": 2067412,
+      "local_path": "analysis/extracted/d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e/BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin",
+      "names": [
+        "BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/tld/spectrum_es07d03_fw_102.zip",
+          "member": "BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "102",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "e386ee9f0f8242aca4115aa17f4b2536a9f0e8f9a35341661ec135a6f4e5f2ef",
+      "size_bytes": 711502,
+      "local_path": "analysis/extracted/e386ee9f0f8242aca4115aa17f4b2536a9f0e8f9a35341661ec135a6f4e5f2ef/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/tld/spectrum_es07d03_fw_102.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "102",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54",
+      "size_bytes": 2054556,
+      "local_path": "analysis/extracted/62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54/BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin",
+      "names": [
+        "BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_fw_104.zip",
+          "member": "BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "104",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "f271f86200f217b44b77feb3d39fe90367af0a4701dafefa0e54b557be58bdd9",
+      "size_bytes": 722385,
+      "local_path": "analysis/extracted/f271f86200f217b44b77feb3d39fe90367af0a4701dafefa0e54b557be58bdd9/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_fw_104.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "104",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9",
+      "size_bytes": 2056020,
+      "local_path": "analysis/extracted/536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9/BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+      "names": [
+        "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_105.zip",
+          "member": "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "105",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_105.zip",
+          "member": "BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "v.105",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "b47830da35f63281071266f473d79687ade2b1666617586d1dd58038644a7b3d",
+      "size_bytes": 979475,
+      "local_path": "analysis/extracted/b47830da35f63281071266f473d79687ade2b1666617586d1dd58038644a7b3d/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_105.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "105",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_105.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "v.105",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1",
+      "size_bytes": 2056388,
+      "local_path": "analysis/extracted/199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1/BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+      "names": [
+        "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_106.zip",
+          "member": "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "106",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_106.zip",
+          "member": "BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "v.106",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "6650db6d7180c38538bc8320f56f8206e378bd734bf489dbfe8636fd8497bf0a",
+      "size_bytes": 1336479,
+      "local_path": "analysis/extracted/6650db6d7180c38538bc8320f56f8206e378bd734bf489dbfe8636fd8497bf0a/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_106.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "106",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_106.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "v.106",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180",
+      "size_bytes": 2056364,
+      "local_path": "analysis/extracted/ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180/BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin",
+      "names": [
+        "BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_107.zip",
+          "member": "BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "107",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "00ddc5b2f4fa1b27912aee81436795f453f67d7886ea914a8511668085318449",
+      "size_bytes": 1338010,
+      "local_path": "analysis/extracted/00ddc5b2f4fa1b27912aee81436795f453f67d7886ea914a8511668085318449/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_scaler_fw_107.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "107",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757",
+      "size_bytes": 2069060,
+      "local_path": "analysis/extracted/136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757/ES07D03_V108_rev1148_USB update.bin",
+      "names": [
+        "ES07D03_V108_rev1148_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_108_98bc9b51-b121-42aa-9ea8-76233332cc72.zip",
+          "member": "ES07D03_V108_rev1148_USB update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "108",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_108.zip",
+          "member": "ES07D03_V108_rev1148_USB update.bin",
+          "models": [
+            "ES07D03",
+            "ES07E30"
+          ],
+          "version": "v.108",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "48bf3ebb379c53ea9f423847d9c0078d339ac396ca36b0e2e9857908866063ac",
+      "size_bytes": 1330516,
+      "local_path": "analysis/extracted/48bf3ebb379c53ea9f423847d9c0078d339ac396ca36b0e2e9857908866063ac/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_108_98bc9b51-b121-42aa-9ea8-76233332cc72.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "108",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1149_Beta01.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "Beta01 rev1149",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_108.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03",
+            "ES07E30"
+          ],
+          "version": "v.108",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3",
+      "size_bytes": 1344628,
+      "local_path": "analysis/extracted/d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+      "names": [
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/ES07D03_Beta03_rev1169-E771_USB_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+          "member": "spectrum_es07d03_scaler_fw_1169-E771_Beta03/ES07D03_Beta03_rev1169-E771_USB_update.bin",
+          "models": [
+            "ES07D03",
+            "ES07DC9",
+            "ES07E30"
+          ],
+          "version": "Beta 03",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "749226ede81e3f7f6e91e837f565491d5d450aa700dd6eca65c5bad571c1e3d6",
+      "size_bytes": 1495822,
+      "local_path": "analysis/extracted/749226ede81e3f7f6e91e837f565491d5d450aa700dd6eca65c5bad571c1e3d6/instructions.pdf",
+      "names": [
+        "spectrum_es07d03_scaler_fw_1169-E771_Beta03/instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_one_es07d03_scaler_fw_1169-Beta03.zip",
+          "member": "spectrum_es07d03_scaler_fw_1169-E771_Beta03/instructions.pdf",
+          "models": [
+            "ES07D03",
+            "ES07DC9",
+            "ES07E30"
+          ],
+          "version": "Beta 03",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3",
+      "size_bytes": 2068884,
+      "local_path": "analysis/extracted/bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3/ES07D03_Beta01_rev1149_USB_update.bin",
+      "names": [
+        "ES07D03_Beta01_rev1149_USB_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1149_Beta01.zip",
+          "member": "ES07D03_Beta01_rev1149_USB_update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "Beta01 rev1149",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d",
+      "size_bytes": 1344772,
+      "local_path": "analysis/extracted/ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d/ES07D03_Beta02_rev1169_USB_update.bin",
+      "names": [
+        "spectrum_es07d03_scaler_fw_1169_Beta02/ES07D03_Beta02_rev1169_USB_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1169_Beta02_2.zip",
+          "member": "spectrum_es07d03_scaler_fw_1169_Beta02/ES07D03_Beta02_rev1169_USB_update.bin",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "Beta02 rev1169",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "a5c5dd3c7216161e1f218f314bd64e7ace335dd4370a6bd26d1a9e0fcfdb2197",
+      "size_bytes": 1340744,
+      "local_path": "analysis/extracted/a5c5dd3c7216161e1f218f314bd64e7ace335dd4370a6bd26d1a9e0fcfdb2197/instructions.pdf",
+      "names": [
+        "spectrum_es07d03_scaler_fw_1169_Beta02/instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03_scaler_fw_1169_Beta02_2.zip",
+          "member": "spectrum_es07d03_scaler_fw_1169_Beta02/instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "Beta02 rev1169",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "0f2636a9f141c235613e61345c1c7b59047a9dcac1b88589b68b4ded30f5453d",
+      "size_bytes": 297289,
+      "local_path": "analysis/extracted/0f2636a9f141c235613e61345c1c7b59047a9dcac1b88589b68b4ded30f5453d/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_usb_fw_06A4-0A.89.17.02.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "06A4-0A.89.17.02",
+          "component": "usb"
+        },
+        {
+          "package": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.17.02.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "USB Firmware v.17.02",
+          "component": "usb"
+        }
+      ]
+    },
+    {
+      "sha256": "4f2386dd49350101a47dcab208fc8ce4118bd8c4afd62e1e29a9663d9be21e79",
+      "size_bytes": 921120,
+      "local_path": "analysis/extracted/4f2386dd49350101a47dcab208fc8ce4118bd8c4afd62e1e29a9663d9be21e79/VL822_06A4_VL103R_89_17_02_Lehui_20210804.exe",
+      "names": [
+        "VL822_06A4_VL103R_89_17_02_Lehui_20210804.exe"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03_usb_fw_06A4-0A.89.17.02.zip",
+          "member": "VL822_06A4_VL103R_89_17_02_Lehui_20210804.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "06A4-0A.89.17.02",
+          "component": "usb"
+        },
+        {
+          "package": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.17.02.zip",
+          "member": "VL822_06A4_VL103R_89_17_02_Lehui_20210804.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "USB Firmware v.17.02",
+          "component": "usb"
+        }
+      ]
+    },
+    {
+      "sha256": "c0ad09ee371e3542e09cae44f6d8cd0372abd60b44ab533141f3d2ff8eb03ffd",
+      "size_bytes": 322506,
+      "local_path": "analysis/extracted/c0ad09ee371e3542e09cae44f6d8cd0372abd60b44ab533141f3d2ff8eb03ffd/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03",
+            "ES07DC9"
+          ],
+          "version": "06A4-0A.89.19.02",
+          "component": "usb"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02_1.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03",
+            "ES07DC9"
+          ],
+          "version": "06A4/0A.89.19.02",
+          "component": "usb"
+        },
+        {
+          "package": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.19.02.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03",
+            "ES07DC9",
+            "ES07E30"
+          ],
+          "version": "USB Firmware v.19.02",
+          "component": "usb"
+        }
+      ]
+    },
+    {
+      "sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55",
+      "size_bytes": 922630,
+      "local_path": "analysis/extracted/123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55/VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe",
+      "names": [
+        "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02.zip",
+          "member": "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe",
+          "models": [
+            "ES07D03",
+            "ES07DC9"
+          ],
+          "version": "06A4-0A.89.19.02",
+          "component": "usb"
+        },
+        {
+          "package": "downloads/reddit-2023/spectrum_es07d03-es07dc9_usb_fw_06A4-0A.89.19.02_1.zip",
+          "member": "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe",
+          "models": [
+            "ES07D03",
+            "ES07DC9"
+          ],
+          "version": "06A4/0A.89.19.02",
+          "component": "usb"
+        },
+        {
+          "package": "downloads/official/spectrum_one_usb_fw_06A4-0A.89.19.02.zip",
+          "member": "VL822_06A4_VL103R_89_19_02_Lehui_20220615.exe",
+          "models": [
+            "ES07D03",
+            "ES07DC9",
+            "ES07E30"
+          ],
+          "version": "USB Firmware v.19.02",
+          "component": "usb"
+        }
+      ]
+    },
+    {
+      "sha256": "2bf900467c4c2d9705ab5bb5a1fa3ede1fd7bbcf73387d435d0f2ae2862c1eb8",
+      "size_bytes": 321776,
+      "local_path": "analysis/extracted/2bf900467c4c2d9705ab5bb5a1fa3ede1fd7bbcf73387d435d0f2ae2862c1eb8/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/tld/spectrum_es07d03_usb_fw_06A4-0A.89.18.02.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "06A4/0A.89.18.02",
+          "component": "usb"
+        }
+      ]
+    },
+    {
+      "sha256": "2e2be098f64a310e5e4b6c499a1d02578acf825662cbe89017c6d0167da64170",
+      "size_bytes": 922641,
+      "local_path": "analysis/extracted/2e2be098f64a310e5e4b6c499a1d02578acf825662cbe89017c6d0167da64170/VL822_06A4_VL103R_89_18_02_VLI_Hub_PD_FW_Upgrade_Tool.exe",
+      "names": [
+        "VL822_06A4_VL103R_89_18_02_VLI_Hub_PD_FW_Upgrade_Tool.exe"
+      ],
+      "sources": [
+        {
+          "package": "downloads/tld/spectrum_es07d03_usb_fw_06A4-0A.89.18.02.zip",
+          "member": "VL822_06A4_VL103R_89_18_02_VLI_Hub_PD_FW_Upgrade_Tool.exe",
+          "models": [
+            "ES07D03"
+          ],
+          "version": "06A4/0A.89.18.02",
+          "component": "usb"
+        }
+      ]
+    },
+    {
+      "sha256": "435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b",
+      "size_bytes": 2056356,
+      "local_path": "analysis/extracted/435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b/ES07DC9_V100_rev1056_USB_update.bin",
+      "names": [
+        "ES07DC9_V100_rev1056_USB_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07dc9_scaler_fw_100.zip",
+          "member": "ES07DC9_V100_rev1056_USB_update.bin",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "100",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "2143fef3aeffa6eaf5ac77a029b07a2f644681836207979cce46342fe8b1dde0",
+      "size_bytes": 1313403,
+      "local_path": "analysis/extracted/2143fef3aeffa6eaf5ac77a029b07a2f644681836207979cce46342fe8b1dde0/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/legacy-2023/spectrum_es07dc9_scaler_fw_100.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "100",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+      "size_bytes": 2069060,
+      "local_path": "analysis/extracted/0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9/ES07DC9_V101_rev1148_USB update.bin",
+      "names": [
+        "ES07DC9_V101_rev1148_USB update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07dc9_scaler_fw_101_632e5593-443e-487d-975c-29fa3b0dd012.zip",
+          "member": "ES07DC9_V101_rev1148_USB update.bin",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "101",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07dc9_scaler_fw_101.zip",
+          "member": "ES07DC9_V101_rev1148_USB update.bin",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "v.101",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "93edba0b319fddec1e75d41ee4f42236a9cb4dc8811fc2e815d4d28077176800",
+      "size_bytes": 1292043,
+      "local_path": "analysis/extracted/93edba0b319fddec1e75d41ee4f42236a9cb4dc8811fc2e815d4d28077176800/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/reddit-2023/spectrum_es07dc9_scaler_fw_101_632e5593-443e-487d-975c-29fa3b0dd012.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "101",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_one_es07dc9_scaler_fw_101.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07DC9"
+          ],
+          "version": "v.101",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "568096e44bb205e96c0816af0b8a2b4c4c57590204accecad7da03957b83774d",
+      "size_bytes": 73709772,
+      "local_path": "analysis/extracted/568096e44bb205e96c0816af0b8a2b4c4c57590204accecad7da03957b83774d/Dough Firmware Update tool v0.1.5.exe",
+      "names": [
+        "Dough Firmware Update tool v0.1.5.exe"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_beta006.zip",
+          "member": "Dough Firmware Update tool v0.1.5.exe",
+          "models": [
+            "ES07E2D"
+          ],
+          "version": "Beta 006",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_005.zip",
+          "member": "Dough Firmware Update tool v0.1.5.exe",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.005",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_008.zip",
+          "member": "Dough Firmware Update tool v0.1.5.exe",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.008",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "7758fad6b16da9a5ade0c7bda4418106879e8bb6c83f2c4dd25cbd3f364470bf",
+      "size_bytes": 311199,
+      "local_path": "analysis/extracted/7758fad6b16da9a5ade0c7bda4418106879e8bb6c83f2c4dd25cbd3f364470bf/QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin.7z",
+      "names": [
+        "QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin.7z"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_beta006.zip",
+          "member": "QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin.7z",
+          "models": [
+            "ES07E2D"
+          ],
+          "version": "Beta 006",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "dad445c70abbc80be793313c929bf1e80f3a465bfdba4d21099ea72658820221",
+      "size_bytes": 609971,
+      "local_path": "analysis/extracted/dad445c70abbc80be793313c929bf1e80f3a465bfdba4d21099ea72658820221/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_beta006.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E2D"
+          ],
+          "version": "Beta 006",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_005.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.005",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "82298417d873ce933d8253a6c22c037ef9dd90cf3e7a3a01f639cf2328d0a485",
+      "size_bytes": 6020180,
+      "local_path": "analysis/extracted/82298417d873ce933d8253a6c22c037ef9dd90cf3e7a3a01f639cf2328d0a485/ES07E2D v005 update tool for macOS.dmg",
+      "names": [
+        "ES07E2D v005 update tool for macOS.dmg"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_005.zip",
+          "member": "ES07E2D v005 update tool for macOS.dmg",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.005",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "cefacbb01af5e079895cd341db96ea28147f1e629bf779d07928442559596a6c",
+      "size_bytes": 1376256,
+      "local_path": "analysis/extracted/cefacbb01af5e079895cd341db96ea28147f1e629bf779d07928442559596a6c/ES07E2D_v005_update.bin",
+      "names": [
+        "ES07E2D_v005_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_005.zip",
+          "member": "ES07E2D_v005_update.bin",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.005",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "d157eb473f2a7c5fcbe1e7b1038749d85a7ccc033ff0ac92c5dda2893449a81e",
+      "size_bytes": 6839473,
+      "local_path": "analysis/extracted/d157eb473f2a7c5fcbe1e7b1038749d85a7ccc033ff0ac92c5dda2893449a81e/es07e2d v008 update tool for macOS.dmg",
+      "names": [
+        "es07e2d v008 update tool for macOS.dmg"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_008.zip",
+          "member": "es07e2d v008 update tool for macOS.dmg",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.008",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "cbbbe445ea5d3d2d2b2663dc519cc22613c59c496b23501d705bce1c826d8d0a",
+      "size_bytes": 1376256,
+      "local_path": "analysis/extracted/cbbbe445ea5d3d2d2b2663dc519cc22613c59c496b23501d705bce1c826d8d0a/es07e2d_v008_update.bin",
+      "names": [
+        "es07e2d_v008_update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_008.zip",
+          "member": "es07e2d_v008_update.bin",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.008",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "d8ba587421cf057b7bc5889eb6977bd865d3ccc98a4d6578cbd1b88437bceca6",
+      "size_bytes": 695712,
+      "local_path": "analysis/extracted/d8ba587421cf057b7bc5889eb6977bd865d3ccc98a4d6578cbd1b88437bceca6/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_scaler_fw_008.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E2D",
+            "ES07E2F"
+          ],
+          "version": "v.008",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "9b5d1fb5483415d7e65c5dd72633f2e2abdf06bb32ac636cd14d1953b8df3cf3",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/9b5d1fb5483415d7e65c5dd72633f2e2abdf06bb32ac636cd14d1953b8df3cf3/dough_es07e91_v1.0.13_USB-update.bin",
+      "names": [
+        "dough_es07e91_v1.0.13_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1013.zip",
+          "member": "dough_es07e91_v1.0.13_USB-update.bin",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.13",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "6a62de83539cb61b93f316a7bd927a944fb85d8c28ec1ed63597b5d90b1ff4af",
+      "size_bytes": 962589,
+      "local_path": "analysis/extracted/6a62de83539cb61b93f316a7bd927a944fb85d8c28ec1ed63597b5d90b1ff4af/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1013.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.13",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1013.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.13",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "15264923fad40f21deff5c25554382a3af89284e96760c702214e02a526f7446",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/15264923fad40f21deff5c25554382a3af89284e96760c702214e02a526f7446/dough_es07e91_v1.0.14_USB-update.bin",
+      "names": [
+        "dough_es07e91_v1.0.14_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1014.zip",
+          "member": "dough_es07e91_v1.0.14_USB-update.bin",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "96c20b49461b8e0c7a44bed05b532fd79ab384bb97d5812a05ed2a02cdd8a86c",
+      "size_bytes": 965130,
+      "local_path": "analysis/extracted/96c20b49461b8e0c7a44bed05b532fd79ab384bb97d5812a05ed2a02cdd8a86c/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1014.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1014.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "b452a95c3a0864e758f9d8fc371d0f1b543b6078986e01ea3107b7da5be194a2",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/b452a95c3a0864e758f9d8fc371d0f1b543b6078986e01ea3107b7da5be194a2/dough_es07e91_v1.0.16_USB-update.bin",
+      "names": [
+        "dough_es07e91_v1.0.16_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1016.zip",
+          "member": "dough_es07e91_v1.0.16_USB-update.bin",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "2b96f396a5d9da46ed2e2cf8ab97ab50a67da1d0183d03df315522ee3a22662b",
+      "size_bytes": 990009,
+      "local_path": "analysis/extracted/2b96f396a5d9da46ed2e2cf8ab97ab50a67da1d0183d03df315522ee3a22662b/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1016.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1016.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1016.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1016.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "97a60bfc28cdc82a5ab0da557b311b2a5ad63ba6c7544748013bf02e0fd175ce",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/97a60bfc28cdc82a5ab0da557b311b2a5ad63ba6c7544748013bf02e0fd175ce/dough_es07e91_v1.0.17_USB-update.bin",
+      "names": [
+        "dough_es07e91_v1.0.17_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1017.zip",
+          "member": "dough_es07e91_v1.0.17_USB-update.bin",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "5f069a32e7e02cff7c897c81bc6fcce7c1cdba50d2ee6c699b164764c0a46f6a",
+      "size_bytes": 969235,
+      "local_path": "analysis/extracted/5f069a32e7e02cff7c897c81bc6fcce7c1cdba50d2ee6c699b164764c0a46f6a/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1017.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1017.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1017.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1017.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "c54e56344cf286648603514900ec63fdddad20409a931e5886f09e5b67fdcb5f",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/c54e56344cf286648603514900ec63fdddad20409a931e5886f09e5b67fdcb5f/dough_es07e91_v1.0.19_USB-update.bin",
+      "names": [
+        "dough_es07e91_v1.0.19_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1019.zip",
+          "member": "dough_es07e91_v1.0.19_USB-update.bin",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "ea2bfedaafeb8bf05d0cd963b407eb66a96abe0eb3f47c39f4c64adabbd78308",
+      "size_bytes": 973804,
+      "local_path": "analysis/extracted/ea2bfedaafeb8bf05d0cd963b407eb66a96abe0eb3f47c39f4c64adabbd78308/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1019.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1019.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1019.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1019.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "96050da83c44a84f210af904ea5422708b319942073ff2b6a40415ed8ceaa4f4",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/96050da83c44a84f210af904ea5422708b319942073ff2b6a40415ed8ceaa4f4/dough_es07e91_v1.0.6_USB-update.bin",
+      "names": [
+        "dough_es07e91_v1.0.6_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1006.zip",
+          "member": "dough_es07e91_v1.0.6_USB-update.bin",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.6",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "9f07a922e98a59f09cdd0b75b7019524709b79f7ad70554512d0dc8dc2bfb61a",
+      "size_bytes": 955818,
+      "local_path": "analysis/extracted/9f07a922e98a59f09cdd0b75b7019524709b79f7ad70554512d0dc8dc2bfb61a/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07e91_scaler_fw_1006.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07E91"
+          ],
+          "version": "v.1.0.6",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "9e50e7902f38d1e054f99063cfc306d0b87fdbe9536e2e74a8fda22195945ae2",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/9e50e7902f38d1e054f99063cfc306d0b87fdbe9536e2e74a8fda22195945ae2/dough_es07ef5_v1.0.14_USB-update.bin",
+      "names": [
+        "dough_es07ef5_v1.0.14_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1014.zip",
+          "member": "dough_es07ef5_v1.0.14_USB-update.bin",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "5775480d5f3edb9447b272d2d7da2281df04cd13ab9c666a06b597093dad8db7",
+      "size_bytes": 958834,
+      "local_path": "analysis/extracted/5775480d5f3edb9447b272d2d7da2281df04cd13ab9c666a06b597093dad8db7/instructions.pdf",
+      "names": [
+        "instructions.pdf"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1014.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        },
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1014.zip",
+          "member": "instructions.pdf",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "c96b114a17e06143f0b4f321f36b8c218e1c91ed9015d48288dee0020eba2a99",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/c96b114a17e06143f0b4f321f36b8c218e1c91ed9015d48288dee0020eba2a99/dough_es07ef5_v1.0.16_USB-update.bin",
+      "names": [
+        "dough_es07ef5_v1.0.16_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1016.zip",
+          "member": "dough_es07ef5_v1.0.16_USB-update.bin",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "fbc10d1e6539cdb62abd7fd464becaf6526bc50933f59fdac6c37a30e7d51b43",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/fbc10d1e6539cdb62abd7fd464becaf6526bc50933f59fdac6c37a30e7d51b43/dough_es07ef5_v1.0.17_USB-update.bin",
+      "names": [
+        "dough_es07ef5_v1.0.17_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1017.zip",
+          "member": "dough_es07ef5_v1.0.17_USB-update.bin",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "b92d11b588f13186bebdb832e4b5d0367c42726b64bf2b16ec4990a7aa05b4c9",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/b92d11b588f13186bebdb832e4b5d0367c42726b64bf2b16ec4990a7aa05b4c9/dough_es07ef5_v1.0.19_USB-update.bin",
+      "names": [
+        "dough_es07ef5_v1.0.19_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07ef5_scaler_fw_1019.zip",
+          "member": "dough_es07ef5_v1.0.19_USB-update.bin",
+          "models": [
+            "ES07EF5"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "bce160dab0486d786a8986f932cdae5ebfd18d344baf61b51c7f407d681dc7ae",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/bce160dab0486d786a8986f932cdae5ebfd18d344baf61b51c7f407d681dc7ae/dough_es07efb_v1.0.14_USB-update.bin",
+      "names": [
+        "dough_es07efb_v1.0.14_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1014.zip",
+          "member": "dough_es07efb_v1.0.14_USB-update.bin",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "0f820659f1ef1b7bd3bf2f118b384db3d34ffab4507845739691e1c4f4bde55f",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/0f820659f1ef1b7bd3bf2f118b384db3d34ffab4507845739691e1c4f4bde55f/dough_es07efb_v1.0.16_USB-update.bin",
+      "names": [
+        "dough_es07efb_v1.0.16_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1016.zip",
+          "member": "dough_es07efb_v1.0.16_USB-update.bin",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "c4eab5ebb070e7d073497746378f9b00cc21e17d7a128d89c787d66341f92fc7",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/c4eab5ebb070e7d073497746378f9b00cc21e17d7a128d89c787d66341f92fc7/dough_es07efb_v1.0.17_USB-update.bin",
+      "names": [
+        "dough_es07efb_v1.0.17_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1017.zip",
+          "member": "dough_es07efb_v1.0.17_USB-update.bin",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "b8f861c600be4caf2c15f3966e59a5f99e83d93ae445eb2a5e290d15bdbcb95d",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/b8f861c600be4caf2c15f3966e59a5f99e83d93ae445eb2a5e290d15bdbcb95d/dough_es07efb_v1.0.19_USB-update.bin",
+      "names": [
+        "dough_es07efb_v1.0.19_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efb_scaler_fw_1019.zip",
+          "member": "dough_es07efb_v1.0.19_USB-update.bin",
+          "models": [
+            "ES07EFB"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "9e1c93fb847531098f6011492ccb45a4a6e341a213f5845006b686293b6fb41b",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/9e1c93fb847531098f6011492ccb45a4a6e341a213f5845006b686293b6fb41b/dough_es07efe_v1.0.13_USB-update.bin",
+      "names": [
+        "dough_es07efe_v1.0.13_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1013.zip",
+          "member": "dough_es07efe_v1.0.13_USB-update.bin",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.13",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "17b28010b7f8ae4b00cc8c097d31d5673bd321bff1892550ba4551b3bfe455fa",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/17b28010b7f8ae4b00cc8c097d31d5673bd321bff1892550ba4551b3bfe455fa/dough_es07efe_v1.0.14_USB-update.bin",
+      "names": [
+        "dough_es07efe_v1.0.14_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1014.zip",
+          "member": "dough_es07efe_v1.0.14_USB-update.bin",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.14",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "c8615dae1d88c98aa1a427669efec7a37d033f3e1e7e27eca3b5ce5121192bb9",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/c8615dae1d88c98aa1a427669efec7a37d033f3e1e7e27eca3b5ce5121192bb9/dough_es07efe_v1.0.16_USB-update.bin",
+      "names": [
+        "dough_es07efe_v1.0.16_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1016.zip",
+          "member": "dough_es07efe_v1.0.16_USB-update.bin",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.16",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "2a806725741de3f7b444b2c0f64e842b0d8e67b452dc4775be018762a5e22db8",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/2a806725741de3f7b444b2c0f64e842b0d8e67b452dc4775be018762a5e22db8/dough_es07efe_v1.0.17_USB-update.bin",
+      "names": [
+        "dough_es07efe_v1.0.17_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1017.zip",
+          "member": "dough_es07efe_v1.0.17_USB-update.bin",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.17",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40",
+      "size_bytes": 1638400,
+      "local_path": "analysis/extracted/e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40/dough_es07efe_v1.0.19_USB-update.bin",
+      "names": [
+        "dough_es07efe_v1.0.19_USB-update.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/official/spectrum_black_es07efe_scaler_fw_1019.zip",
+          "member": "dough_es07efe_v1.0.19_USB-update.bin",
+          "models": [
+            "ES07EFE"
+          ],
+          "version": "v.1.0.19",
+          "component": "scaler"
+        }
+      ]
+    },
+    {
+      "sha256": "c09376b93b77a42faf63584cc6b4f3c48c9d80a79ec98582d532c9da1700b456",
+      "size_bytes": 1376256,
+      "local_path": "analysis/extracted/c09376b93b77a42faf63584cc6b4f3c48c9d80a79ec98582d532c9da1700b456/QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin",
+      "names": [
+        "QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin"
+      ],
+      "sources": [
+        {
+          "package": "downloads/sharepoint/spectrum_black_27_beta006.zip",
+          "member": "QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin.7z",
+          "models": [
+            "ES07E2D"
+          ],
+          "version": "Beta 006",
+          "component": "scaler",
+          "nested_member": "QHD240_OLED_ES07E2D_MP_V.006_20240312_ReduceBank_ForMediaTest.bin"
+        }
+      ]
+    }
+  ]
+}

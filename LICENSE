@@ -21,4 +21,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 This license does not cover third-party firmware, executables, disk images, or
-instructions under downloads/.
+instructions under downloads/, nor extracted or firmware-derived code and data,
+including disassembly, data tables, and reconstructed snippets under analysis/.
