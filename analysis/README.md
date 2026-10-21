@@ -6,14 +6,19 @@ small, manually reconstructed routines with evidence and stated uncertainties.
 Original vendor source names, comments, headers, and build systems have not
 been recovered.
 
-Start with the [technical report](2026-10-19_reverse-dough-report.md).
+Start with the [latest format/build report](2026-10-20_reverse-spectrum-one-report.md)
+or the [initial cross-family report](2026-10-19_reverse-dough-report.md).
 
 ## Results to explore
 
 | Area | Result | Evidence |
 |---|---|---|
 | Spectrum One D02/D03/DC9 | Raw DEFLATE program recovered from all 13 distinct images | [Segment maps](mstar-layouts.json), [AEON excerpts](aeon-excerpts.md) |
+| Spectrum One containers | Two CRC32s per image, 141 resource CRC16s, 13 byte-exact roundtrips | [Roundtrip results](mstar-roundtrips.json) |
+| DC9 v101 build experiment | New DEFLATE stream with identical decoded program; hardware untested | [Recompression](dc9-recompression.json), [boot trace](mstar-boot-excerpts.md) |
+| Spectrum One USB packages | Releases 17/18/19 share the same hub image and have different VL103R images | [Installer inventory](installers.json) |
 | Glossy Spectrum One DC9 | Startup mapping and a table-search routine reconstructed | [Partial C](reconstructed/spectrum_one_helpers.c) |
+| DC9 helper code generation | 13 assembly instructions reproduce the original 39 bytes exactly | [Assembly source](reconstructed/spectrum_one_table_helper.aeon.s), [build evidence](aeon-helper-build.json) |
 | Spectrum Black 32 E91/EFE | A model-value write routine found in eight images | [Decoded code](black32-code.json), [partial C](reconstructed/black32_model_value.c) |
 | Black 32 v1.0.19 variants | Nine changed bytes across the entire 1,638,400-byte image | [Comparisons](comparisons.json) |
 | Black 27 E2D/E2F updater | Python entry recovered; start-flow checked against bytecode; communication module identified | [Flow analysis](reconstructed/black27-start-flow.md), [native metadata](updater.json) |
@@ -36,6 +41,9 @@ python scripts/inspect_updater.py
 python scripts/prepare_aeon.py --download
 python scripts/disassemble_samples.py
 python scripts/test_analysis.py
+python scripts/roundtrip_mstar.py verify-corpus
+python scripts/inspect_mstar_boot.py
+python scripts/build_aeon_helper.py
 ```
 
 The first and seventh commands can access the network. Subsequent runs of
@@ -45,6 +53,16 @@ The compiler processes the SLEIGH processor definition only.
 
 The analysis commands parse bytes. They do not load vendor DLLs, launch
 updaters, execute recovered bytecode, or access a monitor.
+
+On Windows, `python scripts/extract_installers.py --download` obtains the
+pinned official innoextract 1.9 distribution if absent, checks its SHA256,
+checks the extractor executable against that archive, and extracts four known
+installers. Later runs can omit `--download`. This runs the extraction utility,
+never the extracted vendor applications. On the analysis machine the 32-bit
+utility needed execution outside the Windows application sandbox.
+
+See the [reconstruction commands](2026-10-20_reverse-spectrum-one-report.md#reproduce-the-two-reconstruction-experiments)
+for component export/reassembly and the explicitly experimental DC9 recompressor.
 
 With a C compiler, check the reconstructed snippets without running them:
 
@@ -94,10 +112,11 @@ all bytes in the image.
    attach names only when callers or data establish their meaning.
 2. **Black 32:** establish runtime mapping and remaining instruction support;
    trace references to the model-value address and recover larger functions.
-3. **Update formats:** identify every checksum/validation field and verify
-   reconstruction against untouched releases before implementing a packer.
-4. **USB hub firmware:** unpack the Inno installers and distinguish hub,
-   USB-PD, and scaler payloads. Their filenames are currently only clues.
+3. **Update formats:** CRC32 and resource CRC16 validation and untouched
+   reconstruction now pass. Resolve the main trailer's final two bytes and
+   other validation consumers before treating recompressed images as releases.
+4. **USB hub firmware:** installers are extracted and hub/PD payloads separated;
+   recover their code and update protocols with model-specific evidence.
 5. **Buildability:** reconstruct dependencies, linker layout, startup,
    peripheral definitions, and reproducible compiler settings. A collection
    of C snippets is not sufficient to build working monitor firmware.

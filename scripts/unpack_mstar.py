@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import struct
 import zlib
+from mstar_checksums import verify_crc32
 
 ROOT = Path(__file__).resolve().parents[1]
 PREFIX = bytes.fromhex("c2afe4f5")
@@ -20,10 +21,14 @@ def unpack(data):
         raise ValueError("Not a supported Spectrum One image")
     words = struct.unpack_from("<10I", data, 0x10000)
     start, base, end_address, end = words[:4]
-    if start != 0x30080 or base != 0x200000 or not start < end <= len(data):
+    if start != 0x30080 or base != 0x200000 or not start + 0x3800 < end <= len(data) - 4:
         raise ValueError("Unrecognized segment bounds")
     if end - start != end_address - base or words[8] != len(data) - 4:
         raise ValueError("Inconsistent header spans")
+    checksums = verify_crc32(data, start, end)
+    if (data[start + 0x1147:start + 0x114a] != b"\xbe\xad\xde"
+            or struct.unpack_from("<I", data, start + 0x114a)[0] != end - start):
+        raise ValueError("Inconsistent application compression metadata")
     compressed_start = start + 0x3800
     decoder = zlib.decompressobj(-15)
     program = decoder.decompress(data[compressed_start:end], MAX_EXPANDED + 1)
@@ -40,9 +45,10 @@ def unpack(data):
         "deflate_end_exclusive": hex(end - 6), "deflate_bytes": end - 6 - compressed_start,
         "program_size": len(program), "trailer_hex": trailer.hex(),
         "trailer_length_matches": True, "trailer_last_two_bytes_meaning": "unknown",
+        "compression_marker": "beadde", "prefix_segment_length_matches": True,
         "expanded_size": len(expanded), "expanded_sha256": hashlib.sha256(expanded).hexdigest(),
         "candidate_expanded_end_address": hex(base + len(expanded)),
-        "header_checksum_meaning": "unknown; not validated",
+        "checksums": checksums,
     }
 
 

@@ -1,0 +1,79 @@
+{
+  "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "assembly_path": "analysis/reconstructed/spectrum_one_table_helper.aeon.s",
+  "assembly_normalized_utf8_sha256": "2d24627546691be5d9129fdd398208d0271b147c0cdae1d00103c74d88e229de",
+  "candidate_address": "0x204059",
+  "expanded_offset": "0x4059",
+  "size_bytes": 39,
+  "instruction_count": 13,
+  "machine_code_sha256": "5055f0197a3de495f1b4c4ff559c257aebb0839ef54624689361c11c61071b37",
+  "matches_original_bytes": true,
+  "listing": [
+    {
+      "address": "0x204059",
+      "bytes": "c0e00561",
+      "instruction": "bg.movhi r7, 0x2b"
+    },
+    {
+      "address": "0x20405d",
+      "bytes": "fce7ed7c",
+      "instruction": "bg.addi r7, r7, -0x1284"
+    },
+    {
+      "address": "0x204061",
+      "bytes": "9010",
+      "instruction": "bt.j test_byte"
+    },
+    {
+      "address": "0x204063",
+      "bytes": "9ce1",
+      "instruction": "bt.addi r7, 1"
+    },
+    {
+      "address": "0x204065",
+      "bytes": "c0c00561",
+      "instruction": "bg.movhi r6, 0x2b"
+    },
+    {
+      "address": "0x204069",
+      "bytes": "fcc6eda5",
+      "instruction": "bg.addi r6, r6, -0x125b"
+    },
+    {
+      "address": "0x20406d",
+      "bytes": "d4e6007a",
+      "instruction": "bg.beq r7, r6, absent"
+    },
+    {
+      "address": "0x204071",
+      "bytes": "10c700",
+      "instruction": "bn.lbz r6, 0(r7)"
+    },
+    {
+      "address": "0x204074",
+      "bytes": "d466ff7e",
+      "instruction": "bg.bne r3, r6, next_byte"
+    },
+    {
+      "address": "0x204078",
+      "bytes": "9861",
+      "instruction": "bt.movi r3, 1"
+    },
+    {
+      "address": "0x20407a",
+      "bytes": "8529",
+      "instruction": "bt.jr r9"
+    },
+    {
+      "address": "0x20407c",
+      "bytes": "9860",
+      "instruction": "bt.movi r3, 0"
+    },
+    {
+      "address": "0x20407e",
+      "bytes": "8529",
+      "instruction": "bt.jr r9"
+    }
+  ],
+  "limitations": "One routine, nine supported mnemonics; no C compiler, linker or hardware validation"
+}

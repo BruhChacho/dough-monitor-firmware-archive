@@ -3,6 +3,9 @@
 Analysis began 2026-10-13; continuation and report dated 2026-10-19.
 Scope: [offline archive analysis](scope.md).
 
+Historical milestone: see the [2026-10-20 continuation](2026-10-20_reverse-spectrum-one-report.md)
+for subsequently recovered checksums, resource framing and reconstruction work.
+
 ## Summary
 
 All 45 archived ZIPs were verified against the preservation manifest and

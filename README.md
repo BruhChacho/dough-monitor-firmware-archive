@@ -49,4 +49,11 @@ The [analysis workspace](analysis/README.md) now includes a reproducible invento
 
 Small annotated C reconstructions are available under [`analysis/reconstructed/`](analysis/reconstructed/). **A complete, buildable replacement firmware has not been recovered.** Extracted programs are generated locally from the preserved ZIPs; no monitor was flashed during analysis.
 
+The [2026-10-20 milestone](analysis/2026-10-20_reverse-spectrum-one-report.md) adds
+validated Spectrum One checksums and resource parsing, 13 byte-exact container
+roundtrips, a bootloader trace, and an experimental DC9 recompression with
+identical decoded program bytes. A small assembly build also reproduces one
+recovered 39-byte routine exactly. The experimental image is not hardware-tested
+and is not offered as an installable release.
+
 This project is an independent community archive, not a support or warranty channel.
