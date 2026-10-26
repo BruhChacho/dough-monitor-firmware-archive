@@ -1,0 +1,323 @@
+{
+  "format": "offline-firmware-validation-v1",
+  "started_utc": "2026-10-25T19:36:35.907059+00:00",
+  "git_head": "50dbabfe6a8d8c9d1616616235ce570538270fde",
+  "offline_validation_passed": true,
+  "complete_source": false,
+  "hardware_tested": false,
+  "stages": [
+    "archive",
+    "corpus",
+    "helper-rewrite",
+    "commands",
+    "registers",
+    "receive",
+    "transfer",
+    "timer",
+    "callbacks",
+    "configuration",
+    "apply",
+    "masked-registers",
+    "metadata",
+    "metadata-service",
+    "metadata-consumers",
+    "metadata-registers"
+  ],
+  "limitations": [
+    "Most DC9 application bytes remain pinned vendor input.",
+    "CPU, store, CALL and interleaving assumptions are explicit in individual reports.",
+    "EFE and USB exports are raw references, not community source builds.",
+    "No boot, recovery or physical monitor functionality has been validated."
+  ],
+  "unit_tests": {
+    "run": 132,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "workspace": {
+    "verified_artifacts": 135,
+    "changed_sources": [],
+    "usb": {
+      "verified_raw_images": 2,
+      "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+    },
+    "dc9_byte_exact_component_roundtrip": true,
+    "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+    "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+  },
+  "builds": {
+    "dc9-v101.baseline": {
+      "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+      "size": 2069060,
+      "resource_ranges_unchanged": 11,
+      "changed_program_bytes": 0
+    },
+    "dc9-v101-helper.experimental": {
+      "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad",
+      "size": 2069060,
+      "resource_ranges_unchanged": 11,
+      "changed_program_bytes": 29
+    },
+    "dc9-v101-layout.experimental": {
+      "sha256": "95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a",
+      "size": 2069060,
+      "resource_ranges_unchanged": 11,
+      "changed_program_bytes": 6
+    }
+  },
+  "source_components": 96,
+  "assembled_code_bytes": 13809,
+  "assembled_instructions": 4406,
+  "assembled_table_bytes": 787,
+  "finished_utc": "2026-10-25T19:38:36.301256+00:00",
+  "validation_directory": "analysis/extracted/firmware-validation-metadata-consumers-2026-10-25",
+  "validation_report_sha256": "51522e768a20dea932009ded55ed02d6aebc7bef319dbfbcdff81e2f923711b7",
+  "verified_run_artifacts": 162,
+  "verified_source_identities": 188,
+  "evidence_sha256": {
+    "aeon-rewrite-validation.json": "471e1b3190b46171a2b9a97c4b21034925c4b47b14b5122903686f509f10d62a",
+    "dc9-module-validation.json": "3c55ea248a218e7efbbb0c80c902ac8b2b6729a180a12c4d7742ee4e6407a411",
+    "dc9-register-validation.json": "12903c909757b0d7b4cca87d44c715eacd45109cd9448443e1a4ec73173de541",
+    "dc9-receive-validation.json": "3867d1f95efbc1b9872efa14594efded670f6b5154980224f54ba86fb8562f8f",
+    "dc9-transfer-validation.json": "600ef5c95c2ac119d7e81ba9975a8ed07bc4dde8d9cbea43df78978a9bc150fc",
+    "dc9-timer-validation.json": "96c87415c659540153dd4bc80b49aeb5a808c13899069833cde6b34ac6eba0a6",
+    "dc9-callback-validation.json": "e51c992024f0c8fec738e2c467793c9a330a4eacd74bfabe992566d24f4500ed",
+    "dc9-configuration-validation.json": "b32f97378d92e07717b8d03e6f2c3025ea312ac383ac365bd64cfe2ce48a9664",
+    "dc9-apply-validation.json": "1c1e6699f7f313de1b9730da3db40a6b952bc51d3565d9d99695937abbecec4e",
+    "dc9-masked-validation.json": "5d63d93e490222dd901551613eef09d5aa2196ee8cf7ad4f5c7c7826427b7754",
+    "dc9-metadata-validation.json": "bfe9d7699994cb0c47199494623d698d7efd19c2c20c77bdc25b403f2259b035",
+    "dc9-metadata-service-validation.json": "d902162adbffa479bf48e4b55e2b4839e2e1a420b313959120469aacbdf177d2",
+    "dc9-metadata-consumers-validation.json": "c567e75420617c113d2dc8646a0554b8a5b329398b3ee5717a1507ffaff3b343",
+    "dc9-metadata-registers-validation.json": "8a2f6381d005d7c3e987e718c336742d0b5b77072fb8e38e0ad8ae88df7e2059",
+    "dc9-source-baseline.json": "b00f753701422b884338a20cbb3bcad8a9fcef4acaf8c9b16fc3e3fa6f95730a",
+    "dc9-source-experiment.json": "293f7b72ea8886cb8d45ca51722f5f7a5f0d5cb841b4e651d4cdfc34dced9845",
+    "dc9-layout-experiment.json": "e95dc48fd894f88fb51b0beb6814c8304f209cab7e38ff565f4a4a7c803c5b25"
+  },
+  "coverage": {
+    "reconstructed_code_bytes": 13809,
+    "application_bytes": 2426560,
+    "percent": 0.569077212185151,
+    "interpretation": "code-byte/application-byte coverage proxy, not product completion or engineering effort"
+  },
+  "counts": {
+    "consumer_strict": 2646,
+    "register_strict_including_default_rejections": 262,
+    "register_conditional": 5336,
+    "complete_accumulation_per_policy": 1840,
+    "complete_six_record_reset_per_policy": 1
+  },
+  "preservation": {
+    "snapshot": {
+      "path": "analysis/scratch/metadata-consumers-before-2026-10-25",
+      "manifest_sha256": "aae2ab1161ebbe7ec3389fca36dd6df2973051698780dd2234d591858d0e790c",
+      "verified_saved_files": 195,
+      "all_original_paths_present": true,
+      "note": "Early snapshot includes initial bn.sra agent edits; the preceding exact versions remain verified in the prior snapshot."
+    },
+    "verified_pre_sra_versions": {
+      "analysis/scratch/metadata-service-before-2026-10-24/scripts/aeon_subset_assembler.py": "5325b9d068e65624609358cfac8f2484bebf3d0ea21da38fe8bf775e651d9deb",
+      "analysis/scratch/metadata-service-before-2026-10-24/scripts/aeon_module_model.py": "4a44eac064f9dbe24f8904f01c49a0926c384400ffc75f53a9279fd22ba184ab"
+    },
+    "prior_workspaces": [
+      {
+        "path": "analysis/extracted/community-workspace",
+        "verified_artifacts": 57,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/community-receive-workspace",
+        "verified_artifacts": 72,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/community-transfer-workspace",
+        "verified_artifacts": 80,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-2026-10-23/workspace",
+        "verified_artifacts": 86,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-timers-2026-10-23/workspace",
+        "verified_artifacts": 93,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-configuration-2026-10-23/workspace",
+        "verified_artifacts": 101,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-apply-2026-10-24/workspace",
+        "verified_artifacts": 107,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-2026-10-24/workspace",
+        "verified_artifacts": 118,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-service-2026-10-24/workspace",
+        "verified_artifacts": 122,
+        "changed_sources": [],
+        "usb": {
+          "verified_raw_images": 2,
+          "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+        },
+        "dc9_byte_exact_component_roundtrip": true,
+        "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+        "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+      }
+    ],
+    "prior_build_outputs": [
+      {
+        "path": "analysis/extracted/community-workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/community-workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/community-receive-workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/community-receive-workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/community-transfer-workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/community-transfer-workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-2026-10-23/workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-2026-10-23/workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-timers-2026-10-23/workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-timers-2026-10-23/workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-configuration-2026-10-23/workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-configuration-2026-10-23/workspace/build/dc9-v101-layout.experimental.bin",
+        "sha256": "95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-configuration-2026-10-23/workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-apply-2026-10-24/workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-apply-2026-10-24/workspace/build/dc9-v101-layout.experimental.bin",
+        "sha256": "95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-apply-2026-10-24/workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-2026-10-24/workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-2026-10-24/workspace/build/dc9-v101-layout.experimental.bin",
+        "sha256": "95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-2026-10-24/workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-service-2026-10-24/workspace/build/dc9-v101-helper.experimental.bin",
+        "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-service-2026-10-24/workspace/build/dc9-v101-layout.experimental.bin",
+        "sha256": "95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a"
+      },
+      {
+        "path": "analysis/extracted/firmware-validation-metadata-service-2026-10-24/workspace/build/dc9-v101.baseline.bin",
+        "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9"
+      }
+    ]
+  }
+}

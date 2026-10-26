@@ -1,0 +1,136 @@
+{
+  "format": "community-workspace-evidence-v1",
+  "status": "partial source build with separately labeled store-hypothesis experiments",
+  "workspace": "analysis/extracted/community-transfer-workspace",
+  "verification": {
+    "verified_artifacts": 80,
+    "changed_sources": [],
+    "usb": {
+      "verified_raw_images": 2,
+      "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+    },
+    "dc9_byte_exact_component_roundtrip": true,
+    "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+    "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+  },
+  "previous_workspace_verifications": {
+    "community-workspace": {
+      "verified_artifacts": 57,
+      "changed_sources": [],
+      "usb": {
+        "verified_raw_images": 2,
+        "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+      },
+      "dc9_byte_exact_component_roundtrip": true,
+      "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+      "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+    },
+    "community-receive-workspace": {
+      "verified_artifacts": 72,
+      "changed_sources": [],
+      "usb": {
+        "verified_raw_images": 2,
+        "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+      },
+      "dc9_byte_exact_component_roundtrip": true,
+      "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+      "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+    }
+  },
+  "builds": [
+    {
+      "path": "analysis/extracted/community-transfer-workspace/build/dc9-v101.baseline.bin",
+      "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+      "size_bytes": 2069060,
+      "report_path": "analysis/extracted/community-transfer-workspace/build/dc9-v101.baseline.json",
+      "report_sha256": "f37a0d50ac293a0604623f4fe33fca615b4386e866e1a9669a9929175143604c",
+      "byte_exact_original": true,
+      "changed_program_bytes": 0,
+      "unchanged_resource_ranges": 11,
+      "checksums": {
+        "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+        "segment_crc32": "68ea7417",
+        "segment_crc32_field": "0x10014, little-endian",
+        "whole_file_crc32": "df78e833",
+        "whole_file_crc32_field": "last four bytes, big-endian",
+        "both_crc32_valid": true,
+        "main_crc16": "ddf3",
+        "main_crc16_valid": true,
+        "main_crc16_range": "0x10000:0x125ad9 (end exclusive)",
+        "main_crc16_zeroed_words": [
+          "0x10014",
+          "0x10060",
+          "0x10064"
+        ]
+      }
+    },
+    {
+      "path": "analysis/extracted/community-transfer-workspace/build/dc9-v101-helper.experimental.bin",
+      "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad",
+      "size_bytes": 2069060,
+      "report_path": "analysis/extracted/community-transfer-workspace/build/dc9-v101-helper.experimental.json",
+      "report_sha256": "76225b7eb7f2ad18d4cd9d9fe20b55b71fc47b92d46cdd7c37cf8e299432d8d1",
+      "byte_exact_original": false,
+      "changed_program_bytes": 29,
+      "unchanged_resource_ranges": 11,
+      "checksums": {
+        "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+        "segment_crc32": "119662e0",
+        "segment_crc32_field": "0x10014, little-endian",
+        "whole_file_crc32": "e905a4b7",
+        "whole_file_crc32_field": "last four bytes, big-endian",
+        "both_crc32_valid": true,
+        "main_crc16": "e09f",
+        "main_crc16_valid": true,
+        "main_crc16_range": "0x10000:0x124093 (end exclusive)",
+        "main_crc16_zeroed_words": [
+          "0x10014",
+          "0x10060",
+          "0x10064"
+        ]
+      }
+    }
+  ],
+  "source_components": 43,
+  "assembled_instructions": 2123,
+  "assembled_code_bytes": 6708,
+  "assembled_table_bytes": 531,
+  "unit_tests_passed": 76,
+  "transfer_strict_cases": 1832,
+  "transfer_conditional_cases": 218,
+  "receive_cases": 29495,
+  "register_cases": 266,
+  "conditional_results_are_hardware_validation": false,
+  "git": {
+    "branch": "main",
+    "head": "50dbabfe6a8d8c9d1616616235ce570538270fde",
+    "remote_fetched": false
+  },
+  "preservation": {
+    "snapshot": "analysis/scratch/transfer-before-2026-10-23",
+    "snapshot_files_verified": 96,
+    "all_original_paths_present": true,
+    "original_zip_hashes_verified": 45,
+    "prior_workspace_build_hashes_verified": true
+  },
+  "evidence_sha256": {
+    "scripts/aeon_subset_assembler.py": "d0eb2d84f8418e6c1f28362cb9c9e5bd3a8ae8732ae335f3746697fe3e073fcb",
+    "scripts/aeon_module_model.py": "90cb9fc5ca240e7482bd82ba93c0b6265e502e59a5bf4fae72f0689441883a89",
+    "scripts/reconstruct_dc9_receive.py": "8c65f3628fd960daa3a2a6bb0bb4376a1cd528b5dcf5145431d2b0c5abc1fdee",
+    "scripts/reconstruct_dc9_transfer.py": "c76066da84d6776ba518b0f55ef8b1cc9e2ce6fed0e6a90ae703da01e648297d",
+    "scripts/validate_dc9_transfer.py": "b927e575b011960cde6da359a93da7f49e3af28072949e28d61ac2cc42524f75",
+    "scripts/test_dc9_transfer.py": "b8c7ad894ec1598b457d09f8c7cc5ce282c8783dec02f37fb0ef88dbe2040937",
+    "scripts/firmware_workspace.py": "a827aaadd92e12be4d604926ec2327018ca1d797c8cbdc796c63528d1ed834f4",
+    "analysis/reconstructed/dc9-source-layout.json": "2f557b763f75770a0a4fd58b25840c893848a79c3e34c939f896a39838a6d844",
+    "analysis/dc9-transfer-validation.json": "0c7b91612cf8ec01ec7587e4012f92357a55f7144129beb87c5abb04852ef161",
+    "analysis/dc9-receive-validation.json": "b0c73ce2599fba740a3faa29527b4a7e12ee4f86aacb57b8386b7958046016d4",
+    "analysis/dc9-register-validation.json": "fd842c85fe329c297ceb00eb72bc9cf4bf55a11265e617ab5585c4287aa9309e",
+    "analysis/dc9-module-validation.json": "667122ef4327ec5ec23c00188c09b2aca4c9e6c5f1cf8c5852c24c7425ab1582",
+    "analysis/dc9-source-baseline.json": "23b698a6031594c139adad445c5cd59b6d6ec473ba596cca21dd452a3c106e49",
+    "analysis/dc9-source-experiment.json": "e8568d025831bda68ba7a5e813d22a1dd3d5f71bd60826c31cd441782ea82923",
+    "analysis/extracted/community-transfer-workspace/manifest.json": "1a9d9f11655afeb60df0962451f91366c94527038752de674a86473b2bcefa61",
+    "analysis/extracted/community-transfer-workspace/usb/manifest.json": "7be92378d1e8bc50ab2cbae2e361b9c425ab53e570431d8ad28428dd8912c158"
+  },
+  "complete_source": false,
+  "hardware_tested": false
+}

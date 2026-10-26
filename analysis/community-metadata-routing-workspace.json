@@ -1,0 +1,86 @@
+{
+  "format": "offline-firmware-validation-v1",
+  "started_utc": "2026-10-25T06:29:54.831480+00:00",
+  "git_head": "50dbabfe6a8d8c9d1616616235ce570538270fde",
+  "offline_validation_passed": true,
+  "complete_source": false,
+  "hardware_tested": false,
+  "stages": [
+    "archive",
+    "corpus",
+    "helper-rewrite",
+    "commands",
+    "registers",
+    "receive",
+    "transfer",
+    "timer",
+    "callbacks",
+    "configuration",
+    "apply",
+    "masked-registers",
+    "metadata"
+  ],
+  "limitations": [
+    "Most DC9 application bytes remain pinned vendor input.",
+    "CPU, store, CALL and interleaving assumptions are explicit in individual reports.",
+    "EFE and USB exports are raw references, not community source builds.",
+    "No boot, recovery or physical monitor functionality has been validated."
+  ],
+  "unit_tests": {
+    "run": 115,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "workspace": {
+    "verified_artifacts": 118,
+    "changed_sources": [],
+    "usb": {
+      "verified_raw_images": 2,
+      "installer_sha256": "123035bc7afe8c8a9755b0e53448b926380c1fad3955c3d52e422a62bdc3bd55"
+    },
+    "dc9_byte_exact_component_roundtrip": true,
+    "dc9_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+    "efe_sha256": "e3eeedada1464cfb65b927ed2877ebbeffff0d59ba2d793f0c18ddf7cb8ebd40"
+  },
+  "builds": {
+    "dc9-v101.baseline": {
+      "sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+      "size": 2069060,
+      "resource_ranges_unchanged": 11,
+      "changed_program_bytes": 0
+    },
+    "dc9-v101-helper.experimental": {
+      "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad",
+      "size": 2069060,
+      "resource_ranges_unchanged": 11,
+      "changed_program_bytes": 29
+    },
+    "dc9-v101-layout.experimental": {
+      "sha256": "95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a",
+      "size": 2069060,
+      "resource_ranges_unchanged": 11,
+      "changed_program_bytes": 6
+    }
+  },
+  "source_components": 79,
+  "assembled_code_bytes": 12412,
+  "assembled_instructions": 3952,
+  "assembled_table_bytes": 755,
+  "finished_utc": "2026-10-25T06:31:25.321266+00:00",
+  "validation_directory": "analysis/extracted/firmware-validation-metadata-2026-10-24",
+  "validation_report_sha256": "5edcc92585be3157ea9bf43aa4891669a3fd95211d18f50d710fd36196a375bc",
+  "verified_run_artifacts": 142,
+  "verified_source_identities": 160,
+  "coverage": {
+    "code_bytes": 12412,
+    "application_bytes": 2426560,
+    "percent": 0.5115060002637478,
+    "interpretation": "Coverage proxy, not product/effort completion"
+  },
+  "preservation": {
+    "snapshot": "analysis/scratch/metadata-before-2026-10-24",
+    "verified_saved_files": 164,
+    "all_original_paths_present": true
+  }
+}

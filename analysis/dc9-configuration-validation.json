@@ -1,0 +1,294 @@
+{
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "source-exact configuration with record contracts; execution stops before external hardware apply",
+  "cases": {
+    "strict": {
+      "size_selection": 518,
+      "invalid_layout_prefix": 4,
+      "record_flag95": 20
+    },
+    "sleigh-store": {
+      "record_reset": 24,
+      "record_configure": 36,
+      "six_layout_prefix": 180,
+      "edited_mode2_prefix": 6
+    },
+    "halfword-lane-hypothesis": {
+      "record_reset": 24,
+      "record_configure": 36,
+      "six_layout_prefix": 180,
+      "edited_mode2_prefix": 6
+    }
+  },
+  "strict_cases": 542,
+  "conditional_cases": 492,
+  "source_spans": [
+    {
+      "name": "channel_layout_configure",
+      "address": "0x260824",
+      "size": 990,
+      "sha256": "f3d020d842225bb88dbfd9a9a59225c70194aface7b46bd462635640adba7620",
+      "instruction_count": 314,
+      "visited_by_policy": {
+        "strict": 13,
+        "sleigh-store": 300,
+        "halfword-lane-hypothesis": 300
+      }
+    },
+    {
+      "name": "channel_record_configure",
+      "address": "0x23e7f6",
+      "size": 172,
+      "sha256": "84c5402b861037965b7ccd512901d4e71495956ebb9fe3944e381b996f88802a",
+      "instruction_count": 54,
+      "visited_by_policy": {
+        "strict": 0,
+        "sleigh-store": 54,
+        "halfword-lane-hypothesis": 54
+      }
+    },
+    {
+      "name": "channel_record_reset",
+      "address": "0x23e8a2",
+      "size": 247,
+      "sha256": "20c6c5190c709fb1bfb784ef06e1b4066f5fee66ede3722c0a64b3ac9d16b27a",
+      "instruction_count": 76,
+      "visited_by_policy": {
+        "strict": 0,
+        "sleigh-store": 76,
+        "halfword-lane-hypothesis": 76
+      }
+    },
+    {
+      "name": "channel_record_set95",
+      "address": "0x23e734",
+      "size": 22,
+      "sha256": "7bb43534f2766b8891750a123c029c2f8790f7f2cf753922462c846e4e65f71c",
+      "instruction_count": 7,
+      "visited_by_policy": {
+        "strict": 7,
+        "sleigh-store": 7,
+        "halfword-lane-hypothesis": 7
+      }
+    },
+    {
+      "name": "layout_size_first",
+      "address": "0x260459",
+      "size": 35,
+      "sha256": "5ddf34e4291cc759628e4404028a99a0522116c156f26a2a5860345d0a9ea505",
+      "instruction_count": 11,
+      "visited_by_policy": {
+        "strict": 11,
+        "sleigh-store": 11,
+        "halfword-lane-hypothesis": 11
+      }
+    },
+    {
+      "name": "layout_size_second",
+      "address": "0x26047c",
+      "size": 35,
+      "sha256": "0a40c95cc492f043f1567a7573d1c19bd9bda9c030cdca2ed39ba3639449c1bc",
+      "instruction_count": 11,
+      "visited_by_policy": {
+        "strict": 11,
+        "sleigh-store": 11,
+        "halfword-lane-hypothesis": 11
+      }
+    }
+  ],
+  "layout_records_uint16_le": [
+    [
+      [
+        0,
+        0,
+        3840,
+        2160
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        3840,
+        2160
+      ],
+      [
+        0,
+        0,
+        3840,
+        2160
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1920,
+        2160
+      ],
+      [
+        1920,
+        0,
+        1920,
+        2160
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        3840,
+        1080
+      ],
+      [
+        0,
+        1080,
+        3840,
+        1080
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1920,
+        2160
+      ],
+      [
+        1920,
+        0,
+        1920,
+        1080
+      ],
+      [
+        1920,
+        1080,
+        1920,
+        1080
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      [
+        1920,
+        0,
+        1920,
+        1080
+      ],
+      [
+        0,
+        1080,
+        1920,
+        1080
+      ],
+      [
+        1920,
+        1080,
+        1920,
+        1080
+      ]
+    ]
+  ],
+  "dispatch_targets": [
+    "0x2608fa",
+    "0x26085f",
+    "0x260ad3",
+    "0x260a5b",
+    "0x2609d6",
+    "0x260935"
+  ],
+  "hardware_apply_target": "0x23fad0",
+  "stops_before_calls": [
+    "0x2608e5",
+    "0x260abe"
+  ],
+  "limitations": [
+    "x/y/width/height interpretation is inferred from values and layout behavior, not display hardware execution.",
+    "All six-layout runs stop before applying records to hardware; no framebuffer, scaler or connector behavior is validated.",
+    "24-bit sh_2 follows existing low-halfword sh_1/lh assumptions; pinned SLEIGH uses register-subfield semantics.",
+    "Wide sw_1/sh remain rejected by default; both explicit policies agree here because those stores write zero.",
+    "Physical ISA, data endian, call ABI, runtime table mutation and layout reachability remain unverified.",
+    "Most of the application remains vendor input; editable data tables do not count as recovered executable code."
+  ],
+  "tools_sha256": {
+    "validate_dc9_configuration.py": "1affc50a6acb460df66146f95a26b1b238b0edf08893bdc06a6d9b368bda24fe",
+    "reconstruct_dc9_configuration.py": "66ca49268422d462e054757cee9c1e8023de02c52133740235771e5a309c3449",
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"
+  }
+}

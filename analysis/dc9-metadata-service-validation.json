@@ -1,0 +1,98 @@
+{
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "selector returns and state accumulation prefixes; publication tails tested independently",
+  "cases": {
+    "selector_return": 259,
+    "accumulation_before_common_services": 2574
+  },
+  "strict_cases": 2833,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "isolated_publication_tail": 75
+    },
+    "halfword-lane-hypothesis": {
+      "isolated_publication_tail": 75
+    }
+  },
+  "conditional_cases": 150,
+  "visited_instruction_count": 174,
+  "source_spans": [
+    {
+      "name": "channel_selector_mask",
+      "address": "0x20e687",
+      "end_exclusive": "0x20e6c5",
+      "size": 62,
+      "sha256": "503d41ecc550ba8d64606df4231a6c96f90b271cc9365c00c69fa515c9f71030",
+      "visited_instructions": 25
+    },
+    {
+      "name": "metadata_state_accumulate",
+      "address": "0x20f1ef",
+      "end_exclusive": "0x20f401",
+      "size": 530,
+      "sha256": "de130f6f772da28fcf7c8048f137352b78846f05eb3098743df48e37b12ace2f",
+      "visited_instructions": 139
+    },
+    {
+      "name": "metadata_state_publish",
+      "address": "0x20fe64",
+      "end_exclusive": "0x20fe85",
+      "size": 33,
+      "sha256": "0b0514294ff1d253123dc025f3a40c5352dea3e3eee9d24858f0f828b05835d2",
+      "visited_instructions": 9
+    },
+    {
+      "name": "metadata_state_publish_jump",
+      "address": "0x20ff1b",
+      "end_exclusive": "0x20ff1f",
+      "size": 4,
+      "sha256": "f8a87334317b09abbdd47da47ad254854f463cf3866707143f6103ea0121f8fa",
+      "visited_instructions": 1
+    }
+  ],
+  "selector_outputs": [
+    128,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "dispatch_targets": [
+    "0x20e69f",
+    "0x20e6c1",
+    "0x20e6bd",
+    "0x20e6b9",
+    "0x20e6b5",
+    "0x20e6b0",
+    "0x20e6ab",
+    "0x20e6a6"
+  ],
+  "common_stop_before": "0x20f28c",
+  "common_service_target": "0x20e76c",
+  "limitations": [
+    "Both enable and disable branches invoke the same common service; this focused gate stops before it. Complete conditional runs are in dc9-metadata-registers-validation.json.",
+    "Publication-tail return is isolated and does not prove the preceding service chain ran.",
+    "Shared flag0x4543dd is overwritten by literal bg.sh before OR2, while the +2 low-halfword policy preserves its other bits.",
+    "Conditional store policies, low-byte/halfword semantics, little-endian data and fallthrough CALL remain model hypotheses.",
+    "Selector order is80,01,02,04,08,10,20,40, not a descending bit shift; physical channel assignment unknown."
+  ],
+  "tools_sha256": {
+    "validate_dc9_metadata_service.py": "302a744022f7e1c38bba717ffde016bf236191b9a21888ff576437d0dfaaa834",
+    "reconstruct_dc9_metadata_service.py": "bc163954977625613f2c9cf13e1fb0ad6b98dbf2c8e95a1c0e4e77b2a8229f1c",
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "status": "strict helper validation and separate conditional store-policy experiments",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "strict_store_policy": "reject",
+  "strict_cases": {
+    "memory_copy": 624,
+    "channel_lookup": 1032,
+    "wait_clear_without_delay": 40,
+    "followup_early_return": 40,
+    "response_format_unambiguous": 96
+  },
+  "strict_total": 1832,
+  "conditional_cases": {
+    "sleigh-store": {
+      "masked_update_conditional": 40,
+      "indirect_write_conditional": 18,
+      "indirect_write32_conditional": 4,
+      "indirect_read_conditional": 12,
+      "indirect_read_scripted_retry_conditional": 1,
+      "setting_setter_conditional": 7,
+      "setting_getter_conditional": 7,
+      "followup_pipeline_conditional": 20
+    },
+    "halfword-lane-hypothesis": {
+      "masked_update_conditional": 40,
+      "indirect_write_conditional": 18,
+      "indirect_write32_conditional": 4,
+      "indirect_read_conditional": 12,
+      "indirect_read_scripted_retry_conditional": 1,
+      "setting_setter_conditional": 7,
+      "setting_getter_conditional": 7,
+      "followup_pipeline_conditional": 20
+    }
+  },
+  "conditional_total": 218,
+  "conditional_results_are_hardware_validation": false,
+  "store_policy_definitions": {
+    "reject": "Default: no execution of bg.sw_1 or bg.sh",
+    "sleigh-store": "Literal SLEIGH source store shapes: sw_1 writes 32 bits at decoded address; sh writes source bits 16..31 at decoded address",
+    "halfword-lane-hypothesis": "sw_1 writes low 16 bits at decoded address; sh writes low 16 bits two bytes beyond decoded address",
+    "common_assumptions": "Both run within the existing little-endian data/fallthrough-CALL model; neither executes full SLEIGH P-code",
+    "decoder_endian_declaration": "big"
+  },
+  "raw_channel_keys": [
+    5,
+    6,
+    4,
+    2,
+    1,
+    3
+  ],
+  "setting_roundtrip_observations": [
+    {
+      "policy": "sleigh-store",
+      "input": 0,
+      "setting_bytes": "0000a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "sleigh-store",
+      "input": 24,
+      "setting_bytes": "0000a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "sleigh-store",
+      "input": 25,
+      "setting_bytes": "0000a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "sleigh-store",
+      "input": 50,
+      "setting_bytes": "0000a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "sleigh-store",
+      "input": 100,
+      "setting_bytes": "0000a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "sleigh-store",
+      "input": 101,
+      "setting_bytes": "a5a5a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "sleigh-store",
+      "input": 255,
+      "setting_bytes": "a5a5a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 0,
+      "setting_bytes": "a5a54b00",
+      "getter_byte": 25
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 24,
+      "setting_bytes": "a5a54b00",
+      "getter_byte": 25
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 25,
+      "setting_bytes": "a5a54b00",
+      "getter_byte": 25
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 50,
+      "setting_bytes": "a5a56400",
+      "getter_byte": 50
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 100,
+      "setting_bytes": "a5a59600",
+      "getter_byte": 100
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 101,
+      "setting_bytes": "a5a5a5a5",
+      "getter_byte": 115
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "input": 255,
+      "setting_bytes": "a5a5a5a5",
+      "getter_byte": 115
+    }
+  ],
+  "store_load_evidence": [
+    {
+      "address": "0x26bedf",
+      "bytes": "ecc7b30b",
+      "instruction": "bg.sh -0x4cf8(r7),r6,",
+      "pcode": [
+        "IMARK ram[26bedf:4]",
+        "unique[ab00:4] = r7 + 0xffffb308",
+        "*[ram]unique[ab00:4] = r6"
+      ],
+      "store_source_varnodes": [
+        {
+          "space": "register",
+          "offset": "0x1018",
+          "size": 2
+        }
+      ]
+    },
+    {
+      "address": "0x26beec",
+      "bytes": "ecc7b30b",
+      "instruction": "bg.sh -0x4cf8(r7),r6,",
+      "pcode": [
+        "IMARK ram[26beec:4]",
+        "unique[ab00:4] = r7 + 0xffffb308",
+        "*[ram]unique[ab00:4] = r6"
+      ],
+      "store_source_varnodes": [
+        {
+          "space": "register",
+          "offset": "0x1018",
+          "size": 2
+        }
+      ]
+    },
+    {
+      "address": "0x26bf15",
+      "bytes": "f0e7b30a",
+      "instruction": "bg.lbz r7, -0x4cf6(r7)",
+      "pcode": [
+        "IMARK ram[26bf15:4]",
+        "unique[2e00:4] = r7 + 0xffffb30a",
+        "r7 = 0x0",
+        "r7 = *[ram]unique[2e00:4]"
+      ],
+      "store_source_varnodes": []
+    }
+  ],
+  "retry_flag_direct_displacement_candidates": [
+    {
+      "address": "0x20e4cd",
+      "bytes": "f96a3b9e",
+      "instruction": "bg.sbz 0x3b9e(r10), r11"
+    },
+    {
+      "address": "0x20e507",
+      "bytes": "f0ea3b9e",
+      "instruction": "bg.lbz r7, 0x3b9e(r10)"
+    },
+    {
+      "address": "0x20e512",
+      "bytes": "f8073b9e",
+      "instruction": "bg.sbz 0x3b9e(r7), r0"
+    }
+  ],
+  "retry_flag_scan_limit": "Only direct wide byte accesses with displacement 0x3b9e; computed pointers/aliases are not excluded",
+  "strict_visited_instruction_addresses": [
+    "0x20c711",
+    "0x20c714",
+    "0x20c716",
+    "0x20c718",
+    "0x20c71c",
+    "0x20c720",
+    "0x20c723",
+    "0x20c727",
+    "0x20c72a",
+    "0x20c72d",
+    "0x20c72f",
+    "0x20c733",
+    "0x20c737",
+    "0x20c739",
+    "0x20cd4a",
+    "0x20cd4c",
+    "0x20cd4f",
+    "0x20cd52",
+    "0x20cd55",
+    "0x20cd58",
+    "0x20cd5c",
+    "0x20cd60",
+    "0x20cd63",
+    "0x20cd65",
+    "0x20cd68",
+    "0x20cd6b",
+    "0x20cd6e",
+    "0x20cd71",
+    "0x20cd84",
+    "0x20cd87",
+    "0x20cd8a",
+    "0x20cd8d",
+    "0x20cd90",
+    "0x20cd92",
+    "0x20d2b7",
+    "0x20d2b9",
+    "0x20d2bc",
+    "0x20d2bf",
+    "0x20d2c1",
+    "0x20d2c4",
+    "0x20d2c8",
+    "0x20d2cc",
+    "0x20d2cf",
+    "0x20d2d2",
+    "0x20d2d5",
+    "0x20d2d9",
+    "0x20d2dd",
+    "0x20d2e0",
+    "0x20d2e3",
+    "0x20d2e6",
+    "0x20d2e9",
+    "0x20d2ec",
+    "0x20d2ef",
+    "0x20d2f2",
+    "0x20d2f4",
+    "0x26bdd1",
+    "0x26bdd4",
+    "0x26bdd8",
+    "0x26bddc",
+    "0x26bddf",
+    "0x26bde2",
+    "0x26bde5",
+    "0x26bde9",
+    "0x26bded",
+    "0x26bdf1",
+    "0x26bdf5",
+    "0x26bdf8",
+    "0x26bdfa",
+    "0x26bdfd",
+    "0x26bdff",
+    "0x26be03",
+    "0x26be07",
+    "0x26be0b",
+    "0x26be0e",
+    "0x26be11",
+    "0x26be15",
+    "0x26be19",
+    "0x26be1c",
+    "0x26be1f",
+    "0x26be23",
+    "0x26be27",
+    "0x26be2b",
+    "0x26be2f",
+    "0x26be32",
+    "0x26be35",
+    "0x26be37",
+    "0x26be3a",
+    "0x26be3d",
+    "0x26be40",
+    "0x26be43",
+    "0x26be47",
+    "0x26be4a",
+    "0x26be4e",
+    "0x26be51",
+    "0x26be55",
+    "0x26be58",
+    "0x26be5c",
+    "0x26be5f",
+    "0x26be63",
+    "0x26be67",
+    "0x26be69",
+    "0x26be6b",
+    "0x26be6e",
+    "0x26be71",
+    "0x26be75",
+    "0x26be79",
+    "0x26be7c",
+    "0x26be80",
+    "0x26be84",
+    "0x26be87",
+    "0x26be8a",
+    "0x26be8e",
+    "0x26be92",
+    "0x26be95",
+    "0x26be98",
+    "0x26be9c",
+    "0x26bea0",
+    "0x26bea3",
+    "0x26bea6",
+    "0x26bea9",
+    "0x26beac",
+    "0x26beae",
+    "0x2aab1e",
+    "0x2aab20",
+    "0x2aab24",
+    "0x2aab27",
+    "0x2aab2a",
+    "0x2aab2d",
+    "0x2aab30",
+    "0x2aab32",
+    "0x2aab35",
+    "0x2aab38",
+    "0x2aab3a",
+    "0x2aab3c",
+    "0x2aab40",
+    "0x2aab42",
+    "0x2aab45",
+    "0x2aab48",
+    "0x2aab4b",
+    "0x2aab4e",
+    "0x2aab51",
+    "0x2aab54",
+    "0x2aab57",
+    "0x2aab5a",
+    "0x2aab5d",
+    "0x2aab60",
+    "0x2aab62",
+    "0x2aab66",
+    "0x2aab69",
+    "0x2aab6c",
+    "0x2aab6f",
+    "0x2aab71",
+    "0x2aab73",
+    "0x2aab75"
+  ],
+  "source_spans": [
+    {
+      "name": "slot_lookup_channel",
+      "begin": "0x20c711",
+      "end_exclusive": "0x20c73b",
+      "sha256": "ac2b838b55a93cc9044f71e825bb607ddf02db3ce623321be4a25a8cd1dfadd5"
+    },
+    {
+      "name": "slot_followup",
+      "begin": "0x20d2b7",
+      "end_exclusive": "0x20d33c",
+      "sha256": "457e55eed38efb1b7ebd76fd6a3a98838cea66ba428a2d91b290eed44f821aae"
+    },
+    {
+      "name": "indirect_buffer_write8",
+      "begin": "0x20e3be",
+      "end_exclusive": "0x20e43a",
+      "sha256": "d4f5d1e8399de292132bb1bacf87e3570c3b576e748387688cabcbfa179dd8da"
+    },
+    {
+      "name": "indirect_buffer_write32_reverse",
+      "begin": "0x20e43a",
+      "end_exclusive": "0x20e47e",
+      "sha256": "4b84919b65bfb011334c27909fd2a214d49906f4abddf998361847bfcf734888"
+    },
+    {
+      "name": "memory_copy",
+      "begin": "0x2aab1e",
+      "end_exclusive": "0x2aab77",
+      "sha256": "238b7d6d52823403813d99bcf90814db8588130ebc5987c2935565bf6edad745"
+    },
+    {
+      "name": "slot_response_format",
+      "begin": "0x26bdd1",
+      "end_exclusive": "0x26bf22",
+      "sha256": "0094cf6a55da8052c8de1d8f6a051a98a2c96add37af6a1d79ea865f0af7fa8c"
+    },
+    {
+      "name": "slot_transmit_prepare",
+      "begin": "0x20cd94",
+      "end_exclusive": "0x20cf64",
+      "sha256": "5d044891adebb7f369266f49da956298288dd2fc8c0bc0370dd4a9c9aabc352d"
+    },
+    {
+      "name": "slot_wait_and_clear",
+      "begin": "0x20cd4a",
+      "end_exclusive": "0x20cd94",
+      "sha256": "26a8aa81dcc9938a0e286a31871059d86288fc1a7fce1fd9742a2495efd78a08"
+    }
+  ],
+  "tool_sha256": {
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d",
+    "validate_dc9_transfer.py": "b927e575b011960cde6da359a93da7f49e3af28072949e28d61ac2cc42524f75"
+  },
+  "limitations": [
+    "Neither store policy has independent physical ISA confirmation",
+    "Plain register bytes do not model bus completion, FIFO, acknowledgement or asynchronous flag updates",
+    "Conditional full pipeline covers selected inputs; this is not hardware or full firmware validation",
+    "Delay helper 0x2420bb remains unresolved; flag-6 wait path is not completed",
+    "Current lookup table keys are archived data, not proof of runtime channel assignment"
+  ]
+}

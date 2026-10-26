@@ -5,6 +5,27 @@
     "rebuilt_sha256": "5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "d788e343",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "81ad832d",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "1d8c",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x118727 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -167,6 +188,27 @@
     "rebuilt_sha256": "e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "01652ffd",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "ee105c08",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "29f6",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x118728 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -329,6 +371,27 @@
     "rebuilt_sha256": "d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "bfa55658",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "50f4e20c",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "9aaf",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x12546a (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -491,6 +554,27 @@
     "rebuilt_sha256": "62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "95d87048",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "2bf164a5",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "9fe9",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x122231 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -653,6 +737,27 @@
     "rebuilt_sha256": "536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "d1e86dd2",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "218be20d",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "9300",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x1227e7 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -815,6 +920,27 @@
     "rebuilt_sha256": "199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "dc85a37e",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "3ebb0786",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "223c",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x12295d (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -977,6 +1103,27 @@
     "rebuilt_sha256": "ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "f793b39b",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "fc7bef6f",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "6dc8",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x122944 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -1139,6 +1286,27 @@
     "rebuilt_sha256": "136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "f3613e44",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "fd26d381",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "6124",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x125ad8 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -1301,6 +1469,27 @@
     "rebuilt_sha256": "d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3",
     "byte_exact": true,
     "component_count": 16,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "94cd4117",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "c9a87fc0",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "be15",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x124d0f (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -1452,6 +1641,27 @@
     "rebuilt_sha256": "bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "96c77a5b",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "d5d918b0",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "e4f2",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x125a2b (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -1614,6 +1824,27 @@
     "rebuilt_sha256": "ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d",
     "byte_exact": true,
     "component_count": 16,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "ed4f2cf3",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "3782200e",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "2e46",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x124d9f (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -1765,6 +1996,27 @@
     "rebuilt_sha256": "435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "fc8e1d62",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "157ca0f5",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "b076",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x122937 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",
@@ -1927,6 +2179,27 @@
     "rebuilt_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
     "byte_exact": true,
     "component_count": 17,
+    "regenerated_checksums": [
+      "main_crc16",
+      "segment_crc32",
+      "whole_file_crc32"
+    ],
+    "checksums": {
+      "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+      "segment_crc32": "68ea7417",
+      "segment_crc32_field": "0x10014, little-endian",
+      "whole_file_crc32": "df78e833",
+      "whole_file_crc32_field": "last four bytes, big-endian",
+      "both_crc32_valid": true,
+      "main_crc16": "ddf3",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x125ad9 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
+    },
     "resources": [
       {
         "id": "0109",

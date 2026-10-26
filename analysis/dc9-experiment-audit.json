@@ -1,0 +1,293 @@
+{
+  "source_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "source_path": "analysis/extracted/0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9/ES07DC9_V101_rev1148_USB update.bin",
+  "method": "Direct parsing, bit-at-a-time CRCs, exhaustive byte comparisons; no packer/parser imports",
+  "hardware_validated": false,
+  "results": [
+    {
+      "kind": "baseline",
+      "sha256": "5e79a74aef972941d232a601ae7a853546f87aaab6ee2f5097b0466a7f93ad68",
+      "file_size": 2069060,
+      "program_sha256": "9844f058cf533e50eb994ff82f37d01da9084158dfe22cccc68c151061baaf21",
+      "segment_end": "0x124096",
+      "deflate_bytes": 985104,
+      "allocation_growth": false,
+      "zero_filled_freed_bytes": 6725,
+      "main_crc16": "be5c",
+      "segment_crc32": "8bbabff1",
+      "whole_file_crc32": "e58450b5",
+      "independent_bitwise_checksums_valid": true,
+      "raw_changes_confined_to_allowed_spans": true,
+      "allowed_raw_spans_end_exclusive": [
+        [
+          "0x10008",
+          "0x10010"
+        ],
+        [
+          "0x10014",
+          "0x10018"
+        ],
+        [
+          "0x311ca",
+          "0x311ce"
+        ],
+        [
+          "0x33880",
+          "0x125adb"
+        ],
+        [
+          "0x1f9240",
+          "0x1f9244"
+        ]
+      ],
+      "changed_prefix_offsets": [
+        "0x114a",
+        "0x114b"
+      ],
+      "changed_expanded_program_offsets": [],
+      "changed_program_bytes": 0,
+      "resources_identical": true,
+      "resources": [
+        {
+          "id": "0x109",
+          "offset": "0x125ae0",
+          "size": 131080,
+          "flags": 0,
+          "sha256": "b81e41d663ccc8badef26443d9a721e50d3c365755efa6814919899e0bfe7ad8"
+        },
+        {
+          "id": "0x110",
+          "offset": "0x145ae8",
+          "size": 32,
+          "flags": 4,
+          "sha256": "12a9093cbd5bed710c15892792f399f8239ba750395eb9aa51360d9a778a20bf"
+        },
+        {
+          "id": "0x111",
+          "offset": "0x145b08",
+          "size": 32,
+          "flags": 4,
+          "sha256": "ccff75fc4b96f88cb93a4954260edb1ac5964af4b79416461003278308728596"
+        },
+        {
+          "id": "0x112",
+          "offset": "0x145b28",
+          "size": 2384,
+          "flags": 4,
+          "sha256": "fbad0b30328d000954440f910238fb5fac7380e7f6d71468d78ea3030467aae9"
+        },
+        {
+          "id": "0x120",
+          "offset": "0x146478",
+          "size": 32,
+          "flags": 4,
+          "sha256": "12a9093cbd5bed710c15892792f399f8239ba750395eb9aa51360d9a778a20bf"
+        },
+        {
+          "id": "0x121",
+          "offset": "0x146498",
+          "size": 32,
+          "flags": 4,
+          "sha256": "ccff75fc4b96f88cb93a4954260edb1ac5964af4b79416461003278308728596"
+        },
+        {
+          "id": "0x122",
+          "offset": "0x1464b8",
+          "size": 4568,
+          "flags": 4,
+          "sha256": "9d9957c35dfe06e8ddaf2d7baaf85f75fa585dc72c238ff5e8705a7f9cb625ca"
+        },
+        {
+          "id": "0x817",
+          "offset": "0x147690",
+          "size": 5424,
+          "flags": 4,
+          "sha256": "9fdf52e9b924784786fcd643e143488630f0e1b961705a56ab767dff35ad4af7"
+        },
+        {
+          "id": "0x827",
+          "offset": "0x148bc0",
+          "size": 1648,
+          "flags": 4,
+          "sha256": "44a262e4fc8c24848d1b55d9d2167e6a9ebfef9aad83961b6f9451d5502bed14"
+        },
+        {
+          "id": "0x10f",
+          "offset": "0x149230",
+          "size": 720904,
+          "flags": 0,
+          "sha256": "998dd818c188e3441e96a771c1e232ccb3591759bf7e87fb7eac5f699641ccef"
+        },
+        {
+          "id": "0xd000",
+          "offset": "0x1f9238",
+          "size": 8,
+          "flags": 0,
+          "sha256": "a9bc3293a8964169ff9efb36352bc584719fa80edc7fbd181487b6842563fef6"
+        }
+      ],
+      "path": "analysis/extracted/rebuild/dc9-v101-crc16-corrected.experimental.bin"
+    },
+    {
+      "kind": "helper",
+      "sha256": "d88a1683bed773e1444fa8b0023852b5c48f95a2a9481bfa360036097dc734ad",
+      "file_size": 2069060,
+      "program_sha256": "9858c1ef4dc9b7583b68407b9082789b74b55ff1bbdf1787142395c0eaa9e28f",
+      "segment_end": "0x124095",
+      "deflate_bytes": 985103,
+      "allocation_growth": false,
+      "zero_filled_freed_bytes": 6726,
+      "main_crc16": "e09f",
+      "segment_crc32": "119662e0",
+      "whole_file_crc32": "e905a4b7",
+      "independent_bitwise_checksums_valid": true,
+      "raw_changes_confined_to_allowed_spans": true,
+      "allowed_raw_spans_end_exclusive": [
+        [
+          "0x10008",
+          "0x10010"
+        ],
+        [
+          "0x10014",
+          "0x10018"
+        ],
+        [
+          "0x311ca",
+          "0x311ce"
+        ],
+        [
+          "0x33880",
+          "0x125adb"
+        ],
+        [
+          "0x1f9240",
+          "0x1f9244"
+        ]
+      ],
+      "changed_prefix_offsets": [
+        "0x114a",
+        "0x114b"
+      ],
+      "changed_expanded_program_offsets": [
+        "0x4061",
+        "0x4062",
+        "0x4063",
+        "0x4064",
+        "0x4065",
+        "0x4066",
+        "0x4067",
+        "0x4068",
+        "0x4069",
+        "0x406a",
+        "0x406b",
+        "0x406c",
+        "0x406d",
+        "0x406e",
+        "0x406f",
+        "0x4070",
+        "0x4071",
+        "0x4072",
+        "0x4073",
+        "0x4074",
+        "0x4075",
+        "0x4076",
+        "0x4077",
+        "0x4078",
+        "0x4079",
+        "0x407a",
+        "0x407b",
+        "0x407c",
+        "0x407d"
+      ],
+      "changed_program_bytes": 29,
+      "resources_identical": true,
+      "resources": [
+        {
+          "id": "0x109",
+          "offset": "0x125ae0",
+          "size": 131080,
+          "flags": 0,
+          "sha256": "b81e41d663ccc8badef26443d9a721e50d3c365755efa6814919899e0bfe7ad8"
+        },
+        {
+          "id": "0x110",
+          "offset": "0x145ae8",
+          "size": 32,
+          "flags": 4,
+          "sha256": "12a9093cbd5bed710c15892792f399f8239ba750395eb9aa51360d9a778a20bf"
+        },
+        {
+          "id": "0x111",
+          "offset": "0x145b08",
+          "size": 32,
+          "flags": 4,
+          "sha256": "ccff75fc4b96f88cb93a4954260edb1ac5964af4b79416461003278308728596"
+        },
+        {
+          "id": "0x112",
+          "offset": "0x145b28",
+          "size": 2384,
+          "flags": 4,
+          "sha256": "fbad0b30328d000954440f910238fb5fac7380e7f6d71468d78ea3030467aae9"
+        },
+        {
+          "id": "0x120",
+          "offset": "0x146478",
+          "size": 32,
+          "flags": 4,
+          "sha256": "12a9093cbd5bed710c15892792f399f8239ba750395eb9aa51360d9a778a20bf"
+        },
+        {
+          "id": "0x121",
+          "offset": "0x146498",
+          "size": 32,
+          "flags": 4,
+          "sha256": "ccff75fc4b96f88cb93a4954260edb1ac5964af4b79416461003278308728596"
+        },
+        {
+          "id": "0x122",
+          "offset": "0x1464b8",
+          "size": 4568,
+          "flags": 4,
+          "sha256": "9d9957c35dfe06e8ddaf2d7baaf85f75fa585dc72c238ff5e8705a7f9cb625ca"
+        },
+        {
+          "id": "0x817",
+          "offset": "0x147690",
+          "size": 5424,
+          "flags": 4,
+          "sha256": "9fdf52e9b924784786fcd643e143488630f0e1b961705a56ab767dff35ad4af7"
+        },
+        {
+          "id": "0x827",
+          "offset": "0x148bc0",
+          "size": 1648,
+          "flags": 4,
+          "sha256": "44a262e4fc8c24848d1b55d9d2167e6a9ebfef9aad83961b6f9451d5502bed14"
+        },
+        {
+          "id": "0x10f",
+          "offset": "0x149230",
+          "size": 720904,
+          "flags": 0,
+          "sha256": "998dd818c188e3441e96a771c1e232ccb3591759bf7e87fb7eac5f699641ccef"
+        },
+        {
+          "id": "0xd000",
+          "offset": "0x1f9238",
+          "size": 8,
+          "flags": 0,
+          "sha256": "a9bc3293a8964169ff9efb36352bc584719fa80edc7fbd181487b6842563fef6"
+        }
+      ],
+      "path": "analysis/extracted/rebuild/dc9-v101-helper-rewrite.experimental.bin"
+    }
+  ],
+  "historical_experiment": {
+    "sha256": "1460a4608062167bcda589aad57567cd9528d00d6f3349f507b80dc2907d7873",
+    "stored_main_crc16": "ddf3",
+    "required_main_crc16": "be5c",
+    "main_crc16_valid": false,
+    "status": "Preserved historical experiment; superseded by corrected baseline"
+  }
+}

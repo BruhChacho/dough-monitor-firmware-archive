@@ -6,25 +6,107 @@ small, manually reconstructed routines with evidence and stated uncertainties.
 Original vendor source names, comments, headers, and build systems have not
 been recovered.
 
-Start with the [latest format/build report](2026-10-20_reverse-spectrum-one-report.md)
+Start with the [raw files and community build guide](../firmware/README.md),
+the [latest layout-setup report](2026-10-25_reverse-dc9-layout-setup-report.md),
+the [consumer milestone report](2026-10-25_reverse-dc9-consumers-report.md),
+the [historical metadata report covering configuration, apply, routing and service milestones](2026-10-24_reverse-dc9-metadata-report.md),
+the [timer, callback and combined-validation report](2026-10-23_reverse-dc9-timer-report.md),
+the [transfer-source and store-hypothesis report](2026-10-23_reverse-dc9-transfer-report.md),
+the [receive-source reconstruction report](2026-10-23_reverse-dc9-receive-report.md),
+the [workspace and register-source report](2026-10-23_reverse-dc9-workspace-report.md),
+the [command-path reconstruction and execution report](2026-10-22_reverse-dc9-module-report.md),
+the [source baseline and command-routing report](2026-10-21_reverse-dc9-source-report.md),
+the [corrected checksum and helper integration report](2026-10-21_reverse-dc9-validation-report.md),
 or the [initial cross-family report](2026-10-19_reverse-dough-report.md).
+
+The [2026-10-20 report](2026-10-20_reverse-spectrum-one-report.md) is historical:
+its recompression experiment fails the subsequently recovered main CRC16.
+The corrected baseline and helper rewrite pass offline validation, but neither
+has been booted on a monitor or constitutes a complete firmware source build.
+The configuration milestone added editable layout data, followed by bounded
+apply, metadata-routing and shared-service recovery. The current source overlay
+contains 104 components, 5,025 instructions and 15,723 code bytes (about 0.648%
+of the expanded application), plus nine tables / 795 bytes. This percentage is
+a coverage proxy, not engineering or product completion. The layout-setup gate
+passed 142 repository tests, 259 strict setup cases, and 46 conditional cases.
+Its model reaches the recovered auxiliary-record reset under selected masks
+and conditional store hypotheses. The full-apply prefix was exercised under
+both store policies; it reaches `0x220aa3` and stops before `0x21d3b1`. The
+thirteen-record path is not complete. The combined gate retains three
+2,069,060-byte BINs with unchanged hashes (`0b5d8350`, `d88a1683`, `95a06b2f`)
+and eleven unchanged resource spans. The previous consumer gate passed 132 repository tests,
+2,646 strict consumer cases, 262 strict register cases, and 5,336 conditional
+cases.
+Metadata uses plain-byte memory and does not model hardware. Layout geometry
+remains inferred and untested on a display. The standalone
+rectangle experiment SHA256 is
+`95a06b2fc44fa9e952e6dd901484936d8545ae9490061abb446e91debe02bb1a`.
 
 ## Results to explore
 
 | Area | Result | Evidence |
 |---|---|---|
+| Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source, separate USB hub/VL103R binaries; latest layout-setup gate passed 142 tests | [Build guide](../firmware/README.md), [layout-setup report](2026-10-25_reverse-dc9-layout-setup-report.md), [workspace summary](community-layout-setup-workspace.json), [latest validation](extracted/firmware-validation-layout-setup-2026-10-25/validation.json), [latest workspace](extracted/firmware-validation-layout-setup-2026-10-25/workspace/README.md) |
+| DC9 partial source baseline | Current overlay: 104 routines/fragments (15,723 code bytes; 5,025 instructions), nine tables (795 bytes); byte-identical stock BIN retained | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [layout-setup report](2026-10-25_reverse-dc9-layout-setup-report.md), [current builds](extracted/firmware-validation-layout-setup-2026-10-25/workspace/build/) |
+| DC9 layout configuration | Historical configuration milestone: 98 repository tests; 542 strict and 492 conditional cases; six layouts; six expanded bytes changed in rectangle example | [Configuration section](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-configuration-2026-10-23/validation.json) |
+| DC9 apply guards | 102 tests passed; 2,965 strict apply cases using explicitly supplied continuation states; full apply not executed | [Configuration and apply report](2026-10-24_reverse-dc9-configuration-report.md), [latest validation](extracted/firmware-validation-apply-2026-10-24/validation.json), [apply summary](community-apply-workspace.json) |
+| DC9 metadata routing and masked-register paths | Historical 79-component gate passed 115 tests; 2,433 strict and 290 conditional metadata cases; 32 default masked-store rejections and 64 conditional cases across two policies | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-2026-10-24/validation.json), [routing summary](community-metadata-routing-workspace.json) |
+| DC9 metadata service | Historical 83-component gate passed 118 tests; 2,833 strict and 150 conditional cases. Both enable states stopped before service `0x20e76c`; publication tail was tested independently | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-service-2026-10-24/validation.json), [service summary](community-metadata-workspace.json) |
+| DC9 layout setup | Gate passed 142 repository tests, 259 strict setup cases, and 46 conditional cases. Full-apply prefix ran under both policies and stops at `0x220aa3`, before `0x21d3b1` | [Layout-setup report](2026-10-25_reverse-dc9-layout-setup-report.md), [validation](extracted/firmware-validation-layout-setup-2026-10-25/validation.json), [summary](community-layout-setup-workspace.json) |
+| DC9 metadata consumers | Historical gate passed 132 tests; 2,646 strict consumer cases, 262 strict register cases, and 5,336 conditional cases. Accumulation and six-record reset modeled under both store policies; full apply at that snapshot stopped at `0x23faf2` before `0x22dc46` | [Consumer report](2026-10-25_reverse-dc9-consumers-report.md), [validation](extracted/firmware-validation-metadata-consumers-2026-10-25/validation.json), [summary](community-metadata-consumers-workspace.json) |
+| DC9 timer and callback paths | 424 strict timer cases, 3,760 conditional timer cases, 2,130 strict callback/dispatch cases; explicit partial paths and interleaving assumptions | [Timer validation](dc9-timer-validation.json), [callback validation](dc9-callback-validation.json), [timer trace](dc9-timer-path.json) |
+| DC9 transfer dependencies | 1,832 cases rejecting ambiguous stores, 218 separate store-hypothesis experiments, including selected complete follow-up/transmit paths | [Transfer validation](dc9-transfer-validation.json) |
+| DC9 receive/transmit service | Full handler and thirteen channel/state helpers reconstructed; 29,495 plain-memory cases including explicitly partial paths | [Receive validation](dc9-receive-validation.json), [control flow](dc9-receive-path.json) |
+| DC9 register access | 266 plain-memory cases for byte/16-bit access, broadcast writes and slot selection; masked-update source recovered with unresolved store width | [Register validation](dc9-register-validation.json) |
+| DC9 RAM command path | Command `0x32`, three-plane data operations, parent selector path, 218 helper comparisons through callers; explicit CALL hypothesis | [Bounded validation](dc9-module-validation.json), [packet entry](dc9-packet-entry.json) |
+| DC9 receive/register path | Eight-slot consumer, receive count/length/state fields, static register base `0xa0000000` and five channel-offset cases | [Ingress](dc9-ingress-path.json), [register mapping](dc9-register-map.json) |
+| DC9 command routing | Selector `0xcc`, three command groups, precedence and secondary switch map; CALL-model gap identified | [Routing evidence](dc9-command-routing.json) |
 | Spectrum One D02/D03/DC9 | Raw DEFLATE program recovered from all 13 distinct images | [Segment maps](mstar-layouts.json), [AEON excerpts](aeon-excerpts.md) |
-| Spectrum One containers | Two CRC32s per image, 141 resource CRC16s, 13 byte-exact roundtrips | [Roundtrip results](mstar-roundtrips.json) |
-| DC9 v101 build experiment | New DEFLATE stream with identical decoded program; hardware untested | [Recompression](dc9-recompression.json), [boot trace](mstar-boot-excerpts.md) |
+| Spectrum One containers | Main CRC16 and two CRC32s per image, 141 resource CRC16s, 13 byte-exact roundtrips | [Roundtrip results](mstar-roundtrips.json) |
+| DC9 v101 corrected baseline | New DEFLATE stream with identical decoded program and all three checksums valid | [Corrected recompression](dc9-recompression-corrected.json), [independent audit](dc9-experiment-audit.json) |
+| DC9 helper integration | 1,557 bounded comparisons; 29 changed bytes within one 39-byte routine; hardware untested | [Helper experiment](dc9-helper-experiment.json), [emulation](aeon-rewrite-validation.json) |
 | Spectrum One USB packages | Releases 17/18/19 share the same hub image and have different VL103R images | [Installer inventory](installers.json) |
 | Glossy Spectrum One DC9 | Startup mapping and a table-search routine reconstructed | [Partial C](reconstructed/spectrum_one_helpers.c) |
 | DC9 helper code generation | 13 assembly instructions reproduce the original 39 bytes exactly | [Assembly source](reconstructed/spectrum_one_table_helper.aeon.s), [build evidence](aeon-helper-build.json) |
 | Spectrum Black 32 E91/EFE | A model-value write routine found in eight images | [Decoded code](black32-code.json), [partial C](reconstructed/black32_model_value.c) |
 | Black 32 v1.0.19 variants | Nine changed bytes across the entire 1,638,400-byte image | [Comparisons](comparisons.json) |
+| Black 32 trailer constraints | 11 originals checked; simple whole-body sums/XOR and 512 CRC8 hypotheses do not explain the final byte across five variant pairs | [Integrity probe](black32-integrity-probe.json) |
 | Black 27 E2D/E2F updater | Python entry recovered; start-flow checked against bytecode; communication module identified | [Flow analysis](reconstructed/black27-start-flow.md), [native metadata](updater.json) |
 | All downloaded packages | 66 distinct archive members, including 35 raw images and five PE programs | [Inventory](inventory.json), [profiles](profiles.json) |
 
 ## Reproduce the analysis
+
+Run the combined offline gates and build fresh firmware files:
+
+```bash
+.venv/bin/python scripts/validate_firmware_repo.py --output analysis/extracted/my-validation
+```
+
+This requires the existing local extraction and decoder setup described below.
+It writes only a new generated directory, preserving earlier reports and builds.
+See the [build guide](../firmware/README.md#validate-and-build-everything-offline)
+for outputs and validation limits.
+
+Build the pinned stock baseline from recovered assembly plus the vendor remainder:
+
+```bash
+.venv/bin/python scripts/build_dc9_source_baseline.py --output analysis/extracted/rebuild/dc9-v101-source.baseline.bin
+```
+
+Existing outputs are never overwritten; use a fresh filename on repeat runs.
+Baseline mode rejects changed source. For named same-size replacements, see the
+[explicit experimental build command](2026-10-21_reverse-dc9-source-report.md#build-and-reproduce).
+Neither mode certifies device compatibility or hardware operation.
+
+For the transferred Ubuntu checkout, use `.venv/bin/python` from the repository
+root. Python 3.12.15, pypcode 4.0.1 and zlib 1.3.2 were used for the latest
+validation. The helper scripts prepend `.tools/python`, which in this checkout
+links to the virtualenv's packages; the validation JSON records the resolved module
+path, version and compiled SLEIGH hash. No dependency installation or network
+access was needed. See the [latest report's commands](2026-10-21_reverse-dc9-validation-report.md#reproduce)
+for the offline validation sequence and fresh experimental output names.
+
+The following is the original setup and cross-family analysis procedure:
 
 Run from the repository root with Python 3.12 and the ZIP files present
 (`git lfs pull` if necessary). Python 3.12 was used for the results here;
@@ -112,9 +194,9 @@ all bytes in the image.
    attach names only when callers or data establish their meaning.
 2. **Black 32:** establish runtime mapping and remaining instruction support;
    trace references to the model-value address and recover larger functions.
-3. **Update formats:** CRC32 and resource CRC16 validation and untouched
-   reconstruction now pass. Resolve the main trailer's final two bytes and
-   other validation consumers before treating recompressed images as releases.
+3. **Update formats:** normalized main CRC16, both CRC32s, resource CRC16s and
+   untouched reconstruction now pass. Trace other validation consumers and
+   hardware constraints before considering any release.
 4. **USB hub firmware:** installers are extracted and hub/PD payloads separated;
    recover their code and update protocols with model-specific evidence.
 5. **Buildability:** reconstruct dependencies, linker layout, startup,

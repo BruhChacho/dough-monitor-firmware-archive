@@ -1,0 +1,304 @@
+{
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "strict guards and explicitly supplied continuation states; full apply unexecuted",
+  "cases": {
+    "apply_entry_before_metadata_service": 1,
+    "apply_empty_three_record_continuation": 2,
+    "apply_active_record_before_service": 12,
+    "rectangle_first_set_bit_copy_prefix": 105,
+    "source_switch_guard_return": 2040,
+    "source_switch_guard_prefix": 24,
+    "engine_guard_prefix": 4,
+    "engine_guard_return": 254,
+    "poll_bypass_return": 384,
+    "poll_before_ambiguous_countdown_store": 128,
+    "update_range_first_record_prefix": 5,
+    "metadata_reset_iteration_prefix": 6
+  },
+  "total_cases": 2965,
+  "visited_instruction_count": 159,
+  "source_spans": [
+    {
+      "name": "channel_layout_apply",
+      "address": "0x23fad0",
+      "end_exclusive": "0x23fc0a",
+      "size": 314,
+      "sha256": "f632b88db4e19e54eb903726b8b27e56cf0b13d2b1615b05a6796b0f50469232",
+      "visited_instructions": 64
+    },
+    {
+      "name": "channel_source_switch",
+      "address": "0x23fc0a",
+      "end_exclusive": "0x23fd13",
+      "size": 265,
+      "sha256": "1c62c028b2d4a58b11fb4eb6800f601f7d935ad3309a1a58ca3d67982649f517",
+      "visited_instructions": 30
+    },
+    {
+      "name": "engine_prepare",
+      "address": "0x204000",
+      "end_exclusive": "0x204059",
+      "size": 89,
+      "sha256": "f85664bd0091df4b9178931bae554822b1844a069b38debc87fd21ce600ec246",
+      "visited_instructions": 11
+    },
+    {
+      "name": "channel_update_range",
+      "address": "0x22ac17",
+      "end_exclusive": "0x22aca0",
+      "size": 137,
+      "sha256": "349e033b4c78fb51f475b5247cee8c54eb7fa63c77f4379d7f237ce1b7000b1d",
+      "visited_instructions": 24
+    },
+    {
+      "name": "channel_metadata_reset",
+      "address": "0x22aca0",
+      "end_exclusive": "0x22acf2",
+      "size": 82,
+      "sha256": "c801bb641622c2b8214f418cfa968d0d807f14c923d03d8bef93f316c74e0cbb",
+      "visited_instructions": 13
+    },
+    {
+      "name": "configuration_poll_wait",
+      "address": "0x2421d3",
+      "end_exclusive": "0x242247",
+      "size": 116,
+      "sha256": "236b358bbd4a145a4ef7cc8a2eee383529cb9379f80e3c456515e985ba536e59",
+      "visited_instructions": 17
+    }
+  ],
+  "external_dependencies": [
+    {
+      "site": "0x20401d",
+      "target": "0x21ffb3",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x20403c",
+      "target": "0x21d86d",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x204055",
+      "target": "0x22d986",
+      "kind": "jump",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x22ac52",
+      "target": "0x2271a9",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x22ac69",
+      "target": "0x22ab1c",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x22ac79",
+      "target": "0x22aa4e",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x22acaf",
+      "target": "0x23d3a0",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x22acd1",
+      "target": "0x20f1ef",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x23faf2",
+      "target": "0x22dc46",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x23faf8",
+      "target": "0x222fca",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x23fb0e",
+      "target": "0x22607c",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fb1b",
+      "target": "0x220a8b",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x23fb29",
+      "target": "0x22d986",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x23fb33",
+      "target": "0x23d349",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fb37",
+      "target": "0x2250e8",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fb3b",
+      "target": "0x226100",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fb91",
+      "target": "0x22eb07",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fb9a",
+      "target": "0x2247fb",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fba0",
+      "target": "0x22683c",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fba8",
+      "target": "0x222cbd",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fc04",
+      "target": "0x23d4fc",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x23fc4a",
+      "target": "0x22e68a",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fc52",
+      "target": "0x22dd9a",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fc5a",
+      "target": "0x225f40",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fc84",
+      "target": "0x22acf2",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fc90",
+      "target": "0x239922",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fcc7",
+      "target": "0x22701c",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fcd5",
+      "target": "0x2271a9",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x23fcf5",
+      "target": "0x23e74a",
+      "kind": "jump",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x242204",
+      "target": "0x21d3b1",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x24220b",
+      "target": "0x23dd44",
+      "kind": "call",
+      "recovered_in_layout": true
+    },
+    {
+      "site": "0x242225",
+      "target": "0x21d3b1",
+      "kind": "call",
+      "recovered_in_layout": false
+    },
+    {
+      "site": "0x24222c",
+      "target": "0x23dd44",
+      "kind": "call",
+      "recovered_in_layout": true
+    }
+  ],
+  "record_geometry_copy": {
+    "source_base": "0x4821ec",
+    "source_stride": 168,
+    "source_offset": "0x18",
+    "destination_base": "0x47fa9c",
+    "destination_stride": 124,
+    "destination_offset": "0x20",
+    "byte_count": 8,
+    "destination_index": "lowest remaining set bit of uint16 record mask"
+  },
+  "limitations": [
+    "Little-endian data, fallthrough CALL and low-halfword semantics remain model hypotheses.",
+    "External services are never stubbed. Continuations supply explicit states; they do not validate prior calls.",
+    "Only the first mask-selected copy is executed before service0x23d4fc; later iteration and hardware effects unverified.",
+    "Sixteen mapped mask destinations are a synthetic uint16 fixture, not a physical engine count.",
+    "Three-record flag loop follows four-engine preparation; earlier service effects remain unresolved.",
+    "Conditional poll execution stops before unresolved countdown store; no timing or device completion claim."
+  ],
+  "tools_sha256": {
+    "validate_dc9_apply.py": "a17638af2e5cc9983b3439d5c60ee192199f504cda71027c925a618125cda2de",
+    "reconstruct_dc9_apply.py": "0851770e995e7f528392b59cb82d482055e4dcc3cacddbffe4166528a21ea00a",
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"
+  }
+}

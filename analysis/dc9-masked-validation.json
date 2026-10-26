@@ -1,0 +1,123 @@
+{
+  "status": "masked register arithmetic validated using plain-byte memory and explicit store hypotheses",
+  "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "tool_sha256": {
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d",
+    "validate_dc9_masked.py": "aa563eeb40be4ca63f338321f9f4ebc596a2c248b244b50ab172b7814e1631e0",
+    "test_dc9_masked.py": "5d18d9c408d73e90be18f79e649c735498309fb83b0d927be5beb2552a8152fc"
+  },
+  "policies": [
+    "sleigh-store",
+    "halfword-lane-hypothesis"
+  ],
+  "strict_cases": 32,
+  "conditional_cases": 64,
+  "cases_per_policy": 32,
+  "coverage": {
+    "sleigh-store": {
+      "visited_instruction_count": 163,
+      "entries": {
+        "0x23dfe1": 67,
+        "0x23e152": 20
+      }
+    },
+    "halfword-lane-hypothesis": {
+      "visited_instruction_count": 163,
+      "entries": {
+        "0x23dfe1": 67,
+        "0x23e152": 20
+      }
+    }
+  },
+  "counter_store_observations": [
+    {
+      "address": "0x23e006",
+      "bytes": "eceb51a9",
+      "pcode_store_widths": [
+        4
+      ]
+    },
+    {
+      "address": "0x23e06b",
+      "bytes": "ecab51a9",
+      "pcode_store_widths": [
+        4
+      ]
+    }
+  ],
+  "counter_values": [
+    0,
+    1,
+    65534,
+    65535
+  ],
+  "direct_and_paged_cases": [
+    {
+      "width": 8,
+      "logical": "0x1234",
+      "mask": "0x0"
+    },
+    {
+      "width": 8,
+      "logical": "0x1235",
+      "mask": "0x1ff"
+    },
+    {
+      "width": 8,
+      "logical": "0xab801234",
+      "mask": "0x0"
+    },
+    {
+      "width": 8,
+      "logical": "0xab801235",
+      "mask": "0x1ff"
+    },
+    {
+      "width": 16,
+      "logical": "0x1240",
+      "mask": "0x0"
+    },
+    {
+      "width": 16,
+      "logical": "0x1242",
+      "mask": "0x1ffff"
+    },
+    {
+      "width": 16,
+      "logical": "0xab801240",
+      "mask": "0x0"
+    },
+    {
+      "width": 16,
+      "logical": "0xab801242",
+      "mask": "0x1ffff"
+    }
+  ],
+  "partial_write_failure": {
+    "rejection": "Unmapped memory access: 0xa0002481+1",
+    "visible_bus_writes": [
+      [
+        2684363904,
+        239
+      ]
+    ],
+    "low_byte_after_failure": "0xef"
+  },
+  "limitations": [
+    "The modeled bus and lock are plain bytes; no page windows, devices, concurrency, or timing are modeled.",
+    "sleigh-store and halfword-lane-hypothesis are explicit alternatives for ambiguous bg.sw_1 counter stores, not hardware facts.",
+    "Passing arithmetic cases validate the reconstructed routines only under the bounded model; they do not establish physical CPU or device behavior."
+  ]
+}

@@ -22,7 +22,7 @@
     "program_size": 2060200,
     "trailer_hex": "a86f1f001d8c",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2074536,
@@ -34,7 +34,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "81ad832d",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "1d8c",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x118727 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162",
     "source_path": "analysis/extracted/5f0a7bf92119fcc5965f09985d41645a062e86fabd993de86635a515b6e92162/ES07D02_V101_rev1148_USB update.bin",
@@ -75,7 +83,7 @@
     "program_size": 2060208,
     "trailer_hex": "b06f1f0029f6",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2074544,
@@ -87,7 +95,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "ee105c08",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "29f6",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x118728 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0",
     "source_path": "analysis/extracted/e319da9490df8cec4ff94677385e57a560899a9ef335b6dc7e9b052bf3bcc9f0/ES07D02_Beta01_rev1167_USB_update.bin",
@@ -128,7 +144,7 @@
     "program_size": 2428736,
     "trailer_hex": "400f25009aaf",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2443072,
@@ -140,7 +156,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "50f4e20c",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "9aaf",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x12546a (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e",
     "source_path": "analysis/extracted/d0fecef0580f1ab340d10724aee33c707ae564cc0e4569055242422bec54cc1e/BD_EVE_4K_Release_20210708_V102a_rev875_USB update.bin",
@@ -181,7 +205,7 @@
     "program_size": 2405464,
     "trailer_hex": "58b424009fe9",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2419800,
@@ -193,7 +217,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "2bf164a5",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "9fe9",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x122231 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54",
     "source_path": "analysis/extracted/62027f7e2b1fbacea66ac9f1e769524652ea99de80180e8e564957a0aba08d54/BD_EVE_4K_Release_20210823_V104_rev943_USB update.bin",
@@ -234,7 +266,7 @@
     "program_size": 2405576,
     "trailer_hex": "c8b424009300",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2419912,
@@ -246,7 +278,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "218be20d",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "9300",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x1227e7 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9",
     "source_path": "analysis/extracted/536d94f761d84fa7d8b616dbf5442b81a2d470f2cb7112cba213bc4fbd10add9/BD_EVE_4K_Release_20211126_V105_rev957_USB update.bin",
@@ -296,7 +336,7 @@
     "program_size": 2405976,
     "trailer_hex": "58b62400223c",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2420312,
@@ -308,7 +348,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "3ebb0786",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "223c",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x12295d (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1",
     "source_path": "analysis/extracted/199bb51c3d31023ffb37542acc250af4bd66cc7059f9a221697ce9c6c5b27ab1/BD_EVE_4K_Release_20220216_V106_rev988_USB update.bin",
@@ -358,7 +406,7 @@
     "program_size": 2405976,
     "trailer_hex": "58b624006dc8",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2420312,
@@ -370,7 +418,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "fc7bef6f",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "6dc8",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x122944 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180",
     "source_path": "analysis/extracted/ccf83898548ce7cc608ac095571c9520944fed5392684604c681c5f4a8f96180/BD_EVE_4K_Release_20220525_V107_rev1067_USB update.bin",
@@ -411,7 +467,7 @@
     "program_size": 2426560,
     "trailer_hex": "c00625006124",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2440896,
@@ -423,7 +479,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "fd26d381",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "6124",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x125ad8 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757",
     "source_path": "analysis/extracted/136d982c65f8c7615c6f5dd4adc6f9bfa8226f1f877e6e6dcff3d7bb28591757/ES07D03_V108_rev1148_USB update.bin",
@@ -474,7 +538,7 @@
     "program_size": 2426488,
     "trailer_hex": "78062500be15",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2440824,
@@ -486,7 +550,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "c9a87fc0",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "be15",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x124d0f (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3",
     "source_path": "analysis/extracted/d9be1e1c7aad81813faa7490a200fe6cfb83d0f371169f4ff94b829ea64c5ce3/ES07D03_Beta03_rev1169-E771_USB_update.bin",
@@ -529,7 +601,7 @@
     "program_size": 2426560,
     "trailer_hex": "c0062500e4f2",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2440896,
@@ -541,7 +613,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "d5d918b0",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "e4f2",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x125a2b (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3",
     "source_path": "analysis/extracted/bf394e15b209dc739d77b9e5a3217e1639de08eafe6ea8acc9d92a6d545299b3/ES07D03_Beta01_rev1149_USB_update.bin",
@@ -582,7 +662,7 @@
     "program_size": 2418296,
     "trailer_hex": "78e624002e46",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2432632,
@@ -594,7 +674,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "3782200e",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "2e46",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x124d9f (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d",
     "source_path": "analysis/extracted/ac2299e193b0f647de456a5e7cfe7a971864dc2fb5eeac72e1cde298810b448d/ES07D03_Beta02_rev1169_USB_update.bin",
@@ -635,7 +723,7 @@
     "program_size": 2405976,
     "trailer_hex": "58b62400b076",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2420312,
@@ -647,7 +735,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "157ca0f5",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "b076",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x122937 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b",
     "source_path": "analysis/extracted/435b473e32b26430c418a5ec45148cd1ba2a7465aba85c38270d52f58063fd4b/ES07DC9_V100_rev1056_USB_update.bin",
@@ -688,7 +784,7 @@
     "program_size": 2426560,
     "trailer_hex": "c0062500ddf3",
     "trailer_length_matches": true,
-    "trailer_last_two_bytes_meaning": "unknown",
+    "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
     "compression_marker": "beadde",
     "prefix_segment_length_matches": true,
     "expanded_size": 2440896,
@@ -700,7 +796,15 @@
       "segment_crc32_field": "0x10014, little-endian",
       "whole_file_crc32": "df78e833",
       "whole_file_crc32_field": "last four bytes, big-endian",
-      "both_crc32_valid": true
+      "both_crc32_valid": true,
+      "main_crc16": "ddf3",
+      "main_crc16_valid": true,
+      "main_crc16_range": "0x10000:0x125ad9 (end exclusive)",
+      "main_crc16_zeroed_words": [
+        "0x10014",
+        "0x10060",
+        "0x10064"
+      ]
     },
     "source_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
     "source_path": "analysis/extracted/0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9/ES07DC9_V101_rev1148_USB update.bin",

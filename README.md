@@ -45,6 +45,22 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 
 ## Reverse engineering
 
+For community firmware development, start with the [raw files and source-build
+guide](firmware/README.md). It provides a prepared DC9/EFE workspace, separate
+Spectrum One USB images, and a DC9 source overlay containing 104 reconstructed
+assembly components (5,025 instructions; 15,723 code bytes) and nine tables
+(795 bytes), about 0.648% of the expanded application. The layout-setup gate
+passed 142 tests, 259 strict setup cases, and 46 conditional cases. Its report
+and workspace summary are
+[here](analysis/2026-10-25_reverse-dc9-layout-setup-report.md) and
+[here](analysis/community-layout-setup-workspace.json). The full-apply prefix
+was exercised under both store policies, reaching `0x220aa3` and stopping
+before `0x21d3b1`; it does not complete the thirteen-record path.
+All addresses use plain-byte memory,
+with no hardware page windows, peripheral effects, timing, or device operation
+modeled. The component ratio is a coverage proxy; most code remains preserved
+vendor input, and experimental images are hardware-untested.
+
 The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
 
 Small annotated C reconstructions are available under [`analysis/reconstructed/`](analysis/reconstructed/). **A complete, buildable replacement firmware has not been recovered.** Extracted programs are generated locally from the preserved ZIPs; no monitor was flashed during analysis.

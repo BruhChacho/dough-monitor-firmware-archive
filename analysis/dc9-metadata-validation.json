@@ -1,0 +1,227 @@
+{
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "metadata guards and conditional complete mask preparation; full apply remains partial",
+  "cases": {
+    "indexed_accessors": 126,
+    "bank_selection_write_prefix": 48,
+    "bank_selection_update_prefix": 144,
+    "metadata_branch_prefix": 64,
+    "geometry_guard_prefix": 640,
+    "geometry_guard_return": 1408,
+    "empty_mask_return": 3
+  },
+  "strict_cases": 2433,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "complete_mask_preparation": 144,
+      "apply_entry_through_mask_preparation_prefix": 1
+    },
+    "halfword-lane-hypothesis": {
+      "complete_mask_preparation": 144,
+      "apply_entry_through_mask_preparation_prefix": 1
+    }
+  },
+  "conditional_cases": 290,
+  "visited_instruction_count": 487,
+  "source_spans": [
+    {
+      "name": "channel_source_read",
+      "address": "0x2227da",
+      "end_exclusive": "0x2227ef",
+      "size": 21,
+      "sha256": "c77fd51a173aacb57edc2e8830e5db0b1f778b61c1a9656c15f120a554e724b6",
+      "visited_instructions": 7
+    },
+    {
+      "name": "engine_channel_read",
+      "address": "0x2227ef",
+      "end_exclusive": "0x222804",
+      "size": 21,
+      "sha256": "8e95208938b37dc1180e3f748b650c76b078fe00d1406fe6600d94011613ae3d",
+      "visited_instructions": 7
+    },
+    {
+      "name": "engine_metadata_read",
+      "address": "0x222804",
+      "end_exclusive": "0x222819",
+      "size": 21,
+      "sha256": "f972490325fabafcc2b081f4601b0ca74d535a2b7c0d6c136d17219bbf66140f",
+      "visited_instructions": 7
+    },
+    {
+      "name": "metadata_engine_read",
+      "address": "0x222819",
+      "end_exclusive": "0x22282e",
+      "size": 21,
+      "sha256": "60101ae9c1d6f5413980dfba8a0f96c7bde9b24ef917e4bb69d548437eca7e4f",
+      "visited_instructions": 7
+    },
+    {
+      "name": "metadata_mask_read",
+      "address": "0x22282e",
+      "end_exclusive": "0x222843",
+      "size": 21,
+      "sha256": "20b0434bfba3c534a15028e3ea8ed189b10690344cfe8c3c30806b76610771c5",
+      "visited_instructions": 7
+    },
+    {
+      "name": "engine_mask_register_write",
+      "address": "0x21d1e5",
+      "end_exclusive": "0x21d2bf",
+      "size": 218,
+      "sha256": "16f3b53426dd98b9fa1f4f720f6ce9a3c098a23897907438afa451b2a9d65220",
+      "visited_instructions": 66
+    },
+    {
+      "name": "engine_mask_register_update",
+      "address": "0x21d2bf",
+      "end_exclusive": "0x21d3b1",
+      "size": 242,
+      "sha256": "bfa07ce05f51993ec551b79237e033819539977571d9ca904ca25cec95a399f5",
+      "visited_instructions": 73
+    },
+    {
+      "name": "channel_mask_prepare",
+      "address": "0x23d3a0",
+      "end_exclusive": "0x23d4fc",
+      "size": 348,
+      "sha256": "b31d8bee1d1172e1c9f32764de5f70a42fe3c1c571befd539dc874d636c41444",
+      "visited_instructions": 93
+    },
+    {
+      "name": "engine_geometry_service",
+      "address": "0x23d4fc",
+      "end_exclusive": "0x23d71e",
+      "size": 546,
+      "sha256": "d2044ea9dd6cb36d3ec3be74b1af8cb7b739be930ba527e578959b81f3f9a4db",
+      "visited_instructions": 48
+    },
+    {
+      "name": "register_mask_write8",
+      "address": "0x23dfe1",
+      "end_exclusive": "0x23e0b6",
+      "size": 213,
+      "sha256": "4fb6cffe8c7395fbf04f19c404cd88009679d78178f52872937913430bf3b1db",
+      "visited_instructions": 59
+    },
+    {
+      "name": "register_mask_write16",
+      "address": "0x23e152",
+      "end_exclusive": "0x23e18c",
+      "size": 58,
+      "sha256": "e404abfac666fb203535a37f1f46f92f0252543f2b569aba1ca0faf37a97a069",
+      "visited_instructions": 20
+    }
+  ],
+  "unrecovered_dependencies": [
+    {
+      "site": "0x23d4b9",
+      "target": "0x20ece9",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d4d5",
+      "target": "0x20ece9",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d4ef",
+      "target": "0x20e990",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d58d",
+      "target": "0x2686dd",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d5a4",
+      "target": "0x2686dd",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d5e0",
+      "target": "0x2334ec",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d632",
+      "target": "0x21bcec",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d638",
+      "target": "0x21bcf6",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d642",
+      "target": "0x21bd00",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d64a",
+      "target": "0x21bd0a",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d652",
+      "target": "0x2213d0",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d658",
+      "target": "0x21ffb3",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d680",
+      "target": "0x21b944",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d688",
+      "target": "0x2229b7",
+      "kind": "bg.jal"
+    },
+    {
+      "site": "0x23d696",
+      "target": "0x21b944",
+      "kind": "bg.jal"
+    }
+  ],
+  "observations": {
+    "engine_metadata_index": "byte[0x47fa9c + engine*124 +0x1d]",
+    "metadata_key": "uint32[0x3b4950 + metadata_index*176]",
+    "bank": "key<=4:low8(key+3); key<=7:low8(key-5); otherwise low8(key)",
+    "mask_register": "0xfff30382 + bank*512",
+    "update_register": "0xfff30380 + bank*512",
+    "register_clobber": "nonempty tested mask preparation leaves r23=0 via register_write8 loading broadcast mask",
+    "apply_stop_before": "0x22acd1 (call0x20f1ef)"
+  },
+  "limitations": [
+    "All bus, page-selection and lock addresses are ordinary bytes without device side effects.",
+    "Complete mask-preparation runs require an explicit ambiguous counter-store policy; default still rejects it.",
+    "Full apply stops before metadata service0x20f1ef. Special metadata branch stops before0x20ece9; geometry stops before0x2686dd.",
+    "The engine channel read occurs before the geometry index>3 guard; mapped-memory bounds are not caller validation.",
+    "Metadata key/bank relationships are observed address calculations, not physical connector assignments.",
+    "Low-byte extbs, little-endian data and fallthrough CALL remain explicit model assumptions; variable shifts>=32 rejected."
+  ],
+  "tools_sha256": {
+    "validate_dc9_metadata.py": "f343362bfb7570427c5dac2170f4ef7ad797af96dd6220777e13b63b3e527ed6",
+    "reconstruct_dc9_metadata.py": "618862ad7cfcf5070b1437c7b58787f634c6d8fb38c3fa8334d2134a15c0eb87",
+    "validate_dc9_masked.py": "aa563eeb40be4ca63f338321f9f4ebc596a2c248b244b50ab172b7814e1631e0",
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"
+  }
+}

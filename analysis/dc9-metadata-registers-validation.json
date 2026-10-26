@@ -1,0 +1,161 @@
+{
+  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "complete consumer and accumulated-state returns under explicit store policies",
+  "cases": {
+    "bank_offset_returns": 258,
+    "default_counter_rejections": 4
+  },
+  "strict_cases": 262,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "channel_register_returns": 32,
+      "four_channel_dispatch_returns": 258,
+      "register_mask01_returns": 256,
+      "register_mask40_returns": 256,
+      "metadata_register_apply_returns": 24,
+      "complete_accumulation_returns": 1840,
+      "complete_six_record_reset_returns": 1,
+      "apply_after_complete_six_record_reset": 1
+    },
+    "halfword-lane-hypothesis": {
+      "channel_register_returns": 32,
+      "four_channel_dispatch_returns": 258,
+      "register_mask01_returns": 256,
+      "register_mask40_returns": 256,
+      "metadata_register_apply_returns": 24,
+      "complete_accumulation_returns": 1840,
+      "complete_six_record_reset_returns": 1,
+      "apply_after_complete_six_record_reset": 1
+    }
+  },
+  "conditional_cases": 5336,
+  "visited_instruction_count": 856,
+  "source_spans": [
+    {
+      "name": "metadata_state_store",
+      "address": "0x20e66d",
+      "end_exclusive": "0x20e687",
+      "size": 26,
+      "sha256": "ebb79ccc97109544fe0ccb5c86ee108b24bf027d0785c2cec4794cc631210b57",
+      "visited_instructions": 7
+    },
+    {
+      "name": "metadata_state_combine",
+      "address": "0x20e76c",
+      "end_exclusive": "0x20e79d",
+      "size": 49,
+      "sha256": "d53fc768913bbeee5970442418c8420ba1f36c3c4ebcc215a0b4485909c61dea",
+      "visited_instructions": 15
+    },
+    {
+      "name": "channel_state_configure",
+      "address": "0x2340cd",
+      "end_exclusive": "0x23417c",
+      "size": 175,
+      "sha256": "62320a92b02891896eb78a2274816d4820f511156a41491ce164ebb7e74bdeca",
+      "visited_instructions": 56
+    },
+    {
+      "name": "channel_state_configure_jump",
+      "address": "0x23417c",
+      "end_exclusive": "0x234180",
+      "size": 4,
+      "sha256": "6443594ac481c68522561ddc688740c4f0f1a539496da6ac719fcd7378b326c5",
+      "visited_instructions": 1
+    },
+    {
+      "name": "channel_enable_dispatch",
+      "address": "0x234180",
+      "end_exclusive": "0x2341c8",
+      "size": 72,
+      "sha256": "62c15c0b4cadcf9c6fec7d3d2c83c5afb1830f013ef168b8ee56e785b5c58978",
+      "visited_instructions": 27
+    },
+    {
+      "name": "channel_enable_dispatch_jump",
+      "address": "0x2341c8",
+      "end_exclusive": "0x2341cc",
+      "size": 4,
+      "sha256": "6a839ea31dec71b190c45df5cfdc65164ef3c11e15b1a42428fb6f4c5d153c47",
+      "visited_instructions": 1
+    },
+    {
+      "name": "metadata_register_apply",
+      "address": "0x21125a",
+      "end_exclusive": "0x2112a0",
+      "size": 70,
+      "sha256": "3846cfea7a3643530ceef6531a480c6344a3e3c2ea5296a1ddad48d943063b9f",
+      "visited_instructions": 22
+    },
+    {
+      "name": "metadata_register_apply_jump",
+      "address": "0x2112a0",
+      "end_exclusive": "0x2112a4",
+      "size": 4,
+      "sha256": "87c5b883ef21c0ac1cadfb2572d3eca4d9bed7aa7dc6fcc5f885d318052c164b",
+      "visited_instructions": 1
+    },
+    {
+      "name": "channel_state_notify_return",
+      "address": "0x2118d2",
+      "end_exclusive": "0x2118d4",
+      "size": 2,
+      "sha256": "c8a8966a736e5b3395373c324545addf3446c74bfe684760461cb9955de1bec9",
+      "visited_instructions": 1
+    },
+    {
+      "name": "channel_register_bank_offset",
+      "address": "0x211855",
+      "end_exclusive": "0x211874",
+      "size": 31,
+      "sha256": "a6cd75da1dec9189089d6fc3a283fb1d1485863dfb6274fa18550d1c20b87ca5",
+      "visited_instructions": 11
+    },
+    {
+      "name": "channel_enable_registers",
+      "address": "0x213b64",
+      "end_exclusive": "0x213bbb",
+      "size": 87,
+      "sha256": "2b101db64755eba55951f9a95607b1c8c3a6f7e43dab2099c1994c1fdd85e625",
+      "visited_instructions": 30
+    },
+    {
+      "name": "metadata_register_mask40",
+      "address": "0x212d95",
+      "end_exclusive": "0x212e18",
+      "size": 131,
+      "sha256": "440d74a9d2fe982667808cffd5d0123a0e6ced3ba0c15dcda62a09362ddf159c",
+      "visited_instructions": 43
+    },
+    {
+      "name": "metadata_register_mask01",
+      "address": "0x212e18",
+      "end_exclusive": "0x212e89",
+      "size": 113,
+      "sha256": "c0c94817369570c37e94b832a9220d1ef68a920934a22d56737f83e70da1b7ee",
+      "visited_instructions": 40
+    }
+  ],
+  "limitations": [
+    "Plain memory does not model hardware page windows, locks, interrupts or physical registers.",
+    "Complete accumulation is conditional on wide-store policies, low-byte operations, little-endian data and fallthrough CALL links.",
+    "Boolean enable1 clears register mask4 under current CMOV1 semantics; no correction or physical interpretation is inferred.",
+    "These complete routine returns do not establish full display application or firmware boot."
+  ],
+  "tools_sha256": {
+    "validate_dc9_metadata_registers.py": "d473eeb354e3801caf8b7c9f3216120fdcad039a6e3c8714b3c3e209eebccc2e",
+    "reconstruct_dc9_metadata_registers.py": "3bb2e1e75fea5dcb7c034a3c26563f93e9e6c31cc25aa18f491c2bbfa38a57e8",
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"
+  }
+}
