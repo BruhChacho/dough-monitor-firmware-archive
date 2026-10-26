@@ -185,7 +185,7 @@ and [`community-metadata-consumers-workspace.json`](community-metadata-consumers
 with validation and latest workspace under
 `analysis/extracted/firmware-validation-metadata-consumers-2026-10-25/`.
 
-On 2026-10-25 (America/Los_Angeles), the current layout-setup milestone adds
+On 2026-10-25 (America/Los_Angeles), the layout-setup milestone added
 eight components (619 instructions;
 1,914 code bytes) and one eight-byte table, bringing the overlay to 104
 components / 5,025 instructions / 15,723 code bytes and nine tables / 795 bytes
@@ -204,11 +204,29 @@ all eleven resource spans unchanged.
 
 In the previous consumer snapshot, the model completed metadata accumulation
 and the six-record reset under two explicit ambiguous-store policies. Its full
-apply prefix stopped at `0x23faf2`, before `0x22dc46`. The current layout-setup
-work extends through these consumers and reaches `0x220aa3`, stopping before
+apply prefix stopped at `0x23faf2`, before `0x22dc46`. The historical
+layout-setup snapshot extended through these consumers and reached `0x220aa3`,
+stopping before
 `0x21d3b1`; this still does not complete the thirteen-record path. Model memory
 is plain bytes, and store policies are conditional software hypotheses. No
 physical CPU, register, peripheral, timing, or display behavior was tested. The
 baseline, helper-experiment, and layout-experiment BIN hashes remain
 `0b5d8350`, `d88a1683`, and `95a06b2f`. The preceding 83- and 96-component
 milestones remain preserved historical snapshots.
+
+On 2026-10-26 (America/New_York), offline source recovery added 22 engine-
+control routines (602 instructions / 1,709 bytes) and two dispatch tables (72
+bytes). The overlay now has 126 components (5,627 instructions / 17,432 code
+bytes) and 11 tables / 867 bytes, about 0.72% of the expanded application. This
+ratio is a source-coverage proxy. The combined offline gate passed 148 tests,
+2,078 strict cases and 384 conditional cases. All 602 new instruction
+addresses were visited across bounded cases; this does not establish exhaustive
+input or path coverage. The full-apply prefix completes the six-record reset
+and stops at `0x220bc7`, before unrecovered service `0x22607c`. Disable-control
+cases return for 13 mapped fixture indices in normal mode, while enabled
+control and full apply remain incomplete. Stock, helper-experiment and
+layout-experiment BIN hashes and resource spans remain unchanged. The gate is
+offline: physical CPU, page-window, peripheral, timing, display and recovery
+behavior remain untested. See the [engine-control report](2026-10-26_reverse-dc9-engine-control-report.md),
+[validation](extracted/firmware-validation-engine-control-2026-10-26/validation.json),
+and [workspace summary](community-engine-control-workspace.json).

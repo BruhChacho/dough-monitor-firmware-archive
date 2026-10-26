@@ -2,21 +2,21 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The current source overlay contains 104 routines/fragments (5,025
-instructions; 15,723 code bytes) and nine tables (795 bytes), retaining the
-rest of the archived vendor image. The layout-setup gate passed 142 tests,
-259 strict setup cases, and 46 conditional cases. The 0.648%
-code-bytes/application-bytes ratio is a coverage proxy, not a measure of
-engineering or product completion. Fully editable firmware and a
-hardware-tested community release remain open goals.
+build. The current source overlay contains 126 components (5,627 instructions;
+17,432 code bytes) and 11 tables (867 bytes), retaining the rest of the
+archived vendor image. The 2026-10-26 combined gate passed 148 tests, 2,078
+strict cases, and 384 conditional cases. The 0.718% code-bytes/application-bytes
+ratio is a coverage proxy, not a measure of engineering or product completion.
+Fully editable firmware and a hardware-tested community release remain open
+goals.
 
 ## Open the files
 
-The latest prepared workspace is [firmware-validation-layout-setup-2026-10-25/workspace](../analysis/extracted/firmware-validation-layout-setup-2026-10-25/workspace/README.md).
+The latest prepared workspace is [firmware-validation-engine-control-2026-10-26/workspace](../analysis/extracted/firmware-validation-engine-control-2026-10-26/workspace/README.md).
 Its combined gate passed. Workspace files are generated locally and
-ignored by Git. Earlier consumer, configuration, apply, metadata-routing,
-community, receive, transfer, timer, and combined validation workspaces remain
-intact as historical snapshots.
+ignored by Git. Earlier layout-setup, consumer, configuration, apply,
+metadata-routing, community, receive, transfer, timer, and combined validation
+workspaces remain intact as historical snapshots.
 
 | File or directory inside the workspace | Purpose |
 |---|---|
@@ -51,10 +51,10 @@ decoder prepared, run this from the repository root:
 Choose a new output directory for each run. The command checks all package
 hashes, the Spectrum One checksum/reconstruction corpus, repository tests,
 command/register/receive/transfer/timer/callback/configuration/apply/metadata,
-metadata-consumer and layout-setup contracts, and helper rewrite equivalence.
-The latest layout-setup gate passed 142 repository tests, 259 strict setup
-cases, and 46 conditional cases. The previous consumer milestone passed 132
-repository tests, 2,646 strict consumer cases,
+metadata-consumer, layout-setup and engine-control contracts, and helper
+rewrite equivalence. The latest engine-control gate passed 148 repository
+tests, 2,078 strict cases, and 384 conditional cases. The previous consumer
+milestone passed 132 repository tests, 2,646 strict consumer cases,
 262 strict register cases, and 5,336 conditional cases. The historical
 metadata-service milestone passed 118 tests and contains 2,833 strict plus 150
 conditional service cases. Its 79-component metadata-routing
@@ -128,20 +128,31 @@ components are immutable inputs; editing them is rejected, not incorporated
 as a source change.
 
 The latest workspace contains
-[`dc9-v101.baseline.bin`](../analysis/extracted/firmware-validation-layout-setup-2026-10-25/workspace/build/dc9-v101.baseline.bin),
-[`dc9-v101-helper.experimental.bin`](../analysis/extracted/firmware-validation-layout-setup-2026-10-25/workspace/build/dc9-v101-helper.experimental.bin),
-and [`dc9-v101-layout.experimental.bin`](../analysis/extracted/firmware-validation-layout-setup-2026-10-25/workspace/build/dc9-v101-layout.experimental.bin).
+[`dc9-v101.baseline.bin`](../analysis/extracted/firmware-validation-engine-control-2026-10-26/workspace/build/dc9-v101.baseline.bin),
+[`dc9-v101-helper.experimental.bin`](../analysis/extracted/firmware-validation-engine-control-2026-10-26/workspace/build/dc9-v101-helper.experimental.bin),
+and [`dc9-v101-layout.experimental.bin`](../analysis/extracted/firmware-validation-engine-control-2026-10-26/workspace/build/dc9-v101-layout.experimental.bin).
 Each file is 2,069,060 bytes; their SHA256 prefixes are `0b5d8350`, `d88a1683`,
 and `95a06b2f`, respectively. All eleven resource spans are unchanged in each
 build. No experimental output has been booted on a monitor.
+
+The engine-control validator covers metadata-index guards and key dispatch,
+register readers, selected masked writes, and a full-apply prefix. All 602 new
+instruction addresses were visited in bounded cases, not exhaustively over all
+inputs or paths. The prefix completes the six-record metadata reset, then stops
+at `0x220bc7` before unrecovered service `0x22607c`. Disable-control cases
+return for 13 mapped fixture indices in normal mode; enabled control and full
+apply remain incomplete. The 2026-10-26 [report](../analysis/2026-10-26_reverse-dc9-engine-control-report.md),
+[validation](../analysis/extracted/firmware-validation-engine-control-2026-10-26/validation.json),
+and [workspace summary](../analysis/community-engine-control-workspace.json)
+record the evidence. Layout-setup results below are historical snapshots.
 
 The metadata validator maps an engine's metadata index through the observed key
 and bank arithmetic to paged register addresses. Its bus fixture is ordinary
 memory; it does not emulate page windows, hardware registers, timing, or
 peripherals. The previous consumer validation modeled complete metadata
 accumulation and the six-record reset under two ambiguous counter-store
-hypotheses. The current layout-setup prefix reaches `0x220aa3` and stops before
-`0x21d3b1`; it does not complete the thirteen-record path. Selected setup paths
+hypotheses. The historical layout-setup prefix reached `0x220aa3` and stopped
+before `0x21d3b1`; it does not complete the thirteen-record path. Selected setup paths
 complete only under conditional store hypotheses.
 Earlier validation stopped at `0x22acd1`, before external service `0x20f1ef`;
 that is a historical prefix boundary.
@@ -180,9 +191,9 @@ tail and trampoline) plus a 32-byte selector table. It passed 2,833 strict and
 unknown.
 
 The historical consumer milestone models metadata accumulation through the
-six-record reset under both explicit store policies. Current layout-setup work
-extends the full-apply prefix to `0x220aa3`, before `0x21d3b1`; the
-thirteen-record path is not complete. The mapped
+six-record reset under both explicit store policies. The historical
+layout-setup snapshot extended the full-apply prefix to `0x220aa3`, before
+`0x21d3b1`; its thirteen-record path was not complete. The mapped
 register bus is plain memory, with no page-window, peripheral or timing
 behavior. The observed metadata key/bank arithmetic and `r23` clobbering
 through `register_write8` do not establish hardware register or connector
@@ -208,7 +219,7 @@ and neighboring flag provide a stronger constraint on store width, while the
 physical ISA and clock remain unverified. Register tests use plain mapped bytes,
 without peripheral side effects. See the
 [timer and callback report](../analysis/2026-10-23_reverse-dc9-timer-report.md)
-for timer evidence and limitations. The current source overlay is about 0.648%
+for timer evidence and limitations. The current source overlay is about 0.72%
 of the expanded application; this is a coverage proxy, not engineering or product
 completion. Most functionality still resides in the pinned vendor remainder.
 

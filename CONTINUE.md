@@ -3,15 +3,94 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: layout setup and repository publication
+## Latest continuation: engine-control helpers
 
-Publication status: the validated update is prepared on local branch
-`codex/community-firmware-layout-setup-2026-10-25`. The GitHub connector resolves
-the repository to `BruhChacho/dough-monitor-firmware-archive`, but creating a Git
-tree failed with HTTP403 "Resource not accessible by integration". HTTPS Git
-has no configured credentials, and no configured SSH identity or agent is
-available. No remote branch or pull request was created. Resume publication
-after write access is configured; do not treat this as a validation failure.
+Updated 2026-10-26 (America/New_York). The owner wants **100% editable
+application**, continued use of cheaper agents with parent review, repository
+updates and current READMEs. **Always report the source-coverage percentage**,
+not an invented product-completion percentage. Read
+`analysis/2026-10-26_reverse-dc9-engine-control-report.md`,
+`analysis/community-engine-control-workspace.json`, and `firmware/README.md`.
+
+Publication: GitHub CLI authentication succeeded. Branch
+`codex/community-firmware-layout-setup-2026-10-25` is published in
+[open draft PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1),
+not merged. Canonical origin is
+`https://github.com/BruhChacho/dough-monitor-firmware-archive.git`.
+The starting commit for this milestone is `3b4605a`; verify current Git/remote
+state before continuing. The earlier connector403/credential blocker is
+resolved. User authorization includes updating this repository; hardware work
+remains outside the offline continuation.
+
+- Source: **126 components, 5,627 instructions / 17,432 code bytes**, plus
+  **11 tables / 867 bytes**. Coverage **0.718% (about 0.72%)** of 2,426,560
+  application bytes; this includes a data-bearing denominator and does not
+  measure product readiness. No physical operation has been tested.
+- `reconstruct_dc9_engine_control.py` adds 22 routines, 602 instructions /
+  1,709 bytes spanning `21d3b1..21da5e`, with two 36-byte code-pointer tables
+  at `2af554` and `2af578`. Every target is a recovered instruction boundary;
+  full assembly/tables reproduce all original bytes. All addresses are hex,
+  ends exclusive. No encoder/model instruction implementation changed.
+- Base selector `21d3b1`: engine index -> byte at `47fa9c + index*124 + 1d`
+  -> metadata index. Reject metadata index>5 before metadata access; otherwise
+  load uint32 key at `3b4950 + metadata_index*176`. Keys>8 and key0 return0.
+  Keys1..8 return `fff30a00,fff30c00,fff30e00,fff31000,fff30200,fff30400,
+  fff30600,fff31200`. Do not confuse these with older mask-register bases.
+- Read wrappers cover byte offsets42/45/43/06/3d/41/04 and halfword offsets
+  0e/0c/08. Halfwords read high byte first. `21d814` returns bit7 under both
+  engine-parity branches; `21d8f7` reads BYTE base+4. Key0 causes inactive-bank
+  reads returning0. `21d913` computes
+  `(((read16(base+50)&1fff)+1)*(metadata.byte88+1)*metadata.byte89-1)&ffff`.
+  Zero second factor returnsffff. Physical units remain unknown.
+- Selected-engine setters use masks20/10/08/01/40 at base+90 and mask04 at
+  base+05; two-bit mode setter uses `(value&3)<<1`, mask6. Mask08 helper adds
+  `02800090` for EVEN engine index versus90 for odd, with uint32 wrap.
+  Strict argument-prefix checks retain the high-page/address distinction.
+- `21d977` dispatches keys1..7 to masks10/20/40/80/01/02/04 atfff01f83,
+  key8 to mask1 atfff01f84. Key0/>8 no-op. It has NO metadata-index>5 guard;
+  tests explicitly retain unmapped metadata-index6 failure. `21d430` selects
+  bit80 writes at base+0f/+11 for metadata modes1/2/4. `21d86d` updates
+  bit80 atbase+07. These are masked updates, not full-byte replacements.
+- `validate_dc9_engine_control.py`: **2,078 strict + 384 conditional cases**.
+  All602 new instruction addresses are visited, not exhaustive state/input
+  coverage. Readers assert page-write and data-read order; writers assert
+  selected data-write order and pre-helper logical arguments. The bus is
+  plain bytes, without actual page isolation, devices, timing or interrupts.
+  Six focused boundary tests preserve guards, faults and strict store rejection.
+- Full apply entry23fad0 now completes reset and first-engine range/base/read,
+  then stops at **220bc7**, the call to **22607c**, withr3/r4=1/1. No unknown
+  calls are stubbed. Separate disable-control220a8b returns for13 mapped
+  fixture indices with normal mode bytes; enabled13-record setup is incomplete.
+- Successful combined gate:
+  `analysis/extracted/firmware-validation-engine-control-2026-10-26/`.
+  **148 tests**,45 archive hashes,13 byte-exact corpus roundtrips/141 resource
+  checksums, all model gates and3 BINs pass. Stock/helper/layout hashes remain
+  `0b5d8350`/`d88a1683`/`95a06b2f`, each2,069,060bytes,11resources unchanged.
+  Canonical evidence/build JSONs describe this run; old runs remain preserved.
+  Audit:194 run-artifact hashes,225 source identities,165 workspace base
+  artifacts+2USB,11 prior workspaces and28 previous BINs verified.
+- Starting267 tracked source/evidence/doc files were saved with verified hashes
+  in `analysis/scratch/engine-control-before-2026-10-26/`. Existing changes,
+  original ZIPs and previous workspaces/BINs were preserved. Three cheaper
+  agents helped source, review, tests/docs; parent corrected incorrect draft
+  mappings/test address/generator preservation behavior before acceptance.
+
+Next offline task: recover **22607c** and its dependencies to continue enabled
+control. Other pending calls:23ee2c,23ea03,23e13b,21bd1e,220995; queued writes
+still stop before27b707. Continue geometry2686dd and special20ece9/20e990,
+independent ISA/CALL/store evidence, compiler/linker and EFE/USB source work.
+Most application source and physical boot/recovery/display validation remain
+unfinished. No experimental image is a hardware-proven installable release.
+
+## Previous continuation: layout setup and repository publication
+
+Publication status: GitHub CLI authentication is configured on this machine.
+The validated update is published on branch
+`codex/community-firmware-layout-setup-2026-10-25` in
+`BruhChacho/dough-monitor-firmware-archive`, with open draft
+[PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1).
+The earlier connector HTTP403 was bypassed using authenticated Git/CLI.
+The PR is not merged; verify its current head before further publication.
 
 Updated 2026-10-25 (America/Los_Angeles). Read
 `analysis/2026-10-25_reverse-dc9-layout-setup-report.md`,

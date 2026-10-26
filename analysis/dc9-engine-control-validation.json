@@ -1,0 +1,248 @@
+{
+  "source_layout_sha256": "86a1658224451d256b82631e0c0a2f1031bef57b7532285b2c31ae53f4c879c1",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "engine control helpers return; full apply stops before unrecovered enable service",
+  "cases": {
+    "base_selector_returns": 156,
+    "metadata_index_guard_returns": 3,
+    "register_reader_returns": 1440,
+    "metadata_scaled_size_returns": 240,
+    "empty_mask_returns": 7,
+    "selected_bit_update_argument_prefixes": 156,
+    "selected_field_update_argument_prefixes": 52,
+    "metadata_key_update_argument_prefixes": 24
+  },
+  "strict_cases": 2078,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "selected_engine_bit_updates": 72,
+      "selected_engine_field_updates": 28,
+      "metadata_mode_updates": 36,
+      "engine_bit80_updates": 18,
+      "metadata_key_bit_updates": 24,
+      "control_disable_returns": 13,
+      "full_apply_before_engine_enable_service": 1
+    },
+    "halfword-lane-hypothesis": {
+      "selected_engine_bit_updates": 72,
+      "selected_engine_field_updates": 28,
+      "metadata_mode_updates": 36,
+      "engine_bit80_updates": 18,
+      "metadata_key_bit_updates": 24,
+      "control_disable_returns": 13,
+      "full_apply_before_engine_enable_service": 1
+    }
+  },
+  "conditional_cases": 384,
+  "visited_instruction_count": 1628,
+  "source_spans": [
+    {
+      "name": "engine_metadata_control_mask_lookup",
+      "address": "0x21d3b1",
+      "end_exclusive": "0x21d430",
+      "size": 127,
+      "sha256": "713b456a61bdf7c0bfaa07795784b883d6c2cf4274f40647ecf2aac844820096",
+      "visited_instructions": 45
+    },
+    {
+      "name": "engine_control_metadata_flags_apply",
+      "address": "0x21d430",
+      "end_exclusive": "0x21d4c1",
+      "size": 145,
+      "sha256": "9135f1cca50c31d35742d70924316125b6d9605d2a5c4d190f014ec745fc3d53",
+      "visited_instructions": 49
+    },
+    {
+      "name": "engine_control_metadata_mask20_update",
+      "address": "0x21d4c1",
+      "end_exclusive": "0x21d51e",
+      "size": 93,
+      "sha256": "3801e4cce9346541533087aaae8642e92606fcd82fe65a01700a096b25b7d247",
+      "visited_instructions": 33
+    },
+    {
+      "name": "engine_control_metadata_mask10_update",
+      "address": "0x21d51e",
+      "end_exclusive": "0x21d57b",
+      "size": 93,
+      "sha256": "967f96bd490acdc8300843476681c0fc1c154ec6e0532c42fa1a1282f91c2c5b",
+      "visited_instructions": 33
+    },
+    {
+      "name": "engine_control_channel_mask08_update",
+      "address": "0x21d57b",
+      "end_exclusive": "0x21d5ef",
+      "size": 116,
+      "sha256": "6a36fb5bcded03637efa50268252af2f53613bef96e753f00be79d253a69a7bf",
+      "visited_instructions": 42
+    },
+    {
+      "name": "engine_control_mode_bits_write",
+      "address": "0x21d5ef",
+      "end_exclusive": "0x21d650",
+      "size": 97,
+      "sha256": "3463873eac00675f550e541b91f8e7bd542eb188aebf8ee0856a40aa035decdf",
+      "visited_instructions": 34
+    },
+    {
+      "name": "engine_control_bit01_update",
+      "address": "0x21d650",
+      "end_exclusive": "0x21d6ac",
+      "size": 92,
+      "sha256": "09f5b2e8f6c91949f7e9814bee35274ca50b61e04583e531c36cdede7451d107",
+      "visited_instructions": 33
+    },
+    {
+      "name": "engine_control_bit40_update",
+      "address": "0x21d6ac",
+      "end_exclusive": "0x21d709",
+      "size": 93,
+      "sha256": "0cf88617c329c914f833d6508ef29be3049f1350721758cee4854b973efc6277",
+      "visited_instructions": 33
+    },
+    {
+      "name": "engine_register_bit04_read",
+      "address": "0x21d709",
+      "end_exclusive": "0x21d72c",
+      "size": 35,
+      "sha256": "026e27de95c7a2c545cdcb6d65bcd0cbdde6a3ab8daf6e1540ed917624ea548f",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_register_value45_read",
+      "address": "0x21d72c",
+      "end_exclusive": "0x21d749",
+      "size": 29,
+      "sha256": "690d37f8165770f70cddb7472a04cf9b576668b63507a0cf18a84f66cdeb5ebd",
+      "visited_instructions": 10
+    },
+    {
+      "name": "engine_register_bit08_read",
+      "address": "0x21d749",
+      "end_exclusive": "0x21d76c",
+      "size": 35,
+      "sha256": "5baeff4459ceb3f3acc5a229a6dd40b33d060f147ab4efd7258fb21e2fba9a7e",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_register_bit40_read",
+      "address": "0x21d76c",
+      "end_exclusive": "0x21d78e",
+      "size": 34,
+      "sha256": "7373eef6fc2e07af3fb42c516f54bb22619591b2743b44da6f796b56fd457d80",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_register_word0e_read",
+      "address": "0x21d78e",
+      "end_exclusive": "0x21d7b1",
+      "size": 35,
+      "sha256": "506db1d4fccfb4b930dc891e9e1272d3547d8e5d8f30c049c1a81f1da0cebefe",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_register_word0c_read",
+      "address": "0x21d7b1",
+      "end_exclusive": "0x21d7d4",
+      "size": 35,
+      "sha256": "cf71ebe7daa36a140a2513778b94e2614a95509d0476002a7896eb4449f1d5c2",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_register_word08_read",
+      "address": "0x21d7d4",
+      "end_exclusive": "0x21d7f7",
+      "size": 35,
+      "sha256": "b561c7ab3f6e6e451e4e98e0deaad07ab9900a600c148e28943830927414d885",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_register_value3d_read",
+      "address": "0x21d7f7",
+      "end_exclusive": "0x21d814",
+      "size": 29,
+      "sha256": "42a178f51fd116c625c014331afd5824fa0a3abb5176f0bde738a6947105f8a0",
+      "visited_instructions": 10
+    },
+    {
+      "name": "engine_register_flag41_test",
+      "address": "0x21d814",
+      "end_exclusive": "0x21d86d",
+      "size": 89,
+      "sha256": "56415a3913bd74bac48eb32fee3807b280954bf72d29f3be89f12b0775bcede5",
+      "visited_instructions": 33
+    },
+    {
+      "name": "engine_register_flag07_write",
+      "address": "0x21d86d",
+      "end_exclusive": "0x21d89d",
+      "size": 48,
+      "sha256": "a823778fd042d00b665b44a06e1360a723990b7a82b0a850a7d2a82574b270fd",
+      "visited_instructions": 17
+    },
+    {
+      "name": "engine_control_flag05_mask_update",
+      "address": "0x21d89d",
+      "end_exclusive": "0x21d8f7",
+      "size": 90,
+      "sha256": "4add5dda45c4245caa9ba0c09798e07c6d5fd026b5018c8cc4484a15c4e60829",
+      "visited_instructions": 33
+    },
+    {
+      "name": "engine_register_value04_read",
+      "address": "0x21d8f7",
+      "end_exclusive": "0x21d913",
+      "size": 28,
+      "sha256": "bccba7396dbaeedac3dfdf7471842c04fa3e9809863f5d8d31f8333f09d30bb2",
+      "visited_instructions": 10
+    },
+    {
+      "name": "engine_control_geometry_size_calculate",
+      "address": "0x21d913",
+      "end_exclusive": "0x21d977",
+      "size": 100,
+      "sha256": "1b9a1714d462b4ece2d6263c17880cb56a81787992c17f09d1e4ac70a0ebe8c2",
+      "visited_instructions": 34
+    },
+    {
+      "name": "engine_metadata_control_update_dispatch",
+      "address": "0x21d977",
+      "end_exclusive": "0x21da5e",
+      "size": 231,
+      "sha256": "ecc3b98cd2b7c4a0d0beb7584e18ce4bdc34884ba2d11f368c14d0b629fb887e",
+      "visited_instructions": 81
+    }
+  ],
+  "key_to_logical_base": [
+    "0x0",
+    "0xfff30a00",
+    "0xfff30c00",
+    "0xfff30e00",
+    "0xfff31000",
+    "0xfff30200",
+    "0xfff30400",
+    "0xfff30600",
+    "0xfff31200"
+  ],
+  "limitations": [
+    "Physical ISA, CALL, endianness and counter-store semantics remain hypotheses.",
+    "Plain bus bytes do not implement page isolation, hardware effects, time or interrupts.",
+    "Full enabled control/setup/apply remains incomplete; next service0x22607c is not stubbed.",
+    "Mapping13 software engine records does not establish physical engine count or complete uint32 inputs."
+  ],
+  "tools_sha256": {
+    "validate_dc9_engine_control.py": "122b083f25899259cf825e16049f9b13e432c0d657abd395e53766ee16dc02bc",
+    "reconstruct_dc9_engine_control.py": "8c634a9cde0eaca27e82f92657e7f5a4a6bc2fa4b278c2af96892cd54abe0f55",
+    "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
+    "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"
+  }
+}

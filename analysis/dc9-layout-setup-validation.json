@@ -1,5 +1,5 @@
 {
-  "source_layout_sha256": "8cccc5fae6dc8bf5aedacec29c0e615bc8d2d27ce392a8f79765a21b16b062d8",
+  "source_layout_sha256": "86a1658224451d256b82631e0c0a2f1031bef57b7532285b2c31ae53f4c879c1",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",
@@ -116,7 +116,7 @@
     "Synthetic nonzero engine templates test copy behavior; archived engine template is all zero."
   ],
   "tools_sha256": {
-    "validate_dc9_layout_setup.py": "89e163d13caa4a8bd97f01a7df50631aebb642291727516cb54e96326b0ff380",
+    "validate_dc9_layout_setup.py": "4fb81fe8ad05362fa096188daae9aea93d185c6a4de527300d7a5cd314c1b00b",
     "reconstruct_dc9_layout_setup.py": "31bfbab981d7f007048c47d304202117d9798aa40da68ebc4fdebf187e743a91",
     "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
     "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"

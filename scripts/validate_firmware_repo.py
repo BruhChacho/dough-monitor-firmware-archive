@@ -128,6 +128,7 @@ def run(destination):
         from validate_dc9_metadata_consumers import validate as validate_metadata_consumers
         from validate_dc9_metadata_registers import validate as validate_metadata_registers
         from validate_dc9_layout_setup import validate as validate_layout_setup
+        from validate_dc9_engine_control import validate as validate_engine_control
         original, _, _ = load_original()
         stage('helper-rewrite', lambda: validate_rewrite(original)[1])
         for name, validator in (('commands', validate_commands), ('registers', validate_registers),
@@ -136,7 +137,7 @@ def run(destination):
                                 ('apply', validate_apply), ('masked-registers', validate_masked),
                                 ('metadata', validate_metadata), ('metadata-service', validate_metadata_service),
                                 ('metadata-consumers', validate_metadata_consumers), ('metadata-registers', validate_metadata_registers),
-                                ('layout-setup', validate_layout_setup)):
+                                ('layout-setup', validate_layout_setup), ('engine-control', validate_engine_control)):
             stage(name, validator)
 
         print('Preparing raw files and building baseline, helper and layout images...', flush=True)

@@ -932,10 +932,208 @@
       "original_code_sha256": "2ee8c50bc12931cb8562f8c26489dac69537bd19cf0383fee6a05fff83107af6",
       "purpose": "Read byte, set or clear selected bits, then submit a deferred masked write.",
       "component_kind": "routine"
+    },
+    {
+      "name": "engine_metadata_control_mask_lookup",
+      "address": "0x21d3b1",
+      "size": 127,
+      "source": "analysis/reconstructed/spectrum_one_engine_metadata_control_mask_lookup.aeon.s",
+      "original_code_sha256": "713b456a61bdf7c0bfaa07795784b883d6c2cf4274f40647ecf2aac844820096",
+      "purpose": "Map metadata index 0..5 to a uint32 metadata key; key 0..8 returns a logical base value, otherwise zero.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_metadata_flags_apply",
+      "address": "0x21d430",
+      "size": 145,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_metadata_flags_apply.aeon.s",
+      "original_code_sha256": "9135f1cca50c31d35742d70924316125b6d9605d2a5c4d190f014ec745fc3d53",
+      "purpose": "Read metadata flags and write 0x80 to engine control registers at offsets 0x0f/0x11 for selected flag values.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_metadata_mask20_update",
+      "address": "0x21d4c1",
+      "size": 93,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_metadata_mask20_update.aeon.s",
+      "original_code_sha256": "3801e4cce9346541533087aaae8642e92606fcd82fe65a01700a096b25b7d247",
+      "purpose": "For each selected engine bit, masked-update control register offset 0x90 with mask 0x20.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_metadata_mask10_update",
+      "address": "0x21d51e",
+      "size": 93,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_metadata_mask10_update.aeon.s",
+      "original_code_sha256": "967f96bd490acdc8300843476681c0fc1c154ec6e0532c42fa1a1282f91c2c5b",
+      "purpose": "For each selected engine bit, masked-update control register offset 0x90 with mask 0x10.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_channel_mask08_update",
+      "address": "0x21d57b",
+      "size": 116,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_channel_mask08_update.aeon.s",
+      "original_code_sha256": "6a36fb5bcded03637efa50268252af2f53613bef96e753f00be79d253a69a7bf",
+      "purpose": "For each selected engine bit, choose control offset 0x90 or 0x02800090 from channel parity and masked-update bit 3.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_mode_bits_write",
+      "address": "0x21d5ef",
+      "size": 97,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_mode_bits_write.aeon.s",
+      "original_code_sha256": "3463873eac00675f550e541b91f8e7bd542eb188aebf8ee0856a40aa035decdf",
+      "purpose": "For each selected engine bit, write two mode bits through the control register at offset 0x90.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_bit01_update",
+      "address": "0x21d650",
+      "size": 92,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_bit01_update.aeon.s",
+      "original_code_sha256": "09f5b2e8f6c91949f7e9814bee35274ca50b61e04583e531c36cdede7451d107",
+      "purpose": "For each selected engine bit, masked-update control register offset 0x90 with mask 0x01.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_bit40_update",
+      "address": "0x21d6ac",
+      "size": 93,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_bit40_update.aeon.s",
+      "original_code_sha256": "0cf88617c329c914f833d6508ef29be3049f1350721758cee4854b973efc6277",
+      "purpose": "For each selected engine bit, masked-update control register offset 0x90 with mask 0x40.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_bit04_read",
+      "address": "0x21d709",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_bit04_read.aeon.s",
+      "original_code_sha256": "026e27de95c7a2c545cdcb6d65bcd0cbdde6a3ab8daf6e1540ed917624ea548f",
+      "purpose": "Read engine register offset 0x42 and return bit 4.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_value45_read",
+      "address": "0x21d72c",
+      "size": 29,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_value45_read.aeon.s",
+      "original_code_sha256": "690d37f8165770f70cddb7472a04cf9b576668b63507a0cf18a84f66cdeb5ebd",
+      "purpose": "Read and return engine register offset 0x45.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_bit08_read",
+      "address": "0x21d749",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_bit08_read.aeon.s",
+      "original_code_sha256": "5baeff4459ceb3f3acc5a229a6dd40b33d060f147ab4efd7258fb21e2fba9a7e",
+      "purpose": "Read engine register offset 0x43 and return bit 3.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_bit40_read",
+      "address": "0x21d76c",
+      "size": 34,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_bit40_read.aeon.s",
+      "original_code_sha256": "7373eef6fc2e07af3fb42c516f54bb22619591b2743b44da6f796b56fd457d80",
+      "purpose": "Read engine register offset 0x06 and return bit 6.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_word0e_read",
+      "address": "0x21d78e",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_word0e_read.aeon.s",
+      "original_code_sha256": "506db1d4fccfb4b930dc891e9e1272d3547d8e5d8f30c049c1a81f1da0cebefe",
+      "purpose": "Read engine halfword offset 0x0e and mask to 15 bits.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_word0c_read",
+      "address": "0x21d7b1",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_word0c_read.aeon.s",
+      "original_code_sha256": "cf71ebe7daa36a140a2513778b94e2614a95509d0476002a7896eb4449f1d5c2",
+      "purpose": "Read engine halfword offset 0x0c and mask to 13 bits.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_word08_read",
+      "address": "0x21d7d4",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_word08_read.aeon.s",
+      "original_code_sha256": "b561c7ab3f6e6e451e4e98e0deaad07ab9900a600c148e28943830927414d885",
+      "purpose": "Read engine halfword offset 0x08 and mask to 13 bits.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_value3d_read",
+      "address": "0x21d7f7",
+      "size": 29,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_value3d_read.aeon.s",
+      "original_code_sha256": "42a178f51fd116c625c014331afd5824fa0a3abb5176f0bde738a6947105f8a0",
+      "purpose": "Read and return engine register offset 0x3d.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_flag41_test",
+      "address": "0x21d814",
+      "size": 89,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_flag41_test.aeon.s",
+      "original_code_sha256": "56415a3913bd74bac48eb32fee3807b280954bf72d29f3be89f12b0775bcede5",
+      "purpose": "Read engine register offset 0x41 and return its sign bit; parity paths implement the same test.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_flag07_write",
+      "address": "0x21d86d",
+      "size": 48,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_flag07_write.aeon.s",
+      "original_code_sha256": "a823778fd042d00b665b44a06e1360a723990b7a82b0a850a7d2a82574b270fd",
+      "purpose": "Write 0x80 or zero to engine register offset 0x07 according to the first argument.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_flag05_mask_update",
+      "address": "0x21d89d",
+      "size": 90,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_flag05_mask_update.aeon.s",
+      "original_code_sha256": "4add5dda45c4245caa9ba0c09798e07c6d5fd026b5018c8cc4484a15c4e60829",
+      "purpose": "For each selected engine bit, masked-update engine register offset 0x05 with mask 0x04.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_register_value04_read",
+      "address": "0x21d8f7",
+      "size": 28,
+      "source": "analysis/reconstructed/spectrum_one_engine_register_value04_read.aeon.s",
+      "original_code_sha256": "bccba7396dbaeedac3dfdf7471842c04fa3e9809863f5d8d31f8333f09d30bb2",
+      "purpose": "Read and return engine register offset 0x04.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_control_geometry_size_calculate",
+      "address": "0x21d913",
+      "size": 100,
+      "source": "analysis/reconstructed/spectrum_one_engine_control_geometry_size_calculate.aeon.s",
+      "original_code_sha256": "1b9a1714d462b4ece2d6263c17880cb56a81787992c17f09d1e4ac70a0ebe8c2",
+      "purpose": "Derive a 16-bit size from engine register offset 0x50 and metadata bytes at offsets 0x88/0x89.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_metadata_control_update_dispatch",
+      "address": "0x21d977",
+      "size": 231,
+      "source": "analysis/reconstructed/spectrum_one_engine_metadata_control_update_dispatch.aeon.s",
+      "original_code_sha256": "ecc3b98cd2b7c4a0d0beb7584e18ce4bdc34884ba2d11f368c14d0b629fb887e",
+      "purpose": "Dispatch metadata values 0..8 through a second table to masked control-register updates; unsupported values return without update.",
+      "component_kind": "routine"
     }
   ],
   "limitations": [
-    "104 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "126 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],
@@ -1812,6 +2010,118 @@
         "0x0"
       ],
       "purpose": "Eight source bytes copied into selected stride24 records; physical interpretation unknown."
+    },
+    {
+      "name": "engine_control_dispatch_primary",
+      "address": "0x2af554",
+      "size": 36,
+      "original_data_sha256": "b48d9a0d48692d38b3939cbc9948bfef4c63b5768fed0f157e6743ce9ae64de0",
+      "values": [
+        "0xd5",
+        "0xd3",
+        "0x21",
+        "0x0",
+        "0xf0",
+        "0xd3",
+        "0x21",
+        "0x0",
+        "0x28",
+        "0xd4",
+        "0x21",
+        "0x0",
+        "0x20",
+        "0xd4",
+        "0x21",
+        "0x0",
+        "0x18",
+        "0xd4",
+        "0x21",
+        "0x0",
+        "0x10",
+        "0xd4",
+        "0x21",
+        "0x0",
+        "0x8",
+        "0xd4",
+        "0x21",
+        "0x0",
+        "0x0",
+        "0xd4",
+        "0x21",
+        "0x0",
+        "0xf8",
+        "0xd3",
+        "0x21",
+        "0x0"
+      ],
+      "decoded_values": [
+        "0x21d3d5",
+        "0x21d3f0",
+        "0x21d428",
+        "0x21d420",
+        "0x21d418",
+        "0x21d410",
+        "0x21d408",
+        "0x21d400",
+        "0x21d3f8"
+      ],
+      "purpose": "Nine little-endian 32-bit absolute code targets used by engine-control dispatch."
+    },
+    {
+      "name": "engine_control_dispatch_secondary",
+      "address": "0x2af578",
+      "size": 36,
+      "original_data_sha256": "ae49daa76f9c59d15e8872116414a762752d513ce37f36f9218147fdc7048351",
+      "values": [
+        "0xae",
+        "0xd9",
+        "0x21",
+        "0x0",
+        "0xb8",
+        "0xd9",
+        "0x21",
+        "0x0",
+        "0x47",
+        "0xda",
+        "0x21",
+        "0x0",
+        "0x30",
+        "0xda",
+        "0x21",
+        "0x0",
+        "0x19",
+        "0xda",
+        "0x21",
+        "0x0",
+        "0x11",
+        "0xda",
+        "0x21",
+        "0x0",
+        "0xfb",
+        "0xd9",
+        "0x21",
+        "0x0",
+        "0xe5",
+        "0xd9",
+        "0x21",
+        "0x0",
+        "0xcf",
+        "0xd9",
+        "0x21",
+        "0x0"
+      ],
+      "decoded_values": [
+        "0x21d9ae",
+        "0x21d9b8",
+        "0x21da47",
+        "0x21da30",
+        "0x21da19",
+        "0x21da11",
+        "0x21d9fb",
+        "0x21d9e5",
+        "0x21d9cf"
+      ],
+      "purpose": "Nine little-endian 32-bit absolute code targets used by engine-control dispatch."
     }
   ]
 }

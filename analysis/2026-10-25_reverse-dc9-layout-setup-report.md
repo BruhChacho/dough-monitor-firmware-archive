@@ -168,9 +168,11 @@ or flash operation was performed. Original ZIPs and all earlier builds remain
 preserved. Repository publication is separately authorized by the owner's
 latest request; it does not authorize or establish device operation.
 
-The repository update is prepared on local branch
-`codex/community-firmware-layout-setup-2026-10-25`. Publication could not complete:
-the GitHub integration returned HTTP403 when creating its tree, and the local
-checkout has no HTTPS credentials or configured SSH identity/agent. No remote
-branch or PR was created. The local changes and successful validation artifacts
-remain available; publication requires working repository write credentials.
+The repository update is published on branch
+`codex/community-firmware-layout-setup-2026-10-25` in
+[open draft PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1).
+GitHub CLI authentication resolved the earlier connector HTTP403/credential
+blocker. The PR is not merged. Four validated working inputs (`MANIFEST.csv`,
+`analysis/installers.json`, `analysis/inventory.json`, `scripts/test_analysis.py`)
+have CRLF/LF-only normalization differences in the Git commit; the other 196
+validated input identities match the committed bytes exactly.

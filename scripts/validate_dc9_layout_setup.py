@@ -150,8 +150,8 @@ def validate():
                 assert result['termination']=='breakpoint'
                 record('deferred_request_prefixes',result)
 
-    # The control path's first real dependency remains unknown; preserve its
-    # argument conversion and distinguish a breakpoint from a returned routine.
+    # Retain the historical entry-prefix argument check. The engine-control
+    # validator now executes these dependencies and checks the next boundary.
     for index in (0,1,3,12,255):
         for enabled in (0,1):
             result=strict.run(0x220a8b,Memory([stack_region()]),regs(enabled,index),stop_before=(0x220aa3,))

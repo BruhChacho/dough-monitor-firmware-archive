@@ -44,12 +44,10 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(peek(memory,0x4551a8,2),0)
 
     def test_full_apply_completes_reset_then_requires_next_service(self):
-        from validate_dc9_layout_setup import fixture as setup_fixture
-        from validate_dc9_transfer import plain
+        from validate_dc9_engine_control import apply_fixture
         expanded,_,_=inputs()
-        memory = setup_fixture(expanded,integrate=True)
-        memory.regions.append(plain(0x455210,b'\0','range_mode'))
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x21d3b1'):
+        memory = apply_fixture(expanded)
+        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x22607c'):
             self.conditional.run(0x23fad0, memory, regs())
         for index in range(6):
             self.assertEqual(peek(memory,0x3b4960+176*index),4)
