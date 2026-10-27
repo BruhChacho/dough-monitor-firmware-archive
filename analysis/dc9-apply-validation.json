@@ -1,5 +1,5 @@
 {
-  "source_layout_sha256": "86a1658224451d256b82631e0c0a2f1031bef57b7532285b2c31ae53f4c879c1",
+  "source_layout_sha256": "87e824379b95e5647541f0c9b3566c1548141e7a1d8fb7384b31f801586d6f70",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",
@@ -142,7 +142,7 @@
       "site": "0x23fb0e",
       "target": "0x22607c",
       "kind": "call",
-      "recovered_in_layout": false
+      "recovered_in_layout": true
     },
     {
       "site": "0x23fb1b",

@@ -1,5 +1,5 @@
 {
-  "source_layout_sha256": "86a1658224451d256b82631e0c0a2f1031bef57b7532285b2c31ae53f4c879c1",
+  "source_layout_sha256": "87e824379b95e5647541f0c9b3566c1548141e7a1d8fb7384b31f801586d6f70",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",
@@ -10,7 +10,7 @@
     "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
     "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
   },
-  "status": "engine control helpers return; full apply stops before unrecovered enable service",
+  "status": "engine control helpers return; historical apply prefix retained at enable-service entry",
   "cases": {
     "base_selector_returns": 156,
     "metadata_index_guard_returns": 3,
@@ -236,11 +236,11 @@
   "limitations": [
     "Physical ISA, CALL, endianness and counter-store semantics remain hypotheses.",
     "Plain bus bytes do not implement page isolation, hardware effects, time or interrupts.",
-    "Full enabled control/setup/apply remains incomplete; next service0x22607c is not stubbed.",
+    "This validator retains the historical apply prefix at0x22607c; engine-enable validation continues it.",
     "Mapping13 software engine records does not establish physical engine count or complete uint32 inputs."
   ],
   "tools_sha256": {
-    "validate_dc9_engine_control.py": "122b083f25899259cf825e16049f9b13e432c0d657abd395e53766ee16dc02bc",
+    "validate_dc9_engine_control.py": "62033f2c54b0cce8a03fc26b76c349513fca187ab65fe8af6c312203ac422ecb",
     "reconstruct_dc9_engine_control.py": "8c634a9cde0eaca27e82f92657e7f5a4a6bc2fa4b278c2af96892cd54abe0f55",
     "aeon_module_model.py": "e7a92f3346cbb2d82627f404ddc94cee10bcbc2aa2e97309bd4c71d50910e74d",
     "aeon_subset_assembler.py": "a0594ebdc01ae69711a12a989b64308f4e1a44d7a82b8b2da3fa58407241779d"

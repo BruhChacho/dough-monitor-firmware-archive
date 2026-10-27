@@ -214,11 +214,11 @@ baseline, helper-experiment, and layout-experiment BIN hashes remain
 `0b5d8350`, `d88a1683`, and `95a06b2f`. The preceding 83- and 96-component
 milestones remain preserved historical snapshots.
 
-On 2026-10-26 (America/New_York), offline source recovery added 22 engine-
-control routines (602 instructions / 1,709 bytes) and two dispatch tables (72
-bytes). The overlay now has 126 components (5,627 instructions / 17,432 code
-bytes) and 11 tables / 867 bytes, about 0.72% of the expanded application. This
-ratio is a source-coverage proxy. The combined offline gate passed 148 tests,
+The historical engine-control milestone on 2026-10-26 (America/New_York)
+added 22 routines (602 instructions / 1,709 bytes) and two dispatch tables (72
+bytes). At that snapshot the overlay had 126 components (5,627 instructions /
+17,432 code bytes) and 11 tables / 867 bytes, about 0.72% of the expanded
+application. This ratio is a source-coverage proxy. Its combined offline gate passed 148 tests,
 2,078 strict cases and 384 conditional cases. All 602 new instruction
 addresses were visited across bounded cases; this does not establish exhaustive
 input or path coverage. The full-apply prefix completes the six-record reset
@@ -230,3 +230,35 @@ offline: physical CPU, page-window, peripheral, timing, display and recovery
 behavior remain untested. See the [engine-control report](2026-10-26_reverse-dc9-engine-control-report.md),
 [validation](extracted/firmware-validation-engine-control-2026-10-26/validation.json),
 and [workspace summary](community-engine-control-workspace.json).
+
+In a subsequent milestone dated 2026-10-26 (America/Los_Angeles), offline
+recovery added 11 engine-enable and reference-count routines (292 instructions
+/ 893 code bytes). The overlay now contains 137 components (5,919 instructions
+/ 18,325 code bytes) and 11 tables / 867 bytes, about 0.755184% of the expanded
+application (about 0.76%). This is a code-byte coverage proxy only. The
+individual engine-enable validator reports 66 strict and 212 conditional cases;
+the enable-leaf validator reports 71 strict cases, 2 conditional store-policy
+cases and one expected strict rejection of ambiguous `bg.sw_1`; the reference-
+count validator reports 74 cases, including one expected budget stop. The
+combined gate passed 159 tests. Across the 292 new instructions, bounded cases
+visited 256: ten routines were fully visited and register-pair configuration
+reached 42 of 78 instructions. This is not exhaustive input or path coverage.
+The [engine-enable report](2026-10-26_reverse-dc9-engine-enable-report.md),
+[workspace summary](community-engine-enable-workspace.json), and run under
+`extracted/firmware-validation-engine-enable-2026-10-26/` record the combined
+evidence. The three preserved builds retain hash prefixes `0b5d8350`,
+`d88a1683`, and `95a06b2f`; no encoder or model implementation changed.
+
+The new bounded full-apply prefix completes the six metadata resets, modeled setup for
+13 engine records and four auxiliary resets, then stops at `0x22ac52`
+before unrecovered service `0x2271a9`. Engine-enable validation covers all 13
+records under both store policies and selected special enabled modes 9 and 10
+with a direct pair. The leaf validation confirms the zero predicate, state
+selection, guarded metadata-byte readers, the channel-record byte `0x28` to
+metadata word `0x6c` consumer, and the six-record halfword counter path; the
+ambiguous counter store remains rejected by default and is separately run under
+two explicit width hypotheses. The reference-count run includes an expected
+budget-bounded path. These cases use a bounded instruction model and plain RAM;
+they do not validate peripheral or physical CPU behavior. No encoder or model
+implementation changed. The full firmware remains incomplete and hardware
+untested. The preceding engine-control report remains a historical snapshot.

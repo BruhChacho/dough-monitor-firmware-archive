@@ -233,14 +233,14 @@ def validate():
         record('full_apply_before_engine_enable_service',result,policy)
 
     return {'source_layout_sha256':sha(LAYOUT.read_bytes()),**decoder_identity(),
-        'status':'engine control helpers return; full apply stops before unrecovered enable service',
+        'status':'engine control helpers return; historical apply prefix retained at enable-service entry',
         'cases':counts,'strict_cases':sum(counts.values()),'conditional_cases_by_policy':conditional,
         'conditional_cases':sum(sum(v.values()) for v in conditional.values()),'visited_instruction_count':len(visited),
         'source_spans':[{'name':n,'address':hex(a),'end_exclusive':hex(b),'size':b-a,'sha256':sha(expanded[a-0x200000:b-0x200000]),'visited_instructions':sum(a<=pc<b for pc in visited)} for n,a,b,_ in SPANS],
         'key_to_logical_base':[hex(a) for a in BASES],
         'limitations':['Physical ISA, CALL, endianness and counter-store semantics remain hypotheses.',
             'Plain bus bytes do not implement page isolation, hardware effects, time or interrupts.',
-            'Full enabled control/setup/apply remains incomplete; next service0x22607c is not stubbed.',
+            'This validator retains the historical apply prefix at0x22607c; engine-enable validation continues it.',
             'Mapping13 software engine records does not establish physical engine count or complete uint32 inputs.'],
         'tools_sha256':{n:sha((ROOT/'scripts'/n).read_bytes()) for n in ('validate_dc9_engine_control.py','reconstruct_dc9_engine_control.py','aeon_module_model.py','aeon_subset_assembler.py')}}
 

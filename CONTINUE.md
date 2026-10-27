@@ -3,7 +3,91 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: engine-control helpers
+## Latest continuation: enabled setup and metadata consumers
+
+Updated 2026-10-26 (America/Los_Angeles). Continue toward **100% editable
+application** using lower-cost agents with parent review. **Always report the
+source-coverage percentage**; it is not a product-readiness estimate. Read
+`analysis/2026-10-26_reverse-dc9-engine-enable-report.md`,
+`analysis/community-engine-enable-workspace.json`, and `firmware/README.md`.
+
+Git started clean at `01ed80d` on
+`codex/community-firmware-layout-setup-2026-10-25`, tracking the same remote
+branch. Publication is authorized and uses the configured GitHub CLI/Git
+credentials. [Draft PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1)
+remains open, not merged. Verify the current Git/remote state before continuing.
+The app artifact-attachment call did not respond, but the PR exists on GitHub.
+No hardware work or flashing was performed.
+
+- Source: **137 components, 5,919 instructions / 18,325 code bytes**, plus
+  **11 tables / 867 bytes**. Coverage **0.755% (about 0.76%)** of 2,426,560
+  application bytes. Most code is still pinned vendor input; physical boot,
+  recovery and display behavior remain untested.
+- `reconstruct_dc9_engine_enable.py` adds 11 routines, 292 instructions /
+  893 bytes, with no new tables or encoder/model instruction changes. Exact
+  spans:22607c..226100,23ee2c..23eee9,23eee9..23ef0c,23ea03..23ea1e,
+  23ea1e..23ea6e,23ea6e..23ea99,23ea99..23eac4,23eac4..23eb05,
+  23e13b..23e152,21bd1e..21bd28,220995..220a8b. Addresses hex; ends exclusive.
+- Engine-enable22607c walks set mask bits, reads engine bank word+4 at
+  47fa9c/stride124, updates logical10800032+bank with uint32 wrap. Odd index
+  uses mask2, even20; second argument selects set/clear. Empty mask returns;
+  no13-record bound exists here. Active-bank tests retain earlier writes when
+  a later engine is unmapped. Integrated setup uses zero-bank inactive guards.
+- Reference count23ee2c iterates FOUR channel records4821ec/stride168.
+  Active word+4, source-index byte+28; direct source==target counts. Otherwise
+  channel byte+94, source/target metadata word+80 must be nonzero, then scan
+  source metadata bytes+7c through inclusive bound3 for word==4, else low8(word).
+  Word104 therefore scans5 bytes including word80's low byte. Bound255 without
+  match wraps the uint8 scan index and hits the explicit instruction budget.
+  Keep this failure; no invented success, external reachability or fix claim.
+- Metadata zero test23ea03 reads a32-bit word+c and returns1 forzero.
+  State setter23ea1e writes word+c before walking halfword+12: selected engine
+  word+8 becomes5 forstate2,2 forstate4,otherwise1. r23 always clobbered;
+  r24 becomes124 only fornonempty mask. Sixteen-record fixtures are synthetic.
+  Guarded flag readers require index<=5 andhalfword+ac nonzero, then read
+  bit3/5 ofbyte98. Accessor23eee9 returns32-bit metadata word6c viachannelbyte28.
+- Counter23eac4 visits6 metadata records, stateword+c==4 andhalfword+ac!=0,
+  subtracts50decimal. Default rejects ambiguous store. Underflow1 produces
+  cfffffff withliteral32-bitstore, orcfff withneighborbytespreserved under16-bit
+  hypothesis. Broadcast store23e13b at455214 has the same width distinction.
+- Engine-enable validator: **66 strict, 212 conditional**. Leaf validator:
+  **71 strict, 2 conditional, 1 expected strict-store rejection**. Reference
+  validator: **74 cases including1 expected budget rejection**. Ten new
+  routines have allinstructionsvisited; pairconfiguration42/78, total256/292.
+  Default store/CALL/endianness/byte semantics and plain-bus limits remain.
+- **Enabled setup22dc46(mask1fff,flag1) returns for all13 mapped records** under
+  both store policies, including range/control and tail mask preparation.
+  Normal enabledcontrol returns for13 indices; extra cases cover metadata
+  gating and selected enabled modes9/10. Special modes use globalhalfword
+  343c14 minus1 (uint16wrap), directpair10902f1a/10902b1a andbroadcastmaskA.
+  Zero-bank fixture aliases pair destinations; repeated writes are asserted.
+  Deferred and specialdisable/wait paths remain incomplete.
+- Full apply23fad0 now completes6metadataresets,13enabledsetupiterations and
+  4auxiliaryresets, then stops at **22ac52**, before **2271a9**, withr3=0.
+  Budget100,000 permits this longer bounded path (32,212 instructions observed
+  under halfword policy). No services/timers were stubbed. Fullapply unfinished.
+- Combined gate passed:
+  `analysis/extracted/firmware-validation-engine-enable-2026-10-26/`.
+  **159 tests**,45 archive hashes,13 byte-exact corpus roundtrips /141resource
+  checksums, allmodelstages and3complete BINs. Hashes remainstock0b5d8350,
+  helperd88a1683,layout95a06b2f; each2,069,060bytes,11resources unchanged.
+  Canonical validation/build JSONs describe this run; historical runs retained.
+  Audit:208 run-artifact hashes,243 inputidentities,176 workspace artifacts+2USB,
+  12 prior workspaces and31 previous BINs verified.
+- Starting295 tracked source/evidence/doc files are saved in
+  `analysis/scratch/engine-enable-before-2026-10-26/` with verified hashes.
+  Alloriginalpathsremain. Three cheaperagents contributed source, validators,
+  tests/docs; parent corrected widths, descriptions, oraclepadding andtestpath
+  mistakes before acceptance. Preserve originals, snapshots and prior builds.
+
+Next offline task: recover **2271a9** and update-range dependencies **22ab1c**.
+Other fullapply calls later include23d349,2250e8,226100. Pair/deferred work:
+23e49c,23e4a0,23e58a then27b707. Geometry2686dd andspecial20ece9/20e990,
+independent ISA/CALL/store evidence, complete compiler/linker, most application
+source and EFE/USB source builds remainopen. Do not equate modeledsetupreturn
+with physicaldisplayoperation or a complete firmware release.
+
+## Previous continuation: engine-control helpers
 
 Updated 2026-10-26 (America/New_York). The owner wants **100% editable
 application**, continued use of cheaper agents with parent review, repository

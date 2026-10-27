@@ -46,24 +46,22 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). It provides a prepared DC9/EFE workspace, separate
-Spectrum One USB images, and a DC9 source overlay containing 126 reconstructed
-components (5,627 instructions; 17,432 code bytes) and 11 tables (867 bytes),
-about 0.72% of the expanded application. The 2026-10-26 engine-control gate
-passed 148 tests, 2,078 strict cases, and 384 conditional cases. Its report and
-workspace summary are [here](analysis/2026-10-26_reverse-dc9-engine-control-report.md)
-and [here](analysis/community-engine-control-workspace.json); validation
-artifacts are under
-[`analysis/extracted/firmware-validation-engine-control-2026-10-26/`](analysis/extracted/firmware-validation-engine-control-2026-10-26/).
-All 602 newly recovered instruction addresses were visited across bounded
-cases, which is not exhaustive input or path coverage. The full-apply model
-reaches `0x220bc7` and stops before the unrecovered service at `0x22607c`;
-disable-control cases return for 13 mapped fixture indices, while enabled
-control and full apply remain incomplete. Earlier layout-setup and consumer
-results remain historical snapshots. The model uses plain-byte memory and
-explicit CPU/store hypotheses; it does not model hardware page windows,
-peripheral effects, timing, or device operation. The code-byte ratio is a
-coverage proxy, and experimental images are hardware-untested.
+guide](firmware/README.md). The DC9 source overlay contains **137 reconstructed
+components: 5,919 instructions / 18,325 code bytes**, plus 11 tables / 867 bytes.
+That is **0.755% (about 0.76%)** of the expanded application. Most application
+bytes remain precompiled vendor input; fully editable firmware remains the goal.
+
+The latest offline gate passed **159 tests** and built stock, helper and layout
+images with unchanged hashes. Under both explicit store hypotheses, the model
+completes setup for 13 engine records and resets four auxiliary records. Full
+apply then stops before unrecovered service `0x2271a9`. Physical boot, recovery,
+display behavior and peripheral operation remain untested.
+
+See the [engine-enable report](analysis/2026-10-26_reverse-dc9-engine-enable-report.md),
+[workspace summary](analysis/community-engine-enable-workspace.json), and
+[generated validation run](analysis/extracted/firmware-validation-engine-enable-2026-10-26/).
+The percentage measures recovered code bytes, not overall product readiness.
+Earlier reports and workspaces remain historical snapshots.
 
 The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
 

@@ -1130,10 +1130,109 @@
       "original_code_sha256": "ecc3b98cd2b7c4a0d0beb7584e18ce4bdc34884ba2d11f368c14d0b629fb887e",
       "purpose": "Dispatch metadata values 0..8 through a second table to masked control-register updates; unsupported values return without update.",
       "component_kind": "routine"
+    },
+    {
+      "name": "engine_mask_enable",
+      "address": "0x22607c",
+      "size": 132,
+      "source": "analysis/reconstructed/spectrum_one_engine_mask_enable.aeon.s",
+      "original_code_sha256": "017d62746d2a199c3ce64aa16aad31bdc8e5de90499c43873a356c2bc25e6703",
+      "purpose": "Read the engine-bank word at offset 4, then set or clear mask 2 at logical address 0x10800032 + bank according to odd or even bank parity.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "channel_reference_count",
+      "address": "0x23ee2c",
+      "size": 189,
+      "source": "analysis/reconstructed/spectrum_one_channel_reference_count.aeon.s",
+      "original_code_sha256": "867b306390a94151da57dd9da36b4a7c2b14dd8aacd58e12d2c4c99b69c0c02f",
+      "purpose": "Count matching active channels and return the resulting count.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "metadata_word6c_read",
+      "address": "0x23eee9",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_metadata_word6c_read.aeon.s",
+      "original_code_sha256": "37361499038fbc174f12f1e060bc1f40864d900ff70cfe92736cc583f3bc8329",
+      "purpose": "Read a 32-bit word from the metadata structure at offset 0x6c.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "metadata_word0c_zero_test",
+      "address": "0x23ea03",
+      "size": 27,
+      "source": "analysis/reconstructed/spectrum_one_metadata_word0c_zero_test.aeon.s",
+      "original_code_sha256": "276fb0cff08ecf0d217534a1daedb0f9bd207feaec4b0026914f0ae12dd716dd",
+      "purpose": "Test whether the 32-bit metadata word at offset 0x0c is zero.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "metadata_state_write_selected_engines",
+      "address": "0x23ea1e",
+      "size": 80,
+      "source": "analysis/reconstructed/spectrum_one_metadata_state_write_selected_engines.aeon.s",
+      "original_code_sha256": "c345c35878610a36a7e8f2e3003a932f943c63bb69bba72f71f06ea46d200791",
+      "purpose": "Write a metadata state value and apply it to selected engine records at word offset 0x08.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "metadata_flag_read_1",
+      "address": "0x23ea6e",
+      "size": 43,
+      "source": "analysis/reconstructed/spectrum_one_metadata_flag_read_1.aeon.s",
+      "original_code_sha256": "82b874b20ecdf24ef79a918d6155ca197986dd279e9fae9a618e0c340fca6033",
+      "purpose": "For metadata indices 0..5, require a nonzero halfword at metadata offset 0xac, then return bit 3 of byte offset 0x98.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "metadata_flag_read_2",
+      "address": "0x23ea99",
+      "size": 43,
+      "source": "analysis/reconstructed/spectrum_one_metadata_flag_read_2.aeon.s",
+      "original_code_sha256": "24f7a8d9f30bae8e7156b61d698955767008b490ce801fe9ba10489f6f9905f3",
+      "purpose": "For metadata indices 0..5, require a nonzero halfword at metadata offset 0xac, then return bit 5 of byte offset 0x98.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "metadata_flag_read_3",
+      "address": "0x23eac4",
+      "size": 65,
+      "source": "analysis/reconstructed/spectrum_one_metadata_flag_read_3.aeon.s",
+      "original_code_sha256": "a27cbeda6e538b09ca6ac9e695d919fbbec0b948674573eab7325f1beaf1a99c",
+      "purpose": "Walk stride-0xb0 records; for type 4 with a nonzero halfword at metadata base offset 0xac (base+0xa0 plus 0x0c), subtract 50 decimal from that halfword.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "broadcast_mask_counter_store",
+      "address": "0x23e13b",
+      "size": 23,
+      "source": "analysis/reconstructed/spectrum_one_broadcast_mask_counter_store.aeon.s",
+      "original_code_sha256": "021e096620a8fb948b02f8869b3d49c1e14da83185c15d471c05ae4fcca0957f",
+      "purpose": "Store the supplied value at fixed address 0x455214 when the selector is nonzero, otherwise store zero; semantics are unknown.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "global_halfword_read",
+      "address": "0x21bd1e",
+      "size": 10,
+      "source": "analysis/reconstructed/spectrum_one_global_halfword_read.aeon.s",
+      "original_code_sha256": "b41ffe8645942c20b9eef074001d8f720389f3136e3c518052b29f2deb012b45",
+      "purpose": "Read and return a global halfword.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "register_pair_configuration",
+      "address": "0x220995",
+      "size": 246,
+      "source": "analysis/reconstructed/spectrum_one_register_pair_configuration.aeon.s",
+      "original_code_sha256": "881c1e7516aa6ff537cd64535108a56b739f668f845ae02518df3d333eaf41d0",
+      "purpose": "Configure a pair of registers from the supplied values; register semantics are unresolved.",
+      "component_kind": "routine"
     }
   ],
   "limitations": [
-    "126 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "137 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],
