@@ -1229,10 +1229,91 @@
       "original_code_sha256": "881c1e7516aa6ff537cd64535108a56b739f668f845ae02518df3d333eaf41d0",
       "purpose": "Configure a pair of registers from the supplied values; register semantics are unresolved.",
       "component_kind": "routine"
+    },
+    {
+      "name": "channel_metadata_update",
+      "address": "0x2271a9",
+      "size": 294,
+      "source": "analysis/reconstructed/spectrum_one_channel_metadata_update.aeon.s",
+      "original_code_sha256": "1a39258e73a884e4e86a64c30edff248fa68dcd73296884ef344db771113ee69",
+      "purpose": "Update channel metadata flags using the metadata index and channel record.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "channel_metadata_bit_update",
+      "address": "0x227145",
+      "size": 100,
+      "source": "analysis/reconstructed/spectrum_one_channel_metadata_bit_update.aeon.s",
+      "original_code_sha256": "6be4c441d46d146d07ab09d048af61da10f7576168a5570cd7db50f389cd02b8",
+      "purpose": "Allocate and mark channel metadata ownership, then call the channel helper.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "channel_overlap_flags_update",
+      "address": "0x222843",
+      "size": 85,
+      "source": "analysis/reconstructed/spectrum_one_channel_overlap_flags_update.aeon.s",
+      "original_code_sha256": "3d3b03ab9e2dde5eec50506e530944111d0f04a778e2c26988bef043756bc58c",
+      "purpose": "Update channel overlap flags 0x35 and 0x36.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_pair01_available",
+      "address": "0x222ace",
+      "size": 35,
+      "source": "analysis/reconstructed/spectrum_one_engine_pair01_available.aeon.s",
+      "original_code_sha256": "f0c0a376373e922d9d22de232b0165c06254e7c4ef9675cb6e2bb66cc636e06a",
+      "purpose": "Return whether engine register pair 0x01 is available.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_pair23_available",
+      "address": "0x222af1",
+      "size": 36,
+      "source": "analysis/reconstructed/spectrum_one_engine_pair23_available.aeon.s",
+      "original_code_sha256": "a525843cdf74f12fbbe4f31c6e72a9fdb5df7d6849a421ac177c16bfdc98cb65",
+      "purpose": "Return whether engine register pair 0x23 is available.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "channel_record_rectangle_assign",
+      "address": "0x2229f8",
+      "size": 170,
+      "source": "analysis/reconstructed/spectrum_one_channel_record_rectangle_assign.aeon.s",
+      "original_code_sha256": "60183bf9b1d339864e27d9a15885a2fc29e16d7b0cd85d3d3961e395ab2f5008",
+      "purpose": "Assign the selected channel rectangle using the requested engine and record.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_free_index_scan",
+      "address": "0x222b65",
+      "size": 37,
+      "source": "analysis/reconstructed/spectrum_one_engine_free_index_scan.aeon.s",
+      "original_code_sha256": "e1da08c3dfe9ed6cbaf6d7cfac016c1a1077f59eb05104f91218fd7a20b3c938",
+      "purpose": "Scan engine records and return a free engine index, if found.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "channel_update_range_check",
+      "address": "0x22aa4e",
+      "size": 206,
+      "source": "analysis/reconstructed/spectrum_one_channel_update_range_check.aeon.s",
+      "original_code_sha256": "5ba116cf02654a70a37a43e2c93ce0d1ad71c18602796ebba2b67f74e6739ec8",
+      "purpose": "Check channel records in the selected range and apply range-update helpers.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "channel_update_range_apply",
+      "address": "0x22ab1c",
+      "size": 251,
+      "source": "analysis/reconstructed/spectrum_one_channel_update_range_apply.aeon.s",
+      "original_code_sha256": "584130f8fddb94141358869af0e872103c83f1a3a4d8e9d50c214f0d251c5704",
+      "purpose": "Apply the requested update across channel records in the selected range.",
+      "component_kind": "routine"
     }
   ],
   "limitations": [
-    "137 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "146 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],

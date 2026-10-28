@@ -33,7 +33,7 @@ class WorkspaceTests(unittest.TestCase):
             output, report = build(self.workspace)
         self.assertEqual(output, (self.workspace / 'dc9/original.bin').read_bytes())
         self.assertEqual(report['output_sha256'], SOURCE_SHA)
-        self.assertEqual(report['assembled_code_bytes'], 18325)
+        self.assertEqual(report['assembled_code_bytes'], 19539)
 
     def test_structured_rectangle_edit_requires_selection_and_experimental_mode(self):
         rectangle_path = 'dc9/source/dc9-rectangles-asymmetric.example.json'

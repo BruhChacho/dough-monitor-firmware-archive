@@ -2,20 +2,23 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The source overlay contains **137 components, 5,919 instructions /
-18,325 code bytes**, plus **11 tables / 867 bytes**. Coverage is **0.755%
-(about 0.76%)** of the expanded application; most application bytes remain
+build. The source overlay contains **146 components, 6,332 instructions /
+19,539 code bytes**, plus **11 tables / 867 bytes**. Coverage is **0.805%
+(about 0.81%)** of the expanded application; most application bytes remain
 precompiled vendor input.
 
-The latest combined gate passed **159 tests** and built three complete BINs.
-The model completes enabled setup for 13 mapped engine records under both
-store hypotheses. Fully editable firmware and a hardware-tested community
-release remain unfinished; the percentage is a code-byte coverage proxy.
+The latest source milestone adds nine channel-update and engine-allocation
+routines. The combined gate passed **171 tests**. Separate model stages cover 475 channel-update
+cases (two expected budget rejections), 21 leaf cases, and 15 strict plus four
+conditional integration cases. It built three complete BINs. See the
+[channel-update report](../analysis/2026-10-26_reverse-dc9-channel-update-report.md).
+Fully editable firmware and a hardware-tested community release remain
+unfinished; the percentage is a code-byte coverage proxy.
 
 ## Open the files
 
-The latest prepared workspace is [firmware-validation-engine-enable-2026-10-26/workspace](../analysis/extracted/firmware-validation-engine-enable-2026-10-26/workspace/README.md).
-Its combined gate passed. Workspace files are generated locally and
+The latest prepared workspace is [firmware-validation-channel-update-2026-10-26/workspace](../analysis/extracted/firmware-validation-channel-update-2026-10-26/workspace/README.md).
+Workspace files are generated locally and
 ignored by Git. Earlier engine-control, layout-setup, consumer, configuration,
 apply, metadata-routing, community, receive, transfer, timer, and combined
 validation workspaces remain intact as historical snapshots.
@@ -54,7 +57,8 @@ Choose a new output directory for each run. The command checks all package
 hashes, the Spectrum One checksum/reconstruction corpus, repository tests,
 command/register/receive/transfer/timer/callback/configuration/apply/metadata,
 metadata-consumer, layout-setup, engine-control, engine-enable, enable-leaf,
-reference-count contracts, and helper rewrite equivalence. The previous
+reference-count, channel-update and engine-allocation contracts, and helper
+rewrite equivalence. The previous
 engine-control gate passed 148 repository tests, 2,078 strict cases, and 384
 conditional cases. Its successor passed 159 tests. Current
 individual engine-enable validation reports 66 strict and 212 conditional
@@ -134,13 +138,22 @@ it rejects growth beyond the original allocation. Raw references and container
 components are immutable inputs; editing them is rejected, not incorporated
 as a source change.
 
-The latest workspace contains
+The previous validated workspace contains
 [`dc9-v101.baseline.bin`](../analysis/extracted/firmware-validation-engine-enable-2026-10-26/workspace/build/dc9-v101.baseline.bin),
 [`dc9-v101-helper.experimental.bin`](../analysis/extracted/firmware-validation-engine-enable-2026-10-26/workspace/build/dc9-v101-helper.experimental.bin),
 and [`dc9-v101-layout.experimental.bin`](../analysis/extracted/firmware-validation-engine-enable-2026-10-26/workspace/build/dc9-v101-layout.experimental.bin).
 Each file is 2,069,060 bytes; their SHA256 prefixes are `0b5d8350`, `d88a1683`,
 and `95a06b2f`, respectively. All eleven resource spans are unchanged in each
 build. No experimental output has been booted on a monitor.
+
+The current channel-update milestone adds nine byte-exact routines spanning
+`0x222843..0x222898`, `0x2229f8..0x222aa2`, `0x222ace..0x222b15`,
+`0x222b65..0x222b8a`, `0x227145..0x2272cf`, and `0x22aa4e..0x22ac17`.
+Its full-apply prefix completes four channel updates under an explicit
+wait-bypass fixture, then stops at `0x20401d` before unrecovered `0x21ffb3`.
+See the [channel-update report](../analysis/2026-10-26_reverse-dc9-channel-update-report.md),
+[workspace summary](../analysis/community-channel-update-workspace.json), and
+[validation run](../analysis/extracted/firmware-validation-channel-update-2026-10-26/).
 
 The historical engine-control validator covers metadata-index guards and key
 dispatch, register readers, selected masked writes, and a full-apply prefix.
@@ -151,7 +164,7 @@ there. The [engine-control report](../analysis/2026-10-26_reverse-dc9-engine-con
 and [workspace summary](../analysis/community-engine-control-workspace.json)
 preserve that historical result.
 
-The current engine-enable milestone adds bounded coverage of the selected
+The historical engine-enable milestone added bounded coverage of the selected
 engine mask, special enabled modes 9 and 10 with a direct pair, enable-leaf
 predicates and readers, and the reference-count consumer. The full-apply prefix
 completes six metadata resets, setup for 13 engine records, and four auxiliary
@@ -235,7 +248,7 @@ and neighboring flag provide a stronger constraint on store width, while the
 physical ISA and clock remain unverified. Register tests use plain mapped bytes,
 without peripheral side effects. See the
 [timer and callback report](../analysis/2026-10-23_reverse-dc9-timer-report.md)
-for timer evidence and limitations. The current source overlay is about 0.76%
+for timer evidence and limitations. The current source overlay is about 0.81%
 of the expanded application; this is a coverage proxy, not engineering or product
 completion. Most functionality still resides in the pinned vendor remainder.
 

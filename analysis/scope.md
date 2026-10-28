@@ -262,3 +262,25 @@ budget-bounded path. These cases use a bounded instruction model and plain RAM;
 they do not validate peripheral or physical CPU behavior. No encoder or model
 implementation changed. The full firmware remains incomplete and hardware
 untested. The preceding engine-control report remains a historical snapshot.
+
+On 2026-10-26 (America/Los_Angeles), the channel-update milestone added nine
+byte-exact routines (413 instructions / 1,214 code bytes), including channel
+metadata updates, engine-pair availability checks, engine rectangle assignment,
+engine-free-index scanning, and the channel range-update path. The source overlay
+now contains 146 components / 6,332 instructions / 19,539 code bytes, plus 11
+tables / 867 bytes: 0.805% (about 0.81%) of the 2,426,560-byte expanded
+application. This is source coverage only. The existing 137 source records and
+tables remain unchanged. See the
+[channel-update report](2026-10-26_reverse-dc9-channel-update-report.md).
+
+The integrated apply fixture completes four channel updates after explicitly
+bypassing the existing wait routine via configuration bit `+0x4c & 0x20` or
+inactive byte `0x4551e8 == 0`, then stops at `0x20401d` before unrecovered
+`0x21ffb3` in first-engine preparation. It has not returned from full apply.
+The active-wait countdown path remains stopped at unmapped state; no timer
+completion is invented. The combined gate passed 171 tests, with 475 channel
+cases (two expected budget rejections), 21 leaf cases, and 15 strict plus four
+conditional integration cases. Hardware boot, display, recovery and physical
+CPU behavior remain untested. Next source
+path is `0x21ffb3` and its unresolved `0x21bd8d` dependency; later channel work
+includes `0x22701c` and `0x222ce8` / `0x220c76`.

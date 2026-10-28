@@ -219,6 +219,12 @@ class ModuleModel:
                 flag = signed(value(a[0])) <= imm(a[1])
             elif op == 'bn.sfgtsi':
                 flag = signed(value(a[0])) > imm(a[1])
+            elif op == 'bg.sflesi':
+                flag = signed(value(a[0])) <= imm(a[1])
+            elif op == 'bg.sfgtsi':
+                flag = signed(value(a[0])) > imm(a[1])
+            elif op == 'bg.sfleui':
+                flag = value(a[0]) <= imm(a[1])
             elif op in ("bg.sfnei", "bn.sfnei", "bg.sfeqi", "bn.sfeqi", "bg.sfgti", "bn.sfgtui", "bn.sfleui"):
                 flag = (value(a[0]) != imm(a[1]) if op in ("bg.sfnei", "bn.sfnei") else
                         value(a[0]) == imm(a[1]) if op in ("bg.sfeqi", "bn.sfeqi") else

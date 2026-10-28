@@ -18,12 +18,14 @@ ARITY.update({"bt.mov": 2, "bt.add": 2, "bn.sw": 2, "bn.lwz": 2,
               "bn.beqi": 3, "bn.bnei": 3, "bg.jal": 1, "bn.blesi": 3,
               "bn.add": 3, "bn.xor": 3})
 SIZES.update({"bg.lwz": 4, "bg.sw_0": 4, "bg.lhz": 4, "bg.sbz": 4,
-              "bg.ori": 4, "bg.sfgti": 4, "bn.sbz": 3, "bn.sh_1": 3,
+              "bg.ori": 4, "bg.sfgti": 4, "bg.sflesi": 4,
+              "bg.sfleui": 4, "bg.sfgtsi": 4, "bn.sbz": 3, "bn.sh_1": 3,
               "bn.bf": 3, "bn.exthz": 3, "bn.srli": 3, "bn.bgtui": 3,
               "bn.muls": 3, "bn.addi": 3, "bn.andi": 3, "bn.sfgtui": 3})
 SIZES.update({"bg.lbz": 4, "bg.sfeqi": 4})
 ARITY.update({"bg.lwz": 2, "bg.sw_0": 2, "bg.lhz": 2, "bg.sbz": 2,
-              "bg.ori": 3, "bg.sfgti": 2, "bn.sbz": 2, "bn.sh_1": 2,
+              "bg.ori": 3, "bg.sfgti": 2, "bg.sflesi": 2,
+              "bg.sfleui": 2, "bg.sfgtsi": 2, "bn.sbz": 2, "bn.sh_1": 2,
               "bn.bf": 1, "bn.exthz": 2, "bn.srli": 3, "bn.bgtui": 3,
               "bn.muls": 3, "bn.addi": 3, "bn.andi": 3, "bn.sfgtui": 2})
 ARITY.update({"bg.lbz": 2, "bg.sfeqi": 2})
@@ -146,9 +148,12 @@ def encode(op, args, pc, labels):
     elif op in ("bn.slli", "bn.srli"):
         word = (0x4c0000 | register(args[0]) << 13 | register(args[1]) << 8
                 | immediate(int(args[2], 0), 5) << 3 | (1 if op == "bn.srli" else 0))
-    elif op in ("bg.sfnei", "bg.sfgti", "bg.sfeqi"):
-        word = ({"bg.sfnei": 0xc0000004, "bg.sfgti": 0xc000000e, "bg.sfeqi": 0xc0000000}[op]
-                | register(args[0]) << 21 | immediate(int(args[1], 0), 16) << 5)
+    elif op in ("bg.sfnei", "bg.sfgti", "bg.sfeqi", "bg.sflesi", "bg.sfleui", "bg.sfgtsi"):
+        signed_imm = op in ("bg.sflesi", "bg.sfgtsi")
+        selector = {"bg.sfeqi": 0, "bg.sfnei": 2, "bg.sflesi": 4,
+                    "bg.sfleui": 5, "bg.sfgtsi": 6, "bg.sfgti": 7}[op]
+        word = (0xc0000000 | selector << 1 | register(args[0]) << 21
+                | immediate(int(args[1], 0), 16, signed_imm) << 5)
     elif op in ("bn.sfgtui", "bn.sfeqi", "bn.sfnei", "bn.sfleui"):
         word = {"bn.sfgtui": 0x5c001b, "bn.sfeqi": 0x5c0001, "bn.sfnei": 0x5c0009, "bn.sfleui": 0x5c0013}[op] | register(args[0]) << 13 | immediate(int(args[1], 0), 8) << 5
     elif op == 'bn.sflesi':

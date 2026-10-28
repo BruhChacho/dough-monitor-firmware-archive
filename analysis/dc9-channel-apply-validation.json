@@ -1,0 +1,113 @@
+{
+  "source_layout_sha256": "a3679b2ee11cba4ddf7da64649baabaae466d5d12b188beb2153b589332241ee",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "inactive channel range returns; full apply stops before engine preparation service 0x21ffb3",
+  "cases": {
+    "inactive_channel_update_range_returns": 15
+  },
+  "strict_cases": 15,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "full_apply_after_channel_update_prefix": 2
+    },
+    "halfword-lane-hypothesis": {
+      "full_apply_after_channel_update_prefix": 2
+    }
+  },
+  "conditional_cases": 4,
+  "visited_instruction_count": 1494,
+  "source_spans": [
+    {
+      "name": "channel_metadata_update",
+      "address": "0x2271a9",
+      "end_exclusive": "0x2272cf",
+      "size": 294,
+      "sha256": "1a39258e73a884e4e86a64c30edff248fa68dcd73296884ef344db771113ee69",
+      "visited_instructions": 35
+    },
+    {
+      "name": "channel_metadata_bit_update",
+      "address": "0x227145",
+      "end_exclusive": "0x2271a9",
+      "size": 100,
+      "sha256": "6be4c441d46d146d07ab09d048af61da10f7576168a5570cd7db50f389cd02b8",
+      "visited_instructions": 0
+    },
+    {
+      "name": "channel_overlap_flags_update",
+      "address": "0x222843",
+      "end_exclusive": "0x222898",
+      "size": 85,
+      "sha256": "3d3b03ab9e2dde5eec50506e530944111d0f04a778e2c26988bef043756bc58c",
+      "visited_instructions": 0
+    },
+    {
+      "name": "engine_pair01_available",
+      "address": "0x222ace",
+      "end_exclusive": "0x222af1",
+      "size": 35,
+      "sha256": "f0c0a376373e922d9d22de232b0165c06254e7c4ef9675cb6e2bb66cc636e06a",
+      "visited_instructions": 0
+    },
+    {
+      "name": "engine_pair23_available",
+      "address": "0x222af1",
+      "end_exclusive": "0x222b15",
+      "size": 36,
+      "sha256": "a525843cdf74f12fbbe4f31c6e72a9fdb5df7d6849a421ac177c16bfdc98cb65",
+      "visited_instructions": 0
+    },
+    {
+      "name": "channel_record_rectangle_assign",
+      "address": "0x2229f8",
+      "end_exclusive": "0x222aa2",
+      "size": 170,
+      "sha256": "60183bf9b1d339864e27d9a15885a2fc29e16d7b0cd85d3d3961e395ab2f5008",
+      "visited_instructions": 0
+    },
+    {
+      "name": "engine_free_index_scan",
+      "address": "0x222b65",
+      "end_exclusive": "0x222b8a",
+      "size": 37,
+      "sha256": "e1da08c3dfe9ed6cbaf6d7cfac016c1a1077f59eb05104f91218fd7a20b3c938",
+      "visited_instructions": 0
+    },
+    {
+      "name": "channel_update_range_check",
+      "address": "0x22aa4e",
+      "end_exclusive": "0x22ab1c",
+      "size": 206,
+      "sha256": "5ba116cf02654a70a37a43e2c93ce0d1ad71c18602796ebba2b67f74e6739ec8",
+      "visited_instructions": 36
+    },
+    {
+      "name": "channel_update_range_apply",
+      "address": "0x22ab1c",
+      "end_exclusive": "0x22ac17",
+      "size": 251,
+      "sha256": "584130f8fddb94141358869af0e872103c83f1a3a4d8e9d50c214f0d251c5704",
+      "visited_instructions": 36
+    }
+  ],
+  "limitations": [
+    "Full apply is not complete; no unknown dependency is stubbed.",
+    "Four inactive channel records and explicit polling bypass inputs are bounded synthetic fixtures.",
+    "Store, CALL and byte/little-endian semantics remain conditional; no physical timing or bus behavior is modeled."
+  ],
+  "tools_sha256": {
+    "validate_dc9_channel_apply.py": "f9dc19161a25eaf91e5d5599d6051e2681ffd679889a6fb7987869c8c3b19038",
+    "reconstruct_dc9_channel_update.py": "a8359620eb52fc5e32f36215acdb1f21273f70091c5b5d70d928f1124f7584fe",
+    "aeon_module_model.py": "d9320565a88a2bd9be450014e349f4c6fd62551d18c9acf4c21aa1e1033b1712",
+    "aeon_subset_assembler.py": "51b0203165fab72932eece9af1284eab61fd868cbef75d146fed868e8dbedb8f"
+  }
+}

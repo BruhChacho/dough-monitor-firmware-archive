@@ -3,7 +3,103 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: enabled setup and metadata consumers
+## Latest continuation: channel updates and allocation
+
+Updated 2026-10-26 (America/Los_Angeles). Continue toward **100% editable
+application**, with cheaper coding agents and parent review. **Always report
+source coverage**; it is not a product-readiness percentage. Read
+`analysis/2026-10-26_reverse-dc9-channel-update-report.md`,
+`analysis/community-channel-update-workspace.json`, and `firmware/README.md`.
+
+Started clean at `c17e20a` on `codex/community-firmware-layout-setup-2026-10-25`;
+the remote branch matched. Publication remains authorized through configured
+Git and `.tools/github-cli/gh_2.103.2_linux_amd64/bin/gh`.
+[Draft PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1)
+remains open, not merged. App artifact attachment succeeded this turn. Verify
+current Git and remote state before continuing. No device operations occurred.
+
+- Source: **146 components, 6,332 instructions / 19,539 code bytes**, plus
+  **11 tables / 867 bytes**. Coverage **0.805% (about 0.81%)** of 2,426,560
+  expanded application bytes. Most application bytes remain vendor input;
+  complete editable source and physical boot/recovery/display remain unfinished.
+- `reconstruct_dc9_channel_update.py` adds nine routines, 413 instructions /
+  1,214 bytes. Exact spans (hex, end exclusive): `2271a9..2272cf`,
+  `227145..2271a9`, `222843..222898`, `222ace..222af1`, `222af1..222b15`,
+  `2229f8..222aa2`, `222b65..222b8a`, `22aa4e..22ab1c`, `22ab1c..22ac17`.
+  All prior 137 routine records and 11 tables remain unchanged. Recovery rejects
+  differing sources/records and checks every byte before emitting sources.
+- Encoder/model adds `bg.sflesi` / `bg.sfgtsi` signed comparisons with signed
+  16-bit immediates, and `bg.sfleui` unsigned comparison with an unsigned
+  16-bit immediate. Existing `bg.sfgti` remains unsigned. Pinned SLEIGH and
+  archived bytes were checked; physical ISA assumptions remain unresolved.
+  Default ambiguous-store rejection is unchanged.
+- `2271a9` reads channel source byte `+28`, metadata word `+80`, then channel
+  flag byte `+94`. Either word/flag zero returns 1. Otherwise it handles
+  metadata references `+7c/+7d`, plus `+7e` when word>1 and `+7f` when word>2.
+  References equal to the source index skip; actual allocation failures stop
+  later processing. First result is masked to 1; later results are ANDed.
+  Matching-reference returns and allocator exhaustion are tested; selected
+  assignments stop before `22701c`.
+- Free scan `222b65` reads engine state `+8` for indices 5–12, starting at
+  `47fd10`, returning 13 if all nonzero. It does not write. `227145` ORs the
+  selected bit into channel halfword `+2c`, writes engine byte `+10=channel`
+  and word `+8=1`, then calls `22701c(metadata, engine)`. Prefix stops at CALL
+  `227196`; target `22701c` remains unmapped. Earlier writes are retained.
+- Pair selectors `222ace/222af1` read engine state words `+8` for pairs 0/1
+  and 2/3: prefer odd if zero, else even if zero or 7, else sentinel 4. Neither
+  writes memory.
+- Overlap helper `222843` checks x<=1919 AND x+extent>1920 using channel
+  halfwords `+18/+1c`. It clears bytes `+35/+36` otherwise. On overlap, `+35=1`;
+  `+36=low8(r1)` if x+(extent>>1)==1920, otherwise zero. Preserve this surprising
+  CMOV1 stack-pointer input; do not rewrite it as boolean 1. Tests cover a
+  nonzero low byte and first-store retention when the second store faults.
+- Rectangle helper `2229f8` ORs the engine bit into CHANNEL halfword `+2a`,
+  writes engine owner `+10` and state `+8`, copies 32-bit words `+18/+1c` to
+  engine `+4c/+50`, and byte `+29` to engine `+0e`. Low-halfword clipping relative
+  to 1920 preserves the copied upper halfwords. Right-only x subtracts 1920;
+  crossing engine indices with bit 1 set get x=0 and right extent, otherwise
+  left extent. This is not physical geometry proof.
+- Core validator: 475 cases, including two expected budget rejections for an
+  inclusive end=255 with byte-index wrap. Leaf validator: 21 cases plus mapping
+  fault. Integrated validator: 15 strict + 4 conditional cases. Six new routines
+  have every instruction visited across these checks; input/path coverage is
+  not exhaustive. Unknown `22701c` is never stubbed.
+- Wrapper `22ac17` returns for one inactive channel or selector4/all four. Full
+  apply completes six metadata resets, 13 enabled setups, four auxiliary resets
+  and four channel updates. The older fixture correctly faults at wait config
+  pointer `3b5f38`. New `apply_fixture` maps this pointer to synthetic config
+  at `600000`: config byte `+4c` bit20 or inactive `4551e8=0` bypasses real wait
+  `2421d3`. An active, non-bypass input still faults at countdown `455208`;
+  timer completion is not invented. Both store policies reach **20401d before
+  21ffb3**, in the first engine preparation call `204000`, with r3=0. There are
+  fourteen calls to `220a8b` and thirteen to `22d986`. **Full apply has not returned.**
+- Starting 318 tracked files are saved/hash-checked in
+  `analysis/scratch/channel-update-before-2026-10-26/`. Prior 13 workspaces and
+  34 BINs are verified. Three cheaper agents contributed source, ISA support,
+  validators and docs; parent review corrected descriptions, addresses, copied
+  word semantics, geometry expectations and core validation before acceptance.
+
+Successful combined gate: `analysis/extracted/firmware-validation-channel-update-2026-10-26/`.
+**171 tests**, 45 archive hashes, 13 byte-exact corpus roundtrips / 141 resource
+checksums, all model stages and three complete BINs passed. Stock/helper/layout
+hash prefixes remain `0b5d8350` / `d88a1683` / `95a06b2f`; each has 2,069,060
+bytes and eleven unchanged resource spans. Final audit verified 220 run-artifact
+hashes, 260 input identities, 185 workspace artifacts plus two USB artifacts.
+Canonical validation/build JSONs describe this run; historical runs remain intact.
+
+Next offline task: recover **21ffb3**, then its first new dependency **21bd8d**.
+A candidate span `21ffb3..220995` has 2,530 bytes / 785 instructions; static
+listing: `analysis/scratch/channel-next-21ffb3.txt`. It is not recovered or
+counted in coverage. Verify CFG/boundaries before adding. Direct calls include
+21bd1e, 21bd8d, 2227ef, 23ddb9, 23dfb6, 23dfe1, 23e13b, 23e152, 23e49c,
+23e4a0, 23e4a6, 23e4f4 and 23e58a. Active channel assignment needs
+`22701c..227145`, then `222ce8` / `220c76`; this span was inspected but not
+recovered. Later full-apply dependencies 23d349, 2250e8 and 226100, geometry
+2686dd, special 20ece9/20e990 and deferred 27b707 remain. Full toolchain, most
+source, EFE/USB source builds, independent ISA/CALL/store proof and hardware
+validation remain open.
+
+## Previous continuation: enabled setup and metadata consumers
 
 Updated 2026-10-26 (America/Los_Angeles). Continue toward **100% editable
 application** using lower-cost agents with parent review. **Always report the

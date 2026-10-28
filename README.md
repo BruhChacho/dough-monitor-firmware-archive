@@ -46,20 +46,21 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The DC9 source overlay contains **137 reconstructed
-components: 5,919 instructions / 18,325 code bytes**, plus 11 tables / 867 bytes.
-That is **0.755% (about 0.76%)** of the expanded application. Most application
+guide](firmware/README.md). The DC9 source overlay contains **146 reconstructed
+components: 6,332 instructions / 19,539 code bytes**, plus 11 tables / 867 bytes.
+That is **0.805% (about 0.81%)** of the expanded application. Most application
 bytes remain precompiled vendor input; fully editable firmware remains the goal.
 
-The latest offline gate passed **159 tests** and built stock, helper and layout
-images with unchanged hashes. Under both explicit store hypotheses, the model
-completes setup for 13 engine records and resets four auxiliary records. Full
-apply then stops before unrecovered service `0x2271a9`. Physical boot, recovery,
-display behavior and peripheral operation remain untested.
+The latest offline gate passed **171 tests** and built stock, helper and layout
+images. It includes 475 channel-update cases (two expected budget rejections),
+21 channel-leaf cases, and 15 strict plus four conditional integration cases.
+The full-apply fixture completes four channel updates under an explicit wait
+bypass, then stops at `0x20401d` before unrecovered `0x21ffb3`. Physical boot,
+recovery, display behavior and peripheral operation remain untested.
 
-See the [engine-enable report](analysis/2026-10-26_reverse-dc9-engine-enable-report.md),
-[workspace summary](analysis/community-engine-enable-workspace.json), and
-[generated validation run](analysis/extracted/firmware-validation-engine-enable-2026-10-26/).
+See the [channel-update report](analysis/2026-10-26_reverse-dc9-channel-update-report.md),
+[workspace summary](analysis/community-channel-update-workspace.json), and
+[generated validation run](analysis/extracted/firmware-validation-channel-update-2026-10-26/).
 The percentage measures recovered code bytes, not overall product readiness.
 Earlier reports and workspaces remain historical snapshots.
 
