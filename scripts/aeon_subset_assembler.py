@@ -39,8 +39,10 @@ SIZES.update({"bn.lh": 3, "bn.j": 3, "bg.ble": 4, "bg.bgt": 4})
 ARITY.update({"bn.lh": 2, "bn.j": 1, "bg.ble": 3, "bg.bgt": 3})
 SIZES.update({"bg.bleui": 4, "bg.bgtui": 4, "bn.bleui": 3, "bn.sfnei": 3, "bg.sh": 4})
 ARITY.update({"bg.bleui": 3, "bg.bgtui": 3, "bn.bleui": 3, "bn.sfnei": 2, "bg.sh": 2})
-SIZES.update({"bt.jalr": 2, "bt.nop": 2, "bn.divu": 3, "bn.sfleui": 3, "bn.sh_2": 3})
-ARITY.update({"bt.jalr": 1, "bt.nop": 1, "bn.divu": 3, "bn.sfleui": 2, "bn.sh_2": 2})
+SIZES.update({"bt.jalr": 2, "bt.nop": 2, "bn.divs": 3, "bn.divu": 3,
+              "bn.sfleui": 3, "bn.sh_2": 3})
+ARITY.update({"bt.jalr": 1, "bt.nop": 1, "bn.divs": 3, "bn.divu": 3,
+              "bn.sfleui": 2, "bn.sh_2": 2})
 SIZES.update({'bt.movhi': 2, 'bn.extbs': 3, 'bn.sflesi': 3,
               'bn.sll': 3, 'bn.sra': 3, 'bn.ff1': 3, 'bn.cmov_1': 3,
               'bn.sfgtsi': 3, 'bn.cmovsi_2': 3})
@@ -173,11 +175,11 @@ def encode(op, args, pc, labels):
     elif op == 'bn.cmovsi_2':
         # i24_simm3_5 spans bits 3 through 7: a signed five-bit immediate.
         word = 0x480002 | register(args[0]) << 13 | register(args[1]) << 8 | immediate(int(args[2], 0), 5, True) << 3
-    elif op in ("bn.add", "bn.xor", "bn.muls", "bn.and", "bn.or", "bn.nand", "bn.sub", "bn.cmov_0", "bn.cmov_1", "bn.divu"):
+    elif op in ("bn.add", "bn.xor", "bn.muls", "bn.and", "bn.or", "bn.nand", "bn.sub", "bn.cmov_0", "bn.cmov_1", "bn.divs", "bn.divu"):
         word = ({"bn.add": 0x400004, "bn.xor": 0x440006, "bn.muls": 0x400003,
                  "bn.and": 0x440004, "bn.or": 0x440005, "bn.nand": 0x440007,
                  "bn.sub": 0x400005, "bn.cmov_0": 0x480000, "bn.cmov_1": 0x480001,
-                 "bn.divu": 0x400001}[op] | register(args[0]) << 13
+                 "bn.divs": 0x400000, "bn.divu": 0x400001}[op] | register(args[0]) << 13
                 | register(args[1]) << 8 | register(args[2]) << 3)
     elif op in ("bn.addi", "bn.andi", "bn.ori"):
         word = ({"bn.addi": 0x1c0000, "bn.andi": 0x540000, "bn.ori": 0x500000}[op] | register(args[0]) << 13

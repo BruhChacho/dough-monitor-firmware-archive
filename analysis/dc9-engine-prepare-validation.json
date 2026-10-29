@@ -1,0 +1,111 @@
+{
+  "source_layout_sha256": "322411f95521ef7a70a6a1c3d447a73c0e4b454d36a7766a37febb10064c9055",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "first-engine preparation mode-one returns and bounded service prefixes; full apply remains partial",
+  "cases": {
+    "out_of_range_engine_return": 9,
+    "selected_engine_service_prefix": 8,
+    "first_register_helper_arguments": 4
+  },
+  "strict_cases": 21,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "selected_engine_zero_bank_returns": 4,
+      "selected_engine_mode_one_returns": 4,
+      "full_apply_first_engine_prefix": 2
+    },
+    "halfword-lane-hypothesis": {
+      "selected_engine_zero_bank_returns": 4,
+      "selected_engine_mode_one_returns": 4,
+      "full_apply_first_engine_prefix": 2
+    }
+  },
+  "conditional_cases": 20,
+  "visited_instruction_count": 1752,
+  "source_spans": [
+    {
+      "name": "engine_prepare_selected",
+      "address": "0x21ffb3",
+      "end_exclusive": "0x22089f",
+      "size": 2284,
+      "sha256": "3fdebd47f77b71c99f5cfa963e7b39bdff11bcf56dea7ff1b42a1543cf719e4c",
+      "visited_instructions": 252
+    },
+    {
+      "name": "engine_pair_configuration",
+      "address": "0x22089f",
+      "end_exclusive": "0x220995",
+      "size": 246,
+      "sha256": "fc27f05299b10d2c6a4eb0b626ad3cf819f95a0f45ae63410e4f4193566566d6",
+      "visited_instructions": 0
+    },
+    {
+      "name": "constant_one_return",
+      "address": "0x21bd8d",
+      "end_exclusive": "0x21bd91",
+      "size": 4,
+      "sha256": "623ec64fa7a45afb4609a4fdad13aa14130d2568f686a589afa251dcbb175014",
+      "visited_instructions": 2
+    },
+    {
+      "name": "deferred_request_dispatch_27aa7f",
+      "address": "0x23e49c",
+      "end_exclusive": "0x23e4a0",
+      "size": 4,
+      "sha256": "3d305360b5e3182f9faf2cd894b8532a2fc9d4a139013ec2f8a85d0ea171d46c",
+      "visited_instructions": 0
+    },
+    {
+      "name": "deferred_request_dispatch_27b4e2",
+      "address": "0x23e4a0",
+      "end_exclusive": "0x23e4a6",
+      "size": 6,
+      "sha256": "fff0b800b6eb68537217f233ada5f7d23d59ea68113af8e49278e3c2a33fd3e6",
+      "visited_instructions": 0
+    },
+    {
+      "name": "deferred_masked_halfword_request",
+      "address": "0x23e4a6",
+      "end_exclusive": "0x23e4f4",
+      "size": 78,
+      "sha256": "11a15bfdebc5c4f397b5667609cec30ae8826808145337d817276be1900500fb",
+      "visited_instructions": 0
+    },
+    {
+      "name": "deferred_shifted_byte_request",
+      "address": "0x23e4f4",
+      "end_exclusive": "0x23e50c",
+      "size": 24,
+      "sha256": "348b229a1c4ed9419f5e7602d5dc2ba61c2589f7ba695808c400fc360227e5d0",
+      "visited_instructions": 0
+    },
+    {
+      "name": "deferred_halfword_request",
+      "address": "0x23e58a",
+      "end_exclusive": "0x23e5d1",
+      "size": 71,
+      "sha256": "d6db4e8faf1c3d97d54edf818e9ede22c4fe1c857e817c35ba060d4e8459b963",
+      "visited_instructions": 0
+    }
+  ],
+  "limitations": [
+    "Full apply has not returned; isolated mode-one returns prove only execution on mapped plain bytes, not service or physical effects.",
+    "The modeled GPR, CALL, store, division, byte, and little-endian semantics are hypotheses.",
+    "The selected-engine fixture uses a synthetic size and records; full apply adds an explicit fifth owner record. No device side effects are modeled."
+  ],
+  "tools_sha256": {
+    "validate_dc9_engine_prepare.py": "69eb74f4d20f65ef9b70d326850e69e9f447a13d2cab4780db6fd24fd95efacf",
+    "reconstruct_dc9_engine_prepare.py": "d98f0e22a31c0c0041262293dd5777b1b1bc553c95e3ded2409f149c74220296",
+    "aeon_module_model.py": "be03c58d6b21ab07c0889b1d029e1a18b0c33480e76d084b929affefacab11df",
+    "aeon_subset_assembler.py": "cf1e374776420d07caa0f977733a7d018b1d96e00e9999f25c66896ad177b811"
+  }
+}

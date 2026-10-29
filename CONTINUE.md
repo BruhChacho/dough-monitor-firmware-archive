@@ -3,7 +3,79 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: channel updates and allocation
+## Latest continuation: engine preparation
+
+Validated 2026-10-29 (America/New_York), continuing the milestone named
+2026-10-26. Read `analysis/2026-10-26_reverse-dc9-engine-prepare-report.md`,
+`analysis/community-engine-prepare-workspace.json`, and `firmware/README.md`.
+Goal remains **100% editable application**; always report coverage, not an
+invented product-readiness percentage. Cheaper coding agents are authorized;
+parent review corrected candidate boundaries and fixture assumptions.
+
+Started at published `b26a71b` on
+`codex/community-firmware-layout-setup-2026-10-25`, with the expected engine
+preparation changes already present. Remote matched. Preserve all earlier
+changes and outputs. Git/CLI publication is authorized; draft
+[PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1)
+remains the review branch. Verify current Git/remote before resuming. No device
+operation occurred.
+
+- Source: **154 components, 7,181 instructions / 22,256 code bytes**, plus
+  **11 tables / 867 bytes**. Coverage **0.917% (about 0.92%)** of 2,426,560
+  expanded application bytes. Complete source and hardware operation unfinished.
+- Eight new routines add 849 instructions / 2,717 bytes. Main preparation
+  `21ffb3..22089f` is 707 instructions / 2,284 bytes; adjacent pair configuration
+  `22089f..220995` is separate (78 / 246). Other spans are constant return
+  `21bd8d..21bd91`, dispatches `23e49c..23e4a0` and `23e4a0..23e4a6`, masked
+  halfword `23e4a6..23e4f4`, shifted byte `23e4f4..23e50c` and halfword
+  `23e58a..23e5d1`. All addresses hex, ends exclusive. Prior 146 routine
+  records and eleven tables unchanged; generator rejects differing files/overlaps.
+- Added `bn.divs`, archived bytes `40 e6 18` at `2201ef`. Model truncates toward
+  zero using integer arithmetic, preserves read-before-write aliases, rejects
+  zero and INT_MIN/-1. Default ambiguous-store rejection remains unchanged;
+  physical ISA/CALL/endianness/width assumptions are unresolved.
+- Main reads engine bank, owner and halfwords before index>3 guard. Mapped
+  indices4–12 return; index13 faults at `4800ec+4` with the 13-record fixture.
+  Mode0/1 prefixes use global halfword `343c14`; zero divisor rejects. Mode1
+  direct paths return for four indices under both store policies, with explicit
+  zero/nonzero banks. Nonzero fixtures assert ten ordered data-byte writes,
+  parity-specific addresses, preserved engine/channel records and saved registers.
+- Pair direct writes logical `10902f18/10902b18`, low byte then high byte,
+  truncating to low16. Deferred paths stop before real `27b707/27aa7f/27b4e2`.
+  Odd masked-halfword requests truncate shifted value/mask with ff00; shifted
+  byte helper instead preserves uint32 shifts. CALL paths retain frames;
+  tail paths restore them. No queued service executes.
+- Integrated fixture maps nonzero global size, a fifth synthetic owner record
+  and bank+7 bus bytes explicitly. Sizes1/1000/65535 and both wait-bypass choices
+  complete all four engine preparations, stopping at **23fb33 before23d349**.
+  Four calls each204000/21ffb3/21d86d, seventeen each220a8b/22d986, four2271a9.
+  Selected bank+7 bytes change a5 to25; inputs remain read-only. The fifth record
+  is not evidence of a fifth physical input. Full apply has not returned.
+- Validators:21 strict /20 conditional core,18 leaf,12 conditional integrated
+  cases. The suite includes6 engine,4 leaf and4 signed-division regressions.
+  Bounded visited instructions are not exhaustive input/path coverage.
+- Combined gate passed at
+  `analysis/extracted/firmware-validation-engine-prepare-2026-10-26/`:
+  **185 tests**,45 archives,13 corpus roundtrips /141 resource checksums,
+  all model stages and3 BINs. Stock/helper/layout hashes remain0b5d8350 /
+  d88a1683 /95a06b2f, each2,069,060 bytes with11 unchanged resources.
+  Audit verified231 artifact hashes,275 input identities,193 base workspace
+  artifacts+2USB. All340 starting saved files,14 previous workspaces and37
+  previous BINs verified. Snapshot:`analysis/scratch/engine-prepare-before-2026-10-26/`.
+
+Next offline task: recover **23d349..23d36a**, a13-index loop calling
+**222634..222679**. The latter writes shared dimensions using **21bd00** and
+**21bd0a**, invokes **2213d0**, then ORs engine byte+0f with1. Candidate larger
+span **2213d0..222634** has4,708 bytes /1,550 instructions, far internal
+branches beyond its early return; do not truncate at221650. It introduces
+bg.bgts,bn.cmovi,bn.sfgtu,bn.sfleu,bn.srai,bn.subb. Verify boundaries,
+encodings and relevant execution before counting. The shared stores at343c14
+require explicit writable mapping and both width policies. Getter21bd14 reads
+343c16. Routine23d36a is a distinct four-engine wrapper, not part of23d349.
+Later fullapply2250e8/226100, active assignment22701c, geometry2686dd,
+deferred services and most application/toolchain/EFE/USB work remain open.
+
+## Previous continuation: channel updates and allocation
 
 Updated 2026-10-26 (America/Los_Angeles). Continue toward **100% editable
 application**, with cheaper coding agents and parent review. **Always report

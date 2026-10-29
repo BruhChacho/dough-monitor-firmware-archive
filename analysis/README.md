@@ -7,7 +7,8 @@ Original vendor source names, comments, headers, and build systems have not
 been recovered.
 
 Start with the [raw files and community build guide](../firmware/README.md),
-the [latest channel-update report](2026-10-26_reverse-dc9-channel-update-report.md),
+the [latest engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md),
+the [historical channel-update report](2026-10-26_reverse-dc9-channel-update-report.md),
 the [historical engine-enable report](2026-10-26_reverse-dc9-engine-enable-report.md),
 the [historical engine-control report](2026-10-26_reverse-dc9-engine-control-report.md),
 the [consumer milestone report](2026-10-25_reverse-dc9-consumers-report.md),
@@ -25,12 +26,15 @@ The [2026-10-20 report](2026-10-20_reverse-spectrum-one-report.md) is historical
 its recompression experiment fails the subsequently recovered main CRC16.
 The corrected baseline and helper rewrite pass offline validation, but neither
 has been booted on a monitor or constitutes a complete firmware source build.
-The current source overlay contains 146 components, 6,332 instructions and
-19,539 code bytes (0.805%, about 0.81% of the expanded application), plus
-11 tables / 867 bytes. The latest 2026-10-26 channel-update milestone adds nine
-routines (413 instructions / 1,214 bytes). Its combined gate passed 171 tests,
-with 475 channel-update cases (including two expected budget rejections), 21
-leaf cases, and 15 strict plus four conditional integration cases.
+The current source overlay contains 154 components, 7,181 instructions and
+22,256 code bytes (0.917%, about 0.92% of the expanded application), plus
+11 tables / 867 bytes. The latest 2026-10-26 engine-preparation milestone adds
+eight routines (849 instructions / 2,717 bytes). Its combined gate passed 185
+repository tests: 21 strict and 20 conditional core cases, 18 leaf cases, four
+leaf regressions, and 12 conditional integrated-apply cases. The preceding channel-update milestone adds
+nine routines (413 instructions / 1,214 bytes) and passed 171 tests, with 475
+channel cases (two expected budget rejections), 21 leaf cases, and 15 strict
+plus four conditional integration cases.
 The prior engine-enable milestone adds 11 routines
 (292 instructions; 893 code bytes). Its individual validators report 66 strict
 and 212 conditional engine-enable cases, 71 strict and 2 conditional
@@ -40,13 +44,17 @@ passed 159 repository tests. Across the 292 new instructions, bounded cases
 visited 256: ten routines were fully visited and the register-pair routine
 reached 42 of 78 instructions. This is not exhaustive input or path coverage.
 This percentage is a code-coverage proxy, not engineering or product
-completion. The current full-apply prefix completes four channel updates under
-an explicit wait-bypass fixture, then stops at `0x20401d` before unrecovered
-`0x21ffb3`; full apply has not returned. The
-[channel-update report](2026-10-26_reverse-dc9-channel-update-report.md)
-records the current source and bounded apply prefix. Its combined validation
-run is `extracted/firmware-validation-channel-update-2026-10-26/`. The historical
-engine-enable prefix stopped at `0x22ac52`
+completion. The current full-apply fixture completes four main engine
+preparations, then stops at `0x23fb33` before unrecovered `0x23d349`; full apply
+has not returned. The [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md)
+records this source and boundary. Its combined validation run is
+`extracted/firmware-validation-engine-prepare-2026-10-26/`; the latest workspace
+is [here](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/),
+with its [summary](community-engine-prepare-workspace.json). The historical
+channel-update fixture completed four channel updates and stopped at
+`0x20401d` before `0x21ffb3`; its [report](2026-10-26_reverse-dc9-channel-update-report.md)
+and [run](extracted/firmware-validation-channel-update-2026-10-26/) preserve that
+milestone. The historical engine-enable prefix stopped at `0x22ac52`
 before `0x2271a9`. Its [report](2026-10-26_reverse-dc9-engine-enable-report.md),
 [workspace summary](community-engine-enable-workspace.json), and
 [run artifacts](extracted/firmware-validation-engine-enable-2026-10-26/)
@@ -68,15 +76,16 @@ rectangle experiment SHA256 is
 
 | Area | Result | Evidence |
 |---|---|---|
-| Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source and separate USB images; channel-update gate passed 171 tests | [Build guide](../firmware/README.md), [channel-update report](2026-10-26_reverse-dc9-channel-update-report.md), [workspace summary](community-channel-update-workspace.json), [validation run](extracted/firmware-validation-channel-update-2026-10-26/), [workspace](extracted/firmware-validation-channel-update-2026-10-26/workspace/README.md) |
-| DC9 partial source baseline | Current overlay: 146 components (19,539 code bytes; 6,332 instructions), 11 tables (867 bytes); byte-identical stock BIN retained | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [channel-update report](2026-10-26_reverse-dc9-channel-update-report.md), [previous validated builds](extracted/firmware-validation-engine-enable-2026-10-26/workspace/build/) |
+| Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source and separate USB images; engine-preparation gate passed 185 tests | [Build guide](../firmware/README.md), [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md), [latest workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/), [workspace summary](community-engine-prepare-workspace.json) |
+| DC9 partial source baseline | Current overlay: 154 components (22,256 code bytes; 7,181 instructions), 11 tables (867 bytes); byte-identical stock BIN retained | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md) |
 | DC9 layout configuration | Historical configuration milestone: 98 repository tests; 542 strict and 492 conditional cases; six layouts; six expanded bytes changed in rectangle example | [Configuration section](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-configuration-2026-10-23/validation.json) |
 | DC9 apply guards | 102 tests passed; 2,965 strict apply cases using explicitly supplied continuation states; full apply not executed | [Configuration and apply report](2026-10-24_reverse-dc9-configuration-report.md), [latest validation](extracted/firmware-validation-apply-2026-10-24/validation.json), [apply summary](community-apply-workspace.json) |
 | DC9 metadata routing and masked-register paths | Historical 79-component gate passed 115 tests; 2,433 strict and 290 conditional metadata cases; 32 default masked-store rejections and 64 conditional cases across two policies | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-2026-10-24/validation.json), [routing summary](community-metadata-routing-workspace.json) |
 | DC9 metadata service | Historical 83-component gate passed 118 tests; 2,833 strict and 150 conditional cases. Both enable states stopped before service `0x20e76c`; publication tail was tested independently | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-service-2026-10-24/validation.json), [service summary](community-metadata-workspace.json) |
 | DC9 layout setup (historical snapshot) | Its gate passed 142 repository tests, 259 strict setup cases, and 46 conditional cases. Its full-apply prefix stopped at `0x220aa3`, before `0x21d3b1` | [Layout-setup report](2026-10-25_reverse-dc9-layout-setup-report.md), [validation](extracted/firmware-validation-layout-setup-2026-10-25/validation.json), [summary](community-layout-setup-workspace.json) |
 | DC9 engine enable and leaves | Historical milestone: 159 repository tests passed; 66 strict / 212 conditional engine-enable cases; 71 strict / 2 conditional enable-leaf cases, one expected store rejection; 74 reference-count cases, including one expected budget stop. Its full-apply prefix stopped at `0x22ac52` before `0x2271a9` | [Engine-enable report](2026-10-26_reverse-dc9-engine-enable-report.md), [validation run](extracted/firmware-validation-engine-enable-2026-10-26/), [workspace summary](community-engine-enable-workspace.json) |
-| DC9 channel update and engine allocation | Nine exact routines (413 instructions / 1,214 bytes); 475 channel-update cases, two expected budget rejections; 21 leaf cases; 15 strict and four conditional integration cases. Full-apply fixture completes four channel updates then stops at `0x20401d` before `0x21ffb3` | [Channel-update report](2026-10-26_reverse-dc9-channel-update-report.md), [recovery script](../scripts/reconstruct_dc9_channel_update.py), [source layout](reconstructed/dc9-source-layout.json), [validation](extracted/firmware-validation-channel-update-2026-10-26/validation.json) |
+| DC9 engine preparation | Eight exact routines (849 instructions / 2,717 bytes); gate passed 185 tests, with 21 strict / 20 conditional core cases, 18 leaf cases, four leaf regressions, and 12 conditional integrated-apply cases. Apply fixture stops at `0x23fb33` before `0x23d349`; full apply has not returned | [Engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md), [recovery script](../scripts/reconstruct_dc9_engine_prepare.py), [latest workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/), [summary](community-engine-prepare-workspace.json), [source layout](reconstructed/dc9-source-layout.json) |
+| DC9 channel update and engine allocation (historical) | Nine exact routines (413 instructions / 1,214 bytes); 475 channel-update cases, two expected budget rejections; 21 leaf cases; 15 strict and four conditional integration cases. Apply fixture stopped at `0x20401d` before `0x21ffb3` | [Channel-update report](2026-10-26_reverse-dc9-channel-update-report.md), [recovery script](../scripts/reconstruct_dc9_channel_update.py), [validation](extracted/firmware-validation-channel-update-2026-10-26/validation.json) |
 | DC9 engine control (historical snapshot) | Prior gate: 148 repository tests, 2,078 strict cases, 384 conditional cases; 602 new instruction addresses visited in bounded cases. Its full apply stopped at `0x220bc7` before `0x22607c` | [Engine-control report](2026-10-26_reverse-dc9-engine-control-report.md), [validation](extracted/firmware-validation-engine-control-2026-10-26/validation.json), [validator results](dc9-engine-control-validation.json), [summary](community-engine-control-workspace.json) |
 | DC9 metadata consumers | Historical gate passed 132 tests; 2,646 strict consumer cases, 262 strict register cases, and 5,336 conditional cases. Accumulation and six-record reset modeled under both store policies; full apply at that snapshot stopped at `0x23faf2` before `0x22dc46` | [Consumer report](2026-10-25_reverse-dc9-consumers-report.md), [validation](extracted/firmware-validation-metadata-consumers-2026-10-25/validation.json), [summary](community-metadata-consumers-workspace.json) |
 | DC9 timer and callback paths | 424 strict timer cases, 3,760 conditional timer cases, 2,130 strict callback/dispatch cases; explicit partial paths and interleaving assumptions | [Timer validation](dc9-timer-validation.json), [callback validation](dc9-callback-validation.json), [timer trace](dc9-timer-path.json) |

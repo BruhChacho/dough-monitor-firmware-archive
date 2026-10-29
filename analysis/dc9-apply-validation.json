@@ -1,5 +1,5 @@
 {
-  "source_layout_sha256": "a3679b2ee11cba4ddf7da64649baabaae466d5d12b188beb2153b589332241ee",
+  "source_layout_sha256": "322411f95521ef7a70a6a1c3d447a73c0e4b454d36a7766a37febb10064c9055",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",
@@ -82,7 +82,7 @@
       "site": "0x20401d",
       "target": "0x21ffb3",
       "kind": "call",
-      "recovered_in_layout": false
+      "recovered_in_layout": true
     },
     {
       "site": "0x20403c",
@@ -298,7 +298,7 @@
   "tools_sha256": {
     "validate_dc9_apply.py": "a17638af2e5cc9983b3439d5c60ee192199f504cda71027c925a618125cda2de",
     "reconstruct_dc9_apply.py": "0851770e995e7f528392b59cb82d482055e4dcc3cacddbffe4166528a21ea00a",
-    "aeon_module_model.py": "d9320565a88a2bd9be450014e349f4c6fd62551d18c9acf4c21aa1e1033b1712",
-    "aeon_subset_assembler.py": "51b0203165fab72932eece9af1284eab61fd868cbef75d146fed868e8dbedb8f"
+    "aeon_module_model.py": "be03c58d6b21ab07c0889b1d029e1a18b0c33480e76d084b929affefacab11df",
+    "aeon_subset_assembler.py": "cf1e374776420d07caa0f977733a7d018b1d96e00e9999f25c66896ad177b811"
   }
 }

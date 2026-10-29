@@ -178,6 +178,17 @@ class ModuleModel:
                 if not denominator:
                     raise ValueError('Unmodeled division by zero')
                 put(a[0], numerator // denominator)
+            elif op == 'bn.divs':
+                numerator_raw, denominator_raw = value(a[1]), value(a[2])
+                if not denominator_raw:
+                    raise ValueError('Unmodeled signed division by zero')
+                numerator, denominator = signed(numerator_raw), signed(denominator_raw)
+                if numerator == -0x80000000 and denominator == -1:
+                    raise ValueError('Unmodeled signed division overflow: INT_MIN / -1')
+                quotient = abs(numerator) // abs(denominator)
+                if (numerator < 0) != (denominator < 0):
+                    quotient = -quotient
+                put(a[0], quotient)
             elif op in ("bn.slli", "bn.srli"):
                 x, y = value(a[1]), imm(a[2])
                 put(a[0], x << y if op == "bn.slli" else x >> y)

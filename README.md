@@ -46,23 +46,27 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The DC9 source overlay contains **146 reconstructed
-components: 6,332 instructions / 19,539 code bytes**, plus 11 tables / 867 bytes.
-That is **0.805% (about 0.81%)** of the expanded application. Most application
+guide](firmware/README.md). The DC9 source overlay contains **154 reconstructed
+components: 7,181 instructions / 22,256 code bytes**, plus 11 tables / 867 bytes.
+That is **0.917% (about 0.92%)** of the expanded application. Most application
 bytes remain precompiled vendor input; fully editable firmware remains the goal.
 
-The latest offline gate passed **171 tests** and built stock, helper and layout
-images. It includes 475 channel-update cases (two expected budget rejections),
-21 channel-leaf cases, and 15 strict plus four conditional integration cases.
-The full-apply fixture completes four channel updates under an explicit wait
-bypass, then stops at `0x20401d` before unrecovered `0x21ffb3`. Physical boot,
-recovery, display behavior and peripheral operation remain untested.
+The current engine-preparation milestone adds eight byte-exact routines: the
+main routine at `0x21ffb3..0x22089f` and a separate pair-configuration routine
+at `0x22089f..0x220995`, plus six dependencies. The integrated apply fixture
+completes four main preparations and stops at `0x23fb33` before `0x23d349`;
+full apply has not returned. The combined gate passed 185 repository tests:
+21 strict and 20 conditional core cases, 18 leaf cases, four leaf regressions,
+and 12 conditional integrated-apply cases. Physical boot, recovery, display
+behavior and peripheral operation remain untested.
 
-See the [channel-update report](analysis/2026-10-26_reverse-dc9-channel-update-report.md),
-[workspace summary](analysis/community-channel-update-workspace.json), and
-[generated validation run](analysis/extracted/firmware-validation-channel-update-2026-10-26/).
-The percentage measures recovered code bytes, not overall product readiness.
-Earlier reports and workspaces remain historical snapshots.
+See the [engine-preparation report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md),
+[latest workspace](analysis/extracted/firmware-validation-engine-prepare-2026-10-26/workspace/),
+[workspace summary](analysis/community-engine-prepare-workspace.json), and
+[validation run](analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).
+The percentage measures recovered code bytes, not
+overall product readiness. Earlier reports and workspaces remain historical
+snapshots.
 
 The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
 

@@ -27,10 +27,10 @@ class ChannelApplyTests(unittest.TestCase):
             self.model.run(0x23fad0,memory,regs(),max_steps=100000)
         self.assertIn(('active',0x4551e8,1),memory.reads)
 
-    def test_full_apply_requires_engine_prepare_service(self):
+    def test_full_apply_requires_engine_prepare_size_input(self):
         for config,active in ((0x20,1),(0,0)):
             memory=apply_fixture(self.expanded,config,active)
-            with self.assertRaisesRegex(ValueError,'Outside modeled instruction boundaries: 0x21ffb3'):
+            with self.assertRaisesRegex(ValueError,'Unmapped memory access: 0x343c14'):
                 self.model.run(0x23fad0,memory,regs(),max_steps=100000)
             self.assertFalse(any(a==0x455208 for _,a,_,_ in memory.writes))
 

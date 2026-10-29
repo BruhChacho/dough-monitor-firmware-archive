@@ -135,6 +135,9 @@ def run(destination):
         from validate_dc9_channel_update import validate as validate_channel_update
         from validate_dc9_channel_leaves import validate as validate_channel_leaves
         from validate_dc9_channel_apply import validate as validate_channel_apply
+        from validate_dc9_engine_prepare import validate as validate_engine_prepare
+        from validate_dc9_prepare_leaves import validate as validate_prepare_leaves
+        from validate_dc9_engine_apply import validate as validate_engine_apply
         original, _, _ = load_original()
         stage('helper-rewrite', lambda: validate_rewrite(original)[1])
         for name, validator in (('commands', validate_commands), ('registers', validate_registers),
@@ -146,7 +149,9 @@ def run(destination):
                                 ('layout-setup', validate_layout_setup), ('engine-control', validate_engine_control),
                                 ('enable-leaf', validate_enable_leaf), ('reference-count', validate_reference_count),
                                 ('engine-enable', validate_engine_enable), ('channel-update', validate_channel_update),
-                                ('channel-leaves', validate_channel_leaves), ('channel-apply', validate_channel_apply)):
+                                ('channel-leaves', validate_channel_leaves), ('channel-apply', validate_channel_apply),
+                                ('engine-prepare', validate_engine_prepare), ('prepare-leaves', validate_prepare_leaves),
+                                ('engine-apply', validate_engine_apply)):
             stage(name, validator)
 
         print('Preparing raw files and building baseline, helper and layout images...', flush=True)

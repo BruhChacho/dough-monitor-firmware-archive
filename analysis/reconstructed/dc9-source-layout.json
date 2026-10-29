@@ -1310,10 +1310,82 @@
       "original_code_sha256": "584130f8fddb94141358869af0e872103c83f1a3a4d8e9d50c214f0d251c5704",
       "purpose": "Apply the requested update across channel records in the selected range.",
       "component_kind": "routine"
+    },
+    {
+      "name": "constant_one_return",
+      "address": "0x21bd8d",
+      "size": 4,
+      "source": "analysis/reconstructed/spectrum_one_constant_one_return.aeon.s",
+      "original_code_sha256": "623ec64fa7a45afb4609a4fdad13aa14130d2568f686a589afa251dcbb175014",
+      "purpose": "Return the constant value 1.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "deferred_request_dispatch_27aa7f",
+      "address": "0x23e49c",
+      "size": 4,
+      "source": "analysis/reconstructed/spectrum_one_deferred_request_dispatch_27aa7f.aeon.s",
+      "original_code_sha256": "3d305360b5e3182f9faf2cd894b8532a2fc9d4a139013ec2f8a85d0ea171d46c",
+      "purpose": "Tail-transfer to the existing request service at 0x27aa7f.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "deferred_request_dispatch_27b4e2",
+      "address": "0x23e4a0",
+      "size": 6,
+      "source": "analysis/reconstructed/spectrum_one_deferred_request_dispatch_27b4e2.aeon.s",
+      "original_code_sha256": "fff0b800b6eb68537217f233ada5f7d23d59ea68113af8e49278e3c2a33fd3e6",
+      "purpose": "Set r3 to 1, then tail-transfer to the existing request service at 0x27b4e2.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "deferred_masked_halfword_request",
+      "address": "0x23e4a6",
+      "size": 78,
+      "source": "analysis/reconstructed/spectrum_one_deferred_masked_halfword_request.aeon.s",
+      "original_code_sha256": "11a15bfdebc5c4f397b5667609cec30ae8826808145337d817276be1900500fb",
+      "purpose": "Prepare a masked halfword request, then tail-transfer to the request service.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "deferred_shifted_byte_request",
+      "address": "0x23e4f4",
+      "size": 24,
+      "source": "analysis/reconstructed/spectrum_one_deferred_shifted_byte_request.aeon.s",
+      "original_code_sha256": "348b229a1c4ed9419f5e7602d5dc2ba61c2589f7ba695808c400fc360227e5d0",
+      "purpose": "Prepare a shifted masked byte request, then tail-transfer to the request service.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "deferred_halfword_request",
+      "address": "0x23e58a",
+      "size": 71,
+      "source": "analysis/reconstructed/spectrum_one_deferred_halfword_request.aeon.s",
+      "original_code_sha256": "d6db4e8faf1c3d97d54edf818e9ede22c4fe1c857e817c35ba060d4e8459b963",
+      "purpose": "Prepare a deferred halfword request, then tail-transfer to the request service.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_prepare_selected",
+      "address": "0x21ffb3",
+      "size": 2284,
+      "source": "analysis/reconstructed/spectrum_one_engine_prepare_selected.aeon.s",
+      "original_code_sha256": "3fdebd47f77b71c99f5cfa963e7b39bdff11bcf56dea7ff1b42a1543cf719e4c",
+      "purpose": "Prepare selected engine state and issue register requests; external services remain unresolved.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_pair_configuration",
+      "address": "0x22089f",
+      "size": 246,
+      "source": "analysis/reconstructed/spectrum_one_engine_pair_configuration.aeon.s",
+      "original_code_sha256": "fc27f05299b10d2c6a4eb0b626ad3cf819f95a0f45ae63410e4f4193566566d6",
+      "purpose": "Prepare the selected engine-pair state and preserve its original service calls.",
+      "component_kind": "routine"
     }
   ],
   "limitations": [
-    "146 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "154 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],

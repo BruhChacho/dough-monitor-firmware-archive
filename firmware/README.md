@@ -2,22 +2,27 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The source overlay contains **146 components, 6,332 instructions /
-19,539 code bytes**, plus **11 tables / 867 bytes**. Coverage is **0.805%
-(about 0.81%)** of the expanded application; most application bytes remain
+build. The source overlay contains **154 components, 7,181 instructions /
+22,256 code bytes**, plus **11 tables / 867 bytes**. Coverage is **0.917%
+(about 0.92%)** of the expanded application; most application bytes remain
 precompiled vendor input.
 
-The latest source milestone adds nine channel-update and engine-allocation
-routines. The combined gate passed **171 tests**. Separate model stages cover 475 channel-update
-cases (two expected budget rejections), 21 leaf cases, and 15 strict plus four
-conditional integration cases. It built three complete BINs. See the
-[channel-update report](../analysis/2026-10-26_reverse-dc9-channel-update-report.md).
+The latest source milestone adds eight engine-preparation and dependency
+routines. Its combined gate passed 185 repository tests: 21 strict and 20
+conditional core cases, 18 leaf cases, four leaf regressions, and 12
+conditional integrated-apply cases. See the
+[engine-preparation report](../analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
 Fully editable firmware and a hardware-tested community release remain
 unfinished; the percentage is a code-byte coverage proxy.
 
 ## Open the files
 
-The latest prepared workspace is [firmware-validation-channel-update-2026-10-26/workspace](../analysis/extracted/firmware-validation-channel-update-2026-10-26/workspace/README.md).
+The latest prepared workspace is the
+[engine-preparation workspace](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/workspace/).
+Its [summary](../analysis/community-engine-prepare-workspace.json) and
+[validation run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/)
+record the passed gate. The previous validated workspace is
+[firmware-validation-channel-update-2026-10-26/workspace](../analysis/extracted/firmware-validation-channel-update-2026-10-26/workspace/README.md).
 Workspace files are generated locally and
 ignored by Git. Earlier engine-control, layout-setup, consumer, configuration,
 apply, metadata-routing, community, receive, transfer, timer, and combined
@@ -57,7 +62,8 @@ Choose a new output directory for each run. The command checks all package
 hashes, the Spectrum One checksum/reconstruction corpus, repository tests,
 command/register/receive/transfer/timer/callback/configuration/apply/metadata,
 metadata-consumer, layout-setup, engine-control, engine-enable, enable-leaf,
-reference-count, channel-update and engine-allocation contracts, and helper
+reference-count, channel-update, engine-allocation and engine-preparation
+contracts, and helper
 rewrite equivalence. The previous
 engine-control gate passed 148 repository tests, 2,078 strict cases, and 384
 conditional cases. Its successor passed 159 tests. Current
@@ -146,10 +152,20 @@ Each file is 2,069,060 bytes; their SHA256 prefixes are `0b5d8350`, `d88a1683`,
 and `95a06b2f`, respectively. All eleven resource spans are unchanged in each
 build. No experimental output has been booted on a monitor.
 
-The current channel-update milestone adds nine byte-exact routines spanning
+The current engine-preparation milestone adds eight byte-exact routines:
+`0x21ffb3..0x22089f` (707 instructions / 2,284 bytes),
+`0x22089f..0x220995` (78 / 246), plus six immediate dependencies. The integrated
+apply fixture completes four main preparations, then stops at `0x23fb33` before
+unrecovered `0x23d349`; full apply has not returned. The combined gate passed
+185 repository tests: 21 strict and 20 conditional core cases, 18 leaf cases,
+four leaf regressions, and 12 conditional apply cases. See the [engine-preparation report](../analysis/2026-10-26_reverse-dc9-engine-prepare-report.md),
+[workspace summary](../analysis/community-engine-prepare-workspace.json), and
+[validation run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).
+
+The historical channel-update milestone added nine byte-exact routines spanning
 `0x222843..0x222898`, `0x2229f8..0x222aa2`, `0x222ace..0x222b15`,
 `0x222b65..0x222b8a`, `0x227145..0x2272cf`, and `0x22aa4e..0x22ac17`.
-Its full-apply prefix completes four channel updates under an explicit
+Its full-apply prefix completed four channel updates under an explicit
 wait-bypass fixture, then stops at `0x20401d` before unrecovered `0x21ffb3`.
 See the [channel-update report](../analysis/2026-10-26_reverse-dc9-channel-update-report.md),
 [workspace summary](../analysis/community-channel-update-workspace.json), and

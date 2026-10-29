@@ -263,24 +263,42 @@ they do not validate peripheral or physical CPU behavior. No encoder or model
 implementation changed. The full firmware remains incomplete and hardware
 untested. The preceding engine-control report remains a historical snapshot.
 
-On 2026-10-26 (America/Los_Angeles), the channel-update milestone added nine
+The historical 2026-10-26 channel-update milestone added nine
 byte-exact routines (413 instructions / 1,214 code bytes), including channel
 metadata updates, engine-pair availability checks, engine rectangle assignment,
 engine-free-index scanning, and the channel range-update path. The source overlay
 now contains 146 components / 6,332 instructions / 19,539 code bytes, plus 11
 tables / 867 bytes: 0.805% (about 0.81%) of the 2,426,560-byte expanded
-application. This is source coverage only. The existing 137 source records and
+application at that milestone. This is source coverage only. The existing 137 source records and
 tables remain unchanged. See the
 [channel-update report](2026-10-26_reverse-dc9-channel-update-report.md).
 
-The integrated apply fixture completes four channel updates after explicitly
+That integrated apply fixture completed four channel updates after explicitly
 bypassing the existing wait routine via configuration bit `+0x4c & 0x20` or
-inactive byte `0x4551e8 == 0`, then stops at `0x20401d` before unrecovered
+inactive byte `0x4551e8 == 0`, then stopped at `0x20401d` before unrecovered
 `0x21ffb3` in first-engine preparation. It has not returned from full apply.
 The active-wait countdown path remains stopped at unmapped state; no timer
-completion is invented. The combined gate passed 171 tests, with 475 channel
+completion was invented. Its combined gate passed 171 tests, with 475 channel
 cases (two expected budget rejections), 21 leaf cases, and 15 strict plus four
 conditional integration cases. Hardware boot, display, recovery and physical
-CPU behavior remain untested. Next source
-path is `0x21ffb3` and its unresolved `0x21bd8d` dependency; later channel work
-includes `0x22701c` and `0x222ce8` / `0x220c76`.
+CPU behavior remain untested. Subsequent work recovered `0x21ffb3` and
+`0x21bd8d`, along with immediate deferred-request dependencies.
+
+The 2026-10-26 engine-preparation milestone adds eight byte-exact
+routines (849 instructions / 2,717 code bytes). The overlay now contains 154
+components / 7,181 instructions / 22,256 code bytes, plus 11 tables / 867 bytes:
+0.917% (about 0.92%) of the 2,426,560-byte expanded application. The source
+coverage percentage is not a product-completion measure. The main routine spans
+`0x21ffb3..0x22089f` (707 instructions / 2,284 bytes); adjacent
+`0x22089f..0x220995` is a separate pair-configuration routine (78 / 246).
+
+The integrated-apply fixture completes four main preparations, then stops at
+`0x23fb33` before `0x23d349`; full apply has not returned. Its fixture includes
+nonzero `0x343c14`, size values 1, 1000 and 65535, a fifth synthetic owner
+record, and plain `BASES[KEYS]+7` bytes. On 2026-10-29, its combined gate passed
+185 repository tests: 21 strict and 20 conditional core cases, 18 leaf cases,
+four leaf regressions, and 12 conditional integrated-apply cases. Hardware boot,
+display, recovery and physical CPU behavior remain untested. See the
+[engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md),
+[latest workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/),
+and [summary](community-engine-prepare-workspace.json).
