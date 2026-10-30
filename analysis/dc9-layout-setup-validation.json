@@ -1,0 +1,124 @@
+{
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "strict setup and request prefixes; direct range and no-control setup return under store hypotheses",
+  "cases": {
+    "auxiliary_reset_returns": 19,
+    "thirteen_record_reset_before_mask_prepare": 40,
+    "selected_record_before_range_configuration": 13,
+    "direct_register_word_returns": 25,
+    "range_after_four_word_writes": 64,
+    "range_first_deferred_request": 64,
+    "deferred_request_prefixes": 24,
+    "control_first_dependency_prefix": 10
+  },
+  "strict_cases": 259,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "direct_range_configuration_returns": 8,
+      "zero_bank_range_guard_returns": 8,
+      "complete_setup_without_control_calls": 6,
+      "full_apply_first_control_dependency_prefix": 1
+    },
+    "halfword-lane-hypothesis": {
+      "direct_range_configuration_returns": 8,
+      "zero_bank_range_guard_returns": 8,
+      "complete_setup_without_control_calls": 6,
+      "full_apply_first_control_dependency_prefix": 1
+    }
+  },
+  "conditional_cases": 46,
+  "visited_instruction_count": 1152,
+  "source_spans": [
+    {
+      "name": "engine_records_initialize",
+      "address": "0x22dc46",
+      "end_exclusive": "0x22dd9a",
+      "size": 340,
+      "sha256": "5326a682fe23b1042365ee2744002c1089c90fee33a1db4c467aef0be6fb4fd2",
+      "visited_instructions": 111
+    },
+    {
+      "name": "auxiliary_records_reset",
+      "address": "0x222fca",
+      "end_exclusive": "0x223027",
+      "size": 93,
+      "sha256": "bd1ccbbb89d6acd312216bc8d076e625cd5f2634e5fe84dfcbae7bf297961f1c",
+      "visited_instructions": 30
+    },
+    {
+      "name": "engine_range_configure",
+      "address": "0x22d986",
+      "end_exclusive": "0x22dc46",
+      "size": 704,
+      "sha256": "96eddffa2f5131cf36f8b0ab9c6efa0995735e7e17deb458bfd02f77f1dd01de",
+      "visited_instructions": 156
+    },
+    {
+      "name": "engine_control_configure",
+      "address": "0x220a8b",
+      "end_exclusive": "0x220c76",
+      "size": 491,
+      "sha256": "a79f00a9e923338f2c18b04e3fc4e633de27200e5d61b34232172791554d5a5a",
+      "visited_instructions": 9
+    },
+    {
+      "name": "register_write32",
+      "address": "0x23e2b8",
+      "end_exclusive": "0x23e2fd",
+      "size": 69,
+      "sha256": "cd73e634b24bb3d4f9a09b671d5ae603f0bc97829373cfb51d3cf890ce615829",
+      "visited_instructions": 23
+    },
+    {
+      "name": "register_deferred_write32",
+      "address": "0x23e50c",
+      "end_exclusive": "0x23e58a",
+      "size": 126,
+      "sha256": "e72100ef71cd92b509e5b6b2577bd212d7545d354f48bb66baa23a33a0214a7d",
+      "visited_instructions": 16
+    },
+    {
+      "name": "register_deferred_write8",
+      "address": "0x23e5d1",
+      "end_exclusive": "0x23e5ed",
+      "size": 28,
+      "sha256": "828deb345c3d24bed3393d03861869c0a221070371393a4ad0f5175292372396",
+      "visited_instructions": 7
+    },
+    {
+      "name": "register_deferred_update_bits",
+      "address": "0x23e5ed",
+      "end_exclusive": "0x23e62c",
+      "size": 63,
+      "sha256": "2ee8c50bc12931cb8562f8c26489dac69537bd19cf0383fee6a05fff83107af6",
+      "visited_instructions": 22
+    }
+  ],
+  "templates": {
+    "engine": "0000000000000000",
+    "auxiliary": "0000000006060000"
+  },
+  "limitations": [
+    "Thirteen software records do not establish physical engine count.",
+    "Enabled setup still requires control service dependencies; deferred requests stop before0x27b707.",
+    "Plain bus bytes do not model pages, queued transactions, hardware effects or timing; even control0x8e aliases the end-word byte at0x8c+2.",
+    "Store policies, low-byte/halfword operations, CALL and data endianness remain hypotheses.",
+    "Synthetic nonzero engine templates test copy behavior; archived engine template is all zero."
+  ],
+  "tools_sha256": {
+    "validate_dc9_layout_setup.py": "4fb81fe8ad05362fa096188daae9aea93d185c6a4de527300d7a5cd314c1b00b",
+    "reconstruct_dc9_layout_setup.py": "31bfbab981d7f007048c47d304202117d9798aa40da68ebc4fdebf187e743a91",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

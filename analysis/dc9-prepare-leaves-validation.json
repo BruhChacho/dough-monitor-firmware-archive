@@ -1,0 +1,88 @@
+{
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded pair and deferred-request prefixes validated; service targets remain unmapped",
+  "cases": {
+    "constant_one_return": 1,
+    "pair_direct_low16_byte_writes": 6,
+    "pair_nonzero_mode_request_prefix": 2,
+    "pair_secondary_status_dispatch_prefix": 1,
+    "deferred_masked_halfword_prefix": 2,
+    "deferred_shifted_byte_prefix": 2,
+    "deferred_halfword_prefix": 2,
+    "trampoline_27aa7f_prejump": 1,
+    "trampoline_27b4e2_prejump": 1
+  },
+  "case_count": 18,
+  "visited_instruction_count": 135,
+  "source_spans": [
+    {
+      "name": "engine_pair_configuration",
+      "address": "0x22089f",
+      "end_exclusive": "0x220995",
+      "sha256": "fc27f05299b10d2c6a4eb0b626ad3cf819f95a0f45ae63410e4f4193566566d6",
+      "visited_instructions": 44
+    },
+    {
+      "name": "constant_one_return",
+      "address": "0x21bd8d",
+      "end_exclusive": "0x21bd91",
+      "sha256": "623ec64fa7a45afb4609a4fdad13aa14130d2568f686a589afa251dcbb175014",
+      "visited_instructions": 2
+    },
+    {
+      "name": "deferred_request_dispatch_27aa7f",
+      "address": "0x23e49c",
+      "end_exclusive": "0x23e4a0",
+      "sha256": "3d305360b5e3182f9faf2cd894b8532a2fc9d4a139013ec2f8a85d0ea171d46c",
+      "visited_instructions": 0
+    },
+    {
+      "name": "deferred_request_dispatch_27b4e2",
+      "address": "0x23e4a0",
+      "end_exclusive": "0x23e4a6",
+      "sha256": "fff0b800b6eb68537217f233ada5f7d23d59ea68113af8e49278e3c2a33fd3e6",
+      "visited_instructions": 1
+    },
+    {
+      "name": "deferred_masked_halfword_request",
+      "address": "0x23e4a6",
+      "end_exclusive": "0x23e4f4",
+      "sha256": "11a15bfdebc5c4f397b5667609cec30ae8826808145337d817276be1900500fb",
+      "visited_instructions": 22
+    },
+    {
+      "name": "deferred_shifted_byte_request",
+      "address": "0x23e4f4",
+      "end_exclusive": "0x23e50c",
+      "sha256": "348b229a1c4ed9419f5e7602d5dc2ba61c2589f7ba695808c400fc360227e5d0",
+      "visited_instructions": 6
+    },
+    {
+      "name": "deferred_halfword_request",
+      "address": "0x23e58a",
+      "end_exclusive": "0x23e5d1",
+      "sha256": "d6db4e8faf1c3d97d54edf818e9ede22c4fe1c857e817c35ba060d4e8459b963",
+      "visited_instructions": 19
+    }
+  ],
+  "limitations": [
+    "All bus and global data is plain byte memory under explicit fixtures.",
+    "No request service at 0x27b707, 0x27aa7f, or 0x27b4e2 is modeled.",
+    "Register writes are observations under existing model hypotheses, not hardware semantics."
+  ],
+  "tools_sha256": {
+    "validate_dc9_prepare_leaves.py": "2a69a73bb4f40dd8c045de1a63802a9adbd440fa79f23418bf9fddebe435ab49",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

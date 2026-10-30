@@ -1,0 +1,176 @@
+{
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded contracts under explicit data, CALL and store assumptions; no hardware execution",
+  "counts": {
+    "strict": {
+      "zero_delay": 2,
+      "nop_repeat": 260,
+      "nine_countdown_prefix": 162
+    },
+    "sleigh-store": {
+      "delay_countdown_prefix": 783,
+      "periodic_flags_prefix": 1004,
+      "halfword_lane_prefix": 6,
+      "delay_with_scheduled_tick_prefix": 54,
+      "slot_wait_with_scheduled_tick_prefix": 32,
+      "timer_initialize": 1
+    },
+    "halfword-lane-hypothesis": {
+      "delay_countdown_prefix": 783,
+      "periodic_flags_prefix": 1004,
+      "halfword_lane_prefix": 6,
+      "delay_with_scheduled_tick_prefix": 54,
+      "slot_wait_with_scheduled_tick_prefix": 32,
+      "timer_initialize": 1
+    }
+  },
+  "strict_cases": 424,
+  "conditional_cases": 3760,
+  "visited_instruction_counts": {
+    "strict": 50,
+    "sleigh-store": 226,
+    "halfword-lane-hypothesis": 226
+  },
+  "timer_instruction_coverage": {
+    "strict": 21,
+    "sleigh-store": 160,
+    "halfword-lane-hypothesis": 160
+  },
+  "store_counterexamples": [
+    {
+      "policy": "sleigh-store",
+      "initial_count": 0,
+      "next_count": 0,
+      "next_flag": 0
+    },
+    {
+      "policy": "sleigh-store",
+      "initial_count": 1,
+      "next_count": 0,
+      "next_flag": 0
+    },
+    {
+      "policy": "sleigh-store",
+      "initial_count": 2,
+      "next_count": 1,
+      "next_flag": 0
+    },
+    {
+      "policy": "sleigh-store",
+      "initial_count": 65535,
+      "next_count": 65534,
+      "next_flag": 0
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "initial_count": 0,
+      "next_count": 0,
+      "next_flag": 0
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "initial_count": 1,
+      "next_count": 0,
+      "next_flag": 0
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "initial_count": 2,
+      "next_count": 1,
+      "next_flag": 1
+    },
+    {
+      "policy": "halfword-lane-hypothesis",
+      "initial_count": 65535,
+      "next_count": 65534,
+      "next_flag": 1
+    }
+  ],
+  "routines": [
+    {
+      "name": "timer_tick",
+      "address": "0x2417f1",
+      "end_exclusive": "0x241b18",
+      "size": 807,
+      "sha256": "ed3cdd3b63d858b8d29069320ab5eb9317c99e54fad1deb033eddd675923de8b"
+    },
+    {
+      "name": "nop_return",
+      "address": "0x242099",
+      "end_exclusive": "0x24209d",
+      "size": 4,
+      "sha256": "1b04a79797053dc6ef3aa63344a4d186f44642df57854ed7e7331ba25ec15910"
+    },
+    {
+      "name": "delay_wait",
+      "address": "0x24209d",
+      "end_exclusive": "0x2420bb",
+      "size": 30,
+      "sha256": "1f0022a050b24b61b4c6cbd41715c0f5a08be75e4ac748f028f0ccc3dd84d129"
+    },
+    {
+      "name": "delay_wait_with_callback",
+      "address": "0x2420bb",
+      "end_exclusive": "0x242105",
+      "size": 74,
+      "sha256": "f0ca9d0fc9cf72af955d46811f0b4b9b7d890484655418f3eb682113ad36d01c"
+    },
+    {
+      "name": "timer_initialize",
+      "address": "0x242105",
+      "end_exclusive": "0x24211b",
+      "size": 22,
+      "sha256": "9047182b0dbffe97917c3d3f4d4e9e7c420ffe96f1f7f48f8f1f12f1ed7ae7ec"
+    },
+    {
+      "name": "nop_repeat",
+      "address": "0x24211b",
+      "end_exclusive": "0x24214a",
+      "size": 47,
+      "sha256": "da96b6e3c5a3481a00e08ee61978f6ee45b3a4a77f02bcb17ad0cedeed2f93f4"
+    }
+  ],
+  "callback_slots": {
+    "tick": "0x4824a4",
+    "delay": "0x4824ac"
+  },
+  "tick_contract": {
+    "wait_count": "0x455204",
+    "completion_flag": "0x455206",
+    "reload_count": 1000,
+    "periodic_divisors": [
+      10,
+      30,
+      50,
+      100,
+      500
+    ],
+    "physical_tick_period": null
+  },
+  "limitations": [
+    "Raw scaler application; conventional executable imports are not applicable. Dependencies are direct calls and pointer slots.",
+    "Byte-exact assembly and this model share the pinned decoder; not independent ISA validation.",
+    "All modeled data uses little endian; pinned SLEIGH declares big endian.",
+    "Literal-store and halfword-lane policies are hypotheses; default execution still rejects ambiguous stores.",
+    "Every timer_tick execution is a prefix, stopped at 0x241841, 0x2418db or 0x2419cf before external service calls.",
+    "Scheduled ticks occur on poll reads, not on a measured clock or hardware interrupt. Nested execution uses a separate synthetic stack.",
+    "Nonzero callbacks are tested with an archived nop-return target, not resolved production callback assignments.",
+    "Physical timing, scheduler/interrupt entry, MMIO side effects and external service tails remain unvalidated."
+  ],
+  "tools_sha256": {
+    "validate_dc9_timer.py": "87eaa37cf563dde8972c337b1d023dff8400d7734451738846583b059e33cad7",
+    "reconstruct_dc9_timer.py": "818bea3f0aa83a72200286bbceaed8a42ced0ebc4308b1086283d7e335d10322",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba"
+  }
+}

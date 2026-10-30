@@ -1,0 +1,161 @@
+{
+  "status": "bounded instruction-model returns against pinned firmware; hardware untested",
+  "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "call_policy": "fallthrough-hypothesis",
+  "cases": {
+    "metadata_zero_predicate_returns": 5,
+    "selected_engine_state_returns": 18,
+    "state_write_mask_boundary_returns": 12,
+    "guarded_metadata_flag_returns": 30,
+    "channel_metadata_word6c_returns": 6
+  },
+  "strict_cases": 71,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "six_record_conditional_counter_scan_returns": 1
+    },
+    "halfword-lane-hypothesis": {
+      "six_record_conditional_counter_scan_returns": 1
+    }
+  },
+  "conditional_cases": 2,
+  "strict_ambiguous_store_rejections": 1,
+  "visited_instruction_count": 102,
+  "source_spans": [
+    {
+      "name": "engine_mask_enable",
+      "address": "0x22607c",
+      "end_exclusive": "0x226100",
+      "size": 132,
+      "sha256": "017d62746d2a199c3ce64aa16aad31bdc8e5de90499c43873a356c2bc25e6703",
+      "visited_instructions": 0,
+      "observed_purpose": "Read the engine-bank word at offset 4, then set or clear mask 2 at logical address 0x10800032 + bank according to odd or even bank parity."
+    },
+    {
+      "name": "channel_reference_count",
+      "address": "0x23ee2c",
+      "end_exclusive": "0x23eee9",
+      "size": 189,
+      "sha256": "867b306390a94151da57dd9da36b4a7c2b14dd8aacd58e12d2c4c99b69c0c02f",
+      "visited_instructions": 0,
+      "observed_purpose": "Count matching active channels and return the resulting count."
+    },
+    {
+      "name": "metadata_word6c_read",
+      "address": "0x23eee9",
+      "end_exclusive": "0x23ef0c",
+      "size": 35,
+      "sha256": "37361499038fbc174f12f1e060bc1f40864d900ff70cfe92736cc583f3bc8329",
+      "visited_instructions": 12,
+      "observed_purpose": "Read a 32-bit word from the metadata structure at offset 0x6c."
+    },
+    {
+      "name": "metadata_word0c_zero_test",
+      "address": "0x23ea03",
+      "end_exclusive": "0x23ea1e",
+      "size": 27,
+      "sha256": "276fb0cff08ecf0d217534a1daedb0f9bd207feaec4b0026914f0ae12dd716dd",
+      "visited_instructions": 9,
+      "observed_purpose": "Test whether the 32-bit metadata word at offset 0x0c is zero."
+    },
+    {
+      "name": "metadata_state_write_selected_engines",
+      "address": "0x23ea1e",
+      "end_exclusive": "0x23ea6e",
+      "size": 80,
+      "sha256": "c345c35878610a36a7e8f2e3003a932f943c63bb69bba72f71f06ea46d200791",
+      "visited_instructions": 28,
+      "observed_purpose": "Write a metadata state value and apply it to selected engine records at word offset 0x08."
+    },
+    {
+      "name": "metadata_flag_read_1",
+      "address": "0x23ea6e",
+      "end_exclusive": "0x23ea99",
+      "size": 43,
+      "sha256": "82b874b20ecdf24ef79a918d6155ca197986dd279e9fae9a618e0c340fca6033",
+      "visited_instructions": 14,
+      "observed_purpose": "For metadata indices 0..5, require a nonzero halfword at metadata offset 0xac, then return bit 3 of byte offset 0x98."
+    },
+    {
+      "name": "metadata_flag_read_2",
+      "address": "0x23ea99",
+      "end_exclusive": "0x23eac4",
+      "size": 43,
+      "sha256": "24f7a8d9f30bae8e7156b61d698955767008b490ce801fe9ba10489f6f9905f3",
+      "visited_instructions": 14,
+      "observed_purpose": "For metadata indices 0..5, require a nonzero halfword at metadata offset 0xac, then return bit 5 of byte offset 0x98."
+    },
+    {
+      "name": "metadata_flag_read_3",
+      "address": "0x23eac4",
+      "end_exclusive": "0x23eb05",
+      "size": 65,
+      "sha256": "a27cbeda6e538b09ca6ac9e695d919fbbec0b948674573eab7325f1beaf1a99c",
+      "visited_instructions": 18,
+      "observed_purpose": "Walk stride-0xb0 records; for type 4 with a nonzero halfword at metadata base offset 0xac (base+0xa0 plus 0x0c), subtract 50 decimal from that halfword."
+    },
+    {
+      "name": "broadcast_mask_counter_store",
+      "address": "0x23e13b",
+      "end_exclusive": "0x23e152",
+      "size": 23,
+      "sha256": "021e096620a8fb948b02f8869b3d49c1e14da83185c15d471c05ae4fcca0957f",
+      "visited_instructions": 0,
+      "observed_purpose": "Store the supplied value at fixed address 0x455214 when the selector is nonzero, otherwise store zero; semantics are unknown."
+    },
+    {
+      "name": "global_halfword_read",
+      "address": "0x21bd1e",
+      "end_exclusive": "0x21bd28",
+      "size": 10,
+      "sha256": "b41ffe8645942c20b9eef074001d8f720389f3136e3c518052b29f2deb012b45",
+      "visited_instructions": 0,
+      "observed_purpose": "Read and return a global halfword."
+    },
+    {
+      "name": "register_pair_configuration",
+      "address": "0x220995",
+      "end_exclusive": "0x220a8b",
+      "size": 246,
+      "sha256": "881c1e7516aa6ff537cd64535108a56b739f668f845ae02518df3d333eaf41d0",
+      "visited_instructions": 0,
+      "observed_purpose": "Configure a pair of registers from the supplied values; register semantics are unresolved."
+    }
+  ],
+  "assumptions": [
+    "Fallthrough CALL links, little-endian loads and stores, low subregister behavior, and ordinary RAM are instruction-model assumptions.",
+    "The two bg.sw_1 counter write widths are alternatives, not established ISA or firmware facts.",
+    "The six-record metadata scan and byte/word offsets are taken from the byte-exact recovered disassembly.",
+    "Metadata flag fields are reported as offsets and bit positions; higher-level field meaning is unresolved.",
+    "No hardware, peripheral, interrupt, timing, or vendor application behavior is modeled."
+  ],
+  "key_offsets": {
+    "engine_stride": 124,
+    "metadata_stride": 176,
+    "channel_stride": 168,
+    "engine_word": 8,
+    "metadata_state": 12,
+    "metadata_selection": 18,
+    "metadata_flag_gate": 172,
+    "metadata_flag_byte": 152,
+    "counter_halfword": 172,
+    "counter_delta_decimal": 50
+  },
+  "tools_sha256": {
+    "validate_dc9_enable_leaf.py": "ea3355bdf5311488c5b3383548644c571fa0c1c00e5b4789dc6fec4576a2d837",
+    "reconstruct_dc9_engine_enable.py": "f5d54cd1b5cc0c41253fc583bf262e482657f9f32ee71a78c8c72b5ec6d3a533",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

@@ -45,6 +45,35 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 
 ## Reverse engineering
 
+For community firmware development, start with the [raw files and source-build
+guide](firmware/README.md). The current DC9 source overlay contains **164 reconstructed
+components: 9,195 instructions / 28,347 code bytes**, plus 12 tables / 911 bytes.
+That is **1.168% (about 1.17%)** of the expanded application. Most application
+bytes remain precompiled vendor input; fully editable firmware remains the goal.
+
+The 2026-10-30 channel-storage milestone adds four routines (420 instructions /
+1,251 code bytes). Its bounded offline model returns through integrated apply
+for explicit inactive-channel fixtures under both ambiguous-store policies,
+with an explicit wait bypass. Core validation covers 101 strict and four
+conditional cases; storage-register validation covers 12 conditional cases, one
+strict ambiguous-store rejection, and visits all 118 instructions. The
+combined offline gate passed all stages and 214 repository tests, with no
+failures, errors, or skips. It produced all three BINs; hardware remains
+untested. The 202-test engine-mode gate is a historical result. Active full
+apply still stops at `0x22701c`; positive-area storage stops at `0x2aacb9`, and flagged
+final channels still require `0x22eb07`. Hardware behavior remains untested.
+
+See the [channel-storage report](analysis/2026-10-30_reverse-dc9-channel-storage-report.md),
+[latest workspace](analysis/extracted/firmware-validation-channel-storage-2026-10-30/workspace/),
+[workspace summary](analysis/community-channel-storage-workspace.json), and
+[validation run](analysis/extracted/firmware-validation-channel-storage-2026-10-30/).
+The engine-mode report and its passed 202-test gate remain historical.
+The preceding engine-preparation milestone passed 185 repository tests and
+remains available as a [historical report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
+The percentage measures recovered code bytes, not
+overall product readiness. Earlier reports and workspaces remain historical
+snapshots.
+
 The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
 
 Small annotated C reconstructions are available under [`analysis/reconstructed/`](analysis/reconstructed/). **A complete, buildable replacement firmware has not been recovered.** Extracted programs are generated locally from the preserved ZIPs; no monitor was flashed during analysis.

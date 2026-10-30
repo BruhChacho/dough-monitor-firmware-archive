@@ -1,0 +1,78 @@
+{
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded channel leaf fixtures passed under plain-memory model hypotheses",
+  "cases": {
+    "state_check_geometry": 3,
+    "global_status_selectors": 8,
+    "rectangle_order_and_sentinels": 6,
+    "allocator_available_or_exhausted": 2,
+    "metadata_update_allocator_exhaustion": 1,
+    "metadata_update_pre_external_prefix": 1
+  },
+  "case_count": 21,
+  "visited_instruction_count": 155,
+  "source_spans": [
+    {
+      "name": "channel_metadata_bit_update",
+      "address": "0x227145",
+      "end_exclusive": "0x2271a9",
+      "sha256": "6be4c441d46d146d07ab09d048af61da10f7576168a5570cd7db50f389cd02b8",
+      "visited_instructions": 33
+    },
+    {
+      "name": "channel_overlap_flags_update",
+      "address": "0x222843",
+      "end_exclusive": "0x222898",
+      "sha256": "3d3b03ab9e2dde5eec50506e530944111d0f04a778e2c26988bef043756bc58c",
+      "visited_instructions": 28
+    },
+    {
+      "name": "engine_pair01_available",
+      "address": "0x222ace",
+      "end_exclusive": "0x222af1",
+      "sha256": "f0c0a376373e922d9d22de232b0165c06254e7c4ef9675cb6e2bb66cc636e06a",
+      "visited_instructions": 12
+    },
+    {
+      "name": "engine_pair23_available",
+      "address": "0x222af1",
+      "end_exclusive": "0x222b15",
+      "sha256": "a525843cdf74f12fbbe4f31c6e72a9fdb5df7d6849a421ac177c16bfdc98cb65",
+      "visited_instructions": 12
+    },
+    {
+      "name": "channel_record_rectangle_assign",
+      "address": "0x2229f8",
+      "end_exclusive": "0x222aa2",
+      "sha256": "60183bf9b1d339864e27d9a15885a2fc29e16d7b0cd85d3d3961e395ab2f5008",
+      "visited_instructions": 57
+    },
+    {
+      "name": "engine_free_index_scan",
+      "address": "0x222b65",
+      "end_exclusive": "0x222b8a",
+      "sha256": "e1da08c3dfe9ed6cbaf6d7cfac016c1a1077f59eb05104f91218fd7a20b3c938",
+      "visited_instructions": 13
+    }
+  ],
+  "limitations": [
+    "All memory is plain bytes; there are no peripheral side effects.",
+    "The 0x22701c service remains unresolved and is stopped before execution.",
+    "Results preserve model assumptions and do not establish physical behavior."
+  ],
+  "tools_sha256": {
+    "validate_dc9_channel_leaves.py": "ea7e893073043e26358afd5a8cec46fe17c389f23fa8270b67d9df0569cc098f",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

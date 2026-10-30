@@ -1,0 +1,145 @@
+{
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "enabled control and selected record setup return under explicit store hypotheses; full apply remains partial",
+  "cases": {
+    "enable_logical_argument_prefixes": 39,
+    "empty_enable_mask_return": 1,
+    "global_halfword_returns": 6,
+    "direct_register_pair_returns": 4,
+    "deferred_pair_service_prefixes": 16
+  },
+  "strict_cases": 66,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "selected_engine_enable_returns": 21,
+      "broadcast_mask_store_returns": 12,
+      "enabled_control_normal_mode_returns": 13,
+      "enabled_control_metadata_gate_returns": 48,
+      "enabled_special_mode_pair_returns": 4,
+      "complete_enabled_record_setup_returns": 7,
+      "full_apply_after_enabled_setup_prefix": 1
+    },
+    "halfword-lane-hypothesis": {
+      "selected_engine_enable_returns": 21,
+      "broadcast_mask_store_returns": 12,
+      "enabled_control_normal_mode_returns": 13,
+      "enabled_control_metadata_gate_returns": 48,
+      "enabled_special_mode_pair_returns": 4,
+      "complete_enabled_record_setup_returns": 7,
+      "full_apply_after_enabled_setup_prefix": 1
+    }
+  },
+  "conditional_cases": 212,
+  "visited_instruction_count": 1431,
+  "source_spans": [
+    {
+      "name": "engine_mask_enable",
+      "address": "0x22607c",
+      "end_exclusive": "0x226100",
+      "size": 132,
+      "sha256": "017d62746d2a199c3ce64aa16aad31bdc8e5de90499c43873a356c2bc25e6703",
+      "visited_instructions": 47
+    },
+    {
+      "name": "channel_reference_count",
+      "address": "0x23ee2c",
+      "end_exclusive": "0x23eee9",
+      "size": 189,
+      "sha256": "867b306390a94151da57dd9da36b4a7c2b14dd8aacd58e12d2c4c99b69c0c02f",
+      "visited_instructions": 30
+    },
+    {
+      "name": "metadata_word6c_read",
+      "address": "0x23eee9",
+      "end_exclusive": "0x23ef0c",
+      "size": 35,
+      "sha256": "37361499038fbc174f12f1e060bc1f40864d900ff70cfe92736cc583f3bc8329",
+      "visited_instructions": 0
+    },
+    {
+      "name": "metadata_word0c_zero_test",
+      "address": "0x23ea03",
+      "end_exclusive": "0x23ea1e",
+      "size": 27,
+      "sha256": "276fb0cff08ecf0d217534a1daedb0f9bd207feaec4b0026914f0ae12dd716dd",
+      "visited_instructions": 9
+    },
+    {
+      "name": "metadata_state_write_selected_engines",
+      "address": "0x23ea1e",
+      "end_exclusive": "0x23ea6e",
+      "size": 80,
+      "sha256": "c345c35878610a36a7e8f2e3003a932f943c63bb69bba72f71f06ea46d200791",
+      "visited_instructions": 0
+    },
+    {
+      "name": "metadata_flag_read_1",
+      "address": "0x23ea6e",
+      "end_exclusive": "0x23ea99",
+      "size": 43,
+      "sha256": "82b874b20ecdf24ef79a918d6155ca197986dd279e9fae9a618e0c340fca6033",
+      "visited_instructions": 0
+    },
+    {
+      "name": "metadata_flag_read_2",
+      "address": "0x23ea99",
+      "end_exclusive": "0x23eac4",
+      "size": 43,
+      "sha256": "24f7a8d9f30bae8e7156b61d698955767008b490ce801fe9ba10489f6f9905f3",
+      "visited_instructions": 0
+    },
+    {
+      "name": "metadata_flag_read_3",
+      "address": "0x23eac4",
+      "end_exclusive": "0x23eb05",
+      "size": 65,
+      "sha256": "a27cbeda6e538b09ca6ac9e695d919fbbec0b948674573eab7325f1beaf1a99c",
+      "visited_instructions": 0
+    },
+    {
+      "name": "broadcast_mask_counter_store",
+      "address": "0x23e13b",
+      "end_exclusive": "0x23e152",
+      "size": 23,
+      "sha256": "021e096620a8fb948b02f8869b3d49c1e14da83185c15d471c05ae4fcca0957f",
+      "visited_instructions": 7
+    },
+    {
+      "name": "global_halfword_read",
+      "address": "0x21bd1e",
+      "end_exclusive": "0x21bd28",
+      "size": 10,
+      "sha256": "b41ffe8645942c20b9eef074001d8f720389f3136e3c518052b29f2deb012b45",
+      "visited_instructions": 3
+    },
+    {
+      "name": "register_pair_configuration",
+      "address": "0x220995",
+      "end_exclusive": "0x220a8b",
+      "size": 246,
+      "sha256": "881c1e7516aa6ff537cd64535108a56b739f668f845ae02518df3d333eaf41d0",
+      "visited_instructions": 42
+    }
+  ],
+  "limitations": [
+    "Conditional stores, CALL, endianness and low-byte/halfword semantics remain unproven CPU hypotheses.",
+    "Bus bytes do not model pages, time, interrupts or peripherals; synthetic zero-bank setup fixtures alias broadcast targets.",
+    "Selected enabled mode9/10 cases return; deferred and special disable paths remain incomplete. Full setup returns are bounded fixtures, not display operation."
+  ],
+  "tools_sha256": {
+    "validate_dc9_engine_enable.py": "a49c040e1718bcb5b2340d9495922919b004487594803458b1a83be9f9bbad4b",
+    "reconstruct_dc9_engine_enable.py": "f5d54cd1b5cc0c41253fc583bf262e482657f9f32ee71a78c8c72b5ec6d3a533",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

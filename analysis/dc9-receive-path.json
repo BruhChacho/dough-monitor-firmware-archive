@@ -1,0 +1,1272 @@
+{
+  "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "source_layout_sha256": "56f2e60c51101f2bf75a3f8eb8c71540618ec065adda1461924c0610e0716af2",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "static full transfer-service source with partial execution evidence",
+  "segments": [
+    {
+      "name": "slot_control_or08",
+      "begin": "0x20c80d",
+      "end_exclusive": "0x20c895",
+      "sha256": "922a97a9cab2107ee6ae764c574736b9c2e7fd796de2a0b6bd4d87e12ccc7e0a",
+      "instruction_count": 40,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20c80d",
+          "instruction": "bg.beqi",
+          "target": "0x20c84d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c811",
+          "instruction": "bn.beqi",
+          "target": "0x20c835",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c814",
+          "instruction": "bn.beqi",
+          "target": "0x20c87d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c817",
+          "instruction": "bn.beqi",
+          "target": "0x20c865",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c81a",
+          "instruction": "bn.bnei",
+          "target": "0x20c833",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_control_or30",
+      "begin": "0x20c895",
+      "end_exclusive": "0x20c91d",
+      "sha256": "7e5abc0ca927c718e6a23ed7c0c2d259f7481b8f368e4f470b7ea14e0107bc4c",
+      "instruction_count": 40,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20c895",
+          "instruction": "bg.beqi",
+          "target": "0x20c8d5",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c899",
+          "instruction": "bn.beqi",
+          "target": "0x20c8bd",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c89c",
+          "instruction": "bn.beqi",
+          "target": "0x20c905",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c89f",
+          "instruction": "bn.beqi",
+          "target": "0x20c8ed",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c8a2",
+          "instruction": "bn.bnei",
+          "target": "0x20c8bb",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_status40",
+      "begin": "0x20c91d",
+      "end_exclusive": "0x20c98a",
+      "sha256": "9c86b06c06baccaf88dba89ca2debb67bea559bdfc3652d96e4f7b0145eb84a6",
+      "instruction_count": 34,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20c91d",
+          "instruction": "bg.beqi",
+          "target": "0x20c953",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c921",
+          "instruction": "bn.beqi",
+          "target": "0x20c940",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c924",
+          "instruction": "bn.beqi",
+          "target": "0x20c977",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c927",
+          "instruction": "bn.beqi",
+          "target": "0x20c966",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c92c",
+          "instruction": "bn.bnei",
+          "target": "0x20c94f",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c93e",
+          "instruction": "bt.j",
+          "target": "0x20c94f",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c975",
+          "instruction": "bt.j",
+          "target": "0x20c94f",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_status80",
+      "begin": "0x20c98a",
+      "end_exclusive": "0x20c9fa",
+      "sha256": "4b82e78b57595b317f5d9b245c3451eea035d4563bba1d2292f8e99f1baef501",
+      "instruction_count": 34,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20c98a",
+          "instruction": "bg.beqi",
+          "target": "0x20c9c1",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c98e",
+          "instruction": "bn.beqi",
+          "target": "0x20c9ad",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c991",
+          "instruction": "bn.beqi",
+          "target": "0x20c9e6",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c994",
+          "instruction": "bn.beqi",
+          "target": "0x20c9d5",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c999",
+          "instruction": "bn.bnei",
+          "target": "0x20c9bc",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c9ab",
+          "instruction": "bt.j",
+          "target": "0x20c9bc",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c9e4",
+          "instruction": "bt.j",
+          "target": "0x20c9bc",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_frame_status",
+      "begin": "0x20c9fa",
+      "end_exclusive": "0x20ca70",
+      "sha256": "e8454aac8d0cba54521d71c769f535cb617d1584f8e8f122690584aea796a5a2",
+      "instruction_count": 37,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20c9fa",
+          "instruction": "bg.beqi",
+          "target": "0x20ca36",
+          "inside_span": true
+        },
+        {
+          "address": "0x20c9fe",
+          "instruction": "bn.beqi",
+          "target": "0x20ca20",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca01",
+          "instruction": "bn.beqi",
+          "target": "0x20ca5d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca04",
+          "instruction": "bn.beqi",
+          "target": "0x20ca49",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca09",
+          "instruction": "bn.bnei",
+          "target": "0x20ca32",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca1e",
+          "instruction": "bt.j",
+          "target": "0x20ca32",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca5b",
+          "instruction": "bt.j",
+          "target": "0x20ca32",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_event_or",
+      "begin": "0x20ca70",
+      "end_exclusive": "0x20caf8",
+      "sha256": "9ca2418d95ae0d0ab301c9e4a712ec446411560f1e0e6a5b9befe16ab764ddfd",
+      "instruction_count": 40,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20ca70",
+          "instruction": "bg.beqi",
+          "target": "0x20cab0",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca74",
+          "instruction": "bn.beqi",
+          "target": "0x20ca98",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca77",
+          "instruction": "bn.beqi",
+          "target": "0x20cae0",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca7a",
+          "instruction": "bn.beqi",
+          "target": "0x20cac8",
+          "inside_span": true
+        },
+        {
+          "address": "0x20ca7d",
+          "instruction": "bn.bnei",
+          "target": "0x20ca96",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_data_write",
+      "begin": "0x20caf8",
+      "end_exclusive": "0x20cb4e",
+      "sha256": "80d9f4ce45511ac689ba3ac2f36ce5b57749db8a56254b780441485dc0fdb970",
+      "instruction_count": 25,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20caf8",
+          "instruction": "bg.beqi",
+          "target": "0x20cb24",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cafc",
+          "instruction": "bn.beqi",
+          "target": "0x20cb16",
+          "inside_span": true
+        },
+        {
+          "address": "0x20caff",
+          "instruction": "bn.beqi",
+          "target": "0x20cb40",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cb02",
+          "instruction": "bn.beqi",
+          "target": "0x20cb32",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cb05",
+          "instruction": "bn.bnei",
+          "target": "0x20cb14",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_control_or04",
+      "begin": "0x20cb4e",
+      "end_exclusive": "0x20cbd6",
+      "sha256": "7a4f6297358d4162b568ee925bd2ff2b5e43c11b0a7f451f012355948048ab6d",
+      "instruction_count": 40,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20cb4e",
+          "instruction": "bg.beqi",
+          "target": "0x20cb8e",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cb52",
+          "instruction": "bn.beqi",
+          "target": "0x20cb76",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cb55",
+          "instruction": "bn.beqi",
+          "target": "0x20cbbe",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cb58",
+          "instruction": "bn.beqi",
+          "target": "0x20cba6",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cb5b",
+          "instruction": "bn.bnei",
+          "target": "0x20cb74",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_event_read",
+      "begin": "0x20cbd6",
+      "end_exclusive": "0x20cc43",
+      "sha256": "02b547fe8599bf97149797b60aec4bed96b7099b582573aece03849cd7b07d38",
+      "instruction_count": 34,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20cbd6",
+          "instruction": "bg.beqi",
+          "target": "0x20cc0c",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cbda",
+          "instruction": "bn.beqi",
+          "target": "0x20cbf9",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cbdd",
+          "instruction": "bn.beqi",
+          "target": "0x20cc30",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cbe0",
+          "instruction": "bn.beqi",
+          "target": "0x20cc1f",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cbe5",
+          "instruction": "bn.bnei",
+          "target": "0x20cc08",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cbf7",
+          "instruction": "bt.j",
+          "target": "0x20cc08",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc2e",
+          "instruction": "bt.j",
+          "target": "0x20cc08",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_data_read",
+      "begin": "0x20cc43",
+      "end_exclusive": "0x20ccb0",
+      "sha256": "6ffeadaabf14769b29484b5c35a72444aa3cb324f149793879fa802fb857e03f",
+      "instruction_count": 34,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20cc43",
+          "instruction": "bg.beqi",
+          "target": "0x20cc79",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc47",
+          "instruction": "bn.beqi",
+          "target": "0x20cc66",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc4a",
+          "instruction": "bn.beqi",
+          "target": "0x20cc9d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc4d",
+          "instruction": "bn.beqi",
+          "target": "0x20cc8c",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc52",
+          "instruction": "bn.bnei",
+          "target": "0x20cc75",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc64",
+          "instruction": "bt.j",
+          "target": "0x20cc75",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cc9b",
+          "instruction": "bt.j",
+          "target": "0x20cc75",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_state_initialize",
+      "begin": "0x20ccb0",
+      "end_exclusive": "0x20ccf6",
+      "sha256": "24963a775afbc6745ec202b1caf932719cbbab390187e936653f23151f337036",
+      "instruction_count": 22,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20cce0",
+          "instruction": "bg.bnei",
+          "target": "0x20ccb2",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_state_clear",
+      "begin": "0x20ccf6",
+      "end_exclusive": "0x20cd13",
+      "sha256": "7622d63a77d391a14ee9a5667a12d7e6c1aad052613a499ede5e7f9bc7744a85",
+      "instruction_count": 9,
+      "calls": [],
+      "branches": [],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_packet_xor",
+      "begin": "0x20cd13",
+      "end_exclusive": "0x20cd4a",
+      "sha256": "395c3cfb8208d437b5194d39300cb731e5465cc500fd1d1071a149e0c6b6caea",
+      "instruction_count": 20,
+      "calls": [],
+      "branches": [
+        {
+          "address": "0x20cd18",
+          "instruction": "bn.beqi",
+          "target": "0x20cd48",
+          "inside_span": true
+        },
+        {
+          "address": "0x20cd43",
+          "instruction": "bn.bnei",
+          "target": "0x20cd2d",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    },
+    {
+      "name": "slot_transfer_service",
+      "begin": "0x20d33c",
+      "end_exclusive": "0x20db7b",
+      "sha256": "c5bb20146459258e0d49a6c13ab5cd53f380de5a38b4ad81f42e29d3b3c4c65f",
+      "instruction_count": 660,
+      "calls": [
+        {
+          "address": "0x20d368",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d391",
+          "target": "0x20cc43",
+          "recovered_name": "slot_data_read"
+        },
+        {
+          "address": "0x20d399",
+          "target": "0x20caf8",
+          "recovered_name": "slot_data_write"
+        },
+        {
+          "address": "0x20d3ed",
+          "target": "0x20ccf6",
+          "recovered_name": "slot_state_clear"
+        },
+        {
+          "address": "0x20d405",
+          "target": "0x20c80d",
+          "recovered_name": "slot_control_or08"
+        },
+        {
+          "address": "0x20d40b",
+          "target": "0x20c895",
+          "recovered_name": "slot_control_or30"
+        },
+        {
+          "address": "0x20d411",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d420",
+          "target": "0x20ca70",
+          "recovered_name": "slot_event_or"
+        },
+        {
+          "address": "0x20d495",
+          "target": "0x20c73b",
+          "recovered_name": "slot_ring_position"
+        },
+        {
+          "address": "0x20d4b9",
+          "target": "0x20c91d",
+          "recovered_name": "slot_status40"
+        },
+        {
+          "address": "0x20d4e3",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d547",
+          "target": "0x20c7a8",
+          "recovered_name": "slot_buffer_offset"
+        },
+        {
+          "address": "0x20d55c",
+          "target": "0x20e47e",
+          "recovered_name": "indirect_buffer_read8"
+        },
+        {
+          "address": "0x20d5ae",
+          "target": "0x20e47e",
+          "recovered_name": "indirect_buffer_read8"
+        },
+        {
+          "address": "0x20d653",
+          "target": "0x20c91d",
+          "recovered_name": "slot_status40"
+        },
+        {
+          "address": "0x20d65d",
+          "target": "0x20c80d",
+          "recovered_name": "slot_control_or08"
+        },
+        {
+          "address": "0x20d663",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d6e0",
+          "target": "0x20c73b",
+          "recovered_name": "slot_ring_position"
+        },
+        {
+          "address": "0x20d716",
+          "target": "0x20c98a",
+          "recovered_name": "slot_status80"
+        },
+        {
+          "address": "0x20d732",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d7ac",
+          "target": "0x20c7a8",
+          "recovered_name": "slot_buffer_offset"
+        },
+        {
+          "address": "0x20d80b",
+          "target": "0x20e3be",
+          "recovered_name": null
+        },
+        {
+          "address": "0x20d838",
+          "target": "0x20c98a",
+          "recovered_name": "slot_status80"
+        },
+        {
+          "address": "0x20d851",
+          "target": "0x20c895",
+          "recovered_name": "slot_control_or30"
+        },
+        {
+          "address": "0x20d859",
+          "target": "0x20c895",
+          "recovered_name": "slot_control_or30"
+        },
+        {
+          "address": "0x20d85f",
+          "target": "0x20c80d",
+          "recovered_name": "slot_control_or08"
+        },
+        {
+          "address": "0x20d865",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d912",
+          "target": "0x20c7a8",
+          "recovered_name": "slot_buffer_offset"
+        },
+        {
+          "address": "0x20d945",
+          "target": "0x20e47e",
+          "recovered_name": "indirect_buffer_read8"
+        },
+        {
+          "address": "0x20d97c",
+          "target": "0x20ccf6",
+          "recovered_name": "slot_state_clear"
+        },
+        {
+          "address": "0x20d982",
+          "target": "0x20c80d",
+          "recovered_name": "slot_control_or08"
+        },
+        {
+          "address": "0x20d988",
+          "target": "0x20c895",
+          "recovered_name": "slot_control_or30"
+        },
+        {
+          "address": "0x20d98e",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d9ad",
+          "target": "0x20c80d",
+          "recovered_name": "slot_control_or08"
+        },
+        {
+          "address": "0x20d9e3",
+          "target": "0x20cbd6",
+          "recovered_name": "slot_event_read"
+        },
+        {
+          "address": "0x20d9f0",
+          "target": "0x20ccf6",
+          "recovered_name": "slot_state_clear"
+        },
+        {
+          "address": "0x20da29",
+          "target": "0x20ca70",
+          "recovered_name": "slot_event_or"
+        },
+        {
+          "address": "0x20da42",
+          "target": "0x20ccf6",
+          "recovered_name": "slot_state_clear"
+        },
+        {
+          "address": "0x20da48",
+          "target": "0x20c895",
+          "recovered_name": "slot_control_or30"
+        },
+        {
+          "address": "0x20da58",
+          "target": "0x20c9fa",
+          "recovered_name": "slot_frame_status"
+        },
+        {
+          "address": "0x20da95",
+          "target": "0x20c711",
+          "recovered_name": null
+        },
+        {
+          "address": "0x20daf7",
+          "target": "0x20c7a8",
+          "recovered_name": "slot_buffer_offset"
+        },
+        {
+          "address": "0x20db4d",
+          "target": "0x20e3be",
+          "recovered_name": null
+        }
+      ],
+      "branches": [
+        {
+          "address": "0x20d36c",
+          "instruction": "bg.beqi",
+          "target": "0x20d445",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d37f",
+          "instruction": "bn.bnei",
+          "target": "0x20d3db",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d385",
+          "instruction": "bg.beqi",
+          "target": "0x20d471",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d38c",
+          "instruction": "bn.bf",
+          "target": "0x20d6bc",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d3d7",
+          "instruction": "bg.j",
+          "target": "0x20ccf6",
+          "inside_span": false
+        },
+        {
+          "address": "0x20d418",
+          "instruction": "bn.beqi",
+          "target": "0x20d424",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d4bd",
+          "instruction": "bg.bnei",
+          "target": "0x20d96a",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d4cf",
+          "instruction": "bg.beqi",
+          "target": "0x20d9e1",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d4ea",
+          "instruction": "bg.beqi",
+          "target": "0x20d8a3",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d52c",
+          "instruction": "bg.ble",
+          "target": "0x20d53d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d57d",
+          "instruction": "bg.beq",
+          "target": "0x20dab8",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d58f",
+          "instruction": "bg.bgt",
+          "target": "0x20d5d0",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d5cc",
+          "instruction": "bg.ble",
+          "target": "0x20d5a0",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d5de",
+          "instruction": "bn.beqi",
+          "target": "0x20d608",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d5ef",
+          "instruction": "bn.bnei",
+          "target": "0x20d608",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d62c",
+          "instruction": "bg.beq",
+          "target": "0x20da4f",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d657",
+          "instruction": "bg.bnei",
+          "target": "0x20da30",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d66a",
+          "instruction": "bg.bnei",
+          "target": "0x20da24",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d676",
+          "instruction": "bg.beqi",
+          "target": "0x20d445",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d688",
+          "instruction": "bg.bnei",
+          "target": "0x20d445",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d6b8",
+          "instruction": "bg.j",
+          "target": "0x20d2b7",
+          "inside_span": false
+        },
+        {
+          "address": "0x20d710",
+          "instruction": "bg.beqi",
+          "target": "0x20d857",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d71a",
+          "instruction": "bg.bnei",
+          "target": "0x20d99b",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d72c",
+          "instruction": "bg.beqi",
+          "target": "0x20d99b",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d739",
+          "instruction": "bg.bnei",
+          "target": "0x20dac6",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d749",
+          "instruction": "bg.ble",
+          "target": "0x20d780",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d77c",
+          "instruction": "bg.bgt",
+          "target": "0x20d74d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d7a4",
+          "instruction": "bg.bgt",
+          "target": "0x20d836",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d7da",
+          "instruction": "bt.j",
+          "target": "0x20d7ec",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d7e8",
+          "instruction": "bg.bgt",
+          "target": "0x20d836",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d81b",
+          "instruction": "bg.bgt",
+          "target": "0x20d7dc",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d83c",
+          "instruction": "bn.beqi",
+          "target": "0x20d85d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d855",
+          "instruction": "bt.j",
+          "target": "0x20d85d",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d86c",
+          "instruction": "bg.beqi",
+          "target": "0x20d445",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d89f",
+          "instruction": "bg.j",
+          "target": "0x20ca70",
+          "inside_span": false
+        },
+        {
+          "address": "0x20d8b1",
+          "instruction": "bt.j",
+          "target": "0x20d8ce",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d8e2",
+          "instruction": "bg.ble",
+          "target": "0x20d8b3",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d90a",
+          "instruction": "bg.bgt",
+          "target": "0x20d5d0",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d963",
+          "instruction": "bg.ble",
+          "target": "0x20d937",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d967",
+          "instruction": "bn.j",
+          "target": "0x20d5d0",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d995",
+          "instruction": "bg.beqi",
+          "target": "0x20d445",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d999",
+          "instruction": "bt.j",
+          "target": "0x20d870",
+          "inside_span": true
+        },
+        {
+          "address": "0x20d9dd",
+          "instruction": "bg.j",
+          "target": "0x20c895",
+          "inside_span": false
+        },
+        {
+          "address": "0x20d9ea",
+          "instruction": "bg.bnei",
+          "target": "0x20d4d3",
+          "inside_span": true
+        },
+        {
+          "address": "0x20da20",
+          "instruction": "bg.j",
+          "target": "0x20c80d",
+          "inside_span": false
+        },
+        {
+          "address": "0x20da2d",
+          "instruction": "bn.j",
+          "target": "0x20d66e",
+          "inside_span": true
+        },
+        {
+          "address": "0x20da4c",
+          "instruction": "bn.j",
+          "target": "0x20d65b",
+          "inside_span": true
+        },
+        {
+          "address": "0x20da52",
+          "instruction": "bg.beqi",
+          "target": "0x20d630",
+          "inside_span": true
+        },
+        {
+          "address": "0x20da5c",
+          "instruction": "bg.bnei",
+          "target": "0x20d630",
+          "inside_span": true
+        },
+        {
+          "address": "0x20dab5",
+          "instruction": "bn.j",
+          "target": "0x20d651",
+          "inside_span": true
+        },
+        {
+          "address": "0x20dac3",
+          "instruction": "bn.j",
+          "target": "0x20d581",
+          "inside_span": true
+        },
+        {
+          "address": "0x20dad2",
+          "instruction": "bg.ble",
+          "target": "0x20dae3",
+          "inside_span": true
+        },
+        {
+          "address": "0x20daef",
+          "instruction": "bg.bgt",
+          "target": "0x20d836",
+          "inside_span": true
+        },
+        {
+          "address": "0x20db1c",
+          "instruction": "bt.j",
+          "target": "0x20db2e",
+          "inside_span": true
+        },
+        {
+          "address": "0x20db2a",
+          "instruction": "bg.bgt",
+          "target": "0x20d836",
+          "inside_span": true
+        },
+        {
+          "address": "0x20db5d",
+          "instruction": "bg.bgt",
+          "target": "0x20db1e",
+          "inside_span": true
+        },
+        {
+          "address": "0x20db78",
+          "instruction": "bn.j",
+          "target": "0x20d836",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": [
+        {
+          "address": "0x20d64d",
+          "bytes": "ece651ed",
+          "operands": [
+            "0x51ec(r6)",
+            "r7"
+          ],
+          "pcode": [
+            "IMARK ram[20d64d:4]",
+            "unique[a800:4] = r6 + 0x51ec",
+            "*[ram]unique[a800:4] = r7"
+          ]
+        },
+        {
+          "address": "0x20da6b",
+          "bytes": "ece651ed",
+          "operands": [
+            "0x51ec(r6)",
+            "r7"
+          ],
+          "pcode": [
+            "IMARK ram[20da6b:4]",
+            "unique[a800:4] = r6 + 0x51ec",
+            "*[ram]unique[a800:4] = r7"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "indirect_buffer_read8",
+      "begin": "0x20e47e",
+      "end_exclusive": "0x20e52d",
+      "sha256": "66a7725a4383b14ad791072583a504b8a5209738a22b4e78159b3029559910a8",
+      "instruction_count": 56,
+      "calls": [
+        {
+          "address": "0x20e498",
+          "target": "0x23dd44",
+          "recovered_name": "register_read8"
+        },
+        {
+          "address": "0x20e4be",
+          "target": "0x23dfb6",
+          "recovered_name": "register_write16"
+        },
+        {
+          "address": "0x20e4d9",
+          "target": "0x23dead",
+          "recovered_name": "register_update_bits"
+        },
+        {
+          "address": "0x20e4e1",
+          "target": "0x23dd44",
+          "recovered_name": "register_read8"
+        },
+        {
+          "address": "0x20e500",
+          "target": "0x23dd44",
+          "recovered_name": "register_read8"
+        }
+      ],
+      "branches": [
+        {
+          "address": "0x20e49f",
+          "instruction": "bn.beqi",
+          "target": "0x20e4b3",
+          "inside_span": true
+        },
+        {
+          "address": "0x20e4b0",
+          "instruction": "bn.bnei",
+          "target": "0x20e494",
+          "inside_span": true
+        },
+        {
+          "address": "0x20e4e8",
+          "instruction": "bn.beqi",
+          "target": "0x20e4fc",
+          "inside_span": true
+        },
+        {
+          "address": "0x20e4f9",
+          "instruction": "bn.bnei",
+          "target": "0x20e4dd",
+          "inside_span": true
+        },
+        {
+          "address": "0x20e50b",
+          "instruction": "bn.beqi",
+          "target": "0x20e4ca",
+          "inside_span": true
+        }
+      ],
+      "unresolved_width_stores": []
+    }
+  ],
+  "event_dispatch": {
+    "query": "0x20cbd6",
+    "no_event_return": "0x20d445",
+    "global_error_mask": "0x0c at base+0x7dd4",
+    "receive": "event & 0x18 == 0x08 -> 0x20d471",
+    "transmit": "event & 0x18 == 0x10 -> 0x20d6bc",
+    "other": "copy slot data register to adjacent register and clear software state/count"
+  },
+  "ring": {
+    "current_array": "0x47ef80",
+    "previous_array": "0x47efb0",
+    "other_position_array": "0x47f3c0",
+    "element_bytes": 2,
+    "address_wrap_mask": "0x7f",
+    "normalization_increment": 128,
+    "continuation_normalization": "while current <= previous: current = uint16(current + 128)",
+    "normalization_addresses": [
+      "0x20d8c1",
+      "0x20d8e2"
+    ],
+    "initial_normalization": "if other_position > current: current += 128",
+    "initial_normalization_addresses": [
+      "0x20d52c",
+      "0x20d533"
+    ],
+    "capacity_claim": "128 address positions in these loops; no physical FIFO capacity or overrun guarantee"
+  },
+  "ready": {
+    "decision_entry": "0x20d608",
+    "length_array": "0x454154",
+    "count_array": "0x45414c",
+    "predicate": "length != 0 and count == length + 2 and slot_frame_status(slot) == 0",
+    "ready_store": "0x20da7c",
+    "state_array": "0x453b94",
+    "state_value": 5,
+    "bookkeeping_stores_with_unresolved_width": [
+      "0x20d64d",
+      "0x20da6b"
+    ],
+    "bookkeeping_address": "0x4551ec",
+    "bookkeeping_mask": "0x04"
+  },
+  "copy_store": {
+    "address": "0x20d94c",
+    "expression": "slot_base + received_count",
+    "slot_stride": 128,
+    "count_increment": "uint8(count + 1)",
+    "local_bound": "No explicit count<128 check between 0x20d937 and store; upstream reachability remains unresolved"
+  },
+  "indirect_read": {
+    "entry": "0x20e47e",
+    "address_register": "0x3c02",
+    "address_value": "uint16(argument - 0x4000)",
+    "data_register": "0x3c01",
+    "control_register": "0x3c06",
+    "busy_mask": "0x20",
+    "trigger_mask": "0x02",
+    "poll_counter_initial": "0xffff",
+    "retry_flag": "0x453b9e",
+    "retry_edge": [
+      "0x20e50b",
+      "0x20e4ca"
+    ],
+    "timeout_behavior": "Polling exhaustion falls through; no separate error return is visible",
+    "execution_limit": "Tests stop at masked-update dependency; finite busy polls and outer retry do not establish hardware completion"
+  },
+  "limitations": [
+    "All names are inferred; physical channel/transport identities are unknown",
+    "Shared decoder is not independent ISA certification",
+    "No external reachability or whole-firmware safety claim follows from local count-bound probes",
+    "Raw firmware has no conventional PE/ELF import table; direct call targets serve as the local dependency evidence"
+  ]
+}
