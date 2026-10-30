@@ -164,6 +164,12 @@ class ModuleModel:
                 # writing in case destination aliases the register operand.
                 source = value(a[1]) if flag else imm(a[2])
                 put(a[0], source)
+            elif op == 'bn.cmovi':
+                if flag is None:
+                    raise ValueError("Read of uninitialized flag")
+                put(a[0], imm(a[1] if flag else a[2]))
+            elif op == 'bn.subb':
+                raise ValueError('Unsupported instruction: bn.subb; unresolved borrow semantics')
             elif op == 'bn.ff1':
                 source = value(a[1])
                 result = 0
@@ -189,9 +195,9 @@ class ModuleModel:
                 if (numerator < 0) != (denominator < 0):
                     quotient = -quotient
                 put(a[0], quotient)
-            elif op in ("bn.slli", "bn.srli"):
+            elif op in ("bn.slli", "bn.srli", "bn.srai"):
                 x, y = value(a[1]), imm(a[2])
-                put(a[0], x << y if op == "bn.slli" else x >> y)
+                put(a[0], x << y if op == "bn.slli" else signed(x) >> y if op == "bn.srai" else x >> y)
             elif op == 'bn.sll':
                 x, count = value(a[1]), value(a[2])
                 if count >= 32:
@@ -236,6 +242,8 @@ class ModuleModel:
                 flag = signed(value(a[0])) > imm(a[1])
             elif op == 'bg.sfleui':
                 flag = value(a[0]) <= imm(a[1])
+            elif op in ('bn.sfgtu', 'bn.sfleu'):
+                flag = value(a[0]) > value(a[1]) if op == 'bn.sfgtu' else value(a[0]) <= value(a[1])
             elif op in ("bg.sfnei", "bn.sfnei", "bg.sfeqi", "bn.sfeqi", "bg.sfgti", "bn.sfgtui", "bn.sfleui"):
                 flag = (value(a[0]) != imm(a[1]) if op in ("bg.sfnei", "bn.sfnei") else
                         value(a[0]) == imm(a[1]) if op in ("bg.sfeqi", "bn.sfeqi") else
@@ -245,12 +253,14 @@ class ModuleModel:
                     raise ValueError("Read of uninitialized flag")
                 if flag == (op == "bn.bf"):
                     next_pc = imm(a[0])
-            elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bn.beqi", "bn.bnei", "bn.blesi", "bn.bgtui", "bn.bleui"):
+            elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts", "bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bn.beqi", "bn.bnei", "bn.blesi", "bn.bgtui", "bn.bleui"):
                 x = value(a[0])
-                y = value(a[1]) if op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt") else imm(a[1])
+                y = value(a[1]) if op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts") else imm(a[1])
                 take = (x == y if op in ("bg.beq", "bg.beqi", "bn.beqi") else
                         x != y if op in ("bg.bne", "bg.bnei", "bn.bnei") else
-                        signed(x) <= y if op == "bn.blesi" else x <= y if op in ("bg.ble", "bg.bleui", "bn.bleui") else x > y)
+                        signed(x) <= y if op == "bn.blesi" else
+                        signed(x) > signed(y) if op == "bg.bgts" else
+                        x <= y if op in ("bg.ble", "bg.bleui", "bn.bleui") else x > y)
                 if take:
                     next_pc = imm(a[2])
             elif op in ("bt.j", "bg.j", "bn.j"):

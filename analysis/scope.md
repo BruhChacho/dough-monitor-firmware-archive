@@ -284,11 +284,12 @@ conditional integration cases. Hardware boot, display, recovery and physical
 CPU behavior remain untested. Subsequent work recovered `0x21ffb3` and
 `0x21bd8d`, along with immediate deferred-request dependencies.
 
-The 2026-10-26 engine-preparation milestone adds eight byte-exact
-routines (849 instructions / 2,717 code bytes). The overlay now contains 154
-components / 7,181 instructions / 22,256 code bytes, plus 11 tables / 867 bytes:
-0.917% (about 0.92%) of the 2,426,560-byte expanded application. The source
-coverage percentage is not a product-completion measure. The main routine spans
+The validated 2026-10-26 engine-preparation milestone added eight byte-exact
+routines (849 instructions / 2,717 code bytes). At that milestone the overlay
+contained 154 components / 7,181 instructions / 22,256 code bytes, plus 11
+tables / 867 bytes: 0.917% (about 0.92%) of the 2,426,560-byte expanded
+application. The source coverage percentage is not a product-completion measure.
+The main routine spans
 `0x21ffb3..0x22089f` (707 instructions / 2,284 bytes); adjacent
 `0x22089f..0x220995` is a separate pair-configuration routine (78 / 246).
 
@@ -300,5 +301,24 @@ record, and plain `BASES[KEYS]+7` bytes. On 2026-10-29, its combined gate passed
 four leaf regressions, and 12 conditional integrated-apply cases. Hardware boot,
 display, recovery and physical CPU behavior remain untested. See the
 [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md),
-[latest workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/),
+[historical workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/),
 and [summary](community-engine-prepare-workspace.json).
+
+The 2026-10-29 engine-mode milestone adds six routines (1,594 instructions /
+4,840 code bytes) and an 11-pointer dispatch table (44 bytes). The overlay now
+contains 160 components / 8,775 instructions / 27,096 code bytes, plus 12 tables
+/ 911 bytes: 1.117% (about 1.12%) of the expanded application. Its gate passed 202 repository tests. Validators report 49 strict / 148 conditional
+core cases and 3 strict / 12 conditional leaf cases, including four conditional
+mapping/permission boundary groups. The main 1,550-instruction mode routine has
+134 visited instructions in bounded cases. `bn.subb` re-encodes but execution
+rejects unresolved borrow semantics.
+
+The integrated-apply fixture completes four main preparations and thirteen
+inactive-engine resets, then stops at `0x23fb37` before `0x2250e8`. The
+active-engine fixture stops at `0x22169e` before `0x21fb61`. A writable
+four-byte shared-size fixture is explicit; the literal and halfword-lane store
+hypotheses retain different globals (`ef080000` versus `ef08a013`). Full apply
+has not returned. See the
+[engine-mode report](2026-10-29_reverse-dc9-engine-mode-report.md),
+[latest workspace](extracted/firmware-validation-engine-mode-2026-10-29/workspace/),
+and [summary](community-engine-mode-workspace.json).

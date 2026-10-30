@@ -1382,10 +1382,64 @@
       "original_code_sha256": "fc27f05299b10d2c6a4eb0b626ad3cf819f95a0f45ae63410e4f4193566566d6",
       "purpose": "Prepare the selected engine-pair state and preserve its original service calls.",
       "component_kind": "routine"
+    },
+    {
+      "name": "engine_mode_configuration",
+      "address": "0x2213d0",
+      "size": 4708,
+      "source": "analysis/reconstructed/spectrum_one_engine_mode_configuration.aeon.s",
+      "original_code_sha256": "5b273fb48a2799fa5c0de43f27dc9c13fd8d6d59889f365fad8ee49d12c7401d",
+      "purpose": "Configure engine mode through indexed branches and register requests; external services remain unresolved.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_mode_reset",
+      "address": "0x222634",
+      "size": 69,
+      "source": "analysis/reconstructed/spectrum_one_engine_mode_reset.aeon.s",
+      "original_code_sha256": "9e26bc31c6d9141583109feac27365773d05ea326fe7b8c8ad2cb459773ed108",
+      "purpose": "Set global mode parameters, invoke the mode routine, and update engine state.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "engine_mode_apply_wrapper",
+      "address": "0x23d349",
+      "size": 33,
+      "source": "analysis/reconstructed/spectrum_one_engine_mode_apply_wrapper.aeon.s",
+      "original_code_sha256": "8f9fd98c3a6b7112923320c153dbf660d8520e8884400ef35e03c5150c4242c5",
+      "purpose": "Invoke the engine-mode routine for indices 0 through 12.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "global_halfword_set",
+      "address": "0x21bd00",
+      "size": 10,
+      "source": "analysis/reconstructed/spectrum_one_global_halfword_set.aeon.s",
+      "original_code_sha256": "f48c6d5427a7d6dcebc668e60e22fbbc1a81d1a0147b64f7dd36a906e11c6f1d",
+      "purpose": "Execute ambiguous bg.sh store relative to global 0x343c14; width/lane policies remain unresolved.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "global_word_set",
+      "address": "0x21bd0a",
+      "size": 10,
+      "source": "analysis/reconstructed/spectrum_one_global_word_set.aeon.s",
+      "original_code_sha256": "371f8a35ef0de372f9e0e90b41de12a21b90a92195906827ec29147adf2b54b0",
+      "purpose": "Execute ambiguous bg.sw_1 store relative to global 0x343c14; width/lane policies remain unresolved.",
+      "component_kind": "routine"
+    },
+    {
+      "name": "global_adjacent_halfword_read",
+      "address": "0x21bd14",
+      "size": 10,
+      "source": "analysis/reconstructed/spectrum_one_global_adjacent_halfword_read.aeon.s",
+      "original_code_sha256": "76b4d6bf959137edea71b285d44ac0396b92a211b14365246e644b1def5e13b3",
+      "purpose": "Read a halfword from global address 0x343c16.",
+      "component_kind": "routine"
     }
   ],
   "limitations": [
-    "154 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "160 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],
@@ -2374,6 +2428,58 @@
         "0x21d9cf"
       ],
       "purpose": "Nine little-endian 32-bit absolute code targets used by engine-control dispatch."
+    },
+    {
+      "name": "engine_mode_dispatch",
+      "address": "0x2af5dc",
+      "size": 44,
+      "values": [
+        "0xc",
+        "0x17",
+        "0x22",
+        "0x0",
+        "0x36",
+        "0x17",
+        "0x22",
+        "0x0",
+        "0x87",
+        "0x17",
+        "0x22",
+        "0x0",
+        "0x9b",
+        "0x17",
+        "0x22",
+        "0x0",
+        "0x41",
+        "0x18",
+        "0x22",
+        "0x0",
+        "0x68",
+        "0x18",
+        "0x22",
+        "0x0",
+        "0xb8",
+        "0x19",
+        "0x22",
+        "0x0",
+        "0xb8",
+        "0x19",
+        "0x22",
+        "0x0",
+        "0x4",
+        "0x1a",
+        "0x22",
+        "0x0",
+        "0x29",
+        "0x1b",
+        "0x22",
+        "0x0",
+        "0x25",
+        "0x1e",
+        "0x22",
+        "0x0"
+      ],
+      "original_data_sha256": "3a0f14d879a83ae336746b37b7a60492ff36ca661f851ccaaa27872afaf43a33"
     }
   ]
 }

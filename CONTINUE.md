@@ -3,7 +3,92 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: engine preparation
+## Latest continuation: engine-mode configuration and reset
+
+Updated 2026-10-29 (America/New_York). Continue toward **100% editable
+application**, using cheaper coding agents with parent review. Always report
+editable code coverage; it is not a product-readiness percentage. Read
+`analysis/2026-10-29_reverse-dc9-engine-mode-report.md`,
+`analysis/community-engine-mode-workspace.json`, and `firmware/README.md`.
+
+Started at published `ed5a783` on
+`codex/community-firmware-layout-setup-2026-10-25`. Publication through Git and
+`.tools/github-cli/gh_2.103.2_linux_amd64/bin/gh` remains authorized. Update
+[draft PR #1](https://github.com/BruhChacho/dough-monitor-firmware-archive/pull/1),
+not main; verify current local/remote state first. The earlier engine-preparation
+checkpoint passed185 tests and is preserved. No device operations occurred.
+
+- Source: **160 components, 8,775 instructions / 27,096 code bytes**, plus
+  **12 tables / 911 bytes**. Coverage **1.117% (about1.12%)** of2,426,560
+  expanded application bytes. Complete editable source and hardware operation
+  remain unfinished.
+- Six new routines add1,594 instructions /4,840 bytes: main mode configuration
+  `2213d0..222634` (1,550 /4,708), reset `222634..222679` (23 /69), thirteen-index
+  wrapper `23d349..23d36a` (12 /33), setters `21bd00..21bd0a` and `21bd0a..21bd14`,
+  getter `21bd14..21bd1e` (each3 /10). Addresses hex, ends exclusive. Do not
+  truncate main at its early return22164e: later blocks branch into its body.
+  One104-byte frame, no direct non-call escape, next frame at222634. Existing
+  154 routine records and11 tables unchanged. Generator rejects differences
+  before writes and preserves exact matches on repeat runs.
+- Dispatch table2af5dc is44 bytes /11 little-endian pointers, all verified
+  main instruction boundaries. SHA3a0f14d879a83ae336746b37b7a60492ff36ca661f851ccaaa27872afaf43a33.
+- Added6 encoder forms and checked all26 archived instances: bg.bgts,bn.cmovi,
+  bn.sfgtu,bn.sfleu,bn.srai,bn.subb. Model handles first5; **bn.subb execution
+  rejects unresolved borrow semantics**, whose pinned SLEIGH implementation
+  is marked TODO. cmovi uses signed5-bit operands. Existing CPU/CALL/store/data
+  assumptions and default ambiguous-store rejection remain explicit.
+- Main reads engine bank+4, metadata index+1d and previous mode+d before index
+  guard. Mapped indices4–12 return; index13 faults at4800ec+4. State+8 zero/7
+  returns, as does requested mode9 with old mode9. Other tested paths publish
+  low8(mode) at+d, twice on indices0/2/3, before the ambiguous broadcast store.
+  Strict failure retains prior mode writes. Direct normal-mode paths for
+  indices0/2/3 return under both policies, with explicit zero/nonzero banks and
+  mode byte+c zero/1. Entire ordered page/data trace is checked. Active engine1
+  with zero metadata stops at22169e before unresolved21fb61; no service is stubbed.
+- Main validator:49 strict /148 conditional cases, main134/1550 instructions
+  visited. Leaf:3 strict /12 conditional case groups, including4 groups each
+  checking unmapped and read-only stores. Suite adds6 ISA,5 main and6 leaf
+  regressions. These are bounded cases, not exhaustive paths or physical tests.
+- Shared stores remain ambiguous: bg.sh at343c14 writes high16 there under
+  literal policy, or low16 at343c16 under lane hypothesis. bg.sw_1 writes32
+  or16 low bits at343c14. Getter reads343c16. Reset stores13a0 then08ef, calls
+  mode(0,index), then ORs engine+f with1. The wrapper iterates0–12.
+- Integrated apply explicitly maps four writable global bytes, replacing its
+  earlier two-byte read-only size fixture. It completes4 engine preparations
+  and13 reset iterations, then stops **23fb37 before2250e8**. Engine states
+  are0 in this fixture, so all mode calls take inactive returns. Final13 flag
+  bytes are1; shared bytes areef080000 (literal) or ef08a013 (lane). Do not
+  claim full active configuration or completed full apply. Old fixture still
+  faults at343c16+2; no automatic memory expansion.
+- Successful gate:`analysis/extracted/firmware-validation-engine-mode-2026-10-29/`.
+  **202 tests**,45 archive hashes,13 exact corpus roundtrips /141 resource
+  checksums, all stages and3 complete BINs. Hashes remain0b5d8350 /d88a1683 /
+  95a06b2f; each2,069,060 bytes with11 unchanged resource spans. Final audit:
+  239 artifact hashes,287 input identities,199 base workspace artifacts+2USB.
+  All373 saved starting files,15 prior workspaces and40 previous BINs verify.
+  Snapshot:`analysis/scratch/engine-mode-before-2026-10-29/`. An agent overlaid
+  git archive into that snapshot; parent restored differing bytes only from
+  original-hash-matching sources and reverified every manifest entry. Do not
+  alter an existing snapshot in subsequent work.
+
+Next offline task: recover **2250e8**, verify its full CFG past early return
+22522d. Entry has88-byte frame, scans four channel records at4821ec/stride168,
+uses active byte+0, then updates record words5c..7c. Observed calls include
+2250bd,2aacb9 and2ab331; full boundary not yet established. Continue226100,
+active engine1 service21fb61, other dispatch dependencies, borrow/ISA evidence,
+deferred services and most application/toolchain/EFE/USB source work.
+
+Additional owner context: a private screenshot describes a historical HDMI ISP
+route and USB ISP board fallback. It is a lead, not a validated recovery method.
+The screenshot/notes remain ignored at
+`analysis/scratch/owner-recovery-context-2026-10-29/`; do not publish the private
+image or its sharing URL. No linked SharePoint procedure was accessed. Public
+archive-only correlation is `analysis/isp-tool-family-map.md`: Spectrum One
+MStar USB tool, older E2D/E2F WinISPTool USB path, newer Black USB-storage guide.
+None of those guides establishes the described HDMI/direct-board recovery.
+This new context does not replace the next offline source-recovery task above.
+
+## Previous continuation: engine preparation
 
 Validated 2026-10-29 (America/New_York), continuing the milestone named
 2026-10-26. Read `analysis/2026-10-26_reverse-dc9-engine-prepare-report.md`,

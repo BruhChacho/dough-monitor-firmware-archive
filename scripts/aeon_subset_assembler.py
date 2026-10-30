@@ -49,6 +49,10 @@ SIZES.update({'bt.movhi': 2, 'bn.extbs': 3, 'bn.sflesi': 3,
 ARITY.update({'bt.movhi': 2, 'bn.extbs': 2, 'bn.sflesi': 2,
               'bn.sll': 3, 'bn.sra': 3, 'bn.ff1': 2, 'bn.cmov_1': 3,
               'bn.sfgtsi': 2, 'bn.cmovsi_2': 3})
+SIZES.update({'bg.bgts': 4, 'bn.cmovi': 3, 'bn.sfgtu': 3,
+              'bn.sfleu': 3, 'bn.srai': 3, 'bn.subb': 3})
+ARITY.update({'bg.bgts': 3, 'bn.cmovi': 3, 'bn.sfgtu': 2,
+              'bn.sfleu': 2, 'bn.srai': 3, 'bn.subb': 3})
 
 
 def immediate(value, bits, signed=False):
@@ -82,10 +86,10 @@ def encode(op, args, pc, labels):
         word = ((0xfc000000 if op == "bg.addi" else 0xc8000000)
                 | register(args[0]) << 21 | register(args[1]) << 16
                 | immediate(int(args[2], 0), 16, op == "bg.addi"))
-    elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt"):
+    elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts"):
         word = (0xd4000000 | register(args[0]) << 21 | register(args[1]) << 16
                 | immediate(target(args[2]) - pc, 13, True) << 3
-                | {"bg.beq": 2, "bg.bne": 6, "bg.ble": 1, "bg.bgt": 5}[op])
+                | {"bg.beq": 2, "bg.bne": 6, "bg.ble": 1, "bg.bgt": 5, "bg.bgts": 4}[op])
     elif op in ("bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui"):
         word = (0xd0000000 | register(args[0]) << 21 | immediate(int(args[1], 0), 5) << 16
                 | immediate(target(args[2]) - pc, 13, True) << 3
@@ -147,9 +151,12 @@ def encode(op, args, pc, labels):
         word = 0x4c0006 | register(args[0]) << 13 | register(args[1]) << 8 | register(args[2]) << 3
     elif op == 'bn.ff1':
         word = 0x5c0008 | register(args[0]) << 13 | register(args[1]) << 8
-    elif op in ("bn.slli", "bn.srli"):
+    elif op in ("bn.slli", "bn.srli", "bn.srai"):
         word = (0x4c0000 | register(args[0]) << 13 | register(args[1]) << 8
-                | immediate(int(args[2], 0), 5) << 3 | (1 if op == "bn.srli" else 0))
+                | immediate(int(args[2], 0), 5) << 3
+                | {"bn.slli": 0, "bn.srli": 1, "bn.srai": 2}[op])
+    elif op in ("bn.sfgtu", "bn.sfleu"):
+        word = (0x5c001f if op == "bn.sfgtu" else 0x5c0017) | register(args[0]) << 13 | register(args[1]) << 8
     elif op in ("bg.sfnei", "bg.sfgti", "bg.sfeqi", "bg.sflesi", "bg.sfleui", "bg.sfgtsi"):
         signed_imm = op in ("bg.sflesi", "bg.sfgtsi")
         selector = {"bg.sfeqi": 0, "bg.sfnei": 2, "bg.sflesi": 4,
@@ -175,10 +182,15 @@ def encode(op, args, pc, labels):
     elif op == 'bn.cmovsi_2':
         # i24_simm3_5 spans bits 3 through 7: a signed five-bit immediate.
         word = 0x480002 | register(args[0]) << 13 | register(args[1]) << 8 | immediate(int(args[2], 0), 5, True) << 3
-    elif op in ("bn.add", "bn.xor", "bn.muls", "bn.and", "bn.or", "bn.nand", "bn.sub", "bn.cmov_0", "bn.cmov_1", "bn.divs", "bn.divu"):
+    elif op == 'bn.cmovi':
+        word = (0x480003 | register(args[0]) << 13
+                | immediate(int(args[1], 0), 5, True) << 8
+                | immediate(int(args[2], 0), 5, True) << 3)
+    elif op in ("bn.add", "bn.xor", "bn.muls", "bn.and", "bn.or", "bn.nand", "bn.sub", "bn.subb", "bn.cmov_0", "bn.cmov_1", "bn.divs", "bn.divu"):
         word = ({"bn.add": 0x400004, "bn.xor": 0x440006, "bn.muls": 0x400003,
                  "bn.and": 0x440004, "bn.or": 0x440005, "bn.nand": 0x440007,
-                 "bn.sub": 0x400005, "bn.cmov_0": 0x480000, "bn.cmov_1": 0x480001,
+                 "bn.sub": 0x400005, "bn.subb": 0x400006,
+                 "bn.cmov_0": 0x480000, "bn.cmov_1": 0x480001,
                  "bn.divs": 0x400000, "bn.divu": 0x400001}[op] | register(args[0]) << 13
                 | register(args[1]) << 8 | register(args[2]) << 3)
     elif op in ("bn.addi", "bn.andi", "bn.ori"):

@@ -46,24 +46,23 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The DC9 source overlay contains **154 reconstructed
-components: 7,181 instructions / 22,256 code bytes**, plus 11 tables / 867 bytes.
-That is **0.917% (about 0.92%)** of the expanded application. Most application
+guide](firmware/README.md). The DC9 source overlay contains **160 reconstructed
+components: 8,775 instructions / 27,096 code bytes**, plus 12 tables / 911 bytes.
+That is **1.117% (about 1.12%)** of the expanded application. Most application
 bytes remain precompiled vendor input; fully editable firmware remains the goal.
 
-The current engine-preparation milestone adds eight byte-exact routines: the
-main routine at `0x21ffb3..0x22089f` and a separate pair-configuration routine
-at `0x22089f..0x220995`, plus six dependencies. The integrated apply fixture
-completes four main preparations and stops at `0x23fb33` before `0x23d349`;
-full apply has not returned. The combined gate passed 185 repository tests:
-21 strict and 20 conditional core cases, 18 leaf cases, four leaf regressions,
-and 12 conditional integrated-apply cases. Physical boot, recovery, display
-behavior and peripheral operation remain untested.
+The latest milestone adds six routines and a dispatch table. All **202 repository
+tests** and the three firmware builds pass. The offline model now completes
+four engine preparations and thirteen inactive-engine resets before reaching
+the next unresolved service. Active configuration, the remaining application
+and hardware operation are still unfinished.
 
-See the [engine-preparation report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md),
-[latest workspace](analysis/extracted/firmware-validation-engine-prepare-2026-10-26/workspace/),
-[workspace summary](analysis/community-engine-prepare-workspace.json), and
-[validation run](analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).
+See the [engine-mode report](analysis/2026-10-29_reverse-dc9-engine-mode-report.md),
+[latest workspace](analysis/extracted/firmware-validation-engine-mode-2026-10-29/workspace/),
+[workspace summary](analysis/community-engine-mode-workspace.json), and
+[validation run](analysis/extracted/firmware-validation-engine-mode-2026-10-29/).
+The preceding engine-preparation milestone passed 185 repository tests and
+remains available as a [historical report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
 The percentage measures recovered code bytes, not
 overall product readiness. Earlier reports and workspaces remain historical
 snapshots.

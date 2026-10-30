@@ -1,0 +1,78 @@
+{
+  "source_layout_sha256": "2c99de59b97c771ab3d9b7c2538e98e99229fb4147793ccf6cee1b3104bbaf2a",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded global setter/getter and wrapper/reset prefixes; configuration requests remain outside this leaf validator",
+  "cases": {
+    "default_store_rejection": 2,
+    "adjacent_halfword_getter": 1
+  },
+  "conditional_cases_by_policy": {
+    "sleigh-store": 6,
+    "halfword-lane-hypothesis": 6
+  },
+  "conditional_cases": 12,
+  "conditional_boundary_cases": 4,
+  "visited_instruction_count": 26,
+  "source_spans": [
+    {
+      "name": "engine_mode_reset",
+      "address": "0x222634",
+      "end_exclusive": "0x222679",
+      "size": 69,
+      "sha256": "9e26bc31c6d9141583109feac27365773d05ea326fe7b8c8ad2cb459773ed108",
+      "visited_instructions": 11
+    },
+    {
+      "name": "engine_mode_apply_wrapper",
+      "address": "0x23d349",
+      "end_exclusive": "0x23d36a",
+      "size": 33,
+      "sha256": "8f9fd98c3a6b7112923320c153dbf660d8520e8884400ef35e03c5150c4242c5",
+      "visited_instructions": 6
+    },
+    {
+      "name": "global_halfword_set",
+      "address": "0x21bd00",
+      "end_exclusive": "0x21bd0a",
+      "size": 10,
+      "sha256": "f48c6d5427a7d6dcebc668e60e22fbbc1a81d1a0147b64f7dd36a906e11c6f1d",
+      "visited_instructions": 3
+    },
+    {
+      "name": "global_word_set",
+      "address": "0x21bd0a",
+      "end_exclusive": "0x21bd14",
+      "size": 10,
+      "sha256": "371f8a35ef0de372f9e0e90b41de12a21b90a92195906827ec29147adf2b54b0",
+      "visited_instructions": 3
+    },
+    {
+      "name": "global_adjacent_halfword_read",
+      "address": "0x21bd14",
+      "end_exclusive": "0x21bd1e",
+      "size": 10,
+      "sha256": "76b4d6bf959137edea71b285d44ac0396b92a211b14365246e644b1def5e13b3",
+      "visited_instructions": 3
+    }
+  ],
+  "limitations": [
+    "Four writable bytes at 0x343c14 are explicit fixture input; no memory is automatically expanded.",
+    "bg.sh and bg.sw_1 are measured under explicit SLEIGH-store and halfword-lane hypotheses; default execution rejects them.",
+    "The wrapper and reset stop before 0x2213d0; mode requests, engine completion, and hardware effects are not modeled."
+  ],
+  "tools_sha256": {
+    "validate_dc9_engine_mode_leaves.py": "814d7e3eb55399833c90d94cda47ca0b0b2ca29aabc484636510a49173188b92",
+    "reconstruct_dc9_engine_mode.py": "d7e44764c17bfbbc94daae6bc5951d5c5b7cecb0fb6714b62f126344c3580bd6",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "source_layout_sha256": "2c99de59b97c771ab3d9b7c2538e98e99229fb4147793ccf6cee1b3104bbaf2a",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded direct engine-mode returns; full apply completes thirteen inactive resets and stops before 0x2250e8",
+  "cases": {
+    "inactive_or_out_of_range_return": 26,
+    "unchanged_mode_nine_return": 4,
+    "broadcast_prefix_after_mode_store": 18,
+    "selected_engine_one_service_prefix": 1
+  },
+  "strict_cases": 49,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "direct_mode_return": 72,
+      "full_apply_thirteen_reset_prefix": 2
+    },
+    "halfword-lane-hypothesis": {
+      "direct_mode_return": 72,
+      "full_apply_thirteen_reset_prefix": 2
+    }
+  },
+  "conditional_cases": 148,
+  "visited_instruction_count": 1945,
+  "new_main_instructions_visited": 134,
+  "limitations": [
+    "Plain bus, explicit memory and CPU/store/CALL hypotheses only.",
+    "Full apply uses inactive engine states; active engine-one configuration still stops before 0x21fb61.",
+    "bn.subb remains rejected; most engine-mode paths are not executed."
+  ],
+  "tools_sha256": {
+    "validate_dc9_engine_mode.py": "295b4b06963a286eeed7ba6f5a2b1f66ff020dd847647195b635d3c5102d9d60",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba",
+    "aeon_subset_assembler.py": "422c5c7b78ab9e6c9c872fec1a00f80478255ed1ec69ea331fda5ef9b29539fe"
+  }
+}

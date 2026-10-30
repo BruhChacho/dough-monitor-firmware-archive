@@ -2,26 +2,34 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The source overlay contains **154 components, 7,181 instructions /
-22,256 code bytes**, plus **11 tables / 867 bytes**. Coverage is **0.917%
-(about 0.92%)** of the expanded application; most application bytes remain
+build. The source overlay contains **160 components, 8,775 instructions /
+27,096 code bytes**, plus **12 tables / 911 bytes**. Coverage is **1.117%
+(about 1.12%)** of the expanded application; most application bytes remain
 precompiled vendor input.
 
-The latest source milestone adds eight engine-preparation and dependency
-routines. Its combined gate passed 185 repository tests: 21 strict and 20
-conditional core cases, 18 leaf cases, four leaf regressions, and 12
-conditional integrated-apply cases. See the
-[engine-preparation report](../analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
+The 2026-10-29 engine-mode milestone adds six routines (1,594 instructions /
+4,840 code bytes) and an 11-pointer / 44-byte table. Its combined gate passed 202 repository tests. Current validators report 49 strict / 148
+conditional core cases and 3 strict / 12 conditional leaf cases. The main mode
+routine has 134 of 1,550 instructions visited in bounded cases. Integrated
+apply completes four preparations and thirteen inactive-engine resets, then
+stops at `0x23fb37` before `0x2250e8`; the active engine-one configuration fixture stops at `0x22169e`
+before `0x21fb61`. The four-byte shared-size input is explicit; literal and
+halfword-lane hypotheses yield `ef080000` and `ef08a013`, respectively.
+`bn.subb` execution rejects unresolved borrow semantics.
+See the [engine-mode report](../analysis/2026-10-29_reverse-dc9-engine-mode-report.md).
 Fully editable firmware and a hardware-tested community release remain
 unfinished; the percentage is a code-byte coverage proxy.
 
 ## Open the files
 
 The latest prepared workspace is the
-[engine-preparation workspace](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/workspace/).
-Its [summary](../analysis/community-engine-prepare-workspace.json) and
-[validation run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/)
-record the passed gate. The previous validated workspace is
+[engine-mode workspace](../analysis/extracted/firmware-validation-engine-mode-2026-10-29/workspace/).
+Its [summary](../analysis/community-engine-mode-workspace.json) and
+[validation run](../analysis/extracted/firmware-validation-engine-mode-2026-10-29/)
+record the passed gate. The preceding engine-preparation workspace
+and its passed 185-test gate remain in the
+[historical run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).
+Another earlier workspace is
 [firmware-validation-channel-update-2026-10-26/workspace](../analysis/extracted/firmware-validation-channel-update-2026-10-26/workspace/README.md).
 Workspace files are generated locally and
 ignored by Git. Earlier engine-control, layout-setup, consumer, configuration,
@@ -152,7 +160,22 @@ Each file is 2,069,060 bytes; their SHA256 prefixes are `0b5d8350`, `d88a1683`,
 and `95a06b2f`, respectively. All eleven resource spans are unchanged in each
 build. No experimental output has been booted on a monitor.
 
-The current engine-preparation milestone adds eight byte-exact routines:
+The current engine-mode milestone adds six routines (1,594 instructions /
+4,840 code bytes) and an 11-pointer dispatch table (44 bytes). The overlay now
+contains 160 components / 8,775 instructions / 27,096 code bytes, plus 12 tables
+/ 911 bytes (1.117%, about 1.12%). Its gate passed 202 repository tests;
+the core validator reports 49 strict / 148 conditional cases and leaf
+validation 3 strict / 12 conditional cases. Only 134 of the 1,550 main mode
+instructions were visited. The integrated apply fixture completes four
+preparations and thirteen inactive-engine resets before `0x23fb37`, stopping
+before `0x2250e8`; the active-engine fixture stops at `0x22169e` before
+`0x21fb61`. The mutable four-byte shared size is explicit. The literal and
+halfword-lane hypotheses yield `ef080000` and `ef08a013`; `bn.subb` execution
+rejects unresolved borrow semantics. See the [engine-mode report](../analysis/2026-10-29_reverse-dc9-engine-mode-report.md),
+[workspace summary](../analysis/community-engine-mode-workspace.json), and
+[validation run](../analysis/extracted/firmware-validation-engine-mode-2026-10-29/).
+
+The previous validated engine-preparation milestone added eight byte-exact routines:
 `0x21ffb3..0x22089f` (707 instructions / 2,284 bytes),
 `0x22089f..0x220995` (78 / 246), plus six immediate dependencies. The integrated
 apply fixture completes four main preparations, then stops at `0x23fb33` before
