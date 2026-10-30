@@ -10,7 +10,7 @@
     "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
     "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
   },
-  "source_layout_sha256": "2c99de59b97c771ab3d9b7c2538e98e99229fb4147793ccf6cee1b3104bbaf2a",
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
   "strict_store_policy": "reject",
   "strict_cases": {
     "memory_copy": 624,

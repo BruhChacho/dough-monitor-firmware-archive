@@ -7,7 +7,8 @@ Original vendor source names, comments, headers, and build systems have not
 been recovered.
 
 Start with the [raw files and community build guide](../firmware/README.md),
-the [latest engine-mode report](2026-10-29_reverse-dc9-engine-mode-report.md),
+the [latest channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md),
+the [historical engine-mode report](2026-10-29_reverse-dc9-engine-mode-report.md),
 the [validated engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md),
 the [historical channel-update report](2026-10-26_reverse-dc9-channel-update-report.md),
 the [historical engine-enable report](2026-10-26_reverse-dc9-engine-enable-report.md),
@@ -27,13 +28,25 @@ The [2026-10-20 report](2026-10-20_reverse-spectrum-one-report.md) is historical
 its recompression experiment fails the subsequently recovered main CRC16.
 The corrected baseline and helper rewrite pass offline validation, but neither
 has been booted on a monitor or constitutes a complete firmware source build.
-The current source overlay contains 160 components, 8,775 instructions and
-27,096 code bytes (1.117%, about 1.12% of the expanded application), plus
-12 tables / 911 bytes. The 2026-10-29 engine-mode milestone adds six routines
-(1,594 instructions / 4,840 bytes) and an 11-pointer / 44-byte dispatch table.
-Its combined gate passed 202 repository tests. Validators report 49 strict
-/ 148 conditional core cases and 3 strict / 12 conditional leaf cases. The main
-mode routine visited 134 of 1,550 instructions in bounded cases. The preceding
+The current source overlay contains 164 components, 9,195 instructions and
+28,347 code bytes (1.168%, about 1.17% of the expanded application), plus
+12 tables / 911 bytes. The 2026-10-30 channel-storage milestone adds four
+routines (420 instructions / 1,251 bytes). The integrated inactive-channel
+fixture returns from full apply with `r3=1` after 43,910 modeled instructions
+under both ambiguous-store policies, with explicit wait bypass and synthetic
+fixture values. Core validation covers 101 strict and four conditional cases;
+storage-register validation covers 12 conditional cases and one strict
+ambiguous-store rejection, visiting all 118 instructions. The combined offline validation gate passed all stages and 214 repository
+tests with no failures, errors, or skips, producing all three BINs. The
+engine-mode gate passed 202 tests in its historical run. Active full apply
+remains unresolved at `0x22701c`; positive-area storage stops at `0x2aacb9`,
+and flagged final channels need `0x22eb07`. These bounded offline results do not
+establish hardware behavior. See the
+[channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md),
+[workspace summary](community-channel-storage-workspace.json), and
+[run artifacts](extracted/firmware-validation-channel-storage-2026-10-30/).
+
+The preceding
 2026-10-26 engine-preparation milestone adds eight routines (849 instructions /
 2,717 bytes); its gate passed 185 tests with 21 strict / 20 conditional core
 cases, 18 leaf cases, four leaf regressions, and 12 conditional apply cases.
@@ -89,8 +102,9 @@ USB update tools and records the remaining HDMI/board-recovery evidence gap.
 
 | Area | Result | Evidence |
 |---|---|---|
-| Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source and separate USB images; engine-preparation gate passed 185 tests | [Build guide](../firmware/README.md), [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md), [latest workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/), [workspace summary](community-engine-prepare-workspace.json) |
-| DC9 partial source baseline | Current overlay: 160 components (27,096 code bytes; 8,775 instructions), 12 tables (911 bytes); byte-identical stock BIN retained | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [engine-mode report](2026-10-29_reverse-dc9-engine-mode-report.md) |
+| DC9 channel storage | Current overlay: 164 components (9,195 instructions / 28,347 bytes), 12 tables / 911 bytes. Four routines added; inactive integrated apply returns under explicit fixture and store hypotheses; combined gate passed 214 tests with no failures, errors, or skips; all stages and three BIN builds passed | [Channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md), [validation run](extracted/firmware-validation-channel-storage-2026-10-30/), [workspace](extracted/firmware-validation-channel-storage-2026-10-30/workspace/), [summary](community-channel-storage-workspace.json) |
+| Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source and separate USB images; engine-preparation gate passed 185 tests | [Build guide](../firmware/README.md), [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md), [historical workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/), [workspace summary](community-engine-prepare-workspace.json) |
+| DC9 partial source baseline | Current overlay: 164 components (28,347 code bytes; 9,195 instructions), 12 tables (911 bytes); byte-identical stock BIN retained | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md) |
 | DC9 layout configuration | Historical configuration milestone: 98 repository tests; 542 strict and 492 conditional cases; six layouts; six expanded bytes changed in rectangle example | [Configuration section](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-configuration-2026-10-23/validation.json) |
 | DC9 apply guards | 102 tests passed; 2,965 strict apply cases using explicitly supplied continuation states; full apply not executed | [Configuration and apply report](2026-10-24_reverse-dc9-configuration-report.md), [latest validation](extracted/firmware-validation-apply-2026-10-24/validation.json), [apply summary](community-apply-workspace.json) |
 | DC9 metadata routing and masked-register paths | Historical 79-component gate passed 115 tests; 2,433 strict and 290 conditional metadata cases; 32 default masked-store rejections and 64 conditional cases across two policies | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-2026-10-24/validation.json), [routing summary](community-metadata-routing-workspace.json) |

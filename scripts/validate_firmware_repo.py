@@ -140,6 +140,8 @@ def run(destination):
         from validate_dc9_engine_apply import validate as validate_engine_apply
         from validate_dc9_engine_mode import validate as validate_engine_mode
         from validate_dc9_engine_mode_leaves import validate as validate_engine_mode_leaves
+        from validate_dc9_channel_storage import validate as validate_channel_storage
+        from validate_dc9_storage_registers import validate as validate_storage_registers
         original, _, _ = load_original()
         stage('helper-rewrite', lambda: validate_rewrite(original)[1])
         for name, validator in (('commands', validate_commands), ('registers', validate_registers),
@@ -154,7 +156,8 @@ def run(destination):
                                 ('channel-leaves', validate_channel_leaves), ('channel-apply', validate_channel_apply),
                                 ('engine-prepare', validate_engine_prepare), ('prepare-leaves', validate_prepare_leaves),
                                 ('engine-apply', validate_engine_apply), ('engine-mode', validate_engine_mode),
-                                ('engine-mode-leaves', validate_engine_mode_leaves)):
+                                ('engine-mode-leaves', validate_engine_mode_leaves),
+                                ('channel-storage', validate_channel_storage), ('storage-registers', validate_storage_registers)):
             stage(name, validator)
 
         print('Preparing raw files and building baseline, helper and layout images...', flush=True)

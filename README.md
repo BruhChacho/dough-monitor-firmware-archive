@@ -46,21 +46,28 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The DC9 source overlay contains **160 reconstructed
-components: 8,775 instructions / 27,096 code bytes**, plus 12 tables / 911 bytes.
-That is **1.117% (about 1.12%)** of the expanded application. Most application
+guide](firmware/README.md). The current DC9 source overlay contains **164 reconstructed
+components: 9,195 instructions / 28,347 code bytes**, plus 12 tables / 911 bytes.
+That is **1.168% (about 1.17%)** of the expanded application. Most application
 bytes remain precompiled vendor input; fully editable firmware remains the goal.
 
-The latest milestone adds six routines and a dispatch table. All **202 repository
-tests** and the three firmware builds pass. The offline model now completes
-four engine preparations and thirteen inactive-engine resets before reaching
-the next unresolved service. Active configuration, the remaining application
-and hardware operation are still unfinished.
+The 2026-10-30 channel-storage milestone adds four routines (420 instructions /
+1,251 code bytes). Its bounded offline model returns through integrated apply
+for explicit inactive-channel fixtures under both ambiguous-store policies,
+with an explicit wait bypass. Core validation covers 101 strict and four
+conditional cases; storage-register validation covers 12 conditional cases, one
+strict ambiguous-store rejection, and visits all 118 instructions. The
+combined offline gate passed all stages and 214 repository tests, with no
+failures, errors, or skips. It produced all three BINs; hardware remains
+untested. The 202-test engine-mode gate is a historical result. Active full
+apply still stops at `0x22701c`; positive-area storage stops at `0x2aacb9`, and flagged
+final channels still require `0x22eb07`. Hardware behavior remains untested.
 
-See the [engine-mode report](analysis/2026-10-29_reverse-dc9-engine-mode-report.md),
-[latest workspace](analysis/extracted/firmware-validation-engine-mode-2026-10-29/workspace/),
-[workspace summary](analysis/community-engine-mode-workspace.json), and
-[validation run](analysis/extracted/firmware-validation-engine-mode-2026-10-29/).
+See the [channel-storage report](analysis/2026-10-30_reverse-dc9-channel-storage-report.md),
+[latest workspace](analysis/extracted/firmware-validation-channel-storage-2026-10-30/workspace/),
+[workspace summary](analysis/community-channel-storage-workspace.json), and
+[validation run](analysis/extracted/firmware-validation-channel-storage-2026-10-30/).
+The engine-mode report and its passed 202-test gate remain historical.
 The preceding engine-preparation milestone passed 185 repository tests and
 remains available as a [historical report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
 The percentage measures recovered code bytes, not

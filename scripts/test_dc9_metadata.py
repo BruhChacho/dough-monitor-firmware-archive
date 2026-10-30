@@ -43,12 +43,12 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(peek(memory,byte_address(logical)),0xa5)
         self.assertEqual(peek(memory,0x4551a8,2),0)
 
-    def test_full_apply_completes_reset_then_requires_next_service(self):
+    def test_full_inactive_apply_returns_after_metadata_reset(self):
         from validate_dc9_engine_mode import apply_fixture
         expanded,_,_=inputs()
         memory = apply_fixture(expanded)
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x2250e8'):
-            self.conditional.run(0x23fad0, memory, regs(), max_steps=100000)
+        result = self.conditional.run(0x23fad0, memory, regs(), max_steps=100000)
+        self.assertEqual((result['termination'], result['registers'][3]), ('return', 1))
         for index in range(6):
             self.assertEqual(peek(memory,0x3b4960+176*index),4)
 

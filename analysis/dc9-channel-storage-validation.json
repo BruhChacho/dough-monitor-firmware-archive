@@ -1,0 +1,76 @@
+{
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "full apply returns for explicit inactive-channel fixture; active arithmetic and final services remain unresolved",
+  "cases": {
+    "lowest_set_bit_return": 37,
+    "channel_mask_lookup_return": 24,
+    "inactive_channel_storage_return": 4,
+    "zero_area_dimension_repair_return": 12,
+    "positive_area_arithmetic_prefix": 24
+  },
+  "strict_cases": 101,
+  "conditional_cases_by_policy": {
+    "sleigh-store": {
+      "full_inactive_apply_return": 2
+    },
+    "halfword-lane-hypothesis": {
+      "full_inactive_apply_return": 2
+    }
+  },
+  "conditional_cases": 4,
+  "visited_instruction_count": 2093,
+  "source_spans": [
+    {
+      "name": "channel_storage_lowest_set_bit",
+      "address": "0x2402c4",
+      "end_exclusive": "0x2402de",
+      "size": 26,
+      "sha256": "292194c125f1d389e194c041feb715b12c2b4b44d5dec69ea96ef3c6ae5f7cdc",
+      "visited_instructions": 10
+    },
+    {
+      "name": "channel_storage_lookup",
+      "address": "0x2250c5",
+      "end_exclusive": "0x2250e8",
+      "size": 35,
+      "sha256": "cd65a7fbc352c34f41e5d5d17068d382d35d7439c34b1dfe7b87f898b9dab74f",
+      "visited_instructions": 12
+    },
+    {
+      "name": "channel_storage_configuration",
+      "address": "0x2250e8",
+      "end_exclusive": "0x225416",
+      "size": 814,
+      "sha256": "a95d6bbf7b9d9678351f9e0ab8bb34738bf995009cb1313af8e361132fb417eb",
+      "visited_instructions": 131
+    },
+    {
+      "name": "channel_storage_register_setup",
+      "address": "0x226100",
+      "end_exclusive": "0x226278",
+      "size": 376,
+      "sha256": "e54c54622881718c24157e1eb30009dad42c91aaeab58c92f3e9d0931ca87ef6",
+      "visited_instructions": 56
+    }
+  ],
+  "limitations": [
+    "Inactive full apply uses explicit wait bypass, synthetic fifth owner record, writable size globals and plain bus.",
+    "Active channel arithmetic stops before 0x2aacb9/0x2ab331; flagged final channels require other unrecovered services.",
+    "CPU, CALL, store, low-halfword and little-endian semantics remain hypotheses; no physical behavior is modeled."
+  ],
+  "tools_sha256": {
+    "validate_dc9_channel_storage.py": "29e576e4410c1ea1466935f82f6791b6139d760368e7d76bfcaf99d4372bc77c",
+    "reconstruct_dc9_channel_storage.py": "aeaff979667bb71f20d8fde29b1dae81618e21f0addbb33784a3485b1bdf1b82",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba"
+  }
+}

@@ -45,10 +45,10 @@ class EngineModeTests(unittest.TestCase):
         self.assertEqual(len(named(memory, 'global_halfword').data), 2)
         self.assertFalse([w for w in memory.writes if w[0] == 'global_halfword'])
 
-    def test_completed_inactive_reset_loop_stops_at_next_service(self):
+    def test_completed_inactive_apply_preserves_reset_results(self):
         memory = apply_fixture(self.expanded)
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x2250e8'):
-            self.model.run(0x23fad0, memory, regs(), max_steps=100000)
+        result = self.model.run(0x23fad0, memory, regs(), max_steps=100000)
+        self.assertEqual((result['termination'], result['registers'][3]), ('return', 1))
         for index in range(13):
             self.assertEqual(peek(memory, ENGINES+index*124+0xf), 1)
             self.assertEqual(peek(memory, ENGINES+index*124+8, 4), 0)

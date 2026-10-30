@@ -2,32 +2,38 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The source overlay contains **160 components, 8,775 instructions /
-27,096 code bytes**, plus **12 tables / 911 bytes**. Coverage is **1.117%
-(about 1.12%)** of the expanded application; most application bytes remain
+build. The current source overlay contains **164 components, 9,195 instructions /
+28,347 code bytes**, plus **12 tables / 911 bytes**. Coverage is **1.168%
+(about 1.17%)** of the expanded application; most application bytes remain
 precompiled vendor input.
 
-The 2026-10-29 engine-mode milestone adds six routines (1,594 instructions /
-4,840 code bytes) and an 11-pointer / 44-byte table. Its combined gate passed 202 repository tests. Current validators report 49 strict / 148
-conditional core cases and 3 strict / 12 conditional leaf cases. The main mode
-routine has 134 of 1,550 instructions visited in bounded cases. Integrated
-apply completes four preparations and thirteen inactive-engine resets, then
-stops at `0x23fb37` before `0x2250e8`; the active engine-one configuration fixture stops at `0x22169e`
-before `0x21fb61`. The four-byte shared-size input is explicit; literal and
-halfword-lane hypotheses yield `ef080000` and `ef08a013`, respectively.
-`bn.subb` execution rejects unresolved borrow semantics.
-See the [engine-mode report](../analysis/2026-10-29_reverse-dc9-engine-mode-report.md).
-Fully editable firmware and a hardware-tested community release remain
-unfinished; the percentage is a code-byte coverage proxy.
+The 2026-10-30 channel-storage milestone adds four routines (420 instructions /
+1,251 code bytes): `lowestbit` (`0x2402c4..0x2402de`, 26 bytes), channel lookup
+(`0x2250c5..0x2250e8`, 35 bytes), storage (`0x2250e8..0x225416`, 814 bytes), and
+storage-register setup (`0x226100..0x226278`, 376 bytes). The bounded
+inactive-channel full-apply fixture returns `r3=1` in 43,910 modeled
+instructions under both ambiguous-store policies, with an explicit wait bypass
+and synthetic fixture inputs. Core validation covers 101 strict and four
+conditional cases; storage-register validation covers 12 conditional cases and
+one strict ambiguous-store rejection, visiting all 118 instructions. This is not
+hardware proof. The combined offline gate passed all stages and 214 repository
+tests with no failures, errors, or skips, and produced all three BINs. The
+202-test engine-mode gate is a historical result. Active full apply remains
+unresolved at `0x22701c`; positive-area storage stops at `0x2aacb9`, and the
+final flagged-channel path still needs `0x22eb07`.
+
+See the [channel-storage report](../analysis/2026-10-30_reverse-dc9-channel-storage-report.md).
+The percentage is a code-byte coverage proxy; fully editable firmware and a
+hardware-tested community release remain unfinished.
 
 ## Open the files
 
 The latest prepared workspace is the
-[engine-mode workspace](../analysis/extracted/firmware-validation-engine-mode-2026-10-29/workspace/).
-Its [summary](../analysis/community-engine-mode-workspace.json) and
-[validation run](../analysis/extracted/firmware-validation-engine-mode-2026-10-29/)
-record the passed gate. The preceding engine-preparation workspace
-and its passed 185-test gate remain in the
+[channel-storage workspace](../analysis/extracted/firmware-validation-channel-storage-2026-10-30/workspace/).
+Its [summary](../analysis/community-channel-storage-workspace.json) and
+[validation run](../analysis/extracted/firmware-validation-channel-storage-2026-10-30/)
+record the current milestone evidence; its combined gate passed 214 tests. The
+preceding engine-preparation workspace and its passed 185-test gate remain in the
 [historical run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).
 Another earlier workspace is
 [firmware-validation-channel-update-2026-10-26/workspace](../analysis/extracted/firmware-validation-channel-update-2026-10-26/workspace/README.md).
@@ -70,8 +76,8 @@ Choose a new output directory for each run. The command checks all package
 hashes, the Spectrum One checksum/reconstruction corpus, repository tests,
 command/register/receive/transfer/timer/callback/configuration/apply/metadata,
 metadata-consumer, layout-setup, engine-control, engine-enable, enable-leaf,
-reference-count, channel-update, engine-allocation and engine-preparation
-contracts, and helper
+reference-count, channel-update, engine-allocation, engine-preparation,
+engine-mode, channel-storage and storage-register contracts, and helper
 rewrite equivalence. The previous
 engine-control gate passed 148 repository tests, 2,078 strict cases, and 384
 conditional cases. Its successor passed 159 tests. Current
@@ -160,9 +166,9 @@ Each file is 2,069,060 bytes; their SHA256 prefixes are `0b5d8350`, `d88a1683`,
 and `95a06b2f`, respectively. All eleven resource spans are unchanged in each
 build. No experimental output has been booted on a monitor.
 
-The current engine-mode milestone adds six routines (1,594 instructions /
-4,840 code bytes) and an 11-pointer dispatch table (44 bytes). The overlay now
-contains 160 components / 8,775 instructions / 27,096 code bytes, plus 12 tables
+The historical engine-mode milestone added six routines (1,594 instructions /
+4,840 code bytes) and an 11-pointer dispatch table (44 bytes). That overlay
+contained 160 components / 8,775 instructions / 27,096 code bytes, plus 12 tables
 / 911 bytes (1.117%, about 1.12%). Its gate passed 202 repository tests;
 the core validator reports 49 strict / 148 conditional cases and leaf
 validation 3 strict / 12 conditional cases. Only 134 of the 1,550 main mode
@@ -287,7 +293,7 @@ and neighboring flag provide a stronger constraint on store width, while the
 physical ISA and clock remain unverified. Register tests use plain mapped bytes,
 without peripheral side effects. See the
 [timer and callback report](../analysis/2026-10-23_reverse-dc9-timer-report.md)
-for timer evidence and limitations. The current source overlay is about 0.81%
+for timer evidence and limitations. The source overlay was about 0.81%
 of the expanded application; this is a coverage proxy, not engineering or product
 completion. Most functionality still resides in the pinned vendor remainder.
 

@@ -3,7 +3,98 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: engine-mode configuration and reset
+## Latest continuation: channel storage and inactive full-apply return
+
+Updated 2026-10-30 (America/New_York). Continue toward **100% editable
+application**, using cheaper agents with parent review. Always report editable
+code coverage, not an invented product-readiness percentage. Read
+`analysis/2026-10-30_reverse-dc9-channel-storage-report.md`,
+`analysis/community-channel-storage-workspace.json`, and `firmware/README.md`.
+
+Started at published `89df754` on
+`codex/community-firmware-layout-setup-2026-10-25`; the remote matched. Git/CLI
+publication and updating draft PR #1 remain authorized. Preserve the branch,
+all earlier workspaces and snapshots. No device operations occurred. Verify
+local/remote state before continuing.
+
+- Source: **164 components, 9,195 instructions / 28,347 code bytes**, plus
+  **12 tables / 911 bytes**. Coverage **1.168% (about 1.17%)** of 2,426,560
+  expanded application bytes. Most application bytes remain vendor input.
+- Four new spans add **420 instructions / 1,251 bytes**: lowest-set-bit
+  `2402c4..2402de` (10 / 26), mask lookup `2250c5..2250e8` (12 / 35), storage
+  `2250e8..225416` (280 / 814), register setup `226100..226278` (118 / 376).
+  Addresses hex, ends exclusive. Prior 160 routine records and 12 tables match
+  the starting snapshot. No new ISA form or table. Generator checks complete
+  decode, aligned local branches, static reachability, terminal boundaries and
+  exact reassembly before writes; conflicting sources/records reject.
+  `2250bd` was a misaligned candidate: actual helper is `2250c5`.
+- Lookup reads channel halfword `+2a` from `4821ec` / stride 168 and calls
+  `2402c4`. Lowest-set-bit returns zero for zero, otherwise zero-based lowest
+  bit. Index 4 with four records faults at `4824b6+2`. Model `bn.lh` is an
+  **unsigned low-16-bit hypothesis**.
+- Storage uses an 88-byte frame, scans four records and reads active byte `+0`
+  and dimensions `+1c/+1e`. All inactive: eight iterations of `floor(i/2)`;
+  nine zero word stores per iteration at `5c,68,74,60,6c,78,64,70,7c`:
+  **72 ordered writes**, each channel cleared twice. Active zero area sets only
+  selected dimensions to ten then returns; a read-only second store retains
+  the first. Single positive area reaches `2252be` before unresolved `2aacb9`
+  with r3–r6 = `[395,0,width*height,0]`; prior inactive records already cleared.
+  Other arithmetic including `2ab331` remains unexecuted.
+- Register setup uses two ENGINE pair pointers `47faa0/47fb98` (stride 248).
+  State is pointer `+4`, own/partner widths `+4c/+c8`. First six calls write
+  direct fields. Inactive/zero width clears bit 8 at `bank+20800047`.
+  Width sum <= `1400` hex clears that bit, sets bit 8 at `bank+20800021`, writes
+  `(1400-width)&fff8` at `bank+20800026`. Above threshold reverses bits, zeroes
+  words at `bank+23800012/+23800052`, writes distinct partner/own halfwords at
+  `bank+2080002a/+2080002c` and zero at `bank+20800026`. Exact ordered page/data
+  traces checked; zero-bank guards skip bus. Default ambiguity rejects after
+  twenty page/data writes from the first six calls; earlier writes remain.
+  Core: 101 strict / 4 conditional cases. Registers: 12 conditional / 1 strict
+  rejection; all 118 setup instructions visited. Not exhaustive path coverage.
+- **Full inactive apply `23fad0` returns r3=1** after 43,910 modeled instructions
+  under both store policies and both wait-bypass inputs. Existing engine-mode
+  fixture unchanged: writable four-byte global `343c14`, synthetic fifth owner
+  record, zero engine banks, plain bus. Four preparations, thirteen inactive
+  resets, one call each to `2250e8/226100`; stack/r10–r22 preserved, engine
+  states zero / flags one. Channel active bytes and final `+81` flags are zero.
+  Record writes: four earlier `+5b` byte zeros, then 72 storage clears. The
+  non-bypass wait still lacks countdown state; no timer or service is stubbed.
+- Active full apply first requires **`22701c`**, earlier than storage arithmetic.
+  Isolated positive storage requires **`2aacb9`**. Final channel `+81` flag one
+  requires **`22eb07`**, even when active byte is zero. Inactive return is not
+  working display, active configuration or flash qualification.
+- Successful gate:
+  `analysis/extracted/firmware-validation-channel-storage-2026-10-30/`.
+  **214 tests**, 45 archive hashes, 13 exact corpus roundtrips / 141 resource
+  checksums, all model stages and three complete BINs. Each BIN is 2,069,060
+  bytes with eleven unchanged resources; hashes remain `0b5d8350` / `d88a1683`
+  / `95a06b2f`. Final audit: 245 artifact hashes, 296 input identities, 203
+  base workspace artifacts + 2 USB references. All 390 saved files, 16 prior
+  workspaces and 43 earlier BINs verify. Snapshot:
+  `analysis/scratch/channel-storage-before-2026-10-29/`. Never overlay or alter
+  an existing snapshot. Canonical JSONs describe this run; older runs remain.
+
+Next offline source task: **`22701c..227145`** (candidate 97 instructions / 297
+bytes), with **`222ce8..222d32`** (25 / 74) and **`220c76..220cb4`** (22 / 62).
+Parent independently reassembled all three candidates exactly; they are NOT
+yet added or counted. Assignment directly calls `222ce8,2227ef,20f1ef`; the
+last two are already recovered. It has an external tail jump to `220c76` and
+late branch back to `2270d2`: adapt CFG checks for tail escapes instead of
+truncating at the early return. `222ce8` reads METADATA word `+c` at `3b4950`,
+stride 176, and writes ENGINE state `+8` at `47fa9c`, stride 124: input state
+2 => 5, 4 => 2, otherwise 1. Do not confuse metadata and engine records.
+`220c76` calls `21ddcf` (unrecovered), `220a8b` (recovered), then tail-jumps to
+`226bb5` (unrecovered). All candidate mnemonics already assemble. Use
+**ModuleModel**, not the tiny helper P-code emulator, for behavior. Parent must
+verify fixtures and uncounted boundaries. Other priorities: `2aacb9/2ab331`
+arithmetic, `22eb07` and final services, active engine-one service `21fb61`,
+borrow/ISA proof, remaining application/compiler/linker/EFE/USB and hardware.
+
+Private owner recovery context remains only in ignored scratch; do not publish
+the screenshot/chat/sharing URL. `analysis/isp-tool-family-map.md` is the public
+archive-only correlation, not a verified HDMI or board recovery procedure.
+
+## Previous continuation: engine-mode configuration and reset
 
 Updated 2026-10-29 (America/New_York). Continue toward **100% editable
 application**, using cheaper coding agents with parent review. Always report

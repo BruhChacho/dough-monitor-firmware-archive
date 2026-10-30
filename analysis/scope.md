@@ -322,3 +322,26 @@ has not returned. See the
 [engine-mode report](2026-10-29_reverse-dc9-engine-mode-report.md),
 [latest workspace](extracted/firmware-validation-engine-mode-2026-10-29/workspace/),
 and [summary](community-engine-mode-workspace.json).
+
+On 2026-10-30, continued offline DC9 recovery added four channel-storage
+routines: lowest-set-bit (`0x2402c4..0x2402de`, 26 bytes), channel-mask lookup
+(`0x2250c5..0x2250e8`, 35 bytes), storage (`0x2250e8..0x225416`, 814 bytes),
+and storage-register setup (`0x226100..0x226278`, 376 bytes). The overlay now
+contains 164 components / 9,195 instructions / 28,347 code bytes and 12 tables /
+911 bytes, or 1.168% (about 1.17%) of the expanded application. This is a
+code-byte coverage proxy, not source completeness or product readiness.
+
+A bounded integrated inactive-channel fixture returns from full apply with
+`r3=1` after 43,910 modeled instructions under both ambiguous-store policies.
+It explicitly bypasses the wait and uses synthetic fixture inputs. Core
+validation covers 101 strict and four conditional cases; storage-register
+validation covers 12 conditional cases, one strict ambiguous-store rejection,
+and visits all 118 instructions. The combined offline gate passed all stages and
+214 repository tests with no failures, errors, or skips, and produced all three
+BINs. Active full apply remains unresolved at `0x22701c`; positive-area
+storage stops at `0x2aacb9`, and the final flagged-channel path needs
+`0x22eb07`. The prior engine-mode gate of 202 tests is historical. No hardware
+behavior or flash safety was demonstrated. See the
+[channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md),
+[workspace summary](community-channel-storage-workspace.json), and
+[validation run](extracted/firmware-validation-channel-storage-2026-10-30/).

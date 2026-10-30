@@ -1,0 +1,49 @@
+{
+  "status": "two storage-register pairs validated with explicit plain bus and store hypotheses",
+  "source_layout_sha256": "ec3a2e289abd23fb53cd676fe8c610e0d4bad629101f7b954f87830cfbcdbff4",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "conditional_cases_by_policy": {
+    "sleigh-store": 6,
+    "halfword-lane-hypothesis": 6
+  },
+  "conditional_cases": 12,
+  "strict_rejections": 1,
+  "cases": {
+    "both_inactive": 2,
+    "zero_width_guard": 2,
+    "threshold_equal": 2,
+    "threshold_above": 2,
+    "high_bit_width": 2,
+    "mixed_pair_order": 2
+  },
+  "visited_instruction_count": 268,
+  "source_spans": [
+    {
+      "name": "channel_storage_register_setup",
+      "address": "0x226100",
+      "end_exclusive": "0x226278",
+      "size": 376,
+      "sha256": "e54c54622881718c24157e1eb30009dad42c91aaeab58c92f3e9d0931ca87ef6",
+      "visited_instructions": 118
+    }
+  ],
+  "limitations": [
+    "Plain bus bytes do not model hardware pages or peripheral effects.",
+    "Both ambiguous-store policies are hypotheses; the default rejects them.",
+    "Only the two reachable record pairs and bounded branch values are exercised."
+  ],
+  "tools_sha256": {
+    "validate_dc9_storage_registers.py": "bebd168aed08fcc937a1563456d4eb385e51be34f796b57d0e4202eefde72112",
+    "reconstruct_dc9_channel_storage.py": "aeaff979667bb71f20d8fde29b1dae81618e21f0addbb33784a3485b1bdf1b82",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba"
+  }
+}
