@@ -3,7 +3,83 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: channel storage and inactive full-apply return
+## Latest continuation: channel assignment and active-apply prefix
+
+Gate completed 2026-10-30; preservation review 2026-11-02, publication 2026-11-04
+(America/New_York). Goal remains **100% editable application**. Read
+`analysis/2026-10-30_reverse-dc9-channel-assignment-report.md`,
+`analysis/community-channel-assignment-workspace.json`, and `firmware/README.md`.
+Use cheaper agents with parent review; always report code-byte coverage rather
+than a product-readiness estimate. Started clean at published `d22a0d6` on
+`codex/community-firmware-layout-setup-2026-10-25`; remote matched. Publication
+to this branch and draft PR #1 remains authorized. No device action occurred.
+
+- Source: **167 components, 9,339 instructions / 28,780 code bytes**, plus
+  **12 tables / 911 bytes**. Coverage **1.186% (about 1.19%)** of 2,426,560
+  expanded application bytes. Complete editable source/hardware operation
+  remain unfinished; most bytes still come from the vendor input.
+- Three new spans add **144 instructions / 433 bytes**: assignment
+  `22701c..227145` (97 / 297), state `222ce8..222d32` (25 / 74), dispatch
+  `220c76..220cb4` (22 / 62). Hex, end exclusive. Prior 164 routine records
+  and twelve tables unchanged. No ISA forms or tables added. Generator checks
+  local CFG plus explicit external terminal tails, exact reassembly and all
+  collisions before writes; repeat preserves matching bytes. Assignment has
+  late branches beyond its early return; do not truncate at `2270a2`.
+- State helper reads METADATA `3b4950`, stride176, word+c; writes ENGINE
+  `47fa9c`, stride124, word+8. State2=>5,4=>2,other tested words=>1.
+  Assignment takes metadata index r3 / engine index r4; exact index6 sentinel
+  returns without data reads, not a general upper-bound guard. Non4 selector
+  byte+10 merges engine bit into mask halfword+12, stores engine selector+1d,
+  calls state helper, restores its20-byte frame and tails to dispatch.
+- Selector4 stores engine byte at metadata+10, replaces mask+12, sets+1c=1,
+  calls real2227ef for owner channel, reads channel flag+81. Flag nonzero writes
+  metadata state+c=0; zero writes+c=1 and calls real20f1ef with leading words.
+  Then clears metadata+70. Engine indices0–3 read45508c; nonzero initializes
+  auxiliary record3b4288+metadata*24: bytes0/1=1,+11=0; words+4/+8 are
+  zero-extended source bytes from3b4281/3b427b+metadata. Distinct80/fe values and
+  surrounding bytes checked; missing second table retains first word store.
+- Dispatch r11=20hex for engine4, else2 even/4 odd. Calls21ddcf at220c95,
+  later220a8b then tails226bb5. First and tail services remain unrecovered.
+  Isolated validator:24strict/0conditional cases; visited96/97 assignment,
+  25/25state,11/22dispatch instructions. Seven new isolated fault regressions.
+  Strict still depends on explicit CPU/CALL/little-endian/low-halfword model.
+- Active full apply old fixture now faults **45508c+1**. New integrated fixture
+  explicitly adds that single read-only byte as zero. One active channel100x200
+  in each of four positions reaches **220c95 before21ddcf** under both store
+  policies:8conditional cases,34459+9*channel instructions,r3/r4=[0,1]. Real
+  assignment/state called once,20f1ef seven times including earlier resets.
+  Assignment frame restored but dispatch/caller frames live. Last seven ordered
+  metadata/engine writes checked; owner and dimensions preserved. Unknown call
+  rejection retains writes. No service/timer stub. Inactive full apply still
+  returns; positive storage and flagged final channels remain unresolved.
+- Successful gate:
+  `analysis/extracted/firmware-validation-channel-assignment-2026-10-30/`.
+  **222 tests**,45 archive hashes,13 exact corpus roundtrips/141 resource CRCs,
+  all stages and3complete BINs. Hashes0b5d8350/d88a1683/95a06b2f unchanged;
+  each2,069,060 bytes with11 unchanged resources. Audit:250 artifact hashes,
+  303inputs,206base workspace artifacts+2USB. All403saved files,17prior
+  workspaces and46earlier BINs verify. Immutable snapshot:
+  `analysis/scratch/channel-assignment-before-2026-10-30/`.
+
+Next offline task: recover **21ddcf..21de65** (candidate52instructions/150bytes).
+Parent checked CFG with external tails23ddb9 and exact reassembly, but this
+candidate is NOT added or counted. Reads metadata key word at+0, maps key<=4
+to low8(key+3),5–7 to low8(key-5),larger to low8(key), calls **21bfca**, then
+indices0–3 tail through real23ddb9 with logical fff02e03/02/05/04 respectively;
+other indices return after21bfca. Verify that dependency's complete boundaries
+and register contracts. Dispatch later needs **226bb5**. Continue arithmetic
+2aacb9/2ab331, final22eb07 services,active engine-one21fb61, remaining
+application/toolchain/EFE/USB, and independent ISA/hardware evidence.
+
+The user explicitly requested an ongoing Codex Goal on2026-10-30; it was
+created without a token budget. On resumption2026-11-02 the tool reported
+`usageLimited`, so do not claim automatic continuation is active. Only user/app
+controls can resume a usage-limited Goal. The user has explicitly requested
+continued work in this turn. Scheduled-task tools were unavailable; no schedule
+was created. Neither the Goal nor a schedule guarantees restart at quota reset.
+Private recovery screenshot/chat/URL remain in ignored scratch only.
+
+## Previous continuation: channel storage and inactive full-apply return
 
 Updated 2026-10-30 (America/New_York). Continue toward **100% editable
 application**, using cheaper agents with parent review. Always report editable

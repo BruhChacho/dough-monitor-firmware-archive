@@ -50,14 +50,23 @@ class ChannelStorageTests(unittest.TestCase):
         self.assertEqual([w for w in memory.writes if w[0] != 'stack'], expected_clears(2))
         self.assertEqual(bytes(named(memory, 'records').data[2*168:]), old[2*168:])
 
-    def test_full_apply_active_channel_requires_assignment(self):
+    def test_full_apply_active_channel_requires_assignment_config(self):
         memory = apply_fixture(self.expanded)
         seed(memory, RECORDS, 1, 1)
         seed(memory, RECORDS+0x1c, 100, 2); seed(memory, RECORDS+0x1e, 200, 2)
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x22701c'):
+        with self.assertRaisesRegex(ValueError, r'Unmapped memory access: 0x45508c\+1'):
             self.model.run(0x23fad0, memory, regs(), max_steps=100000)
         self.assertEqual(peek(memory, RECORDS+0x1c, 2), 100)
         self.assertEqual(peek(memory, RECORDS+0x1e, 2), 200)
+
+    def test_full_apply_assignment_keeps_writes_before_unknown_dispatch(self):
+        from validate_dc9_assignment_apply import fixture, assignment_writes
+        memory = fixture(self.expanded)
+        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x21ddcf'):
+            self.model.run(0x23fad0, memory, regs(), max_steps=100000)
+        writes = [w for w in memory.writes if w[0] in ('metadata', 'engines')]
+        self.assertEqual(writes[-7:], assignment_writes())
+        self.assertFalse([w for w in memory.writes if w[0] == 'assignment_config'])
 
     def test_full_apply_flagged_final_channel_requires_its_service(self):
         memory = apply_fixture(self.expanded)

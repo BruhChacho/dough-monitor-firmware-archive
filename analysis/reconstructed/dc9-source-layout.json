@@ -1487,10 +1487,54 @@
       "purpose": "Return zero for zero input, otherwise return the index of the lowest set bit; the storage configuration caller's zero case remains ambiguous.",
       "component_kind": "routine",
       "external_call_targets": []
+    },
+    {
+      "name": "channel_assignment",
+      "address": "0x22701c",
+      "size": 297,
+      "source": "analysis/reconstructed/spectrum_one_channel_assignment.aeon.s",
+      "original_code_sha256": "e1b8c95c81285c20dec5f610bc3219f2043d87e028062cd74548408ca8b10672",
+      "purpose": "Assign a channel from metadata and ENGINE records; helper and dispatch behavior remains unresolved.",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x20f1ef",
+        "0x2227ef",
+        "0x222ce8"
+      ],
+      "external_tail_targets": [
+        "0x220c76"
+      ]
+    },
+    {
+      "name": "channel_assignment_state",
+      "address": "0x222ce8",
+      "size": 74,
+      "source": "analysis/reconstructed/spectrum_one_channel_assignment_state.aeon.s",
+      "original_code_sha256": "ad004fdd4fb5ebae1ed2cde560afd1af6fa467a3ae6c2985fea35cf1f1666b2c",
+      "purpose": "Map metadata state values 2 and 4 to ENGINE state values 5 and 2, otherwise 1.",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": []
+    },
+    {
+      "name": "channel_assignment_dispatch",
+      "address": "0x220c76",
+      "size": 62,
+      "source": "analysis/reconstructed/spectrum_one_channel_assignment_dispatch.aeon.s",
+      "original_code_sha256": "981abfe620f01e8a81b7eb5a0aaded8d664c889174d40a9ee35a5a314d3a5247",
+      "purpose": "Prepare dispatch arguments, call helpers, then tail-dispatch to 0x226bb5.",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x21ddcf",
+        "0x220a8b"
+      ],
+      "external_tail_targets": [
+        "0x226bb5"
+      ]
     }
   ],
   "limitations": [
-    "164 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "167 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],

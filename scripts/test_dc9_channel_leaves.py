@@ -20,17 +20,17 @@ class ChannelLeafValidationTests(unittest.TestCase):
         self.assertEqual(memory.writes, [('channels', CHANNELS + 0x2a, 2, 1 << 2)])
         self.assertEqual(memory.read(CHANNELS + 0x2a, 2), 1 << 2)
 
-    def test_metadata_bit_update_retains_owner_state_before_unmapped_service(self):
+    def test_metadata_bit_update_retains_owner_state_before_unmapped_metadata(self):
         channels = bytearray(4 * 168)
         engines = bytearray(13 * 124)
         memory = Memory([plain(CHANNELS, channels, 'channels'),
                          plain(ENGINE, engines, 'engines'), stack_region()])
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x22701c'):
+        with self.assertRaisesRegex(ValueError, 'Unmapped memory access'):
             self.model.run(0x227145, memory, regs(1, 0x55))
         self.assertEqual(memory.read(CHANNELS + 168 + 0x2c, 2), 1 << 5)
         self.assertEqual(memory.read(ENGINE + 5 * 124 + 0x10, 1), 1)
         self.assertEqual(memory.read(ENGINE + 5 * 124 + 8, 4), 1)
-        self.assertEqual(memory.writes[-3:], [
+        self.assertEqual([w for w in memory.writes if w[0] != 'stack'], [
             ('channels', CHANNELS + 168 + 0x2c, 2, 1 << 5),
             ('engines', ENGINE + 5 * 124 + 0x10, 1, 1),
             ('engines', ENGINE + 5 * 124 + 8, 4, 1),

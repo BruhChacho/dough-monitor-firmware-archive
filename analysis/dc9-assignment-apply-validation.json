@@ -1,0 +1,41 @@
+{
+  "source_layout_sha256": "c2799c85356df743d4e3f856e6a5c16ec76e9a94dd295258e238d1b776ec6f6c",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "active full apply reaches call 0x220c95 before unresolved 0x21ddcf",
+  "conditional_cases_by_policy": {
+    "sleigh-store": 4,
+    "halfword-lane-hypothesis": 4
+  },
+  "conditional_cases": 8,
+  "steps": {
+    "sleigh-store/channel0": 34459,
+    "sleigh-store/channel1": 34468,
+    "sleigh-store/channel2": 34477,
+    "sleigh-store/channel3": 34486,
+    "halfword-lane-hypothesis/channel0": 34459,
+    "halfword-lane-hypothesis/channel1": 34468,
+    "halfword-lane-hypothesis/channel2": 34477,
+    "halfword-lane-hypothesis/channel3": 34486
+  },
+  "visited_instruction_count": 1638,
+  "limitations": [
+    "Explicit read-only configuration byte 0x45508c=0 extends the earlier fixture.",
+    "One active channel with dimensions100x200 and all metadata selectors zero; not general active operation.",
+    "CPU, CALL and both store interpretations remain hypotheses; plain bus bytes have no device behavior.",
+    "The earlier fixture faults at the missing config byte; unknown services and timers are not stubbed."
+  ],
+  "tools_sha256": {
+    "validate_dc9_assignment_apply.py": "2f6b7595909c5409b25ad1d4d574b58723fefe5a0ff88295fe4e2a3eba4764ad",
+    "validate_dc9_engine_mode.py": "295b4b06963a286eeed7ba6f5a2b1f66ff020dd847647195b635d3c5102d9d60",
+    "aeon_module_model.py": "3143710ce5cf897d2a8d80bf30785e6801fb9616337781695d4ff73e35ad08ba"
+  }
+}

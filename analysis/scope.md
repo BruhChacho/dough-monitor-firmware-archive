@@ -345,3 +345,29 @@ behavior or flash safety was demonstrated. See the
 [channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md),
 [workspace summary](community-channel-storage-workspace.json), and
 [validation run](extracted/firmware-validation-channel-storage-2026-10-30/).
+
+The 2026-10-30 channel-assignment milestone adds three byte-exact routines
+(144 instructions / 433 code bytes): `0x22701c..0x227145` (97 / 297),
+`0x222ce8..0x222d32` (25 / 74), and `0x220c76..0x220cb4` (22 / 62). The
+overlay contains 167 components / 9,339 instructions / 28,780 code bytes, plus
+12 tables / 911 bytes. Code-byte coverage is 1.186% (about 1.19%) of the
+2,426,560-byte expanded application; this is a coverage proxy, not source
+completeness or product readiness.
+
+The isolated validators report 24 strict and zero conditional cases, seven new
+regressions, 96/97 assignment instructions visited, 25/25 state-helper
+instructions visited, and 11/22 dispatch instructions visited. The active
+fixture uses an explicit read-only zero byte at `0x45508c`, reaches `0x220c95`
+after 34,459 modeled instructions under both store policies, and stops before
+unrecovered `0x21ddcf`; without that mapping the older fixture faults at
+`0x45508c+1`. Integrated validation has eight conditional cases across four
+active positions and both store policies. It uses explicit read-only input
+`0x45508c`, stops at `0x220c95` before `0x21ddcf`, and executes 34,459
+instructions plus nine per channel. The old inactive full-apply fixture still
+returns. Its 214-test gate and the earlier `0x22701c` stop are historical
+snapshots. The combined 2026-10-30 gate passed all 222 repository tests with no
+failures, errors, or skips, passed every stage, and produced all three BINs.
+No active full apply, hardware behavior, or flash qualification is established.
+
+See the [channel-assignment report](2026-10-30_reverse-dc9-channel-assignment-report.md),
+[workspace summary](community-channel-assignment-workspace.json), and [validation run](extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).

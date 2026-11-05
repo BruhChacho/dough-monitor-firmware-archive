@@ -46,10 +46,25 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The current DC9 source overlay contains **164 reconstructed
-components: 9,195 instructions / 28,347 code bytes**, plus 12 tables / 911 bytes.
-That is **1.168% (about 1.17%)** of the expanded application. Most application
+guide](firmware/README.md). The current DC9 source overlay contains **167 reconstructed
+components: 9,339 instructions / 28,780 code bytes**, plus 12 tables / 911 bytes.
+That is **1.186% (about 1.19%)** of the expanded application. Most application
 bytes remain precompiled vendor input; fully editable firmware remains the goal.
+
+The 2026-10-30 channel-assignment milestone adds three byte-exact routines
+(144 instructions / 433 bytes): `0x22701c..0x227145`, `0x222ce8..0x222d32`,
+and `0x220c76..0x220cb4`. The isolated checks report 24 strict cases, seven
+new regressions, and 96/97 assignment, 25/25 state, and 11/22 dispatch
+instructions visited. Integrated checks cover eight conditional cases across
+four active positions and both store policies. With explicit read-only zero
+input at `0x45508c`, the active fixture reaches `0x220c95` after 34,459 modeled
+instructions plus nine per channel, then stops before unrecovered `0x21ddcf`.
+The earlier fixture without that mapping faults at `0x45508c+1`. The complete
+offline gate passed all stages and 222 tests with no failures, errors, or skips,
+producing all three BINs. This is not hardware validation or a completed active
+apply. See the [assignment report](analysis/2026-10-30_reverse-dc9-channel-assignment-report.md),
+[workspace summary](analysis/community-channel-assignment-workspace.json), and
+[validation run](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
 
 The 2026-10-30 channel-storage milestone adds four routines (420 instructions /
 1,251 code bytes). Its bounded offline model returns through integrated apply
@@ -59,14 +74,12 @@ conditional cases; storage-register validation covers 12 conditional cases, one
 strict ambiguous-store rejection, and visits all 118 instructions. The
 combined offline gate passed all stages and 214 repository tests, with no
 failures, errors, or skips. It produced all three BINs; hardware remains
-untested. The 202-test engine-mode gate is a historical result. Active full
-apply still stops at `0x22701c`; positive-area storage stops at `0x2aacb9`, and flagged
-final channels still require `0x22eb07`. Hardware behavior remains untested.
+untested. The 202-test engine-mode gate is a historical result. At that milestone, active full apply stopped at `0x22701c`; positive-area storage stopped at `0x2aacb9`, and flagged final channels needed `0x22eb07`. The newer assignment milestone reaches `0x220c95` on its bounded active fixture but still does not complete active full apply. Hardware behavior remains untested.
 
-See the [channel-storage report](analysis/2026-10-30_reverse-dc9-channel-storage-report.md),
-[latest workspace](analysis/extracted/firmware-validation-channel-storage-2026-10-30/workspace/),
-[workspace summary](analysis/community-channel-storage-workspace.json), and
-[validation run](analysis/extracted/firmware-validation-channel-storage-2026-10-30/).
+See the [channel-assignment report](analysis/2026-10-30_reverse-dc9-channel-assignment-report.md),
+[latest workspace](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/workspace/),
+[workspace summary](analysis/community-channel-assignment-workspace.json), and
+[validation run](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json). The preceding [channel-storage report](analysis/2026-10-30_reverse-dc9-channel-storage-report.md) and its 214-test gate are historical.
 The engine-mode report and its passed 202-test gate remain historical.
 The preceding engine-preparation milestone passed 185 repository tests and
 remains available as a [historical report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
