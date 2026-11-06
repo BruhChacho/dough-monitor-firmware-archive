@@ -1,6 +1,6 @@
 {
   "status": "two storage-register pairs validated with explicit plain bus and store hypotheses",
-  "source_layout_sha256": "c2799c85356df743d4e3f856e6a5c16ec76e9a94dd295258e238d1b776ec6f6c",
+  "source_layout_sha256": "0bb61e0b364668a9b00d9e91bd12a925eea2a1cc9a330389c181354a9d03629e",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",

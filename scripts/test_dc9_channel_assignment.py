@@ -63,13 +63,13 @@ class ChannelAssignmentTests(unittest.TestCase):
         self.assertEqual(memory.read(METADATA + 176 + 0x10, 1), 2)
         self.assertEqual(memory.read(METADATA + 176 + 0x12, 2), 0x8001)
 
-    def test_dispatch_reaches_unrecovered_service_without_substitution(self):
+    def test_dispatch_requires_metadata_for_real_route(self):
         memory = Memory([stack_region()])
         with self.assertRaisesRegex(ValueError,
-                                    'Outside modeled instruction boundaries: 0x21ddcf'):
+                                    r'Unmapped memory access: 0x3b4a00\+4'):
             self.model.run(DISPATCH, memory, regs(1, 4))
         self.assertFalse(data_writes(memory))
-        self.assertEqual([name for name, *_ in memory.writes], ['stack'] * 3)
+        self.assertEqual([name for name, *_ in memory.writes], ['stack'] * 6)
 
     def test_initialize_missing_second_source_retains_first_word(self):
         memory = fixture(self.expanded, mode=4, channel=3, channel_flag=1,

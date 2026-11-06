@@ -3,7 +3,104 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: channel assignment and active-apply prefix
+## Latest continuation: channel routing and dispatch delay
+
+Gate completed 2026-11-05 UTC; preservation review 2026-11-06 (America/New_York). Continue toward **100% editable
+application**, using cheaper agents with parent review. Always report editable
+code coverage, not a product-readiness percentage. Read
+`analysis/2026-11-04_reverse-dc9-channel-dispatch-report.md`,
+`analysis/community-channel-dispatch-workspace.json`, and `firmware/README.md`.
+Started clean at published `7df2236` on
+`codex/community-firmware-layout-setup-2026-10-25`; remote matched. Git/CLI
+publication to this review branch and draft PR #1 remains authorized. Preserve
+all older workspaces, BINs, source records and immutable snapshots. No device
+operations occurred.
+
+- Source: **170 components, 9,517 instructions / 29,309 code bytes**, plus
+  **12 tables / 911 bytes**. Coverage **1.208% (about 1.21%)** of 2,426,560
+  expanded application bytes. Most application bytes remain vendor input.
+- New spans add **178 instructions / 529 bytes**: route `21ddcf..21de65`
+  (52 / 150), selector `21bfca..21c024` (29 / 90), apply `226bb5..226cd6`
+  (97 / 289). Hex, ends exclusive. Prior 167 routine records and twelve tables
+  unchanged. No ISA form or table added. Generator checks exact reassembly,
+  full local CFG, explicit terminal tails, overlap/conflicts and repeat safety.
+  Parent rejected a 968-byte candidate that merged the distinct routine at
+  `226cd6`; do not repeat that boundary error.
+- Route reads full metadata key at `3b4950 + r3*176`, calls selector with
+  low8(key+3) for keys0–4, low8(key-5) for5–7, else low8(key). Engine r4=0–3
+  then writes byte through logical `fff02e03/02/05/04` respectively. Other
+  tested engines return after selector but still require the metadata read.
+- Selector's engine zero is VALID. Engine0–3 chooses logical
+  `fff01f8e/8d/90/8f`, passes `(r3<<2)&fc` with mask `7c` to real `23dfe1`.
+  Other tested engine indices return without memory. Masked helper writes its
+  page selector twice (read and write), then its data byte. Do not omit one
+  page write from the oracle. Counter/lock effects retain both store policies.
+- Apply examines only low two bytes of r3. Both zero return; high-byte-only
+  writes that byte as a 16-bit value to logical `fff0250e`, then writes zero.
+  Low data byte comes FIRST; the second data byte is zero. Nonzero low flags
+  call real delay `24209d(2)` before later `21be27/21dcee` services, still
+  unrecovered. Six focused isolated regressions pass. Isolated validator has
+  5 strict cases (including1 default-store rejection) and86 conditional cases.
+  Per-policy source visits: route47/52, selector28/29, apply35/97; strict guards
+  visit additional paths. These are not exhaustive input/path checks.
+- Parent integrated validator supplies explicit plain bus bytes for logical
+  `fff01f8d` and `fff02e02`, with page bytes, plus four writable timer bytes
+  at `455204`, initialized `a55ac33c`. Eight cases (four active positions x two
+  store policies) stop **2420b2 before the first completion-flag read** after
+  35,459 + 9*channel modeled instructions. Routing and engine-control return;
+  delay arms count2 and flag1. Final timer bytes are `02000100` under literal
+  stores and `0200013c` under lane stores. No tick/completion is supplied.
+- Ordered new bus writes: `a0e03e00=ff` twice, `a0e03f19=81`,
+  `a0e05c00=ff`, `a0e05c04=0`. Counter/lock end zero. Older assignment fixture
+  faults at missing `a0e03e00+1`, retaining assignment writes. A fixture with
+  bus but no timer faults at `455204+4` or `+2`, retaining routing writes.
+  Inactive full apply still returns. Active full apply and hardware operation
+  remain unfinished; no service or timer is stubbed.
+- Combined gate passed **229 tests** with no failures/errors/skips, 45 archive
+  hashes, 13 exact corpus roundtrips /141 resource checksums, and three complete
+  BINs (unchanged hashes0b5d8350/d88a1683/95a06b2f). Final audit verifies
+  **255 artifacts,310 inputs,209 base workspace artifacts+2USB**, all414 saved
+  files,18 prior workspaces and49 earlier BINs. Results are in the linked summary.
+  Immutable starting snapshot: `analysis/scratch/channel-dispatch-before-2026-11-04/`,
+  **414 saved files**. Never overlay an existing snapshot.
+
+User preference (2026-11-06): prioritize larger source batches and focused
+checks during coding. Run the full gate at publication checkpoints; do not
+repeat passed checks without changed code, a failure or an unresolved concern.
+
+Next offline task: extend the explicit timer interleaving experiment using
+existing `validate_dc9_timer.TickOnPoll`, which runs actual recovered tick
+instructions on flag reads. It needs its own tick stack, reload word mapping
+at `3b4948` and callback-enable byte `4551e1`; inspect overlaps and existing
+fixtures before adding exact regions. The current active fixture's real delay
+sets its flag and will not complete with static plain memory. Do not force the
+flag to zero or claim physical timing. A preliminary uncounted experiment with
+reload bytes e803a55a, callback disabled and tick stack710000 reaches226c20
+(before21be27) after two real ticks under literal stores and four under lane
+stores; main steps35490/35494, r3/r4=[1,4], timer01000000/0000003c. Promote
+this into the next focused integration check. Then recover:
+
+- **21be27..21be98**: candidate40instructions/113bytes, parent verified local
+  CFG and byte-exact assembly. Reads selector via23dd44 at engine0–3 logical
+  `fff01f8e/8d/90/8f`, returns `(value&7c)>>2`; other indices return1f.
+- **21dcee..21dd76**: candidate48instructions/136bytes, byte-exact assembly
+  checked. Calls222804, reads selected metadata key and indirect-dispatches
+  through **2af5b8..2af5dc** (9 pointers /36bytes). Table SHA256
+  `2d298797c026ce4e84ebefd43de1e37f6bcb2438d627275f1aac8be22dfb2dfa`.
+  Targets `21dd25,21dd36,21dd6e,21dd66,21dd5e,21dd56,21dd4e,21dd46,21dd3e`
+  are instruction starts in that span. Verify the full CFG with those indirect
+  edges before counting it. Key>8 uses logical zero; valid cases tail through
+  real23ddb9. These two candidates and their table are NOT added or counted.
+
+Other priorities remain active storage arithmetic2aacb9/2ab331, final22eb07,
+active engine-one21fb61, remaining application/compiler/linker/EFE/USB, and
+independent ISA/device evidence. The ongoing Codex Goal was explicitly created
+without a token budget on2026-10-30, but last reported `usageLimited` on
+resumption. Only user/app controls can resume that status. No schedule was
+created, and automatic restart at quota reset is not guaranteed. User requests
+continue to authorize the current work. Private recovery context stays ignored.
+
+## Previous continuation: channel assignment and active-apply prefix
 
 Gate completed 2026-10-30; preservation review 2026-11-02, publication 2026-11-04
 (America/New_York). Goal remains **100% editable application**. Read

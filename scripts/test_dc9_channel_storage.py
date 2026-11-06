@@ -59,14 +59,23 @@ class ChannelStorageTests(unittest.TestCase):
         self.assertEqual(peek(memory, RECORDS+0x1c, 2), 100)
         self.assertEqual(peek(memory, RECORDS+0x1e, 2), 200)
 
-    def test_full_apply_assignment_keeps_writes_before_unknown_dispatch(self):
+    def test_full_apply_assignment_keeps_writes_before_missing_route_bus(self):
         from validate_dc9_assignment_apply import fixture, assignment_writes
         memory = fixture(self.expanded)
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x21ddcf'):
+        with self.assertRaisesRegex(ValueError, r'Unmapped memory access: 0xa0e03e00\+1'):
             self.model.run(0x23fad0, memory, regs(), max_steps=100000)
         writes = [w for w in memory.writes if w[0] in ('metadata', 'engines')]
         self.assertEqual(writes[-7:], assignment_writes())
         self.assertFalse([w for w in memory.writes if w[0] == 'assignment_config'])
+
+    def test_full_apply_routing_keeps_bus_writes_before_missing_timer(self):
+        from validate_dc9_dispatch_apply import fixture, route_bus_writes, EXPECTED_ROUTE_WRITES
+        memory = fixture(self.expanded, timer=False)
+        with self.assertRaisesRegex(ValueError, r'Unmapped memory access: 0x455204\+2'):
+            self.model.run(0x23fad0, memory, regs(), max_steps=100000)
+        self.assertEqual(route_bus_writes(memory), EXPECTED_ROUTE_WRITES)
+        self.assertEqual(peek(memory, 0x4551a8, 2), 0)
+        self.assertEqual(peek(memory, 0xa0203034), 0)
 
     def test_full_apply_flagged_final_channel_requires_its_service(self):
         memory = apply_fixture(self.expanded)

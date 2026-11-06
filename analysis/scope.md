@@ -346,7 +346,7 @@ behavior or flash safety was demonstrated. See the
 [workspace summary](community-channel-storage-workspace.json), and
 [validation run](extracted/firmware-validation-channel-storage-2026-10-30/).
 
-The 2026-10-30 channel-assignment milestone adds three byte-exact routines
+The historical 2026-10-30 channel-assignment milestone adds three byte-exact routines
 (144 instructions / 433 code bytes): `0x22701c..0x227145` (97 / 297),
 `0x222ce8..0x222d32` (25 / 74), and `0x220c76..0x220cb4` (22 / 62). The
 overlay contains 167 components / 9,339 instructions / 28,780 code bytes, plus
@@ -371,3 +371,33 @@ No active full apply, hardware behavior, or flash qualification is established.
 
 See the [channel-assignment report](2026-10-30_reverse-dc9-channel-assignment-report.md),
 [workspace summary](community-channel-assignment-workspace.json), and [validation run](extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
+
+
+## 2026-11-04 channel-dispatch milestone
+
+Three byte-exact routines were reconstructed at `0x21ddcf..0x21de65`,
+`0x21bfca..0x21c024`, and `0x226bb5..0x226cd6`, adding 178 instructions /
+529 bytes. The overlay now contains 170 components / 9,517 instructions /
+29,309 code bytes and 12 tables / 911 bytes. Code-byte coverage is 1.208%
+(about 1.21%) of the 2,426,560-byte expanded application; this remains a
+coverage proxy, not source completeness or product readiness.
+
+Integrated validation has eight conditional cases across four active positions
+and two store policies. Inputs explicitly map logical bus words at
+`0xfff01f8d` and `0xfff02e02`, and a four-byte wait at `0x455204`. Full apply
+reaches `0x2420b2` after 35,459 modeled instructions plus nine instructions per channel, then stops before its first flag poll. The older assignment
+fixture faulted at `0xa0e03e00` without the bus setup; a separate fixture without
+the timer mapping faults at `0x455204`. Routing and engine control return
+before delay arming. Timer bytes are preserved literally as `02000100` / lane
+`0200013c`; no tick or completion event is inferred. Isolated validation passed
+five strict cases (including one expected store rejection) and 86 conditional
+cases; integrated validation passed eight conditional cases. The full offline
+gate finished 2026-11-05 UTC: all stages and 229 tests passed with zero
+failures, errors, or skips. It verified 255 run-artifact hashes and 310 source
+identities, with 209 base workspace artifacts plus two USB images. Preservation checks found 414 snapshot files, retained 18 prior workspaces, and preserved 49 BIN files. No hardware behavior is established.
+
+See the [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md),
+[workspace summary](community-channel-dispatch-workspace.json), and generated
+[workspace](extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
+The earlier channel-assignment report and its 222-test gate are historical and
+do not validate this dispatch milestone.

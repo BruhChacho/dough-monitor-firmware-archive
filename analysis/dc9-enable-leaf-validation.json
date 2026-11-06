@@ -1,7 +1,7 @@
 {
   "status": "bounded instruction-model returns against pinned firmware; hardware untested",
   "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
-  "source_layout_sha256": "c2799c85356df743d4e3f856e6a5c16ec76e9a94dd295258e238d1b776ec6f6c",
+  "source_layout_sha256": "0bb61e0b364668a9b00d9e91bd12a925eea2a1cc9a330389c181354a9d03629e",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",

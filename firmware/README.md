@@ -2,27 +2,28 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The current source overlay contains **167 components, 9,339 instructions /
-28,780 code bytes**, plus **12 tables / 911 bytes**. Coverage is **1.186%
-(about 1.19%)** of the expanded application; most application bytes remain
+build. The current source overlay contains **170 components, 9,517 instructions /
+29,309 code bytes**, plus **12 tables / 911 bytes**. Coverage is **1.208%
+(about 1.21%)** of the expanded application; most application bytes remain
 precompiled vendor input.
 
-The 2026-10-30 channel-assignment milestone adds three byte-exact routines
-(144 instructions / 433 bytes): `0x22701c..0x227145`, `0x222ce8..0x222d32`,
-and `0x220c76..0x220cb4`. Isolated validation reports 24 strict cases,
-seven new regressions, with 96/97 assignment, 25/25 state, and 11/22 dispatch
-instructions visited. Integrated validation covers eight conditional cases
-across four active positions and both store policies. With explicit read-only
-zero input at `0x45508c`, the active fixture reaches `0x220c95` after 34,459
-modeled instructions plus nine per channel, before unrecovered `0x21ddcf`; the
-earlier fixture without that mapping faults at `0x45508c+1`. The combined
-offline gate passed all stages and 222 tests with no failures, errors, or skips,
-producing all three BINs. This does not establish active full apply or hardware
-behavior. See the [assignment report](../analysis/2026-10-30_reverse-dc9-channel-assignment-report.md),
-[workspace summary](../analysis/community-channel-assignment-workspace.json), and
-[validation run](../analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
+The 2026-11-04 channel-dispatch milestone adds three byte-exact routines
+(178 instructions / 529 bytes): route `0x21ddcf..0x21de65`, selector
+`0x21bfca..0x21c024`, and apply `0x226bb5..0x226cd6`. Integrated validation
+currently covers eight conditional cases across four active positions and two
+store policies, with explicit logical bus mappings at `0xfff01f8d` and
+`0xfff02e02` and a four-byte wait mapping at `0x455204`. Full apply stops at
+`0x2420b2`, before its first flag poll, after a 35,459-instruction base plus nine instructions per channel. Isolated validation passed five strict cases (including one expected store rejection) and 86 conditional cases; integrated validation passed eight conditional cases. The offline gate finished 2026-11-05 UTC: 229 tests passed with no failures, errors, or skips. It verified 255 run-artifact hashes and 310 source identities, with 209 base workspace artifacts plus two USB images. Preservation checks found 414 snapshot files, retained 18 prior workspaces, and preserved 49 BIN files. Routing and engine-control return before delay arming. Timer bytes remain literal `02000100` / lane `0200013c`; no tick or completion event is inferred. No hardware behavior is established. See the [dispatch report](../analysis/2026-11-04_reverse-dc9-channel-dispatch-report.md), [workspace summary](../analysis/community-channel-dispatch-workspace.json), and [workspace](../analysis/extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
 
-The 2026-10-30 channel-storage milestone adds four routines (420 instructions /
+The previous channel-assignment milestone and its combined 222-test gate are
+historical. That earlier fixture used a different input setup and stopped before
+`0x21ddcf`; without logical bus mappings it faulted at `0xa0e03e00`, while a
+fixture without timer mapping faults at `0x455204`. Earlier channel-storage
+results are also historical. The percentage is a code-byte coverage proxy;
+fully editable firmware and a hardware-tested community release remain
+unfinished.
+
+The historical 2026-10-30 channel-storage milestone adds four routines (420 instructions /
 1,251 code bytes): `lowestbit` (`0x2402c4..0x2402de`, 26 bytes), channel lookup
 (`0x2250c5..0x2250e8`, 35 bytes), storage (`0x2250e8..0x225416`, 814 bytes), and
 storage-register setup (`0x226100..0x226278`, 376 bytes). The bounded
@@ -33,7 +34,7 @@ conditional cases; storage-register validation covers 12 conditional cases and
 one strict ambiguous-store rejection, visiting all 118 instructions. This is not
 hardware proof. The combined offline gate passed all stages and 214 repository
 tests with no failures, errors, or skips, and produced all three BINs. The
-202-test engine-mode gate is a historical result. At the channel-storage checkpoint, active full apply stopped at `0x22701c`, positive-area storage stopped at `0x2aacb9`, and the final flagged-channel path needed `0x22eb07`. The newer assignment fixture reaches `0x220c95` but still does not complete active full apply.
+202-test engine-mode gate is a historical result. At the channel-storage checkpoint, active full apply stopped at `0x22701c`, positive-area storage stopped at `0x2aacb9`, and the final flagged-channel path needed `0x22eb07`. At the later assignment checkpoint, a bounded fixture reached `0x220c95` but did not complete active full apply; that fixture and its gate are historical.
 
 See the [channel-storage report](../analysis/2026-10-30_reverse-dc9-channel-storage-report.md).
 The percentage is a code-byte coverage proxy; fully editable firmware and a
@@ -41,11 +42,8 @@ hardware-tested community release remain unfinished.
 
 ## Open the files
 
-The latest prepared workspace is the
-[channel-assignment workspace](../analysis/extracted/firmware-validation-channel-assignment-2026-10-30/workspace/).
-Its [summary](../analysis/community-channel-assignment-workspace.json) and
-[validation run](../analysis/extracted/firmware-validation-channel-assignment-2026-10-30/)
-record the latest milestone evidence; its combined gate passed 222 tests across all stages. The preceding channel-storage run is a historical snapshot.
+The completed channel-dispatch workspace is at
+[firmware-validation-channel-dispatch-2026-11-04](../analysis/extracted/firmware-validation-channel-dispatch-2026-11-04/). The earlier [channel-assignment workspace](../analysis/extracted/firmware-validation-channel-assignment-2026-10-30/workspace/) and its 222-test combined gate are historical. The preceding channel-storage run is also a historical snapshot.
 The preceding engine-preparation workspace and its passed 185-test gate remain in the
 [historical run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).
 Another earlier workspace is

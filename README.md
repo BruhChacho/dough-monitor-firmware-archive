@@ -46,46 +46,28 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The current DC9 source overlay contains **167 reconstructed
-components: 9,339 instructions / 28,780 code bytes**, plus 12 tables / 911 bytes.
-That is **1.186% (about 1.19%)** of the expanded application. Most application
+guide](firmware/README.md). The current DC9 source overlay contains **170 reconstructed
+components: 9,517 instructions / 29,309 code bytes**, plus 12 tables / 911 bytes.
+That is **1.208% (about 1.21%)** of the expanded application. Most application
 bytes remain precompiled vendor input; fully editable firmware remains the goal.
 
-The 2026-10-30 channel-assignment milestone adds three byte-exact routines
-(144 instructions / 433 bytes): `0x22701c..0x227145`, `0x222ce8..0x222d32`,
-and `0x220c76..0x220cb4`. The isolated checks report 24 strict cases, seven
-new regressions, and 96/97 assignment, 25/25 state, and 11/22 dispatch
-instructions visited. Integrated checks cover eight conditional cases across
-four active positions and both store policies. With explicit read-only zero
-input at `0x45508c`, the active fixture reaches `0x220c95` after 34,459 modeled
-instructions plus nine per channel, then stops before unrecovered `0x21ddcf`.
-The earlier fixture without that mapping faults at `0x45508c+1`. The complete
-offline gate passed all stages and 222 tests with no failures, errors, or skips,
-producing all three BINs. This is not hardware validation or a completed active
-apply. See the [assignment report](analysis/2026-10-30_reverse-dc9-channel-assignment-report.md),
-[workspace summary](analysis/community-channel-assignment-workspace.json), and
-[validation run](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
+The 2026-11-04 channel-dispatch milestone adds three byte-exact routines
+(178 instructions / 529 bytes): route `0x21ddcf..0x21de65`, selector
+`0x21bfca..0x21c024`, and apply `0x226bb5..0x226cd6`. Integrated validation
+currently covers eight conditional cases across four active positions and two
+store policies, using explicit logical bus mappings at `0xfff01f8d` and
+`0xfff02e02` and a four-byte wait mapping at `0x455204`. Full apply stops at
+`0x2420b2`, before its first flag poll, after a 35,459-instruction base plus nine instructions per channel. Isolated validation passed five strict cases (including one expected store rejection) and 86 conditional cases; integrated validation passed eight conditional cases. The offline gate finished 2026-11-05 UTC: 229 tests passed with no failures, errors, or skips. It verified 255 run-artifact hashes and 310 source identities, with 209 base workspace artifacts plus two USB images. Preservation checks found 414 snapshot files, retained 18 prior workspaces, and preserved 49 BIN files. This is not hardware validation. Routing and engine control return before delay arming; timer bytes `02000100` / lane `0200013c` remain literal, with no tick or completion event inferred. See the [dispatch report](analysis/2026-11-04_reverse-dc9-channel-dispatch-report.md), [workspace summary](analysis/community-channel-dispatch-workspace.json), and [workspace](analysis/extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
 
-The 2026-10-30 channel-storage milestone adds four routines (420 instructions /
-1,251 code bytes). Its bounded offline model returns through integrated apply
-for explicit inactive-channel fixtures under both ambiguous-store policies,
-with an explicit wait bypass. Core validation covers 101 strict and four
-conditional cases; storage-register validation covers 12 conditional cases, one
-strict ambiguous-store rejection, and visits all 118 instructions. The
-combined offline gate passed all stages and 214 repository tests, with no
-failures, errors, or skips. It produced all three BINs; hardware remains
-untested. The 202-test engine-mode gate is a historical result. At that milestone, active full apply stopped at `0x22701c`; positive-area storage stopped at `0x2aacb9`, and flagged final channels needed `0x22eb07`. The newer assignment milestone reaches `0x220c95` on its bounded active fixture but still does not complete active full apply. Hardware behavior remains untested.
+The 2026-10-30 channel-assignment milestone and its 222-test combined gate are
+historical. That fixture used an earlier input setup, stopped before
+`0x21ddcf`, and faulted at `0xa0e03e00` without the newly supplied logical bus
+mapping; a separate fixture without the timer mapping faults at `0x455204`.
+See its [report](analysis/2026-10-30_reverse-dc9-channel-assignment-report.md)
+and [historical validation](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
 
-See the [channel-assignment report](analysis/2026-10-30_reverse-dc9-channel-assignment-report.md),
-[latest workspace](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/workspace/),
-[workspace summary](analysis/community-channel-assignment-workspace.json), and
-[validation run](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json). The preceding [channel-storage report](analysis/2026-10-30_reverse-dc9-channel-storage-report.md) and its 214-test gate are historical.
-The engine-mode report and its passed 202-test gate remain historical.
-The preceding engine-preparation milestone passed 185 repository tests and
-remains available as a [historical report](analysis/2026-10-26_reverse-dc9-engine-prepare-report.md).
-The percentage measures recovered code bytes, not
-overall product readiness. Earlier reports and workspaces remain historical
-snapshots.
+The percentage measures recovered code bytes, not overall product readiness.
+Earlier reports and workspaces remain historical snapshots.
 
 The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
 

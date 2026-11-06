@@ -7,7 +7,8 @@ Original vendor source names, comments, headers, and build systems have not
 been recovered.
 
 Start with the [raw files and community build guide](../firmware/README.md),
-the [latest channel-assignment milestone](#channel-assignment-milestone),
+the [channel-dispatch milestone](#channel-dispatch-milestone),
+the historical [channel-assignment milestone](#channel-assignment-milestone),
 the [channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md),
 the [historical engine-mode report](2026-10-29_reverse-dc9-engine-mode-report.md),
 the [validated engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md),
@@ -29,23 +30,46 @@ The [2026-10-20 report](2026-10-20_reverse-spectrum-one-report.md) is historical
 its recompression experiment fails the subsequently recovered main CRC16.
 The corrected baseline and helper rewrite pass offline validation, but neither
 has been booted on a monitor or constitutes a complete firmware source build.
-The current source overlay contains 167 components, 9,339 instructions and
-28,780 code bytes (1.186%, about 1.19% of the expanded application), plus
-12 tables / 911 bytes. Channel-assignment isolated validation reports 24 strict
-and zero conditional cases, seven new regressions, and 96/97 assignment,
-25/25 state-helper, and 11/22 dispatch instructions visited. Integrated
-validation covers eight conditional cases across four active positions and
-two store policies. With explicit read-only zero input at `0x45508c`, the active
-fixture reaches `0x220c95` after 34,459 modeled instructions plus nine per
-channel, before unrecovered `0x21ddcf`. The combined offline gate passed all
-stages and 222 repository tests without failures, errors, or skips, producing
-all three BINs. The earlier inactive fixture still returns; its 214-test gate
-is historical. No active full apply or hardware behavior is established. See
-the [assignment report](2026-10-30_reverse-dc9-channel-assignment-report.md),
-[workspace summary](community-channel-assignment-workspace.json), and
-[validation run](extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
+The current source overlay contains 170 components, 9,517 instructions and
+29,309 code bytes (1.208%, about 1.21% of the expanded application), plus
+12 tables / 911 bytes. The 2026-11-04 channel-dispatch milestone adds three
+byte-exact routines (178 instructions / 529 bytes). Integrated validation
+currently covers eight conditional cases across four active positions and two
+store policies, using explicit logical bus mappings at `0xfff01f8d` and
+`0xfff02e02` plus a four-byte wait mapping at `0x455204`. Full apply stops at
+`0x2420b2`, before its first flag poll, after a 35,459-instruction base plus nine instructions per channel. Isolated validation passed five strict cases (including one expected store rejection) and 86 conditional cases; integrated validation passed eight conditional cases. The offline gate finished 2026-11-05 UTC: 229 tests passed with no failures, errors, or skips. It verified 255 run-artifact hashes and 310 source identities, with 209 base workspace artifacts plus two USB images. Preservation checks found 414 snapshot files, retained 18 prior workspaces, and preserved 49 BIN files. Route and engine-control paths return before delay arming; timer bytes `02000100` / lane `0200013c` remain literal, with no tick or completion event inferred. No hardware behavior is established. See the [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md), [workspace summary](community-channel-dispatch-workspace.json), and [workspace](extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
 
-## Channel-assignment milestone
+The 2026-10-30 channel-assignment report and its combined 222-test gate are
+historical. That earlier fixture stopped before route `0x21ddcf`; without
+logical bus mapping it faults at `0xa0e03e00`, and without timer mapping it
+faults at `0x455204`. The historical result must not be read as validation of
+the current dispatch milestone.
+
+## Channel-dispatch milestone
+
+On 2026-11-04, three exact dispatch routines were reconstructed at
+`0x21ddcf..0x21de65`, `0x21bfca..0x21c024`, and `0x226bb5..0x226cd6`, adding
+178 instructions / 529 bytes. This brings the overlay to 170 components /
+9,517 instructions / 29,309 code bytes and 12 tables / 911 bytes, or 1.208%
+(about 1.21%) of the 2,426,560-byte expanded application. This percentage is a
+coverage proxy, not source completeness or product readiness.
+
+The integrated validation passed eight conditional cases: four active
+positions under two store policies. It explicitly maps logical bus words at
+`0xfff01f8d` / `0xfff02e02` and a four-byte wait at `0x455204`. Full apply
+reaches `0x2420b2` after 35,459 modeled instructions plus nine instructions per channel and stops before the first flag poll. The earlier assignment
+fixture faulted at `0xa0e03e00` without the logical bus setup; a run without the
+timer mapping faults at `0x455204`. Routing and engine-control return before
+delay arming. The observed timer bytes are literal `02000100` and lane
+`0200013c`; no tick or completion event has been invented. Isolated validation
+passed five strict cases (including one expected store rejection) and 86 conditional cases. The full offline gate finished 2026-11-05 UTC with 229 tests passed, zero failures, errors, or skips, and all stages passed. It verified 255 run-artifact hashes and 310 source identities, with 209 base workspace artifacts plus two USB images. Preservation checks found 414 snapshot files, retained 18 prior workspaces, and preserved 49 BIN files. No hardware behavior is established.
+
+See the [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md),
+[workspace summary](community-channel-dispatch-workspace.json), and generated
+[workspace](extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
+
+## Channel-assignment milestone (historical)
+
 
 On 2026-10-30, three byte-exact channel-assignment routines were added:
 `0x22701c..0x227145` (97 instructions / 297 bytes),
@@ -124,10 +148,10 @@ USB update tools and records the remaining HDMI/board-recovery evidence gap.
 
 | Area | Result | Evidence |
 |---|---|---|
-| DC9 channel assignment | Current overlay: 167 components (9,339 instructions / 28,780 bytes), 12 tables / 911 bytes. Three exact routines add 144 instructions / 433 bytes. Active prefix reaches `0x220c95` with explicit read-only zero input, before `0x21ddcf`; integrated eight conditional cases and combined 222-test gate passed | [Milestone details](#channel-assignment-milestone), [source layout](reconstructed/dc9-source-layout.json) |
+| DC9 channel dispatch | Current overlay: 170 components (9,517 instructions / 29,309 bytes), 12 tables / 911 bytes. Three exact routines add 178 instructions / 529 bytes. Gate passed 229 tests; isolated validation has 5 strict (including 1 expected rejection) and 86 conditional cases, integrated validation has 8 conditional cases; stops at `0x2420b2` before first flag poll. Gate verified 255 run-artifact hashes and 310 source identities; workspace has 209 base artifacts plus two USB images | [Milestone details](#channel-dispatch-milestone), [source layout](reconstructed/dc9-source-layout.json) |
 | DC9 channel storage | Historical overlay before channel assignment: 164 components (9,195 instructions / 28,347 bytes), 12 tables / 911 bytes. Four routines added; inactive integrated apply returns under explicit fixture and store hypotheses; combined gate passed 214 tests with no failures, errors, or skips; all stages and three BIN builds passed | [Channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md), [validation run](extracted/firmware-validation-channel-storage-2026-10-30/), [workspace](extracted/firmware-validation-channel-storage-2026-10-30/workspace/), [summary](community-channel-storage-workspace.json) |
 | Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source and separate USB images; engine-preparation gate passed 185 tests | [Build guide](../firmware/README.md), [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md), [historical workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/), [workspace summary](community-engine-prepare-workspace.json) |
-| DC9 partial source baseline | Current overlay: 167 components (28,780 code bytes; 9,339 instructions), 12 tables (911 bytes); byte-identical stock BIN retained | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md) |
+| DC9 partial source baseline | Current overlay: 170 components (29,309 code bytes; 9,517 instructions), 12 tables (911 bytes); byte-identical stock BIN retained. Dispatch milestone gate passed 229 tests | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md) |
 | DC9 layout configuration | Historical configuration milestone: 98 repository tests; 542 strict and 492 conditional cases; six layouts; six expanded bytes changed in rectangle example | [Configuration section](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-configuration-2026-10-23/validation.json) |
 | DC9 apply guards | 102 tests passed; 2,965 strict apply cases using explicitly supplied continuation states; full apply not executed | [Configuration and apply report](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-apply-2026-10-24/validation.json), [apply summary](community-apply-workspace.json) |
 | DC9 metadata routing and masked-register paths | Historical 79-component gate passed 115 tests; 2,433 strict and 290 conditional metadata cases; 32 default masked-store rejections and 64 conditional cases across two policies | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-2026-10-24/validation.json), [routing summary](community-metadata-routing-workspace.json) |
