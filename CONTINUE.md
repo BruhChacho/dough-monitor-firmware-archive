@@ -3,7 +3,84 @@
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new
 Codex chat continue without the previous conversation.
 
-## Latest continuation: channel routing and dispatch delay
+## Latest continuation: larger active-path coding batch
+
+Updated 2026-11-06 (America/New_York). Continue toward **100% editable
+application**, with cheaper coding agents and parent review. User explicitly
+prefers larger source batches, focused checks while coding, and full validation
+at publication checkpoints. Avoid repeated broad tests and lengthy duplicate
+documentation. Always report editable-byte coverage, never invent product
+readiness. No hardware access or flashing occurred.
+
+Started at published `e295a65`; the previous 229-test dispatch checkpoint and
+READMEs were pushed to the existing review branch / draft PR#1. Current source
+adds **12 routines,821 instructions /2,388 bytes**, plus2tables/292bytes:
+**182 components,10,338 instructions /31,697 code bytes**,14tables/1,203bytes,
+**1.306% (about1.31%)** of2,426,560 application bytes. Parent verified all prior
+170 routine records and12 tables unchanged and the complete source overlay
+byte-exact. Immutable starting snapshot contains425 saved files at
+`analysis/scratch/dispatch-selection-before-2026-11-06/`; never overlay it.
+
+Read `analysis/2026-11-06_reverse-dc9-active-path-report.md`, current READMEs,
+and `analysis/community-active-path-workspace.json`. Publication gate completed
+2026-11-07 UTC (user date 2026-11-06 America/Los_Angeles): 39 stages, 231 tests,
+zero failures/errors/skips; 271 run-artifact hashes and 329 source identities;
+221 base workspace artifacts plus two USB images. Preservation verified 425
+saved files, 20 prior workspaces and 55 BINs. Three
+new generators recover dispatch selection/parity helpers, wide arithmetic and
+active engine configuration. Parent corrected a proposed merged306-byte
+selector span into four routines and corrected mask02 versus stride7c. No
+prior reconstructed source was replaced.
+
+- Selection reads21be27..21be98 and metadata writer21dcee..21dd76 plus the
+  9-pointer table2af5b8..2af5dc. Four helpers at21be98/21bece/21bf19/21bf85
+  apply masks02/01/30/18 respectively. All end at existing21bfca.
+- Modulo64 multiply2aacb9..2aad0b, signed64 compare2aad0b..2aad27 and
+  unsigned64 divide2ab331..2ab6d2 pass1,908 Python-integer comparisons.
+  Table33b628..33b728 equals bit_length(0..255). Newbn.srl supports counts<32;
+  >=32 and division by zero reject. Newbg.blesi uses signed5-bit immediate and
+  signed comparison, checked against three archived instructions and SLEIGH.
+- Existing storage2250e8 now RETURNS for one positive-area active channel in
+  36cases (fourpositions x threedimensions x threemasks). Two realmultiply/divide
+  calls apportion420 units to each of two banks; six active fields change,
+  inactive records clear and third-bank bytes stay unchanged. Multiple-active
+  arithmetic and full hardware behavior are still unproven.
+- Explicit TickOnPoll executes recovered timer prefix onpolls, with separate
+  stack710000, reload3b4948=e803a55a and callback-enable4551e1=0. Fourliteral
+  or eightlane ticks complete two metadata-key5 writes (values1 then0).
+  Stable selection-prefix checkpoint is22169e beforecall21fb61, mainsteps
+  47169/47177. No forcedflagclear, fabricatedservice or physicalclockclaim.
+- Active engine21fb61..21fe2c(249inst715B), defaultvalue21fb2b..21fb61
+  (19/54), highestbit2402ab..2402c4(10/25) are now source. Defaultvalue reads
+  engine-one modebyte47fb25; mode5 needs21fac9, otherwise returns120.
+  The old engine fixture now fails onmissing343c16+2 afterretainingmodewrite.
+  Activevalidator44strict+2conditionalcases: literal fullapply returnsr3=1 in
+  49,389 mainsteps/fourticks but its globaldimensionef080000 causedearlyengine
+  return; NOT completeactiveengineproof. Lane preservesef08a013 and stops21fcc9
+  before2aae3d in64,013steps/eightticks withr3/r4=[0,405]. Bothfixtures explicitly
+  mapbitlengthtable andreadonly454824=5a (syntheticinput). No floatservice stub.
+
+Next source cluster (read-only candidate scouting; NOTcounted):2aae3d..2aaee6
+169B/59inst calls2acf9e..2ad047(169/58),2acae4..2acd5b(631/224),
+2aca43..2aca8e(75/26),2ad165..2ad1b7(82/27). Transitive helpers include
+2ac55d..2ac756(505/177),2ac756..2ac837(225/78),2ac837..2aca43(524/183),
+2ac268..2ac288(32/11),2aba8f..2abba0(273/94). These boundaries are agent
+candidates; parent must review. Main challenges are unresolved carry/borrow
+bn.subb/bn.addc, bn.jal, bn.sfne/bn.sfeq and decoder-onlybg.addci_maybe/bg.bles.
+Existingbn.subb explicitlyrejects; do not silently inventcarrybehavior. Some
+leafhelpers useexistingforms and canbe recovered inparallelwithISA research.
+
+The initial publication run omitted the four central-registry stages; after
+correcting the runner, the full gate passed in a fresh output directory. The
+first run remains preserved. Next focus: bulk byte-exact CFG source discovery
+alongside carry/borrow research; new generator files under active development
+are not included in this frozen checkpoint. User preference: use larger source
+batches, focused coding checks, and cheaper agents where useful; Astra only as
+manager.
+Goal status last reported usageLimited; manual continuation remains authorized.
+Private recovery context stays ignored. Existing snapshots/BINs stay intact.
+
+## Previous continuation: channel routing and dispatch delay
 
 Gate completed 2026-11-05 UTC; preservation review 2026-11-06 (America/New_York). Continue toward **100% editable
 application**, using cheaper agents with parent review. Always report editable

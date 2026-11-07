@@ -42,10 +42,10 @@ class ChannelStorageTests(unittest.TestCase):
         self.assertEqual([w for w in memory.writes if w[0] != 'stack'],
                          [('head', RECORDS+0x1c, 2, 10)])
 
-    def test_positive_area_does_not_stub_arithmetic_service(self):
+    def test_positive_area_requires_explicit_division_lookup(self):
         memory = record_fixture(2, 1920, 1080)
         old = bytes(named(memory, 'records').data)
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x2aacb9'):
+        with self.assertRaisesRegex(ValueError, r'Unmapped memory access: 0x33b647\+1'):
             self.strict.run(0x2250e8, memory, regs())
         self.assertEqual([w for w in memory.writes if w[0] != 'stack'], expected_clears(2))
         self.assertEqual(bytes(named(memory, 'records').data[2*168:]), old[2*168:])

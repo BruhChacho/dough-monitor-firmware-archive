@@ -9,6 +9,7 @@ from validate_dc9_module import initial_registers
 
 
 ARCHIVED = {
+    0x2ab35c: (bytes.fromhex('4cf83d'), 'bn.srl', ['r7', 'r24', 'r7']),
     0x23412d: (bytes.fromhex('4ced56'), 'bn.sra', ['r7', 'r13', 'r10']),
     0x23413d: (bytes.fromhex('4ce756'), 'bn.sra', ['r7', 'r7', 'r10']),
     0x234194: (bytes.fromhex('4cec56'), 'bn.sra', ['r7', 'r12', 'r10']),
@@ -70,6 +71,21 @@ class ArithmeticShiftTests(unittest.TestCase):
             with self.subTest(count=hex(count)), self.assertRaisesRegex(
                     ValueError, 'Unresolved variable shift count >=32'):
                 model.run(0x200000, Memory([]), regs)
+
+    def test_logical_shift_boundaries_aliases_and_rejected_large_counts(self):
+        # High-bit values distinguish logical shift from signed shift. Both
+        # operand aliases must be read before writing the destination.
+        for destination in ('r3', 'r4', 'r5'):
+            model = model_for(f'bn.srl {destination},r4,r5\nbt.jr r9')
+            for source, count in ((0x80000000, 0), (0x80000000, 1),
+                                  (0xffffffff, 31), (0x81234567, 16)):
+                registers = initial_registers(); registers[4:6] = [source, count]
+                result = model.run(0x200000, Memory([]), registers)
+                self.assertEqual(result['registers'][int(destination[1:])], source >> count)
+            for count in (32, 0xffffffff):
+                registers = initial_registers(); registers[4:6] = [0x80000000, count]
+                with self.assertRaisesRegex(ValueError, 'Unresolved variable shift count >=32'):
+                    model.run(0x200000, Memory([]), registers)
 
 
 if __name__ == '__main__':

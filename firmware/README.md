@@ -2,12 +2,20 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The current source overlay contains **170 components, 9,517 instructions /
-29,309 code bytes**, plus **12 tables / 911 bytes**. Coverage is **1.208%
-(about 1.21%)** of the expanded application; most application bytes remain
-precompiled vendor input.
+build. The current source overlay contains **182 components, 10,338 instructions /
+31,697 code bytes**, plus **14 tables / 1,203 bytes**. Coverage is **1.306% (about 1.31%)**
+of the expanded application; most application bytes remain precompiled vendor
+input.
 
-The 2026-11-04 channel-dispatch milestone adds three byte-exact routines
+The 2026-11-06 batch adds twelve routines (821 instructions / 2,388 bytes)
+and two tables (292 bytes). Recovered selectors, timer paths and wide arithmetic
+now let single-active-channel storage return. Full apply returns under literal
+stores only after a dimension is cleared and engine setup takes an early return;
+the lane-store model reaches an unrecovered conversion routine. Neither proves
+working hardware. The combined offline gate completed 2026-11-07 UTC: all 39 stages passed and 231 tests passed with zero failures, errors, or skips. It verified 271 run-artifact hashes and 329 source identities, including 221 base-workspace artifacts plus two USB images. Preservation checks verified 425 saved snapshot files, retained 20 prior workspaces, and preserved 55 BIN files. All three BIN hashes remain unchanged. This is not hardware validation. See the [batch report](../analysis/2026-11-06_reverse-dc9-active-path-report.md)
+and [source layout](../analysis/reconstructed/dc9-source-layout.json).
+
+The historical 2026-11-04 channel-dispatch milestone adds three byte-exact routines
 (178 instructions / 529 bytes): route `0x21ddcf..0x21de65`, selector
 `0x21bfca..0x21c024`, and apply `0x226bb5..0x226cd6`. Integrated validation
 currently covers eight conditional cases across four active positions and two
@@ -42,7 +50,11 @@ hardware-tested community release remain unfinished.
 
 ## Open the files
 
-The completed channel-dispatch workspace is at
+The latest workspace is being built in
+[firmware-validation-active-path-2026-11-06-complete/workspace](../analysis/extracted/firmware-validation-active-path-2026-11-06-complete/workspace/).
+
+
+The previous channel-dispatch workspace is at
 [firmware-validation-channel-dispatch-2026-11-04](../analysis/extracted/firmware-validation-channel-dispatch-2026-11-04/). The earlier [channel-assignment workspace](../analysis/extracted/firmware-validation-channel-assignment-2026-10-30/workspace/) and its 222-test combined gate are historical. The preceding channel-storage run is also a historical snapshot.
 The preceding engine-preparation workspace and its passed 185-test gate remain in the
 [historical run](../analysis/extracted/firmware-validation-engine-prepare-2026-10-26/).

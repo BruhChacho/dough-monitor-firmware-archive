@@ -53,6 +53,10 @@ SIZES.update({'bg.bgts': 4, 'bn.cmovi': 3, 'bn.sfgtu': 3,
               'bn.sfleu': 3, 'bn.srai': 3, 'bn.subb': 3})
 ARITY.update({'bg.bgts': 3, 'bn.cmovi': 3, 'bn.sfgtu': 2,
               'bn.sfleu': 2, 'bn.srai': 3, 'bn.subb': 3})
+SIZES['bg.blesi'] = 4
+ARITY['bg.blesi'] = 3
+SIZES.update({'bn.srl': 3})
+ARITY.update({'bn.srl': 3})
 
 
 def immediate(value, bits, signed=False):
@@ -90,10 +94,12 @@ def encode(op, args, pc, labels):
         word = (0xd4000000 | register(args[0]) << 21 | register(args[1]) << 16
                 | immediate(target(args[2]) - pc, 13, True) << 3
                 | {"bg.beq": 2, "bg.bne": 6, "bg.ble": 1, "bg.bgt": 5, "bg.bgts": 4}[op])
-    elif op in ("bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui"):
-        word = (0xd0000000 | register(args[0]) << 21 | immediate(int(args[1], 0), 5) << 16
+    elif op in ("bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bg.blesi"):
+        word = (0xd0000000 | register(args[0]) << 21
+                | immediate(int(args[1], 0), 5, op == "bg.blesi") << 16
                 | immediate(target(args[2]) - pc, 13, True) << 3
-                | {"bg.beqi": 2, "bg.bnei": 6, "bg.bleui": 1, "bg.bgtui": 5}[op])
+                | {"bg.beqi": 2, "bg.bnei": 6, "bg.bleui": 1,
+                   "bg.bgtui": 5, "bg.blesi": 0}[op])
     elif op == "bt.j":
         word = 0x9000 | immediate(target(args[0]) - pc, 10, True)
     elif op == "bn.j":
@@ -149,6 +155,8 @@ def encode(op, args, pc, labels):
         word = 0x4c0004 | register(args[0]) << 13 | register(args[1]) << 8 | register(args[2]) << 3
     elif op == 'bn.sra':
         word = 0x4c0006 | register(args[0]) << 13 | register(args[1]) << 8 | register(args[2]) << 3
+    elif op == 'bn.srl':
+        word = 0x4c0005 | register(args[0]) << 13 | register(args[1]) << 8 | register(args[2]) << 3
     elif op == 'bn.ff1':
         word = 0x5c0008 | register(args[0]) << 13 | register(args[1]) << 8
     elif op in ("bn.slli", "bn.srli", "bn.srai"):

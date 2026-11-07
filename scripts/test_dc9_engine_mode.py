@@ -31,9 +31,9 @@ class EngineModeTests(unittest.TestCase):
         self.assertEqual([w for w in memory.writes if w[0] != 'stack'],
                          [('engines', ENGINES+2*124+0xd, 1, 4)] * 2)
 
-    def test_active_engine_one_does_not_stub_missing_service(self):
+    def test_active_engine_one_requires_explicit_dimensions(self):
         memory = fixture(1)
-        with self.assertRaisesRegex(ValueError, 'Outside modeled instruction boundaries: 0x21fb61'):
+        with self.assertRaisesRegex(ValueError, r'Unmapped memory access: 0x343c16\+2'):
             self.model.run(ENTRY, memory, regs(0, 1))
         self.assertEqual(peek(memory, ENGINES+124+0xd), 0)
         self.assertFalse([w for w in memory.writes if w[0].startswith('bus_')])

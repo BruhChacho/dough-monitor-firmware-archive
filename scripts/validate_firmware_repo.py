@@ -146,6 +146,10 @@ def run(destination):
         from validate_dc9_assignment_apply import validate as validate_assignment_apply
         from validate_dc9_channel_dispatch import validate as validate_channel_dispatch
         from validate_dc9_dispatch_apply import validate as validate_dispatch_apply
+        from validate_dc9_dispatch_selection import validate as validate_dispatch_selection
+        from validate_dc9_dispatch_leaves import validate as validate_dispatch_leaves
+        from validate_dc9_wide_arithmetic import validate as validate_wide_arithmetic
+        from validate_dc9_active_engine import validate as validate_active_engine
         original, _, _ = load_original()
         stage('helper-rewrite', lambda: validate_rewrite(original)[1])
         for name, validator in (('commands', validate_commands), ('registers', validate_registers),
@@ -163,7 +167,9 @@ def run(destination):
                                 ('engine-mode-leaves', validate_engine_mode_leaves),
                                 ('channel-storage', validate_channel_storage), ('storage-registers', validate_storage_registers),
                                 ('channel-assignment', validate_channel_assignment), ('assignment-apply', validate_assignment_apply),
-                                ('channel-dispatch', validate_channel_dispatch), ('dispatch-apply', validate_dispatch_apply)):
+                                ('channel-dispatch', validate_channel_dispatch), ('dispatch-apply', validate_dispatch_apply),
+                                ('dispatch-selection', validate_dispatch_selection), ('dispatch-leaves', validate_dispatch_leaves),
+                                ('wide-arithmetic', validate_wide_arithmetic), ('active-engine', validate_active_engine)):
             stage(name, validator)
 
         print('Preparing raw files and building baseline, helper and layout images...', flush=True)

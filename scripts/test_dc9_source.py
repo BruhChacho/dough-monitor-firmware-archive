@@ -19,8 +19,8 @@ class SourceBuildTests(unittest.TestCase):
     def test_all_reconstructed_routines_match_archived_machine_code(self):
         result, records = assemble_routines(self.expanded, self.layout)
         self.assertEqual(result, self.expanded)
-        self.assertEqual(sum(r["size"] for r in records), 29309)
-        self.assertEqual(len(records), 170)
+        self.assertEqual(sum(r["size"] for r in records), 31697)
+        self.assertEqual(len(records), 182)
 
     def changed_source(self, source):
         with tempfile.TemporaryDirectory(dir=ROOT / "analysis/reconstructed") as folder:

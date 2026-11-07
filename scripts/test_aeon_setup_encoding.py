@@ -12,6 +12,9 @@ ARCHIVED = {
     0x220b7e: (bytes.fromhex("5cfff9"), "bn.sfgtsi", ["r7", "-0x1"]),
     0x220b81: (bytes.fromhex("48e00a"), "bn.cmovsi_2", ["r7", "r0", "0x1"]),
     0x220bf5: (bytes.fromhex("d061f601"), "bg.bleui", ["r3", "0x1", "0x220ab5"]),
+    0x21fbea: (bytes.fromhex("d0e20d20"), "bg.blesi", ["r7", "0x2", "0x21fd8e"]),
+    0x21fcc1: (bytes.fromhex("d0600a30"), "bg.blesi", ["r3", "0x0", "0x21fe07"]),
+    0x21fcf5: (bytes.fromhex("d0600778"), "bg.blesi", ["r3", "0x0", "0x21fde4"]),
 }
 
 
@@ -91,6 +94,24 @@ bt.jr r9
             regs = initial_registers(); regs[3] = value
             result = model.run(0x200000, Memory([]), regs)
             self.assertEqual(result["registers"][4], expected)
+
+    def test_signed_long_branch_semantics_and_bounds(self):
+        source = """bg.blesi r3,2,yes
+bt.movi r4,1
+bt.j end
+yes:
+bt.movi r4,2
+end:
+bt.jr r9
+"""
+        code, _ = assemble(source, 0x200000)
+        model = ModuleModel([(0x200000, code)], call_policy="fallthrough-hypothesis")
+        for value, expected in ((0xffffffff, 2), (0, 2), (2, 2), (3, 1)):
+            regs = initial_registers(); regs[3] = value
+            self.assertEqual(model.run(0x200000, Memory([]), regs)["registers"][4], expected)
+        for immediate in (-17, 16):
+            with self.assertRaises(ValueError):
+                encode('bg.blesi', ['r3', str(immediate), '0x200004'], 0x200000, {})
 
 
 if __name__ == "__main__":

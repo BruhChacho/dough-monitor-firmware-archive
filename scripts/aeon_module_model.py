@@ -208,6 +208,11 @@ class ModuleModel:
                 if count >= 32:
                     raise ValueError('Unresolved variable shift count >=32')
                 put(a[0], signed(x) >> count)
+            elif op == 'bn.srl':
+                x, count = value(a[1]), value(a[2])
+                if count >= 32:
+                    raise ValueError('Unresolved variable shift count >=32')
+                put(a[0], x >> count)
             elif op in ("bn.extbz", "bn.exthz"):
                 put(a[0], value(a[1]) & (0xff if op == "bn.extbz" else 0xffff))
             elif op == 'bn.extbs':
@@ -253,12 +258,12 @@ class ModuleModel:
                     raise ValueError("Read of uninitialized flag")
                 if flag == (op == "bn.bf"):
                     next_pc = imm(a[0])
-            elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts", "bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bn.beqi", "bn.bnei", "bn.blesi", "bn.bgtui", "bn.bleui"):
+            elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts", "bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bg.blesi", "bn.beqi", "bn.bnei", "bn.blesi", "bn.bgtui", "bn.bleui"):
                 x = value(a[0])
                 y = value(a[1]) if op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts") else imm(a[1])
                 take = (x == y if op in ("bg.beq", "bg.beqi", "bn.beqi") else
                         x != y if op in ("bg.bne", "bg.bnei", "bn.bnei") else
-                        signed(x) <= y if op == "bn.blesi" else
+                        signed(x) <= y if op in ("bn.blesi", "bg.blesi") else
                         signed(x) > signed(y) if op == "bg.bgts" else
                         x <= y if op in ("bg.ble", "bg.bleui", "bn.bleui") else x > y)
                 if take:

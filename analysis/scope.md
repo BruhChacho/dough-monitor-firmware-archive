@@ -375,9 +375,9 @@ See the [channel-assignment report](2026-10-30_reverse-dc9-channel-assignment-re
 
 ## 2026-11-04 channel-dispatch milestone
 
-Three byte-exact routines were reconstructed at `0x21ddcf..0x21de65`,
+At the historical 2026-11-04 checkpoint, three byte-exact routines were reconstructed at `0x21ddcf..0x21de65`,
 `0x21bfca..0x21c024`, and `0x226bb5..0x226cd6`, adding 178 instructions /
-529 bytes. The overlay now contains 170 components / 9,517 instructions /
+529 bytes. At that checkpoint the overlay contained 170 components / 9,517 instructions /
 29,309 code bytes and 12 tables / 911 bytes. Code-byte coverage is 1.208%
 (about 1.21%) of the 2,426,560-byte expanded application; this remains a
 coverage proxy, not source completeness or product readiness.
@@ -401,3 +401,18 @@ See the [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md),
 [workspace](extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
 The earlier channel-assignment report and its 222-test gate are historical and
 do not validate this dispatch milestone.
+
+## 2026-11-06 active-path batch
+
+Twelve routines / 2,388 bytes and two tables / 292 bytes bring the overlay to
+182 components / 10,338 instructions / 31,697 code bytes, plus 14 tables /
+1,203 bytes: 1.306% (about 1.31%) code-byte coverage. Selector, timer, wide
+arithmetic and active-engine source is editable. Single-active-channel storage
+returns. The full-apply return under literal stores relies on clearing a
+dimension and taking an early engine exit; lane stores reach unrecovered
+conversion code. No hardware behavior is established. The combined gate completed
+2026-11-07 UTC: all 39 stages and 231 tests passed with zero failures, errors, or
+skips. It verified 271 run-artifact hashes and 329 source identities (221 base
+workspace artifacts plus two USB images); preservation verified 425 saved
+snapshot files, 20 prior workspaces and 55 BIN files. All three BIN hashes remain
+unchanged. See the [active-path report](2026-11-06_reverse-dc9-active-path-report.md).

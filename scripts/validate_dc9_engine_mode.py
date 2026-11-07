@@ -139,7 +139,7 @@ def validate():
             'visited_instruction_count': len(visited),
             'new_main_instructions_visited': sum(ENTRY <= pc < 0x222634 for pc in visited),
             'limitations': ['Plain bus, explicit memory and CPU/store/CALL hypotheses only.',
-                            'Full apply uses inactive engine states; active engine-one configuration still stops before 0x21fb61.',
+                            'This fixture uses inactive engine states; active engine-one behavior is checked separately.',
                             'bn.subb remains rejected; most engine-mode paths are not executed.'],
             'tools_sha256': {n: sha((ROOT/'scripts'/n).read_bytes()) for n in
                              ('validate_dc9_engine_mode.py', 'aeon_module_model.py', 'aeon_subset_assembler.py')}}

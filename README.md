@@ -46,12 +46,20 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 ## Reverse engineering
 
 For community firmware development, start with the [raw files and source-build
-guide](firmware/README.md). The current DC9 source overlay contains **170 reconstructed
-components: 9,517 instructions / 29,309 code bytes**, plus 12 tables / 911 bytes.
-That is **1.208% (about 1.21%)** of the expanded application. Most application
-bytes remain precompiled vendor input; fully editable firmware remains the goal.
+guide](firmware/README.md). The current DC9 source overlay contains **182
+components, 10,338 instructions / 31,697 code bytes**, plus **14 tables / 1,203
+bytes**. Code-byte coverage is **1.306% (about 1.31%)** of the expanded application; most
+application bytes remain precompiled vendor input.
 
-The 2026-11-04 channel-dispatch milestone adds three byte-exact routines
+The 2026-11-06 batch adds twelve routines (821 instructions / 2,388 bytes)
+and two tables (292 bytes). Recovered selectors, timer paths and wide arithmetic
+now let single-active-channel storage return. Full apply returns under literal
+stores only after a dimension is cleared and engine setup takes an early return;
+the lane-store model reaches an unrecovered conversion routine. Neither proves
+working hardware. The combined offline gate completed 2026-11-07 UTC: all 39 stages passed and 231 tests passed with zero failures, errors, or skips. It verified 271 run-artifact hashes and 329 source identities, including 221 base-workspace artifacts plus two USB images. Preservation checks verified 425 saved snapshot files, retained 20 prior workspaces, and preserved 55 BIN files. All three BIN hashes remain unchanged. This is not hardware validation. See the [batch report](analysis/2026-11-06_reverse-dc9-active-path-report.md)
+and [source layout](analysis/reconstructed/dc9-source-layout.json).
+
+The historical 2026-11-04 channel-dispatch milestone adds three byte-exact routines
 (178 instructions / 529 bytes): route `0x21ddcf..0x21de65`, selector
 `0x21bfca..0x21c024`, and apply `0x226bb5..0x226cd6`. Integrated validation
 currently covers eight conditional cases across four active positions and two
