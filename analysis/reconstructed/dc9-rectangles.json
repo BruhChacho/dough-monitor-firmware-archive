@@ -1,0 +1,163 @@
+{
+  "format": "dc9-rectangles-v1",
+  "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "provenance": "Firmware-derived data; excluded from repository MIT grant. Field meanings inferred; hardware untested.",
+  "modes": [
+    [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 2160
+      },
+      {
+        "x": 1920,
+        "y": 0,
+        "width": 1920,
+        "height": 2160
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 3840,
+        "height": 1080
+      },
+      {
+        "x": 0,
+        "y": 1080,
+        "width": 3840,
+        "height": 1080
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 2160
+      },
+      {
+        "x": 1920,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "x": 1920,
+        "y": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "x": 1920,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "x": 0,
+        "y": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "x": 1920,
+        "y": 1080,
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  ]
+}

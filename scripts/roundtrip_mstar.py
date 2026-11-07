@@ -9,7 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from mstar_checksums import update_crc32
+from mstar_checksums import update_checksums
 from mstar_resources import resources
 from unpack_mstar import unpack
 
@@ -44,7 +44,7 @@ def split(data):
                         "sha256": sha(parts[name])})
     manifest = {"format": "spectrum-one-lossless-v1", "source_sha256": sha(data),
                 "source_size": len(data), "parts": records, "resources": directory,
-                "limitation": "Preserves encoded program; meaning of final two main-trailer bytes unresolved"}
+                "limitation": "No-change component reconstruction only; not hardware-validated"}
     return manifest, parts
 
 
@@ -70,8 +70,8 @@ def assemble(manifest, parts):
     _, layout = unpack(result)
     start, end = int(layout["segment_start"], 16), int(layout["segment_end_exclusive"], 16)
     resources(result, end)
-    # Recalculate, rather than simply copy, both independently recovered CRC32s.
-    rebuilt = update_crc32(result, start, end)
+    # Recalculate the main CRC16 and both CRC32s in dependency order.
+    rebuilt = update_checksums(result, start, end)
     if sha(rebuilt) != manifest["source_sha256"]:
         raise ValueError("Checksum regeneration changed source identity")
     return rebuilt
@@ -114,9 +114,12 @@ def verify_corpus():
         rebuilt = assemble(manifest, parts)
         if rebuilt != raw:
             raise ValueError("Roundtrip was not byte-exact")
+        _, verified = unpack(rebuilt)
         results.append({"source_path": layout["source_path"],
                         "source_sha256": sha(raw), "rebuilt_sha256": sha(rebuilt),
                         "byte_exact": True, "component_count": len(parts),
+                        "regenerated_checksums": ["main_crc16", "segment_crc32", "whole_file_crc32"],
+                        "checksums": verified["checksums"],
                         "resources": manifest["resources"]})
     (ROOT / "analysis/mstar-roundtrips.json").write_text(json.dumps(results, indent=2) + "\n")
     print(f"{len(results)} byte-exact roundtrips; "

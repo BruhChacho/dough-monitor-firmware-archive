@@ -58,3 +58,36 @@ def update_crc32(data, start, end):
     struct.pack_into("<I", result, 0x10014, crc32_msb(result[start:end]))
     struct.pack_into(">I", result, len(result) - 4, crc32_msb(result[:-4]))
     return bytes(result)
+
+
+def main_crc16(data, end):
+    """CRC16 of [0x10000,end-2), normalizing three header words.
+
+    Matches all 13 archived Spectrum One images. Header words at 0x10060
+    and 0x10064 are treated as zero; their complete semantics are unconfirmed.
+    """
+    if not 0x10082 <= end <= len(data):
+        raise ValueError("Invalid main CRC16 bounds")
+    region = bytearray(data[0x10000:end - 2])
+    for offset in (0x14, 0x60, 0x64):
+        region[offset:offset + 4] = bytes(4)
+    return crc16_msb(region)
+
+
+def verify_main_crc16(data, end):
+    calculated = main_crc16(data, end)
+    if int.from_bytes(data[end - 2:end], "big") != calculated:
+        raise ValueError("Main trailer CRC16 mismatch")
+    return {"main_crc16": f"{calculated:04x}", "main_crc16_valid": True,
+            "main_crc16_range": f"0x10000:{end - 2:#x} (end exclusive)",
+            "main_crc16_zeroed_words": ["0x10014", "0x10060", "0x10064"]}
+
+
+def update_checksums(data, start, end):
+    """Regenerate main CRC16, AP CRC32, then file CRC32 in dependency order.
+
+    Caller must validate AP bounds and non-overlap with the file CRC32 field.
+    """
+    result = bytearray(data)
+    struct.pack_into(">H", result, end - 2, main_crc16(result, end))
+    return update_crc32(result, start, end)

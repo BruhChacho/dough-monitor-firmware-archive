@@ -45,6 +45,38 @@ ZIPs are tracked with Git LFS. Install [Git LFS](https://git-lfs.com/) before cl
 
 ## Reverse engineering
 
+For community firmware development, start with the [raw files and source-build
+guide](firmware/README.md). The current DC9 source overlay contains **182
+components, 10,338 instructions / 31,697 code bytes**, plus **14 tables / 1,203
+bytes**. Code-byte coverage is **1.306% (about 1.31%)** of the expanded application; most
+application bytes remain precompiled vendor input.
+
+The 2026-11-06 batch adds twelve routines (821 instructions / 2,388 bytes)
+and two tables (292 bytes). Recovered selectors, timer paths and wide arithmetic
+now let single-active-channel storage return. Full apply returns under literal
+stores only after a dimension is cleared and engine setup takes an early return;
+the lane-store model reaches an unrecovered conversion routine. Neither proves
+working hardware. The combined offline gate completed 2026-11-07 UTC: all 39 stages passed and 231 tests passed with zero failures, errors, or skips. It verified 271 run-artifact hashes and 329 source identities, including 221 base-workspace artifacts plus two USB images. Preservation checks verified 425 saved snapshot files, retained 20 prior workspaces, and preserved 55 BIN files. All three BIN hashes remain unchanged. This is not hardware validation. See the [batch report](analysis/2026-11-06_reverse-dc9-active-path-report.md)
+and [source layout](analysis/reconstructed/dc9-source-layout.json).
+
+The historical 2026-11-04 channel-dispatch milestone adds three byte-exact routines
+(178 instructions / 529 bytes): route `0x21ddcf..0x21de65`, selector
+`0x21bfca..0x21c024`, and apply `0x226bb5..0x226cd6`. Integrated validation
+currently covers eight conditional cases across four active positions and two
+store policies, using explicit logical bus mappings at `0xfff01f8d` and
+`0xfff02e02` and a four-byte wait mapping at `0x455204`. Full apply stops at
+`0x2420b2`, before its first flag poll, after a 35,459-instruction base plus nine instructions per channel. Isolated validation passed five strict cases (including one expected store rejection) and 86 conditional cases; integrated validation passed eight conditional cases. The offline gate finished 2026-11-05 UTC: 229 tests passed with no failures, errors, or skips. It verified 255 run-artifact hashes and 310 source identities, with 209 base workspace artifacts plus two USB images. Preservation checks found 414 snapshot files, retained 18 prior workspaces, and preserved 49 BIN files. This is not hardware validation. Routing and engine control return before delay arming; timer bytes `02000100` / lane `0200013c` remain literal, with no tick or completion event inferred. See the [dispatch report](analysis/2026-11-04_reverse-dc9-channel-dispatch-report.md), [workspace summary](analysis/community-channel-dispatch-workspace.json), and [workspace](analysis/extracted/firmware-validation-channel-dispatch-2026-11-04/workspace/).
+
+The 2026-10-30 channel-assignment milestone and its 222-test combined gate are
+historical. That fixture used an earlier input setup, stopped before
+`0x21ddcf`, and faulted at `0xa0e03e00` without the newly supplied logical bus
+mapping; a separate fixture without the timer mapping faults at `0x455204`.
+See its [report](analysis/2026-10-30_reverse-dc9-channel-assignment-report.md)
+and [historical validation](analysis/extracted/firmware-validation-channel-assignment-2026-10-30/validation.json).
+
+The percentage measures recovered code bytes, not overall product readiness.
+Earlier reports and workspaces remain historical snapshots.
+
 The [analysis workspace](analysis/README.md) now includes a reproducible inventory, an unpacker that recovers the compressed program from all 13 distinct Spectrum One images, bounded AEON disassembly, a decoded Black 32 model-value routine, and a static analysis of the Black 27 updater. The [first technical report](analysis/2026-10-19_reverse-dough-report.md) records evidence, model/version differences, and remaining uncertainties.
 
 Small annotated C reconstructions are available under [`analysis/reconstructed/`](analysis/reconstructed/). **A complete, buildable replacement firmware has not been recovered.** Extracted programs are generated locally from the preserved ZIPs; no monitor was flashed during analysis.

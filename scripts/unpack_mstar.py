@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import struct
 import zlib
-from mstar_checksums import verify_crc32
+from mstar_checksums import verify_crc32, verify_main_crc16
 
 ROOT = Path(__file__).resolve().parents[1]
 PREFIX = bytes.fromhex("c2afe4f5")
@@ -26,6 +26,7 @@ def unpack(data):
     if end - start != end_address - base or words[8] != len(data) - 4:
         raise ValueError("Inconsistent header spans")
     checksums = verify_crc32(data, start, end)
+    checksums.update(verify_main_crc16(data, end))
     if (data[start + 0x1147:start + 0x114a] != b"\xbe\xad\xde"
             or struct.unpack_from("<I", data, start + 0x114a)[0] != end - start):
         raise ValueError("Inconsistent application compression metadata")
@@ -44,7 +45,7 @@ def unpack(data):
         "candidate_load_base": hex(base), "deflate_start": hex(compressed_start),
         "deflate_end_exclusive": hex(end - 6), "deflate_bytes": end - 6 - compressed_start,
         "program_size": len(program), "trailer_hex": trailer.hex(),
-        "trailer_length_matches": True, "trailer_last_two_bytes_meaning": "unknown",
+        "trailer_length_matches": True, "trailer_last_two_bytes_meaning": "normalized main CRC16, big-endian",
         "compression_marker": "beadde", "prefix_segment_length_matches": True,
         "expanded_size": len(expanded), "expanded_sha256": hashlib.sha256(expanded).hexdigest(),
         "candidate_expanded_end_address": hex(base + len(expanded)),

@@ -1,0 +1,42 @@
+{
+  "source_layout_sha256": "e2ae0406441cd0097a6121015966a39074f1b412525b92a249e09c5484240772",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded 64-bit multiply, unsigned quotient and signed comparison agree with Python integers",
+  "cases": {
+    "multiply": 641,
+    "divide": 626,
+    "compare": 641
+  },
+  "strict_cases": 1908,
+  "single_active_storage_return_cases": 36,
+  "expected_rejections": 1,
+  "visited_instructions": {
+    "multiply": 29,
+    "divide": 290,
+    "compare": 10
+  },
+  "maximum_steps": {
+    "multiply": 29,
+    "divide": 93,
+    "compare": 8
+  },
+  "limitations": [
+    "Inputs are bounded samples, not an exhaustive 64-bit proof.",
+    "Variable shift counts >=32 and division by zero remain rejected.",
+    "CPU/CALL semantics are modeled hypotheses; no hardware execution."
+  ],
+  "tools_sha256": {
+    "validate_dc9_wide_arithmetic.py": "349176d7debe38367255873003b1202b70df9453621dfe12cbbf6a86f767499a",
+    "aeon_module_model.py": "b6c670e4a48774b7e95d97457b68a1b017f085c848e08c3128fec4df14ff3124",
+    "aeon_subset_assembler.py": "97a13380bf1a4df076e838fec7c2e0cb2fdb73f46d57649c3a9212b9e371329f"
+  }
+}

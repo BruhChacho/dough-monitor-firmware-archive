@@ -2,6 +2,16 @@
 
 Date: 2026-10-20. Scope: [offline firmware reconstruction](scope.md).
 
+> **Continuation correction, 2026-10-21:** the final two main-trailer bytes
+> are now reproduced as normalized CRC16 across all 13 images. The historical
+> E11 experiment below (`1460a460…`) has stale main CRC16 `ddf3`; it requires
+> `be5c` and is rejected by the current parser despite its valid CRC32s.
+> Its JSON and binary are preserved as historical evidence. Claims below about
+> an unknown trailer or a passing recompression gate describe the earlier,
+> incomplete checks. See the [follow-up report](2026-10-21_reverse-dc9-validation-report.md)
+> for the corrected baseline, bounded helper integration and independent audit.
+> None of these images has been validated on hardware.
+
 ## Status
 
 We can validate and reconstruct all 13 archived Spectrum One images without

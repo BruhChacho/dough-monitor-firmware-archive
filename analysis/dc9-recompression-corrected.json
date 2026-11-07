@@ -1,0 +1,40 @@
+{
+  "status": "offline experiment; not hardware-validated; not a complete source build",
+  "model": "ES07DC9",
+  "base_version": "v101 rev1148",
+  "source_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
+  "experimental_sha256": "5e79a74aef972941d232a601ae7a853546f87aaab6ee2f5097b0466a7f93ad68",
+  "zlib_runtime": "1.3.2",
+  "source_deflate_bytes": 991829,
+  "new_deflate_bytes": 985104,
+  "old_segment_end": "0x125adb",
+  "new_segment_end": "0x124096",
+  "program_size": 2426560,
+  "program_sha256": "9844f058cf533e50eb994ff82f37d01da9084158dfe22cccc68c151061baaf21",
+  "decoded_program_identical": true,
+  "decoded_program_matches_requested": true,
+  "resource_directory_and_payloads_identical": true,
+  "regenerated_main_crc16": "be5c",
+  "checksums": {
+    "algorithm": "CRC32 MSB polynomial=04c11db7 init=0 xorout=0",
+    "segment_crc32": "8bbabff1",
+    "segment_crc32_field": "0x10014, little-endian",
+    "whole_file_crc32": "e58450b5",
+    "whole_file_crc32_field": "last four bytes, big-endian",
+    "both_crc32_valid": true,
+    "main_crc16": "be5c",
+    "main_crc16_valid": true,
+    "main_crc16_range": "0x10000:0x124094 (end exclusive)",
+    "main_crc16_zeroed_words": [
+      "0x10014",
+      "0x10060",
+      "0x10064"
+    ]
+  },
+  "remaining_gates": [
+    "Validate any other update consumers and hardware constraints",
+    "Validate loader behavior beyond static decoding",
+    "Confirm exact device revision, backup and restore path",
+    "Hardware boot and feature regression tests"
+  ]
+}

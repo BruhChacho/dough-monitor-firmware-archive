@@ -1,0 +1,63 @@
+{
+  "source_layout_sha256": "e2ae0406441cd0097a6121015966a39074f1b412525b92a249e09c5484240772",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded assignment and state paths; unknown dispatch services remain unresolved",
+  "cases": {
+    "state_map_return": 12,
+    "assignment_index_six_guard": 1,
+    "assignment_nonfour_dispatch_prefix": 3,
+    "assignment_four_flagged_dispatch_prefix": 1,
+    "assignment_four_initialized_dispatch_prefix": 1,
+    "assignment_four_zero_flag_service_prefix": 1,
+    "dispatch_first_service_arguments": 5
+  },
+  "strict_cases": 24,
+  "conditional_cases": 0,
+  "visited_instruction_count": 214,
+  "source_spans": [
+    {
+      "name": "channel_assignment",
+      "address": "0x22701c",
+      "end_exclusive": "0x227145",
+      "size": 297,
+      "sha256": "e1b8c95c81285c20dec5f610bc3219f2043d87e028062cd74548408ca8b10672",
+      "visited_instructions": 96
+    },
+    {
+      "name": "channel_assignment_state",
+      "address": "0x222ce8",
+      "end_exclusive": "0x222d32",
+      "size": 74,
+      "sha256": "ad004fdd4fb5ebae1ed2cde560afd1af6fa467a3ae6c2985fea35cf1f1666b2c",
+      "visited_instructions": 25
+    },
+    {
+      "name": "channel_assignment_dispatch",
+      "address": "0x220c76",
+      "end_exclusive": "0x220cb4",
+      "size": 62,
+      "sha256": "981abfe620f01e8a81b7eb5a0aaded8d664c889174d40a9ee35a5a314d3a5247",
+      "visited_instructions": 11
+    }
+  ],
+  "limitations": [
+    "The 0x21ddcf and 0x226bb5 dispatch services are not modeled.",
+    "The active metadata service stops at its real common-service boundary.",
+    "Plain RAM, unsigned low-halfword loads, little-endian data and CALL fallthrough are hypotheses; no hardware behavior is established."
+  ],
+  "tools_sha256": {
+    "validate_dc9_channel_assignment.py": "4b271c23efa8e69ede9fce22d8192c4ef4782028cdf3fe4539367bc7f93cd577",
+    "reconstruct_dc9_channel_assignment.py": "ea5197b580eb1986f87a128c228bc782aa609c62ca5d0bec0703714d5dff6761",
+    "aeon_module_model.py": "b6c670e4a48774b7e95d97457b68a1b017f085c848e08c3128fec4df14ff3124",
+    "aeon_subset_assembler.py": "97a13380bf1a4df076e838fec7c2e0cb2fdb73f46d57649c3a9212b9e371329f"
+  }
+}

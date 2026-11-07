@@ -6,7 +6,7 @@ import copy
 from pathlib import Path
 import tempfile
 from unpack_mstar import unpack
-from mstar_checksums import crc32_msb, crc16_msb, update_crc32
+from mstar_checksums import crc32_msb, crc16_msb, update_crc32, update_checksums, main_crc16, verify_main_crc16
 from mstar_resources import resources, TABLE, TABLE_PREFIX
 from roundtrip_mstar import split, assemble, export, rebuild
 from aeon_subset_assembler import assemble as assemble_aeon
@@ -26,7 +26,7 @@ def sample():
     struct.pack_into("<I", image, 0x10020, len(image) - 4)
     image[0x311c7:0x311ca] = b"\xbe\xad\xde"
     struct.pack_into("<I", image, 0x311ca, end - 0x30080)
-    return bytearray(update_crc32(image, 0x30080, end)), program
+    return bytearray(update_checksums(image, 0x30080, end)), program
 
 
 def sample_with_resource(compressed=False):
@@ -48,10 +48,43 @@ def sample_with_resource(compressed=False):
     struct.pack_into(">H", image, TABLE + 12, 1)
     struct.pack_into(">HIIBH", image, TABLE + 14, 0x109, start, len(payload) + 2, flags, 0xf000)
     struct.pack_into("<I", image, 0x10020, len(image) - 4)
-    return bytearray(update_crc32(image, 0x30080, end)), end, start
+    return bytearray(update_checksums(image, 0x30080, end)), end, start
 
 
 class ParserTests(unittest.TestCase):
+    def test_stale_main_crc_rejected_even_with_valid_crc32s(self):
+        data, _ = sample()
+        data[-5] ^= 1
+        data = update_crc32(data, 0x30080, len(data) - 4)
+        with self.assertRaisesRegex(ValueError, "Main trailer CRC16"):
+            unpack(data)
+
+    def test_main_crc_normalization_and_covered_metadata(self):
+        data, _ = sample()
+        end = len(data) - 4
+        expected = main_crc16(data, end)
+        for offset in (0x10014, 0x10060, 0x10064):
+            data[offset:offset + 4] = b"\x12\x34\x56\x78"
+        self.assertEqual(main_crc16(data, end), expected)
+        data[0x10024] ^= 1
+        self.assertNotEqual(main_crc16(data, end), expected)
+
+    def test_main_crc_bounds_rejected(self):
+        for end in (0, 0x10081, 0x20000):
+            with self.assertRaises(ValueError):
+                main_crc16(bytes(0x10080), end)
+
+    def test_main_crc_missing_trailer_rejected(self):
+        # An all-zero region has CRC zero: an empty/short trailer must not
+        # accidentally verify as zero through int.from_bytes().
+        data = bytes(0x10100)
+        self.assertTrue(verify_main_crc16(data, len(data))["main_crc16_valid"])
+        for missing in (1, 2):
+            for operation in (main_crc16, verify_main_crc16):
+                with self.subTest(missing=missing, operation=operation.__name__):
+                    with self.assertRaisesRegex(ValueError, "bounds"):
+                        operation(data, len(data) + missing)
+
     def test_assembler_rejects_out_of_range_branch(self):
         with self.assertRaisesRegex(ValueError, "10-bit range"):
             assemble_aeon("bt.j 0x1000", 0)
@@ -80,7 +113,7 @@ class ParserTests(unittest.TestCase):
     def test_wrong_expanded_length_rejected(self):
         data, _ = sample()
         data[-10] ^= 1
-        data = update_crc32(data, 0x30080, len(data) - 4)
+        data = update_checksums(data, 0x30080, len(data) - 4)
         with self.assertRaises(ValueError):
             unpack(data)
 
@@ -179,7 +212,7 @@ class ParserTests(unittest.TestCase):
     def test_inconsistent_prefix_size_with_valid_crc_rejected(self):
         data, _ = sample()
         data[0x311ca] ^= 1
-        data = update_crc32(data, 0x30080, len(data) - 4)
+        data = update_checksums(data, 0x30080, len(data) - 4)
         with self.assertRaisesRegex(ValueError, "compression metadata"):
             unpack(data)
 

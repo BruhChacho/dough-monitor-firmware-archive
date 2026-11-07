@@ -1,0 +1,41 @@
+{
+  "source_layout_sha256": "e2ae0406441cd0097a6121015966a39074f1b412525b92a249e09c5484240772",
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "active full apply arms real delay and stops before first completion-flag poll",
+  "conditional_cases_by_policy": {
+    "sleigh-store": 4,
+    "halfword-lane-hypothesis": 4
+  },
+  "conditional_cases": 8,
+  "steps": {
+    "sleigh-store/channel0": 35459,
+    "sleigh-store/channel1": 35468,
+    "sleigh-store/channel2": 35477,
+    "sleigh-store/channel3": 35486,
+    "halfword-lane-hypothesis/channel0": 35459,
+    "halfword-lane-hypothesis/channel1": 35468,
+    "halfword-lane-hypothesis/channel2": 35477,
+    "halfword-lane-hypothesis/channel3": 35486
+  },
+  "visited_instruction_count": 1707,
+  "limitations": [
+    "New logical bus bytes and a four-byte writable wait region are explicit fixture inputs.",
+    "Execution stops before polling; no timer tick, completion or hardware time is invented.",
+    "Both store-width interpretations are hypotheses and differ in the adjacent sentinel.",
+    "Other active states and unrecovered services remain incomplete."
+  ],
+  "tools_sha256": {
+    "validate_dc9_dispatch_apply.py": "2e7a862fae64c49f00b378b12a275f54d6114bba36a9dde7706af74948fa092a",
+    "validate_dc9_assignment_apply.py": "2f6b7595909c5409b25ad1d4d574b58723fefe5a0ff88295fe4e2a3eba4764ad",
+    "aeon_module_model.py": "b6c670e4a48774b7e95d97457b68a1b017f085c848e08c3128fec4df14ff3124"
+  }
+}
