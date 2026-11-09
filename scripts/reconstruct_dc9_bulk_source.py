@@ -161,7 +161,7 @@ def validate(inventory_path=INVENTORY, source_dir=SOURCE_DIR):
                 raise ValueError(f"callsite not in published/accepted code at {call_pc:#x}")
             decoded = ctx.disassemble(expanded[call_pc - BASE:call_pc - BASE + 4],
                                       base_address=call_pc, max_instructions=1).instructions
-            if (len(decoded) != 1 or decoded[0].mnem != "bg.jal"
+            if (len(decoded) != 1 or decoded[0].mnem not in ("bg.jal", "bn.jal")
                     or int(decoded[0].body, 0) != address
                     or call_pc + decoded[0].length > containing[0][1]):
                 raise ValueError(f"unverified direct-call provenance at {call_pc:#x}")

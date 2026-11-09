@@ -1,4 +1,50 @@
-## Latest continuation: bulk byte-exact source batch
+## 2026-11-09 publication direction
+
+The user explicitly authorized merging this validated checkpoint to the actual
+default branch, `main`. Check PR #1's merge state before proceeding; start any
+subsequent source batches from the updated `main`.
+
+## Latest continuation: encoder-support source batch
+
+Updated 2026-11-08 (America/New_York). Continue toward **100% editable
+application** with larger batches, lower-cost coding workers and focused review;
+reserve Astra for manager/review work. The offline gate passed. No hardware access
+or flashing occurred.
+
+The 2026-11-08 batch adds **31 routines** (3,545 instructions / 10,639 bytes) to
+the prior 271-routine overlay: **302 routines, 19,084 instructions / 57,977 code
+bytes**, plus 14 tables / 1,203 bytes, **2.389% (about 2.39%)** code-byte
+coverage of 2,426,560 application bytes. Encoder support and operand parsing
+were added for `bn.sfeq`, `bn.sfne`, `bn.exths`, `bn.jal`, `bg.bles`, `bg.bgtsi`,
+`bn.addc`, `bg.syncwritebuffer`, and `bg.addci_maybe`, plus generic operandless
+instruction parsing. All nine forms still reject during execution; there are no
+new execution semantics. See `analysis/2026-11-08_reverse-dc9-encoder-bulk-report.md`
+and `analysis/reconstructed/dc9-encoder-bulk-source-batch.json`.
+
+Independent full-CFG and byte-exact assembly review passed for three large
+rooted candidates: `0x22cae2` (entry from `0x233549`), `0x2ab6d2` (called at
+`0x22d1ed` and `0x22d31b` from `0x22cae2`), and `0x2acae4` (called at
+`0x2aae82` from `0x2aae3d`, itself rooted by six older calls). Review found no
+hidden known entry points. Evidence is in
+`analysis/scratch/dc9-next-bulk-entry-audit-2026-11-08.json`. The lane-store
+execution fixture still stops before the `0x2aae3d` call site; source recovery
+alone does not establish execution behavior.
+
+The full offline gate passed on 2026-11-08 UTC: 40 stages and 235 tests, with
+zero failures, errors, or skips. It verified 392 run-artifact hashes and 455
+source identities; the workspace contains 341 artifacts plus two USB images.
+Preservation verified the 547-file snapshot, 22 prior workspaces and 61 BINs;
+three reference BIN hashes were unchanged. Canonical evidence is
+`analysis/community-encoder-bulk-workspace.json`; validation output is under
+`analysis/extracted/firmware-validation-encoder-bulk-2026-11-08/`. The immutable
+pre-batch snapshot is `analysis/scratch/encoder-bulk-before-2026-11-08/`, whose
+manifest SHA256 is `9388f2f6c16012575747e23e81ba851d0c51f84d0270ddaab529ab9d2e4f6048`.
+The batch manifest SHA256 is
+`71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c`. Tail
+candidates remain excluded pending separate audit. Publication to the existing
+review branch and draft PR #1 remains authorized.
+
+## Previous continuation: bulk byte-exact source batch
 
 Updated 2026-11-07 (America/New_York). Continue toward **100% editable
 application** with larger batches, lower-cost coding workers and focused review;

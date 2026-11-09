@@ -19,7 +19,7 @@ from recompress_dc9 import SOURCE_SHA
 BASE = 0x200000
 LIMIT = 4096
 UNCONDITIONAL = {"bt.j", "bn.j", "bg.j"}
-INDIRECT = {"bt.jalr", "bn.jal", "bg.jalr"}
+INDIRECT = {"bt.jalr", "bg.jalr"}
 
 
 def operand_target(row):
@@ -64,7 +64,7 @@ def existing_calls(ctx, expanded, layout):
         if not rows or sum(row.length for row in rows) != len(data):
             raise ValueError(f"existing layout decode incomplete: {record['name']}")
         for row in rows:
-            if row.mnem == "bg.jal":
+            if row.mnem in ("bg.jal", "bn.jal"):
                 sites[operand_target(row)].add(row.addr.offset)
     return sites
 
@@ -114,7 +114,7 @@ def inspect(start, *, ctx, expanded, protected, entries, call_entries):
             returns.add(pc)
         elif op in INDIRECT:
             raise ValueError(f"unsupported_indirect_call_{pc:#x}_{op}")
-        elif op == "bg.jal":
+        elif op in ("bg.jal", "bn.jal"):
             dest = operand_target(row)
             calls.add(dest)
             call_sites[dest].add(pc)

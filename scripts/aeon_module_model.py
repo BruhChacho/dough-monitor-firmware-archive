@@ -81,7 +81,7 @@ class ModuleModel:
             covered = 0
             for row in rows:
                 pc = row.addr.offset
-                args = [x.strip() for x in row.body.rstrip(',').split(',')]
+                args = [x.strip() for x in row.body.rstrip(',').split(',')] if row.body.strip() else []
                 original = code[pc - base:pc - base + row.length]
                 if encode(row.mnem, args, pc, {}) != original:
                     raise ValueError("Instruction re-encoding mismatch")

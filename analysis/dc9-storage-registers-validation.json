@@ -1,6 +1,6 @@
 {
   "status": "two storage-register pairs validated with explicit plain bus and store hypotheses",
-  "source_layout_sha256": "f8597362af743a8fa5e3a5ba52cd13d174500e101cb7d0cead5f0def021a1262",
+  "source_layout_sha256": "e1605a5d6e86b0de701782f5329c105335026506b73cceca48aa91ad0e84ea75",
   "pypcode_version": "4.0.1",
   "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
   "python_version": "3.12.15",
@@ -44,6 +44,6 @@
   "tools_sha256": {
     "validate_dc9_storage_registers.py": "bebd168aed08fcc937a1563456d4eb385e51be34f796b57d0e4202eefde72112",
     "reconstruct_dc9_channel_storage.py": "aeaff979667bb71f20d8fde29b1dae81618e21f0addbb33784a3485b1bdf1b82",
-    "aeon_module_model.py": "b6c670e4a48774b7e95d97457b68a1b017f085c848e08c3128fec4df14ff3124"
+    "aeon_module_model.py": "90df068eb5d23e86e37a0bf2511e9d347d7e6778ad8af5cb4ebe5d5728ef504c"
   }
 }

@@ -3186,10 +3186,497 @@
       "purpose": "Convert a tagged value to a 32-bit floating-point representation; numeric edge behavior is not independently validated.",
       "component_kind": "routine",
       "external_call_targets": []
+    },
+    {
+      "name": "routine_20e79d",
+      "address": "0x20e79d",
+      "size": 36,
+      "source": "analysis/reconstructed/spectrum_one_routine_20e79d.aeon.s",
+      "original_code_sha256": "314e78f579ebce7e3780c3f36fb977889393a6e46d383830e224a74cf61c14a4",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x20e687"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "6c8356547c91bc8d701e5b871ec5ffbaa5451e8c58e882541fc97d8ac2cc7fc2",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_20edc8",
+      "address": "0x20edc8",
+      "size": 267,
+      "source": "analysis/reconstructed/spectrum_one_routine_20edc8.aeon.s",
+      "original_code_sha256": "901c1bab58b189e4156a5914327f9a4702b4cf9d5f65e83eabbd69f682ca4583",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x20e6c5",
+        "0x20e736",
+        "0x20e79d",
+        "0x20ff43",
+        "0x21008c",
+        "0x211014",
+        "0x2336d1"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "28065a313a234a4bff40612200c728faa301fa76f61251ce32c0e9e5b3e5eeb3",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_20ff33",
+      "address": "0x20ff33",
+      "size": 16,
+      "source": "analysis/reconstructed/spectrum_one_routine_20ff33.aeon.s",
+      "original_code_sha256": "cc08177b5b868e542fa77634c4351713a1b10f3f84bc0e7f7d1cb27ec44e1785",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x21195b"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "2f44d2eb5ecf51d7b011d3370a297dc136b7f58a0073a6423f7fc81b4302cb2e",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_20ff43",
+      "address": "0x20ff43",
+      "size": 16,
+      "source": "analysis/reconstructed/spectrum_one_routine_20ff43.aeon.s",
+      "original_code_sha256": "e5ccfcff7bc495614318d31f26c1725dafd861e86a0a1cd663458865283ab455",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x20ff33"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "0a622bff820a3640ec6a706bc24b9f267357db2f9f3cc26774cd3c912a017ea7",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_21195b",
+      "address": "0x21195b",
+      "size": 4,
+      "source": "analysis/reconstructed/spectrum_one_routine_21195b.aeon.s",
+      "original_code_sha256": "d2e2053f3e302c9ef5d1e799c2ac54dda31db8b6e0849f8aae0e2e516a5fb3cc",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "d6d461940c0dc0df7fc75302f335c6ae7c5d66d0f51b652aa5452416cdeba32d",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2151c8",
+      "address": "0x2151c8",
+      "size": 207,
+      "source": "analysis/reconstructed/spectrum_one_routine_2151c8.aeon.s",
+      "original_code_sha256": "eafeb2eda6e7c6238ae780ba8e2b2b5a2990859cb8f3540a3b1b4464bb267231",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x211855",
+        "0x23dd44",
+        "0x23df85"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "6fdb4d78c3427fd15417baa1f147e1b2aec54226df2cbbc11175116a93e7c411",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_222c8d",
+      "address": "0x222c8d",
+      "size": 48,
+      "source": "analysis/reconstructed/spectrum_one_routine_222c8d.aeon.s",
+      "original_code_sha256": "a12c2f25d794b419cf2b7efc5bb07c762fa89710375b827e3f0a161f6bceb1d3",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "a8128dd37ec1babf8057724a04bce1e4a674517ff03b54452e382d9c4dd932b0",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2247fb",
+      "address": "0x2247fb",
+      "size": 1457,
+      "source": "analysis/reconstructed/spectrum_one_routine_2247fb.aeon.s",
+      "original_code_sha256": "9bce235023475dc2dd8fc3df2e83342c009e0bc6d5869466c02e157469ed4b76",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x222c8d",
+        "0x2402c4"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "b6e87b61b7c99272f3ef80b9267933c30d7dd77bceb9752dd846902e0d450a73",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_225aa2",
+      "address": "0x225aa2",
+      "size": 165,
+      "source": "analysis/reconstructed/spectrum_one_routine_225aa2.aeon.s",
+      "original_code_sha256": "324f2eff5515789194845b77d6066420c0b40d0e5cf30d7ec1bfa36d33a2139c",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x222804"
+      ],
+      "external_tail_targets": [
+        "0x23dfb6"
+      ],
+      "source_normalized_utf8_sha256": "7605093d2aaff7965a16773d321d34e035eb6f8146aebfe6613e508f3c3c1a8a",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_225b47",
+      "address": "0x225b47",
+      "size": 162,
+      "source": "analysis/reconstructed/spectrum_one_routine_225b47.aeon.s",
+      "original_code_sha256": "d111fe47edfcc5fa01f9ebf3ca62050f86a7f0b995b041159129526a7289d2f1",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x222804"
+      ],
+      "external_tail_targets": [
+        "0x23dfb6"
+      ],
+      "source_normalized_utf8_sha256": "c6be5a9edc8f2b39e453fb04cc61c126cc9d9538cb5ab6f971cfb6a5095ce062",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_22cae2",
+      "address": "0x22cae2",
+      "size": 3748,
+      "source": "analysis/reconstructed/spectrum_one_routine_22cae2.aeon.s",
+      "original_code_sha256": "e3bbaa76758e0ff40502425247810bf8b1ed930fdf8c6f2167ec26de34079a48",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2227ef",
+        "0x225aa2",
+        "0x225b47",
+        "0x23dd44",
+        "0x23ddb9",
+        "0x23dfb6",
+        "0x23dfe1",
+        "0x23e2b8",
+        "0x23e50c",
+        "0x23e58a",
+        "0x23e5d1",
+        "0x2aacb9",
+        "0x2ab331",
+        "0x2ab6d2"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "71467f143a2a6678a538c76a98b363602397dda61591f4130cd6165f6043a184",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27099e",
+      "address": "0x27099e",
+      "size": 241,
+      "source": "analysis/reconstructed/spectrum_one_routine_27099e.aeon.s",
+      "original_code_sha256": "9510622cca05f7abddf242d65383850c901932d46181646f44926b585d8bd44b",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "e0c63199a46327afee7f07b9c4707a65ffd6237717f26d00a0057d5a73621f78",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_279cd8",
+      "address": "0x279cd8",
+      "size": 9,
+      "source": "analysis/reconstructed/spectrum_one_routine_279cd8.aeon.s",
+      "original_code_sha256": "00a863dcd2820fb843f9fb6e6fce824786127dc190e3b5ebac87ed26d012f836",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "5e7da7d1e1b22715bf791894f1a9552c57e34073425dc84592762f8ac75359a8",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27a971",
+      "address": "0x27a971",
+      "size": 75,
+      "source": "analysis/reconstructed/spectrum_one_routine_27a971.aeon.s",
+      "original_code_sha256": "cc1b8cd2197a83ad232bcd6e090564826719e47e79a3cc3dd2d5c7cfe1269c45",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x279cd8"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "fd942efce2d0355c7ec2bd95b93b9039a294160a0e0ac6f54ecd951145a18f1b",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27ac57",
+      "address": "0x27ac57",
+      "size": 30,
+      "source": "analysis/reconstructed/spectrum_one_routine_27ac57.aeon.s",
+      "original_code_sha256": "4023ca5c3727a4a0c3ceead602ca8c837d05f2dfbf84256ddb08be05a761fd9a",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x27bf84"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "9b045985bdf99217b14666ec47e5ebd774538a1900bbd0152ca78f8398d8514f",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27ad9a",
+      "address": "0x27ad9a",
+      "size": 60,
+      "source": "analysis/reconstructed/spectrum_one_routine_27ad9a.aeon.s",
+      "original_code_sha256": "a0002db57c2dd85ad7916fda4647e5ab880e311f4ae5dae20a82b0e59438d03b",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x27ac57"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "20471c91174a09c1d39b2e88feb393c586b4b875ada4788944fa0cd99ccf5fe3",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27b5dd",
+      "address": "0x27b5dd",
+      "size": 298,
+      "source": "analysis/reconstructed/spectrum_one_routine_27b5dd.aeon.s",
+      "original_code_sha256": "7a71055cdec9ce7a30ea923a68b72938fd3ec679a6ff4410a4c282b0887f944a",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x27a971",
+        "0x27ad9a",
+        "0x27adde",
+        "0x27ade2"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "3dbb74ddc9e0afb34b83ef77bac459b062d4f0763568a29c557b715832532c56",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27baf6",
+      "address": "0x27baf6",
+      "size": 67,
+      "source": "analysis/reconstructed/spectrum_one_routine_27baf6.aeon.s",
+      "original_code_sha256": "c02fd1bac0462e37fd3c35f29b1c49b9c3a829d091ebd5111ee6eb924c789f69",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "6c470efa17a574d52a70d75e2857b92ff80da9ad87f8afe398455d0a394b9bc3",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27bb79",
+      "address": "0x27bb79",
+      "size": 49,
+      "source": "analysis/reconstructed/spectrum_one_routine_27bb79.aeon.s",
+      "original_code_sha256": "df4d829da0617e2dcdea228dfe1affc0d41cb23055e2d7cee2c8008be06fefe7",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x27baf6"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "3fe330aaa2d5b8fb4a3b6ab1a40ff7eaf202c8bfdc935cd2d90d21fc4eb0f678",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_27bf84",
+      "address": "0x27bf84",
+      "size": 29,
+      "source": "analysis/reconstructed/spectrum_one_routine_27bf84.aeon.s",
+      "original_code_sha256": "7dd53ccb38ca099d0bb102b14e6ea980c60b1f3ef8af0406ff16963ce51bd968",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x27bb79"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "da29be20f0536fe3e64179fedb77a2baf62df9696fb57bb90fdc43a085d32aed",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2aae3d",
+      "address": "0x2aae3d",
+      "size": 169,
+      "source": "analysis/reconstructed/spectrum_one_routine_2aae3d.aeon.s",
+      "original_code_sha256": "37caee3b377811302a6f37992cfa1aab331cf2f6ce3acccad6ff5a2f10138a1f",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2aca43",
+        "0x2acae4",
+        "0x2acf9e",
+        "0x2ad165"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "9039045b013e93a069b2a37354824d5ff036a70330e4474fd38e9c85db03eebf",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2ab6d2",
+      "address": "0x2ab6d2",
+      "size": 957,
+      "source": "analysis/reconstructed/spectrum_one_routine_2ab6d2.aeon.s",
+      "original_code_sha256": "cf83f6c6b643457608d4baa77928ab47583bcb0263822fc4d64cbc89828f875e",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "f6acb74c6a4120fc052043a42fff0f46ca74c06e97dd9954d86b9278353f4f67",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2abc45",
+      "address": "0x2abc45",
+      "size": 340,
+      "source": "analysis/reconstructed/spectrum_one_routine_2abc45.aeon.s",
+      "original_code_sha256": "05f4dcf46f6d18af4dcf94d5dbed4945aceb6026d28ae7bdbd2b0c9019ec8290",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "532588aeb88d451e1a57725766ad8ba73567daf5a5dac1bc6d0a483e3a07be55",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2abd99",
+      "address": "0x2abd99",
+      "size": 69,
+      "source": "analysis/reconstructed/spectrum_one_routine_2abd99.aeon.s",
+      "original_code_sha256": "c881e0b92b6d8b9dec1f7619c8679bd849579b985a985df16505da555af528ea",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2aba8f",
+        "0x2abba0",
+        "0x2abc45"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "2f096fa97264babe411b6b63e7fe3f40e68e1f436a6789fba0e7531a2f55836b",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2abdde",
+      "address": "0x2abdde",
+      "size": 80,
+      "source": "analysis/reconstructed/spectrum_one_routine_2abdde.aeon.s",
+      "original_code_sha256": "9e1bc6c179a17ae18283c76ee3c22ff9a75ca2503b846620a271752835332865",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2aba8f",
+        "0x2abba0",
+        "0x2abc45"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "fdfdf58f4803b28061ac00ea0e343f256b221b81ca3c9c87dbd1d41252596901",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2ac120",
+      "address": "0x2ac120",
+      "size": 136,
+      "source": "analysis/reconstructed/spectrum_one_routine_2ac120.aeon.s",
+      "original_code_sha256": "7cd66727aa24d08928b87b87bc7b43f8c011a099708daf72b562c863b89016cb",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2aba8f"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "373fb97a89718980ea7843f91d4e22802369c09f8338db791861802c332e8e04",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2ac55d",
+      "address": "0x2ac55d",
+      "size": 505,
+      "source": "analysis/reconstructed/spectrum_one_routine_2ac55d.aeon.s",
+      "original_code_sha256": "5abecd24b27dcd443f4ed767b7faab49025cc4e77db3071a2f701cece5a3651e",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "9f7e59e7fa26e98126c5f05f45384b988bd397449cc01b16e5cd97c5c4ffd5a1",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2ac837",
+      "address": "0x2ac837",
+      "size": 524,
+      "source": "analysis/reconstructed/spectrum_one_routine_2ac837.aeon.s",
+      "original_code_sha256": "42bd79e571faedc8b05337fe482565fc85f744e41645ccc09e7d2301cb632930",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "0d98286e0351d242e3a0c6e08b9d97dea48bf627b4f244793efbe6d7da32c6a1",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2aca43",
+      "address": "0x2aca43",
+      "size": 75,
+      "source": "analysis/reconstructed/spectrum_one_routine_2aca43.aeon.s",
+      "original_code_sha256": "a0f9322caa627eb86afa9b37017693a80291e80f9c38c11e7277325a24462502",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2ac55d",
+        "0x2ac756",
+        "0x2ac837"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "49f326e8a795ba58b6f1ed7d7ccc68323d350503196f576b0deb32cea54a2072",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2acae4",
+      "address": "0x2acae4",
+      "size": 631,
+      "source": "analysis/reconstructed/spectrum_one_routine_2acae4.aeon.s",
+      "original_code_sha256": "de93a00e6b64b253f67b00be72d7e8da21082442a176c6197f80836e21ebe6bb",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2aacb9",
+        "0x2ac55d",
+        "0x2ac756"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "7b06017e8f8c762dd2a6c0a4cdf90497774ff0c2856c7d9d3cc38d9cecc60c3a",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
+    },
+    {
+      "name": "routine_2acf9e",
+      "address": "0x2acf9e",
+      "size": 169,
+      "source": "analysis/reconstructed/spectrum_one_routine_2acf9e.aeon.s",
+      "original_code_sha256": "8fa8aacd23cf8f488a2f1a8536a5c80a923b9ab948e232666ea91928338b0ff5",
+      "purpose": "Byte-exact recovered source; semantics not yet validated",
+      "component_kind": "routine",
+      "external_call_targets": [
+        "0x2ac55d"
+      ],
+      "external_tail_targets": [],
+      "source_normalized_utf8_sha256": "feee922ae6a2a07aad5d14c7cb682a84e03fb6b5b30e734e4d4909c5967a47c7",
+      "candidate_inventory_sha256": "71cbddf44c0a06da45a124b1dfb191d7b403a70fc0db66b141af65b05e3ee13c"
     }
   ],
   "limitations": [
-    "271 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "302 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],

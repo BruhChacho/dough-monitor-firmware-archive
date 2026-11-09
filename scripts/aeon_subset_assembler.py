@@ -57,6 +57,14 @@ SIZES['bg.blesi'] = 4
 ARITY['bg.blesi'] = 3
 SIZES.update({'bn.srl': 3})
 ARITY.update({'bn.srl': 3})
+SIZES.update({'bn.sfeq': 3, 'bn.sfne': 3, 'bn.exths': 3,
+              'bn.jal': 3, 'bg.bles': 4, 'bg.bgtsi': 4})
+ARITY.update({'bn.sfeq': 2, 'bn.sfne': 2, 'bn.exths': 2,
+              'bn.jal': 1, 'bg.bles': 3, 'bg.bgtsi': 3})
+SIZES.update({'bn.addc': 3, 'bg.syncwritebuffer': 4})
+ARITY.update({'bn.addc': 3, 'bg.syncwritebuffer': 0})
+SIZES['bg.addci_maybe'] = 4
+ARITY['bg.addci_maybe'] = 3
 
 
 def immediate(value, bits, signed=False):
@@ -86,24 +94,29 @@ def encode(op, args, pc, labels):
         word = 0xc0000001 | register(args[0]) << 21 | immediate(int(args[1], 0), 16) << 5
     elif op == "bn.movhi_2":
         word = 0x040000 | register(args[0]) << 13 | immediate(int(args[1], 0), 13)
-    elif op in ("bg.addi", "bg.ori"):
-        word = ((0xfc000000 if op == "bg.addi" else 0xc8000000)
+    elif op in ("bg.addi", "bg.ori", "bg.addci_maybe"):
+        # addci_maybe retains the pinned decoder's tentative name. This is
+        # field encoding only; carry semantics remain unsupported.
+        word = ({"bg.addi": 0xfc000000, "bg.ori": 0xc8000000,
+                 "bg.addci_maybe": 0xdc000000}[op]
                 | register(args[0]) << 21 | register(args[1]) << 16
-                | immediate(int(args[2], 0), 16, op == "bg.addi"))
-    elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts"):
+                | immediate(int(args[2], 0), 16, op != "bg.ori"))
+    elif op in ("bg.beq", "bg.bne", "bg.ble", "bg.bgt", "bg.bgts", "bg.bles"):
         word = (0xd4000000 | register(args[0]) << 21 | register(args[1]) << 16
                 | immediate(target(args[2]) - pc, 13, True) << 3
-                | {"bg.beq": 2, "bg.bne": 6, "bg.ble": 1, "bg.bgt": 5, "bg.bgts": 4}[op])
-    elif op in ("bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bg.blesi"):
+                | {"bg.bles": 0, "bg.beq": 2, "bg.bne": 6, "bg.ble": 1, "bg.bgt": 5, "bg.bgts": 4}[op])
+    elif op in ("bg.beqi", "bg.bnei", "bg.bleui", "bg.bgtui", "bg.blesi", "bg.bgtsi"):
         word = (0xd0000000 | register(args[0]) << 21
-                | immediate(int(args[1], 0), 5, op == "bg.blesi") << 16
+                | immediate(int(args[1], 0), 5, op in ("bg.blesi", "bg.bgtsi")) << 16
                 | immediate(target(args[2]) - pc, 13, True) << 3
                 | {"bg.beqi": 2, "bg.bnei": 6, "bg.bleui": 1,
-                   "bg.bgtui": 5, "bg.blesi": 0}[op])
+                   "bg.bgtui": 5, "bg.blesi": 0, "bg.bgtsi": 4}[op])
     elif op == "bt.j":
         word = 0x9000 | immediate(target(args[0]) - pc, 10, True)
     elif op == "bn.j":
         word = 0x2c0000 | immediate(target(args[0]) - pc, 18, True)
+    elif op == "bn.jal":
+        word = 0x280000 | immediate(target(args[0]) - pc, 18, True)
     elif op == "bn.lh":
         offset, base = memory_operand(args[1])
         # Pinned decoder masks the displacement to an unsigned even byte.
@@ -148,9 +161,9 @@ def encode(op, args, pc, labels):
                   "bg.lhz": 0xe8000001, "bg.sbz": 0xf8000000, "bg.lbz": 0xf0000000,
                   "bg.sw_1": 0xec000001, "bg.sh": 0xec000003}[op]
         word = prefix | reg << 21 | base << 16 | immediate(offset, 16, True)
-    elif op in ("bn.extbz", "bn.exthz", "bn.extbs"):
+    elif op in ("bn.extbz", "bn.exthz", "bn.extbs", "bn.exths"):
         word = (0x5c0000 | register(args[0]) << 13 | register(args[1]) << 8
-                | {'bn.extbz': 0, 'bn.exthz': 4, 'bn.extbs': 2}[op])
+                | {'bn.extbz': 0, 'bn.extbs': 2, 'bn.exthz': 4, 'bn.exths': 6}[op])
     elif op == 'bn.sll':
         word = 0x4c0004 | register(args[0]) << 13 | register(args[1]) << 8 | register(args[2]) << 3
     elif op == 'bn.sra':
@@ -173,6 +186,8 @@ def encode(op, args, pc, labels):
                 | immediate(int(args[1], 0), 16, signed_imm) << 5)
     elif op in ("bn.sfgtui", "bn.sfeqi", "bn.sfnei", "bn.sfleui"):
         word = {"bn.sfgtui": 0x5c001b, "bn.sfeqi": 0x5c0001, "bn.sfnei": 0x5c0009, "bn.sfleui": 0x5c0013}[op] | register(args[0]) << 13 | immediate(int(args[1], 0), 8) << 5
+    elif op in ("bn.sfeq", "bn.sfne"):
+        word = (0x5c0005 if op == "bn.sfeq" else 0x5c000d) | register(args[0]) << 13 | register(args[1]) << 8
     elif op == 'bn.sflesi':
         word = 0x5c0011 | register(args[0]) << 13 | immediate(int(args[1], 0), 8, True) << 5
     elif op == 'bn.sfgtsi':
@@ -194,10 +209,14 @@ def encode(op, args, pc, labels):
         word = (0x480003 | register(args[0]) << 13
                 | immediate(int(args[1], 0), 5, True) << 8
                 | immediate(int(args[2], 0), 5, True) << 3)
-    elif op in ("bn.add", "bn.xor", "bn.muls", "bn.and", "bn.or", "bn.nand", "bn.sub", "bn.subb", "bn.cmov_0", "bn.cmov_1", "bn.divs", "bn.divu"):
+    elif op == 'bg.syncwritebuffer':
+        # Pinned constructor has no operands. Reproduce the archived zero
+        # reserved-field form only; do not infer synchronization semantics.
+        word = 0xf4000005
+    elif op in ("bn.add", "bn.xor", "bn.muls", "bn.and", "bn.or", "bn.nand", "bn.sub", "bn.subb", "bn.addc", "bn.cmov_0", "bn.cmov_1", "bn.divs", "bn.divu"):
         word = ({"bn.add": 0x400004, "bn.xor": 0x440006, "bn.muls": 0x400003,
                  "bn.and": 0x440004, "bn.or": 0x440005, "bn.nand": 0x440007,
-                 "bn.sub": 0x400005, "bn.subb": 0x400006,
+                 "bn.sub": 0x400005, "bn.subb": 0x400006, "bn.addc": 0x400007,
                  "bn.cmov_0": 0x480000, "bn.cmov_1": 0x480001,
                  "bn.divs": 0x400000, "bn.divu": 0x400001}[op] | register(args[0]) << 13
                 | register(args[1]) << 8 | register(args[2]) << 3)

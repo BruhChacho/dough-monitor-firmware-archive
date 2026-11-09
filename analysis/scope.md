@@ -402,11 +402,22 @@ See the [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md),
 The earlier channel-assignment report and its 222-test gate are historical and
 do not validate this dispatch milestone.
 
-## 2026-11-06 bulk-source batch
+## 2026-11-08 encoder-bulk batch
+
+The encoder batch adds 31 routines (3,545 instructions / 10,639 bytes), bringing
+the overlay to 302 routines / 19,084 instructions / 57,977 code bytes, plus 14
+tables / 1,203 bytes: 2.389% code-byte coverage. Encoder and operand parsing
+support was added for nine forms; all nine remain rejected during execution. The
+full offline gate passed on 2026-11-08 UTC: 40 stages and 235 tests, with zero
+failures, errors, or skips. No hardware behavior is established. See the
+[encoder-bulk report](2026-11-08_reverse-dc9-encoder-bulk-report.md)
+and [validation workspace](extracted/firmware-validation-encoder-bulk-2026-11-08/workspace/).
+
+## Historical 2026-11-06 bulk-source batch
 
 The bulk batch adds 89 routines (5,201 instructions / 15,641 bytes), bringing
 coverage to 271 routines / 15,539 instructions / 47,338 code bytes, plus 14
-tables / 1,203 bytes: 1.951% (about 1.95%) of the expanded application. It
+tables / 1,203 bytes: 1.951% (about 1.95%) at that historical checkpoint. It
 introduces no ISA or model changes. Static CFG and byte-exact assembly review
 passed for ten largest spans (2,929 instructions); four conversion leaves were
 checked against 115 bounded cases. Generic names and recovered instruction
