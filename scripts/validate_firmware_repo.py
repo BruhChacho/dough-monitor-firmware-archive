@@ -150,6 +150,7 @@ def run(destination):
         from validate_dc9_dispatch_leaves import validate as validate_dispatch_leaves
         from validate_dc9_wide_arithmetic import validate as validate_wide_arithmetic
         from validate_dc9_active_engine import validate as validate_active_engine
+        from validate_dc9_conversion_leaves import validate as validate_conversion_leaves
         original, _, _ = load_original()
         stage('helper-rewrite', lambda: validate_rewrite(original)[1])
         for name, validator in (('commands', validate_commands), ('registers', validate_registers),
@@ -169,7 +170,8 @@ def run(destination):
                                 ('channel-assignment', validate_channel_assignment), ('assignment-apply', validate_assignment_apply),
                                 ('channel-dispatch', validate_channel_dispatch), ('dispatch-apply', validate_dispatch_apply),
                                 ('dispatch-selection', validate_dispatch_selection), ('dispatch-leaves', validate_dispatch_leaves),
-                                ('wide-arithmetic', validate_wide_arithmetic), ('active-engine', validate_active_engine)):
+                                ('wide-arithmetic', validate_wide_arithmetic), ('active-engine', validate_active_engine),
+                                ('conversion-leaves', validate_conversion_leaves)):
             stage(name, validator)
 
         print('Preparing raw files and building baseline, helper and layout images...', flush=True)

@@ -402,7 +402,23 @@ See the [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md),
 The earlier channel-assignment report and its 222-test gate are historical and
 do not validate this dispatch milestone.
 
-## 2026-11-06 active-path batch
+## 2026-11-06 bulk-source batch
+
+The bulk batch adds 89 routines (5,201 instructions / 15,641 bytes), bringing
+coverage to 271 routines / 15,539 instructions / 47,338 code bytes, plus 14
+tables / 1,203 bytes: 1.951% (about 1.95%) of the expanded application. It
+introduces no ISA or model changes. Static CFG and byte-exact assembly review
+passed for ten largest spans (2,929 instructions); four conversion leaves were
+checked against 115 bounded cases. Generic names and recovered instruction
+bytes do not establish source semantics. Conversion caller `0x2aae3d` remains
+unrecovered; NaN payload behavior and hardware behavior are unproven. The combined offline gate passed on 2026-11-08 UTC: 40 stages and 231 tests,
+with zero failures, errors, or skips. It verified 361 run-artifact hashes and
+423 source identities; preservation checked 450 snapshot files, 21 prior
+workspaces and 58 BIN files. The workspace contains 310 artifacts plus two USB
+images. See the [bulk-source report](2026-11-06_reverse-dc9-bulk-source-report.md)
+and [workspace summary](community-bulk-source-workspace.json).
+
+## Historical 2026-11-06 active-path batch
 
 Twelve routines / 2,388 bytes and two tables / 292 bytes bring the overlay to
 182 components / 10,338 instructions / 31,697 code bytes, plus 14 tables /

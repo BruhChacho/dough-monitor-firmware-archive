@@ -1,0 +1,39 @@
+{
+  "pypcode_version": "4.0.1",
+  "pypcode_module_path": ".venv/lib/python3.12/site-packages/pypcode/__init__.py",
+  "python_version": "3.12.15",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "sleigh_files_sha256": {
+    "aeon.ldefs": "d1ba5abfc42b0cde43a5a3e0b797df8966d5c31dc85935871ff990d9204b5e03",
+    "aeon.slaspec": "195753632b7065a46e8bfbb67b35c5345832c211925299073f57d22f165ea748",
+    "aeon.sla": "3ec06a3d4c38386aad7dd36b3810a93ff943742bf65973960c7c40880acf8ce2"
+  },
+  "status": "bounded binary64-to-binary32 results match Python struct packing",
+  "entry": "0x2ad165",
+  "cases": 115,
+  "finite_random_cases": 96,
+  "observed_nan_case": {
+    "input_binary64_bits": "0x7ff8000000000042",
+    "output_binary32_bits": "0x7ff00001",
+    "note": "Observed emulator result only; no NaN payload oracle is asserted."
+  },
+  "maximum_steps": 667,
+  "visited_instructions_by_leaf": {
+    "conversion_from_wide": 66,
+    "conversion_to_wide_wrapper": 27,
+    "conversion_wrapper": 11,
+    "conversion_to_float": 82
+  },
+  "source_sha256": {
+    "conversion_from_wide": "6bf133ea628cc868aa79cf603ca20cd1d111302a11b6bdd74b50cb9648c5595d",
+    "conversion_to_wide_wrapper": "05918b9cc46963272479681fd79ffe0724a3b46d1c8b88df925222e847a45da5",
+    "conversion_wrapper": "403b7eaba067a9471c2f3c92e7f564db55d86356cdafe635a72923a61198c565",
+    "conversion_to_float": "90c30b68932ee52d8896107f9b3f917b416528cb4e015e17a302bf7fb13f31b0"
+  },
+  "limitations": [
+    "Sampled values are not an exhaustive proof.",
+    "NaN payload behavior is not compared; the output shown is one observation only.",
+    "Calls use the ModuleModel fallthrough-link hypothesis; no hardware behavior is validated."
+  ]
+}

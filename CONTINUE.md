@@ -1,3 +1,43 @@
+## Latest continuation: bulk byte-exact source batch
+
+Updated 2026-11-07 (America/New_York). Continue toward **100% editable
+application** with larger batches, lower-cost coding workers and focused review;
+reserve Astra for manager/review work. The owner authorized continued offline
+recovery. No hardware access or flashing occurred.
+
+Starting at published `f4761dc`, the bulk work adds **89 routines** (5,201
+instructions / 15,641 bytes) to the existing 182 routines: **271 routines,
+15,539 instructions / 47,338 code bytes**, plus 14 tables / 1,203 bytes,
+**1.951% (about 1.95%)** code-byte coverage of 2,426,560 application bytes.
+No ISA or model changes. Batch inputs and hashes are in
+`analysis/reconstructed/dc9-bulk-source-batch.json`; the 450-file immutable
+starting snapshot is `analysis/scratch/bulk-source-before-2026-11-06/`.
+
+Independent CFG and byte-exact assembly review passed for the ten largest
+spans (2,929 instructions), including `0x22bb7d..0x22cae2` (3,941 bytes / 1,239
+instructions, caller `0x233555`). Four conversion leaves passed 115 bounded
+finite/rounding/infinity cases; NaN payloads are not proven. Caller `0x2aae3d`
+remains unrecovered, so lane-store execution still stops before conversion.
+Unknown semantics remain generic; unsupported forms are recorded in
+`analysis/scratch/dc9-bulk-unsupported-forms.json` and must not be conflated
+with unresolved carry/borrow modeling. No hardware behavior is established.
+
+The combined offline gate passed on 2026-11-08 UTC: 40 stages, 231 tests,
+zero failures/errors/skips; 361 run-artifact hashes and 423 source identities;
+310 workspace artifacts plus two USB images. Preservation verified 450 snapshot
+files, 21 prior workspaces and 58 BINs. Canonical evidence is
+`analysis/community-bulk-source-workspace.json`; validation output is under
+`analysis/extracted/firmware-validation-bulk-source-2026-11-06/`.
+
+For repeatable source checks, run `scripts/reconstruct_dc9_bulk_source.py` in
+dry-run mode, then `scripts/reconstruct_dc9_conversion_leaves.py` and
+`scripts/validate_dc9_conversion_leaves.py`. No device behavior is established.
+A scratch-only follow-up found possible tail-target seed spans, but independent
+routine boundaries are not established; do not count or merge them. Resume that
+review only after gathering stronger entry evidence. Larger batches and focused
+review remain preferred; reserve Astra for manager/review work. Publication to
+the existing review branch and draft PR #1 remains authorized.
+
 # Dough firmware reverse engineering: continuation handoff
 
 Prepared 2026-10-21 (America/Los_Angeles). This file is intended to let a new

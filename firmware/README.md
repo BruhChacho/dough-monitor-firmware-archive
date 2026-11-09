@@ -2,18 +2,19 @@
 
 The development workspace contains raw firmware inputs, decompressed DC9 code
 and resources, editable reconstructed assembly, and an offline source-to-BIN
-build. The current source overlay contains **182 components, 10,338 instructions /
-31,697 code bytes**, plus **14 tables / 1,203 bytes**. Coverage is **1.306% (about 1.31%)**
-of the expanded application; most application bytes remain precompiled vendor
-input.
-
-The 2026-11-06 batch adds twelve routines (821 instructions / 2,388 bytes)
-and two tables (292 bytes). Recovered selectors, timer paths and wide arithmetic
-now let single-active-channel storage return. Full apply returns under literal
-stores only after a dimension is cleared and engine setup takes an early return;
-the lane-store model reaches an unrecovered conversion routine. Neither proves
-working hardware. The combined offline gate completed 2026-11-07 UTC: all 39 stages passed and 231 tests passed with zero failures, errors, or skips. It verified 271 run-artifact hashes and 329 source identities, including 221 base-workspace artifacts plus two USB images. Preservation checks verified 425 saved snapshot files, retained 20 prior workspaces, and preserved 55 BIN files. All three BIN hashes remain unchanged. This is not hardware validation. See the [batch report](../analysis/2026-11-06_reverse-dc9-active-path-report.md)
-and [source layout](../analysis/reconstructed/dc9-source-layout.json).
+build. The current source overlay contains **271 routines, 15,539 instructions /
+47,338 code bytes**, plus **14 tables / 1,203 bytes**: **1.951% (about 1.95%)**
+code-byte coverage of the expanded application. The 2026-11-06 bulk batch adds
+89 routines (5,201 instructions / 15,641 bytes), with no ISA or model changes.
+Single-active-channel storage returns; lane-store full apply still stops at
+unrecovered conversion `0x2aae3d`. The combined offline gate passed on
+2026-11-08 UTC: 40 stages and 231 tests, with zero failures, errors, or skips.
+It verified 361 run-artifact hashes and 423 source identities; preservation
+checked 450 snapshot files, 21 prior workspaces and 58 BIN files. The workspace
+contains 310 artifacts plus two USB images. No hardware behavior is established.
+See the [bulk-source report](../analysis/2026-11-06_reverse-dc9-bulk-source-report.md),
+[workspace summary](../analysis/community-bulk-source-workspace.json), and
+[source layout](../analysis/reconstructed/dc9-source-layout.json).
 
 The historical 2026-11-04 channel-dispatch milestone adds three byte-exact routines
 (178 instructions / 529 bytes): route `0x21ddcf..0x21de65`, selector
@@ -50,8 +51,7 @@ hardware-tested community release remain unfinished.
 
 ## Open the files
 
-The latest workspace is being built in
-[firmware-validation-active-path-2026-11-06-complete/workspace](../analysis/extracted/firmware-validation-active-path-2026-11-06-complete/workspace/).
+The latest workspace is [firmware-validation-bulk-source-2026-11-06/workspace](../analysis/extracted/firmware-validation-bulk-source-2026-11-06/workspace/). The preceding [active-path workspace](../analysis/extracted/firmware-validation-active-path-2026-11-06-complete/workspace/) remains a historical snapshot.
 
 
 The previous channel-dispatch workspace is at

@@ -7,7 +7,7 @@ Original vendor source names, comments, headers, and build systems have not
 been recovered.
 
 Start with the [raw files and community build guide](../firmware/README.md),
-the [active-path report](2026-11-06_reverse-dc9-active-path-report.md),
+the [bulk-source report](2026-11-06_reverse-dc9-bulk-source-report.md),
 the historical [channel-dispatch milestone](#channel-dispatch-milestone),
 the historical [channel-assignment milestone](#channel-assignment-milestone),
 the [channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md),
@@ -31,13 +31,7 @@ The [2026-10-20 report](2026-10-20_reverse-spectrum-one-report.md) is historical
 its recompression experiment fails the subsequently recovered main CRC16.
 The corrected baseline and helper rewrite pass offline validation, but neither
 has been booted on a monitor or constitutes a complete firmware source build.
-The current overlay contains **182 components, 10,338 instructions / 31,697
-code bytes**, plus **14 tables / 1,203 bytes**: **1.306% (about 1.31%)** of the
-expanded application. The 2026-11-06 batch adds twelve routines and two tables.
-Single-active-channel storage now returns. Active full apply reaches an
-unrecovered conversion under lane stores; literal stores return after clearing
-a dimension and taking an early engine exit. Hardware remains untested.
-The combined offline gate completed 2026-11-07 UTC: all 39 stages passed and 231 tests passed with zero failures, errors, or skips; 271 run-artifact hashes and 329 source identities were verified, including 221 base-workspace artifacts plus two USB images. Preservation verified 425 saved snapshot files, 20 prior workspaces and 55 BIN files. All three BIN hashes remain unchanged. Hardware remains untested. See the [active-path report](2026-11-06_reverse-dc9-active-path-report.md).
+The current overlay contains **271 routines, 15,539 instructions / 47,338 code bytes**, plus **14 tables / 1,203 bytes**: **1.951% (about 1.95%)** code-byte coverage. The 2026-11-06 bulk batch adds 89 routines (5,201 instructions / 15,641 bytes), with no ISA or model changes. Single-active-channel storage returns; lane-store full apply still stops at unrecovered conversion `0x2aae3d`. The combined gate passed on 2026-11-08 UTC: 40 stages and 231 tests with zero failures, errors, or skips. It verified 361 run-artifact hashes and 423 source identities; preservation checked 450 snapshot files, 21 prior workspaces and 58 BIN files. The workspace has 310 artifacts plus two USB images. Hardware remains untested. See the [bulk-source report](2026-11-06_reverse-dc9-bulk-source-report.md) and [workspace summary](community-bulk-source-workspace.json).
 
 The 2026-10-30 channel-assignment report and its combined 222-test gate are
 historical. That earlier fixture stopped before route `0x21ddcf`; without
@@ -148,10 +142,10 @@ USB update tools and records the remaining HDMI/board-recovery evidence gap.
 
 | Area | Result | Evidence |
 |---|---|---|
-| DC9 channel dispatch (historical) | At that checkpoint: 170 components (9,517 instructions / 29,309 bytes), 12 tables / 911 bytes. Three exact routines add 178 instructions / 529 bytes. Its gate passed 229 tests; the bounded apply stops at `0x2420b2` before the first flag poll. The current overlay and completed gate are summarized above | [Milestone details](#channel-dispatch-milestone), [source layout](reconstructed/dc9-source-layout.json) |
+| DC9 channel dispatch (historical) | At that checkpoint: 170 components (9,517 instructions / 29,309 bytes), 12 tables / 911 bytes. Three exact routines add 178 instructions / 529 bytes. Its gate passed 229 tests; the bounded apply stops at `0x2420b2` before the first flag poll. The current overlay and pending bulk gate are summarized above | [Milestone details](#channel-dispatch-milestone), [source layout](reconstructed/dc9-source-layout.json) |
 | DC9 channel storage | Historical overlay before channel assignment: 164 components (9,195 instructions / 28,347 bytes), 12 tables / 911 bytes. Four routines added; inactive integrated apply returns under explicit fixture and store hypotheses; combined gate passed 214 tests with no failures, errors, or skips; all stages and three BIN builds passed | [Channel-storage report](2026-10-30_reverse-dc9-channel-storage-report.md), [validation run](extracted/firmware-validation-channel-storage-2026-10-30/), [workspace](extracted/firmware-validation-channel-storage-2026-10-30/workspace/), [summary](community-channel-storage-workspace.json) |
 | Community development workspace | Raw DC9/EFE images, lossless DC9 components, expanded code/resources, editable source and separate USB images; engine-preparation gate passed 185 tests | [Build guide](../firmware/README.md), [engine-preparation report](2026-10-26_reverse-dc9-engine-prepare-report.md), [historical workspace](extracted/firmware-validation-engine-prepare-2026-10-26/workspace/), [workspace summary](community-engine-prepare-workspace.json) |
-| DC9 partial source baseline | Current overlay: 182 components (31,697 code bytes; 10,338 instructions), 14 tables (1,203 bytes); the active-path batch gate passed 231 tests. The earlier byte-identical stock BIN remains a historical baseline | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [dispatch report](2026-11-04_reverse-dc9-channel-dispatch-report.md) |
+| DC9 partial source baseline | Current overlay: 271 routines (47,338 code bytes; 15,539 instructions), 14 tables (1,203 bytes); the bulk-source gate passed 40 stages and 231 tests. The earlier byte-identical stock BIN remains a historical baseline | [Build evidence](dc9-source-baseline.json), [source layout](reconstructed/dc9-source-layout.json), [bulk-source report](2026-11-06_reverse-dc9-bulk-source-report.md) |
 | DC9 layout configuration | Historical configuration milestone: 98 repository tests; 542 strict and 492 conditional cases; six layouts; six expanded bytes changed in rectangle example | [Configuration section](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-configuration-2026-10-23/validation.json) |
 | DC9 apply guards | 102 tests passed; 2,965 strict apply cases using explicitly supplied continuation states; full apply not executed | [Configuration and apply report](2026-10-24_reverse-dc9-configuration-report.md), [historical validation](extracted/firmware-validation-apply-2026-10-24/validation.json), [apply summary](community-apply-workspace.json) |
 | DC9 metadata routing and masked-register paths | Historical 79-component gate passed 115 tests; 2,433 strict and 290 conditional metadata cases; 32 default masked-store rejections and 64 conditional cases across two policies | [Metadata report](2026-10-24_reverse-dc9-metadata-report.md), [validation](extracted/firmware-validation-metadata-2026-10-24/validation.json), [routing summary](community-metadata-routing-workspace.json) |
