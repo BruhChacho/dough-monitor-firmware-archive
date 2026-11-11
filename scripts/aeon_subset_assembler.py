@@ -63,8 +63,27 @@ ARITY.update({'bn.sfeq': 2, 'bn.sfne': 2, 'bn.exths': 2,
               'bn.jal': 1, 'bg.bles': 3, 'bg.bgtsi': 3})
 SIZES.update({'bn.addc': 3, 'bg.syncwritebuffer': 4})
 ARITY.update({'bn.addc': 3, 'bg.syncwritebuffer': 0})
+# Explicit encodings for the low bit hidden by the pinned bn.lh decoder.
+SIZES.update({'bn.lh_0': 3, 'bn.lh_1': 3})
+ARITY.update({'bn.lh_0': 2, 'bn.lh_1': 2})
 SIZES['bg.addci_maybe'] = 4
 ARITY['bg.addci_maybe'] = 3
+
+
+def exact_source_mnemonic(mnemonic, raw):
+    """Retain encoding information hidden by the pinned decoder's text.
+
+    The bn.lh suffix names encoded bit zero, not a CPU semantic distinction.
+    Keep the established bn.lh spelling when its restricted encoder is exact.
+    """
+    if mnemonic == "bn.lh":
+        if len(raw) != 3:
+            raise ValueError("Expected three encoded bytes for bn.lh")
+        if not raw[-1] & 1:
+            return "bn.lh_0"
+        if raw[-1] & 0x80:
+            return "bn.lh_1"
+    return mnemonic
 
 
 def immediate(value, bits, signed=False):
@@ -117,6 +136,15 @@ def encode(op, args, pc, labels):
         word = 0x2c0000 | immediate(target(args[0]) - pc, 18, True)
     elif op == "bn.jal":
         word = 0x280000 | immediate(target(args[0]) - pc, 18, True)
+    elif op in ("bn.lh_0", "bn.lh_1"):
+        offset, base = memory_operand(args[1])
+        # Pinned i24_mB_2 displays (signed byte & 0xfe), masking bit 0.
+        # Keep the displayed unsigned even byte and record the hidden bit in
+        # the explicit source spelling. This makes no hardware/ISA claim.
+        if offset % 2:
+            raise ValueError("Halfword offset must be even")
+        word = (0x080000 | (op == "bn.lh_1") | register(args[0]) << 13
+                | base << 8 | immediate(offset, 8))
     elif op == "bn.lh":
         offset, base = memory_operand(args[1])
         # Pinned decoder masks the displacement to an unsigned even byte.
