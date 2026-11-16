@@ -66,6 +66,8 @@ ARITY.update({'bn.addc': 3, 'bg.syncwritebuffer': 0})
 # Explicit encodings for the low bit hidden by the pinned bn.lh decoder.
 SIZES.update({'bn.lh_0': 3, 'bn.lh_1': 3})
 ARITY.update({'bn.lh_0': 2, 'bn.lh_1': 2})
+SIZES.update({'bn.lbs': 3, 'bn.bgtsi': 3})
+ARITY.update({'bn.lbs': 2, 'bn.bgtsi': 3})
 SIZES['bg.addci_maybe'] = 4
 ARITY['bg.addci_maybe'] = 3
 
@@ -162,7 +164,7 @@ def encode(op, args, pc, labels):
         word = 0x8001 | immediate(int(args[0], 0), 4) << 1
     elif op in ("bt.mov", "bt.add"):
         word = (0x8800 if op == "bt.mov" else 0x8c00) | register(args[0]) << 5 | register(args[1])
-    elif op in ("bn.lbz", "bn.lwz", "bn.sw", "bn.sbz", "bn.sh_1", "bn.sh_2"):
+    elif op in ("bn.lbs", "bn.lbz", "bn.lwz", "bn.sw", "bn.sbz", "bn.sh_1", "bn.sh_2"):
         store = op in ("bn.sw", "bn.sbz", "bn.sh_1", "bn.sh_2")
         offset, base = memory_operand(args[0] if store else args[1])
         reg = register(args[1] if store else args[0])
@@ -175,7 +177,7 @@ def encode(op, args, pc, labels):
             raise ValueError("sh_1 supports only nonnegative four-byte-aligned offsets")
         if op == 'bn.sh_2' and (offset < 0 or offset % 4 != 2):
             raise ValueError('sh_2 supports only nonnegative offsets congruent to two modulo four')
-        prefix = {"bn.lbz": 0x100000, "bn.lwz": 0x0c0002, "bn.sw": 0x0c0000,
+        prefix = {"bn.lbs": 0x140000, "bn.lbz": 0x100000, "bn.lwz": 0x0c0002, "bn.sw": 0x0c0000,
                   "bn.sbz": 0x180000, "bn.sh_1": 0x0c0001, "bn.sh_2": 0x0c0003}[op]
         word = prefix | reg << 13 | base << 8 | encoded_offset
     elif op in ("bg.lwz", "bg.sw_0", "bg.sw_1", "bg.sh", "bg.lhz", "bg.sbz", "bg.lbz"):
@@ -248,6 +250,11 @@ def encode(op, args, pc, labels):
                  "bn.cmov_0": 0x480000, "bn.cmov_1": 0x480001,
                  "bn.divs": 0x400000, "bn.divu": 0x400001}[op] | register(args[0]) << 13
                 | register(args[1]) << 8 | register(args[2]) << 3)
+    elif op == "bn.bgtsi":
+        # Pinned i24 opcode 9, signed 3-bit immediate, signed byte PC offset.
+        word = (0x240002 | register(args[0]) << 13
+                | immediate(int(args[1], 0), 3, True) << 10
+                | immediate(target(args[2]) - pc, 8, True) << 2)
     elif op in ("bn.addi", "bn.andi", "bn.ori"):
         word = ({"bn.addi": 0x1c0000, "bn.andi": 0x540000, "bn.ori": 0x500000}[op] | register(args[0]) << 13
                 | register(args[1]) << 8 | immediate(int(args[2], 0), 8, op == "bn.addi"))
