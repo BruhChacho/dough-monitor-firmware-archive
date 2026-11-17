@@ -26,8 +26,8 @@ The [source build guide](firmware/README.md) explains how to prepare an editable
 workspace, reproduce the stock DC9 image, and build fixed-size source changes
 using Python 3.9 or newer. No additional Python packages are required.
 
-[Editable assembly and tables](firmware/source/layout.json) cover 523 components,
-125,949 code bytes and 2,179 table bytes. The code covers 5.190% of the
+[Editable assembly and tables](firmware/source/layout.json) cover 600 components,
+139,087 code bytes and 2,203 table bytes. The code covers 5.732% of the
 2,426,560-byte application. The rest remains a pinned vendor binary. A complete vendor source
 tree, SDK and general target compiler are unavailable. Experimental images are
 hardware-untested and are not offered as installable releases.
