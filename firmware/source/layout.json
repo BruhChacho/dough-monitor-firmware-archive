@@ -3,7 +3,7 @@
   "source_firmware_sha256": "0b5d8350af9997e35b8591b4d5585ae859988129b72b4e7b8d55a3ab68ea56a9",
   "candidate_load_base": "0x200000",
   "limitations": [
-    "600 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
+    "785 reconstructed routines/fragments only; remaining firmware is a pinned vendor input",
     "Byte-exact assembly does not validate physical CPU behavior",
     "No hardware testing or update transport is included"
   ],
@@ -4207,6 +4207,1301 @@
       "size": 31,
       "original_code_sha256": "8061bf1d6db779daeff716f739e502c7c72e50d0639caef802cda31674c30ece",
       "source": "firmware/source/spectrum_one_routine_2a9469.aeon.s"
+    },
+    {
+      "name": "routine_20409a",
+      "address": "0x20409a",
+      "size": 56,
+      "original_code_sha256": "b87911821479725e3f59e5ed7b30d600781b4484bfc5cef3f0eecb790aa19948",
+      "source": "firmware/source/spectrum_one_routine_20409a.aeon.s"
+    },
+    {
+      "name": "routine_20417e",
+      "address": "0x20417e",
+      "size": 50,
+      "original_code_sha256": "a1366159b9cda90069af9ecaf014b07bb418aa7ca9141598219f0ecdfcb3c04a",
+      "source": "firmware/source/spectrum_one_routine_20417e.aeon.s"
+    },
+    {
+      "name": "routine_2041b0",
+      "address": "0x2041b0",
+      "size": 25,
+      "original_code_sha256": "be4b7277d4a8640f33272de97e7c71c485d89e3f75e3e8e0ed8a1da090726321",
+      "source": "firmware/source/spectrum_one_routine_2041b0.aeon.s"
+    },
+    {
+      "name": "routine_2041c9",
+      "address": "0x2041c9",
+      "size": 91,
+      "original_code_sha256": "ed7fcba5cbeaee5aaed1a5181b949ab94013c0e1da25d4e60e2e16a51695292c",
+      "source": "firmware/source/spectrum_one_routine_2041c9.aeon.s"
+    },
+    {
+      "name": "routine_204243",
+      "address": "0x204243",
+      "size": 17,
+      "original_code_sha256": "b5e81f8b90f29ea859480fb459fc48017c46dd1283775178babcc610ddd44d5b",
+      "source": "firmware/source/spectrum_one_routine_204243.aeon.s"
+    },
+    {
+      "name": "routine_2042dd",
+      "address": "0x2042dd",
+      "size": 23,
+      "original_code_sha256": "94af34a581d9e53e582cf5fd88fcbc9c4408455cd281da7b969b8a9670525159",
+      "source": "firmware/source/spectrum_one_routine_2042dd.aeon.s"
+    },
+    {
+      "name": "routine_2042f4",
+      "address": "0x2042f4",
+      "size": 23,
+      "original_code_sha256": "4e5724ed1673bd32da75aa802493822852f76368516124f8130a00c292765891",
+      "source": "firmware/source/spectrum_one_routine_2042f4.aeon.s"
+    },
+    {
+      "name": "routine_20434e",
+      "address": "0x20434e",
+      "size": 88,
+      "original_code_sha256": "6bcdf3680f397944907e9ad6cadc756503c5aef5175caddaf5a4a8e9d6c8bcab",
+      "source": "firmware/source/spectrum_one_routine_20434e.aeon.s"
+    },
+    {
+      "name": "routine_2043a6",
+      "address": "0x2043a6",
+      "size": 167,
+      "original_code_sha256": "90b36b9c73cd7abbfa161885d7e6b0058c537f163b20009e0ad0b25a474298a3",
+      "source": "firmware/source/spectrum_one_routine_2043a6.aeon.s"
+    },
+    {
+      "name": "routine_20444d",
+      "address": "0x20444d",
+      "size": 112,
+      "original_code_sha256": "8b6e2a6da85c575517dcd91f7ed36f590928e8a60bfa383c6efc4f15632109f4",
+      "source": "firmware/source/spectrum_one_routine_20444d.aeon.s"
+    },
+    {
+      "name": "routine_20451b",
+      "address": "0x20451b",
+      "size": 45,
+      "original_code_sha256": "77c5a086c4445729089370ca8623e634618bd65d588cd338a97904677227aa52",
+      "source": "firmware/source/spectrum_one_routine_20451b.aeon.s"
+    },
+    {
+      "name": "routine_204555",
+      "address": "0x204555",
+      "size": 44,
+      "original_code_sha256": "5115753a8a751739b7b7c0a3bc6dcdc9b7bbaae2af369de607c81d48e9d02455",
+      "source": "firmware/source/spectrum_one_routine_204555.aeon.s"
+    },
+    {
+      "name": "routine_204581",
+      "address": "0x204581",
+      "size": 173,
+      "original_code_sha256": "968a4a70440371a29040cb69866eeb19fa4e77aee07a3ee1e79cef43e099d208",
+      "source": "firmware/source/spectrum_one_routine_204581.aeon.s"
+    },
+    {
+      "name": "routine_2053ad",
+      "address": "0x2053ad",
+      "size": 194,
+      "original_code_sha256": "8d48d093d6315f5de9d41dbcb87333268107cef43640c6bbbfc99980842b2d5c",
+      "source": "firmware/source/spectrum_one_routine_2053ad.aeon.s"
+    },
+    {
+      "name": "routine_20546f",
+      "address": "0x20546f",
+      "size": 124,
+      "original_code_sha256": "21042b5a8e1563ff1d9092e01505f63c01b3aa0c1b096124d1b8e443295ace03",
+      "source": "firmware/source/spectrum_one_routine_20546f.aeon.s"
+    },
+    {
+      "name": "routine_205531",
+      "address": "0x205531",
+      "size": 69,
+      "original_code_sha256": "2de01a3cbd1084f3e9729589ff1b64233c38c89939c60dd455375cf36e015c3e",
+      "source": "firmware/source/spectrum_one_routine_205531.aeon.s"
+    },
+    {
+      "name": "routine_205576",
+      "address": "0x205576",
+      "size": 7,
+      "original_code_sha256": "59fdc9f121e8dbd4e4f98cea522b0f356f3ce1d937971bba9c9a69bdefe40134",
+      "source": "firmware/source/spectrum_one_routine_205576.aeon.s"
+    },
+    {
+      "name": "routine_20557d",
+      "address": "0x20557d",
+      "size": 69,
+      "original_code_sha256": "ea6adf39fb2042e1eb77df9ad77c836859fc0ab788dd96946f40231d16396c6d",
+      "source": "firmware/source/spectrum_one_routine_20557d.aeon.s"
+    },
+    {
+      "name": "routine_205711",
+      "address": "0x205711",
+      "size": 578,
+      "original_code_sha256": "c77e9095e3ec20ed496477d08f05569f5459bac9e210fdc678b6792a23f97022",
+      "source": "firmware/source/spectrum_one_routine_205711.aeon.s"
+    },
+    {
+      "name": "routine_205b56",
+      "address": "0x205b56",
+      "size": 130,
+      "original_code_sha256": "d6c7b777df66df2f68fe1afc47ae82f2283846257b520c02bd529283df459cf6",
+      "source": "firmware/source/spectrum_one_routine_205b56.aeon.s"
+    },
+    {
+      "name": "routine_2063ed",
+      "address": "0x2063ed",
+      "size": 42,
+      "original_code_sha256": "3322674a0b84f8038a7c3f17690fc2430f361c08ba4b90f9bab5b4b6144f9620",
+      "source": "firmware/source/spectrum_one_routine_2063ed.aeon.s"
+    },
+    {
+      "name": "routine_206417",
+      "address": "0x206417",
+      "size": 16,
+      "original_code_sha256": "d538f1842d7558317345f4e4566abf5f9b66b0aacd0bc3316ab8da7f1aece82c",
+      "source": "firmware/source/spectrum_one_routine_206417.aeon.s"
+    },
+    {
+      "name": "routine_206427",
+      "address": "0x206427",
+      "size": 118,
+      "original_code_sha256": "37c4b29d771a5d3b7aa6e1f67cdf79910943f82cf9e7cb2b31cd119eb9ef327d",
+      "source": "firmware/source/spectrum_one_routine_206427.aeon.s"
+    },
+    {
+      "name": "routine_20649d",
+      "address": "0x20649d",
+      "size": 1742,
+      "original_code_sha256": "c3198ed04322cb40d65ed35f72291d80748e9a5c812ab5134708d441cce02123",
+      "source": "firmware/source/spectrum_one_routine_20649d.aeon.s"
+    },
+    {
+      "name": "routine_206b6b",
+      "address": "0x206b6b",
+      "size": 269,
+      "original_code_sha256": "6336bc5032e91a30ec7d42fbb172d2f0cfecd7655598904d510f4227b5a0fe74",
+      "source": "firmware/source/spectrum_one_routine_206b6b.aeon.s"
+    },
+    {
+      "name": "routine_206f72",
+      "address": "0x206f72",
+      "size": 182,
+      "original_code_sha256": "1b7d309dcaae6b0d01611548758ec162d6ca7c49f234769b42de98246ba801ca",
+      "source": "firmware/source/spectrum_one_routine_206f72.aeon.s"
+    },
+    {
+      "name": "routine_207028",
+      "address": "0x207028",
+      "size": 203,
+      "original_code_sha256": "3ec00d263ccf8afa2b2867e0051cd647a200687033b913559fd2c471f1a872d2",
+      "source": "firmware/source/spectrum_one_routine_207028.aeon.s"
+    },
+    {
+      "name": "routine_2072e4",
+      "address": "0x2072e4",
+      "size": 447,
+      "original_code_sha256": "439fd434f0c137f26eaebe98d645d9c6533590fdca62a621068208183f7a68cb",
+      "source": "firmware/source/spectrum_one_routine_2072e4.aeon.s"
+    },
+    {
+      "name": "routine_20762c",
+      "address": "0x20762c",
+      "size": 271,
+      "original_code_sha256": "8a6ef7efa2649724823bd188de6446102e09c93cdf8b36b5bbcd91ec99c755c4",
+      "source": "firmware/source/spectrum_one_routine_20762c.aeon.s"
+    },
+    {
+      "name": "fragment_207f4b",
+      "address": "0x207f4b",
+      "size": 349,
+      "original_code_sha256": "56774e05f7cc302794624b646b5ef9c26f9c9585cdbad20a7322bc12930e53d1",
+      "source": "firmware/source/spectrum_one_fragment_207f4b.aeon.s"
+    },
+    {
+      "name": "routine_208205",
+      "address": "0x208205",
+      "size": 190,
+      "original_code_sha256": "64573d65e3235beb5c7a012c436ce296dfa8ae2299af1526e66fa2dcc2a473a0",
+      "source": "firmware/source/spectrum_one_routine_208205.aeon.s"
+    },
+    {
+      "name": "routine_2082c3",
+      "address": "0x2082c3",
+      "size": 190,
+      "original_code_sha256": "9ee72a1cf9b82a573d050591870635da5d1081b1230a44e2286f329d2e67528b",
+      "source": "firmware/source/spectrum_one_routine_2082c3.aeon.s"
+    },
+    {
+      "name": "routine_208676",
+      "address": "0x208676",
+      "size": 292,
+      "original_code_sha256": "0e1dc35a56bb4a6a4a71266f59febc2255187723bbb33754bf1bc4de0dd082ed",
+      "source": "firmware/source/spectrum_one_routine_208676.aeon.s"
+    },
+    {
+      "name": "routine_20879a",
+      "address": "0x20879a",
+      "size": 297,
+      "original_code_sha256": "4fae470b4cc25343b57899c179118e95836c7f7c7205dc4c321b840fafe6d578",
+      "source": "firmware/source/spectrum_one_routine_20879a.aeon.s"
+    },
+    {
+      "name": "routine_2088c3",
+      "address": "0x2088c3",
+      "size": 586,
+      "original_code_sha256": "c5f6c3475d391ca36d949f33930e9d5192ee7fbb54cc7c4ba1bad5a1984582dd",
+      "source": "firmware/source/spectrum_one_routine_2088c3.aeon.s"
+    },
+    {
+      "name": "routine_20981f",
+      "address": "0x20981f",
+      "size": 257,
+      "original_code_sha256": "b0141bff4640ea7c2c11571a73e76f6537b47bda3e54a0ff5e4eebbd863723bd",
+      "source": "firmware/source/spectrum_one_routine_20981f.aeon.s"
+    },
+    {
+      "name": "routine_209a30",
+      "address": "0x209a30",
+      "size": 361,
+      "original_code_sha256": "2e48dac1cc463eb4de3d4deccc4fdbb75e20fa65d0815863474645eab37d536f",
+      "source": "firmware/source/spectrum_one_routine_209a30.aeon.s"
+    },
+    {
+      "name": "routine_20f12a",
+      "address": "0x20f12a",
+      "size": 118,
+      "original_code_sha256": "903039cd4d9802726a998803391bf262d900568b06e7f589c995595e15bff22b",
+      "source": "firmware/source/spectrum_one_routine_20f12a.aeon.s"
+    },
+    {
+      "name": "routine_210280",
+      "address": "0x210280",
+      "size": 35,
+      "original_code_sha256": "810dd1e0de79fa2bc5d7dc0ee4dd905bd62c5963804e0deba49ead6d5b23121b",
+      "source": "firmware/source/spectrum_one_routine_210280.aeon.s"
+    },
+    {
+      "name": "routine_2102a3",
+      "address": "0x2102a3",
+      "size": 35,
+      "original_code_sha256": "b665907c319b5ecf634ed5d4b88c357e297ac0dc64be67250b34b3d5e165cd4e",
+      "source": "firmware/source/spectrum_one_routine_2102a3.aeon.s"
+    },
+    {
+      "name": "routine_2102c6",
+      "address": "0x2102c6",
+      "size": 35,
+      "original_code_sha256": "6de8d2bbb2641878883826305c512c472db42f62cb007a577382483745a9653f",
+      "source": "firmware/source/spectrum_one_routine_2102c6.aeon.s"
+    },
+    {
+      "name": "routine_2102e9",
+      "address": "0x2102e9",
+      "size": 35,
+      "original_code_sha256": "d33df799f4176c207c33cd0e4f2088713b34edbffc540ada6ffbf71a5762d055",
+      "source": "firmware/source/spectrum_one_routine_2102e9.aeon.s"
+    },
+    {
+      "name": "routine_21047e",
+      "address": "0x21047e",
+      "size": 66,
+      "original_code_sha256": "c03ad2a450dbef56096f4b509b2400b633e913a851f65d809a50e8a61385ef4c",
+      "source": "firmware/source/spectrum_one_routine_21047e.aeon.s"
+    },
+    {
+      "name": "routine_21bca6",
+      "address": "0x21bca6",
+      "size": 70,
+      "original_code_sha256": "59f05fe98a838cffa8a6a17904b62971f883072a189a34400d4034c9b6ece916",
+      "source": "firmware/source/spectrum_one_routine_21bca6.aeon.s"
+    },
+    {
+      "name": "routine_223126",
+      "address": "0x223126",
+      "size": 179,
+      "original_code_sha256": "b401148655254cda04eecb60f0c931a8a6637fcf0b010115b4bd53dcb641ea16",
+      "source": "firmware/source/spectrum_one_routine_223126.aeon.s"
+    },
+    {
+      "name": "routine_225db7",
+      "address": "0x225db7",
+      "size": 57,
+      "original_code_sha256": "61471b499e4ad79f8a1bd212be3ed731ab5075b8089b2bf75757e3c6b93afb6f",
+      "source": "firmware/source/spectrum_one_routine_225db7.aeon.s"
+    },
+    {
+      "name": "routine_225df0",
+      "address": "0x225df0",
+      "size": 33,
+      "original_code_sha256": "96c6d694e41551148af523c600909864489179be1566529c325e4989b7f9afc6",
+      "source": "firmware/source/spectrum_one_routine_225df0.aeon.s"
+    },
+    {
+      "name": "routine_233d1b",
+      "address": "0x233d1b",
+      "size": 198,
+      "original_code_sha256": "27477e162b72cc89505aa73cddbb81e4ff439bc46af82b63a92260e9cea8e567",
+      "source": "firmware/source/spectrum_one_routine_233d1b.aeon.s"
+    },
+    {
+      "name": "routine_233de1",
+      "address": "0x233de1",
+      "size": 26,
+      "original_code_sha256": "bf221d40f92cc6794989f4e88a44792ad78467b37826bf6ca2fa7fd3c240ad7d",
+      "source": "firmware/source/spectrum_one_routine_233de1.aeon.s"
+    },
+    {
+      "name": "routine_235230",
+      "address": "0x235230",
+      "size": 27,
+      "original_code_sha256": "1000d23472ed47cb15921c88ebc069bc798ea31dc2dc3e1ff3c3845596b02254",
+      "source": "firmware/source/spectrum_one_routine_235230.aeon.s"
+    },
+    {
+      "name": "routine_236b04",
+      "address": "0x236b04",
+      "size": 20,
+      "original_code_sha256": "0b59fd5e202fedb29cc1893221ed8d6c7259c9d0e0ae7f21e08bebf3aae5f9a3",
+      "source": "firmware/source/spectrum_one_routine_236b04.aeon.s"
+    },
+    {
+      "name": "fragment_237e0b",
+      "address": "0x237e0b",
+      "size": 14,
+      "original_code_sha256": "e639c3680b5418cd4753b4f3ed74b43d28e1a1f76bb3f74e44e3d29dfec189ab",
+      "source": "firmware/source/spectrum_one_fragment_237e0b.aeon.s"
+    },
+    {
+      "name": "routine_238383",
+      "address": "0x238383",
+      "size": 10,
+      "original_code_sha256": "0c587e6d8492deeb573fbc5c9136a0b7dcd565e8c65d2f74335e3674120a83fc",
+      "source": "firmware/source/spectrum_one_routine_238383.aeon.s"
+    },
+    {
+      "name": "routine_2383db",
+      "address": "0x2383db",
+      "size": 73,
+      "original_code_sha256": "4278976edbafb4cd2f2e2bc8137e8b77e20d0b0a58cb848ac3f290d2e2e15ef0",
+      "source": "firmware/source/spectrum_one_routine_2383db.aeon.s"
+    },
+    {
+      "name": "routine_23a01f",
+      "address": "0x23a01f",
+      "size": 146,
+      "original_code_sha256": "225246bd8c56114d158c30ce7c0143ef95810c3fe7978ef426ef05f484ec8762",
+      "source": "firmware/source/spectrum_one_routine_23a01f.aeon.s"
+    },
+    {
+      "name": "routine_23a0de",
+      "address": "0x23a0de",
+      "size": 4,
+      "original_code_sha256": "3ae2c911de362cee32486daa7bc2d9ea189faf87723e86b47f9fcdb6ac65d326",
+      "source": "firmware/source/spectrum_one_routine_23a0de.aeon.s"
+    },
+    {
+      "name": "routine_23a181",
+      "address": "0x23a181",
+      "size": 55,
+      "original_code_sha256": "6b52363dadda6e07193f1c35b9ff1b70ead37f4dceaad15e4a8b3b8b297f82cd",
+      "source": "firmware/source/spectrum_one_routine_23a181.aeon.s"
+    },
+    {
+      "name": "routine_23a1b8",
+      "address": "0x23a1b8",
+      "size": 98,
+      "original_code_sha256": "d46d77fe2b7d5a6bf9bf61272f035fc88f03b7752d9318585a05c2c0bdcba12f",
+      "source": "firmware/source/spectrum_one_routine_23a1b8.aeon.s"
+    },
+    {
+      "name": "routine_23a295",
+      "address": "0x23a295",
+      "size": 146,
+      "original_code_sha256": "b71034f5d7bd09dfdaa41255dae020f8768f85440b1fdf560a91585812279a23",
+      "source": "firmware/source/spectrum_one_routine_23a295.aeon.s"
+    },
+    {
+      "name": "routine_23a327",
+      "address": "0x23a327",
+      "size": 252,
+      "original_code_sha256": "7c559abf9170332137bbba8803ee65ca5d4ad6d82a480a10433ae5e1bd4ee34d",
+      "source": "firmware/source/spectrum_one_routine_23a327.aeon.s"
+    },
+    {
+      "name": "routine_23a423",
+      "address": "0x23a423",
+      "size": 180,
+      "original_code_sha256": "7922143a7224fed81ce0fbcfb6aadf0513bed4712956b92d8e7c020b9d8610ab",
+      "source": "firmware/source/spectrum_one_routine_23a423.aeon.s"
+    },
+    {
+      "name": "routine_23a5aa",
+      "address": "0x23a5aa",
+      "size": 64,
+      "original_code_sha256": "62dd04835ddacf23d9a7cccdfa5c369110b5e2e308c4dd88449b79dbaf3d51ca",
+      "source": "firmware/source/spectrum_one_routine_23a5aa.aeon.s"
+    },
+    {
+      "name": "routine_23e661",
+      "address": "0x23e661",
+      "size": 30,
+      "original_code_sha256": "27d78c9fcb2be9fc9061fe59834e3e29801888c9091bfd7e4cf122810816e3f3",
+      "source": "firmware/source/spectrum_one_routine_23e661.aeon.s"
+    },
+    {
+      "name": "routine_23e697",
+      "address": "0x23e697",
+      "size": 24,
+      "original_code_sha256": "01f025949f81c6371b870bff7c8d23dd87de50d930208eb0f11bb71265fd805e",
+      "source": "firmware/source/spectrum_one_routine_23e697.aeon.s"
+    },
+    {
+      "name": "routine_23e760",
+      "address": "0x23e760",
+      "size": 35,
+      "original_code_sha256": "dbb8ead41042187115e980b9f4a1bb393bdc12957a5f41015c654871a66722a0",
+      "source": "firmware/source/spectrum_one_routine_23e760.aeon.s"
+    },
+    {
+      "name": "routine_23e7b3",
+      "address": "0x23e7b3",
+      "size": 21,
+      "original_code_sha256": "edef9ec135bcb4c894981ecd490e926a91b313cc7de21d9c0ae65c2e3e86a4a2",
+      "source": "firmware/source/spectrum_one_routine_23e7b3.aeon.s"
+    },
+    {
+      "name": "routine_23ecff",
+      "address": "0x23ecff",
+      "size": 30,
+      "original_code_sha256": "b0e35080d7c269b77a60ff4aab6bd9df4da83da1a498cce259f7998bfd7cf9a1",
+      "source": "firmware/source/spectrum_one_routine_23ecff.aeon.s"
+    },
+    {
+      "name": "routine_23f12d",
+      "address": "0x23f12d",
+      "size": 75,
+      "original_code_sha256": "cf220e6dbb78f8928d2aad548035626a86908624e0c5362b952ee8fbf43d9914",
+      "source": "firmware/source/spectrum_one_routine_23f12d.aeon.s"
+    },
+    {
+      "name": "routine_242247",
+      "address": "0x242247",
+      "size": 83,
+      "original_code_sha256": "d2a2d98399701ecfceb92d30199538920781479792bc626d7d42170a27698b1b",
+      "source": "firmware/source/spectrum_one_routine_242247.aeon.s"
+    },
+    {
+      "name": "routine_248739",
+      "address": "0x248739",
+      "size": 80,
+      "original_code_sha256": "6a6575a93298830b1c808dbd17d18c65067bcc45abaddaf62563b80472b585ad",
+      "source": "firmware/source/spectrum_one_routine_248739.aeon.s"
+    },
+    {
+      "name": "routine_248789",
+      "address": "0x248789",
+      "size": 45,
+      "original_code_sha256": "41212b9918ac87eb8d3deff2120ee9387e936cc86177dafa42aa0d6e79b4efc1",
+      "source": "firmware/source/spectrum_one_routine_248789.aeon.s"
+    },
+    {
+      "name": "routine_2487b6",
+      "address": "0x2487b6",
+      "size": 131,
+      "original_code_sha256": "30f28661205872538b21fcd6adf950a70afb4f9763293345145768f0fb39588d",
+      "source": "firmware/source/spectrum_one_routine_2487b6.aeon.s"
+    },
+    {
+      "name": "routine_248839",
+      "address": "0x248839",
+      "size": 16,
+      "original_code_sha256": "e1eeb66483475eba57c5a6fbd231c0952e4f2c390f325b595f6f267fe06415a0",
+      "source": "firmware/source/spectrum_one_routine_248839.aeon.s"
+    },
+    {
+      "name": "routine_2488ff",
+      "address": "0x2488ff",
+      "size": 29,
+      "original_code_sha256": "c5d9162103e75887e31590f87809c80c7399fe8ed2e8270e207918ce1f94ff8c",
+      "source": "firmware/source/spectrum_one_routine_2488ff.aeon.s"
+    },
+    {
+      "name": "routine_24891c",
+      "address": "0x24891c",
+      "size": 23,
+      "original_code_sha256": "2eaf3930b8e58560d098e9b662f0e937da2e9da2ee3892b887062c05ebec7a02",
+      "source": "firmware/source/spectrum_one_routine_24891c.aeon.s"
+    },
+    {
+      "name": "routine_248933",
+      "address": "0x248933",
+      "size": 33,
+      "original_code_sha256": "f332609a0f3125df4f24e0865e764577753124840e54be7f65e07860f2d4b788",
+      "source": "firmware/source/spectrum_one_routine_248933.aeon.s"
+    },
+    {
+      "name": "routine_248954",
+      "address": "0x248954",
+      "size": 15,
+      "original_code_sha256": "78f4dd9e51e28fdf36147348421a4ac8ed0fde1f7799e925e506d18d34213a4c",
+      "source": "firmware/source/spectrum_one_routine_248954.aeon.s"
+    },
+    {
+      "name": "routine_249116",
+      "address": "0x249116",
+      "size": 325,
+      "original_code_sha256": "af27978105d1f721596ae223e62a2aaffd1dc1deb7a490aa63cad223e193cd56",
+      "source": "firmware/source/spectrum_one_routine_249116.aeon.s"
+    },
+    {
+      "name": "routine_24925b",
+      "address": "0x24925b",
+      "size": 355,
+      "original_code_sha256": "2d3a91a9c66935ee5bdd42388a31de5d9f45034dbdf02b2f06e21555879b392e",
+      "source": "firmware/source/spectrum_one_routine_24925b.aeon.s"
+    },
+    {
+      "name": "routine_2493be",
+      "address": "0x2493be",
+      "size": 37,
+      "original_code_sha256": "d459caf19a5855f7097244d460edcee2a78753b3748cb518872eb3ecfdc8afb4",
+      "source": "firmware/source/spectrum_one_routine_2493be.aeon.s"
+    },
+    {
+      "name": "routine_2493e3",
+      "address": "0x2493e3",
+      "size": 45,
+      "original_code_sha256": "3b1d6e697f5bb2be38a714e89bec658d0b96002e6dffc9744bcecd0d505de0b1",
+      "source": "firmware/source/spectrum_one_routine_2493e3.aeon.s"
+    },
+    {
+      "name": "routine_249410",
+      "address": "0x249410",
+      "size": 131,
+      "original_code_sha256": "1d0124736286a5c629a7749e094ade0064944059507fdcd87cb5cd192871043f",
+      "source": "firmware/source/spectrum_one_routine_249410.aeon.s"
+    },
+    {
+      "name": "routine_249493",
+      "address": "0x249493",
+      "size": 29,
+      "original_code_sha256": "ad80e2f26764456b4973d88ed6d90e07c63b42c03635ca5142f38f0b9d234196",
+      "source": "firmware/source/spectrum_one_routine_249493.aeon.s"
+    },
+    {
+      "name": "routine_249c03",
+      "address": "0x249c03",
+      "size": 325,
+      "original_code_sha256": "90c1dd5e6fdd410e91740154dc7d956ce733768fd57f2a03c581768e9d5dd178",
+      "source": "firmware/source/spectrum_one_routine_249c03.aeon.s"
+    },
+    {
+      "name": "routine_249d48",
+      "address": "0x249d48",
+      "size": 333,
+      "original_code_sha256": "82d5c317b99c0a85b7f20adcbc3aae42d510d56a23bee2605b554e014838d04c",
+      "source": "firmware/source/spectrum_one_routine_249d48.aeon.s"
+    },
+    {
+      "name": "routine_249e95",
+      "address": "0x249e95",
+      "size": 45,
+      "original_code_sha256": "7e451d93334f1ea3a56df6268493f2007774a0a08fb8ba953c5497922d586100",
+      "source": "firmware/source/spectrum_one_routine_249e95.aeon.s"
+    },
+    {
+      "name": "routine_249ec2",
+      "address": "0x249ec2",
+      "size": 131,
+      "original_code_sha256": "691694c697f51c61cd3aa14598bc5f5e571556f0c40fcbadab7b1276fc4af2c5",
+      "source": "firmware/source/spectrum_one_routine_249ec2.aeon.s"
+    },
+    {
+      "name": "routine_249f45",
+      "address": "0x249f45",
+      "size": 16,
+      "original_code_sha256": "e1eeb66483475eba57c5a6fbd231c0952e4f2c390f325b595f6f267fe06415a0",
+      "source": "firmware/source/spectrum_one_routine_249f45.aeon.s"
+    },
+    {
+      "name": "routine_24a00b",
+      "address": "0x24a00b",
+      "size": 29,
+      "original_code_sha256": "682fa3d72a19e0e5f04f22b9fdd3342bd1c153bb4236c26a1f2492617a208305",
+      "source": "firmware/source/spectrum_one_routine_24a00b.aeon.s"
+    },
+    {
+      "name": "routine_24a028",
+      "address": "0x24a028",
+      "size": 23,
+      "original_code_sha256": "3c5f909b15509722084e2eae05a415ef8d87fde0fcdd9b8f42153bd1da559493",
+      "source": "firmware/source/spectrum_one_routine_24a028.aeon.s"
+    },
+    {
+      "name": "routine_24a03f",
+      "address": "0x24a03f",
+      "size": 33,
+      "original_code_sha256": "9b57709772814f3a27168fff198fb1a419e2076bc4762ba2dfd6f3f99d04665e",
+      "source": "firmware/source/spectrum_one_routine_24a03f.aeon.s"
+    },
+    {
+      "name": "routine_24a060",
+      "address": "0x24a060",
+      "size": 15,
+      "original_code_sha256": "246dbf4e6b478829abbf46b56a6e90e9d8acae55157cf51461f00b23c2bbc87a",
+      "source": "firmware/source/spectrum_one_routine_24a060.aeon.s"
+    },
+    {
+      "name": "routine_24a822",
+      "address": "0x24a822",
+      "size": 325,
+      "original_code_sha256": "8ed6127163efe4490b680f963d841695a8259dbfe168d116e28bdd2fbe8cf80a",
+      "source": "firmware/source/spectrum_one_routine_24a822.aeon.s"
+    },
+    {
+      "name": "routine_24a967",
+      "address": "0x24a967",
+      "size": 355,
+      "original_code_sha256": "dc191302cacd24bcccb20c35626a156ded95cec71833ee337c2d9fbcb43e932e",
+      "source": "firmware/source/spectrum_one_routine_24a967.aeon.s"
+    },
+    {
+      "name": "routine_24aaca",
+      "address": "0x24aaca",
+      "size": 37,
+      "original_code_sha256": "d459caf19a5855f7097244d460edcee2a78753b3748cb518872eb3ecfdc8afb4",
+      "source": "firmware/source/spectrum_one_routine_24aaca.aeon.s"
+    },
+    {
+      "name": "routine_24aaef",
+      "address": "0x24aaef",
+      "size": 45,
+      "original_code_sha256": "6734d96883d5b4ad24c03f42fade932a6a83de944260d898234fedb006f71031",
+      "source": "firmware/source/spectrum_one_routine_24aaef.aeon.s"
+    },
+    {
+      "name": "routine_24ab1c",
+      "address": "0x24ab1c",
+      "size": 131,
+      "original_code_sha256": "375e63914648d8d58bc1522d5c7ad7385355c190d695d354de55c5636a91d1db",
+      "source": "firmware/source/spectrum_one_routine_24ab1c.aeon.s"
+    },
+    {
+      "name": "routine_24ab9f",
+      "address": "0x24ab9f",
+      "size": 29,
+      "original_code_sha256": "96595079d26eb442b339620ddaa2ece888164f1eac059ed2b6afb79e8260a0bc",
+      "source": "firmware/source/spectrum_one_routine_24ab9f.aeon.s"
+    },
+    {
+      "name": "routine_24b30f",
+      "address": "0x24b30f",
+      "size": 325,
+      "original_code_sha256": "44210618ea9fb4cf79364951fe06612962dfb5b1b220aa1adc2fe66030e4f4fd",
+      "source": "firmware/source/spectrum_one_routine_24b30f.aeon.s"
+    },
+    {
+      "name": "routine_24b454",
+      "address": "0x24b454",
+      "size": 333,
+      "original_code_sha256": "577776cdc1e8b38c16d178f2e016f5bbb5686a3fca677f27ae732bac4408076f",
+      "source": "firmware/source/spectrum_one_routine_24b454.aeon.s"
+    },
+    {
+      "name": "routine_24f810",
+      "address": "0x24f810",
+      "size": 18,
+      "original_code_sha256": "51f6ca0ab030012f943adefd77b3fbde9e23248957820841ec4e27f42738fa8e",
+      "source": "firmware/source/spectrum_one_routine_24f810.aeon.s"
+    },
+    {
+      "name": "routine_24f822",
+      "address": "0x24f822",
+      "size": 18,
+      "original_code_sha256": "ecf78eb45cba1380fa2fb4c855f75835fbdd647de90d51c888c7d06b44d68045",
+      "source": "firmware/source/spectrum_one_routine_24f822.aeon.s"
+    },
+    {
+      "name": "routine_24f834",
+      "address": "0x24f834",
+      "size": 4,
+      "original_code_sha256": "d2e2053f3e302c9ef5d1e799c2ac54dda31db8b6e0849f8aae0e2e516a5fb3cc",
+      "source": "firmware/source/spectrum_one_routine_24f834.aeon.s"
+    },
+    {
+      "name": "routine_24f842",
+      "address": "0x24f842",
+      "size": 811,
+      "original_code_sha256": "319ed7c31b4701cdd6519edef2318fe9e3a5d1e43de74394470304410cee0f5f",
+      "source": "firmware/source/spectrum_one_routine_24f842.aeon.s"
+    },
+    {
+      "name": "routine_251d67",
+      "address": "0x251d67",
+      "size": 2054,
+      "original_code_sha256": "de96b92bda928012ea6f041edf1d93e514ee5fe3cd0170d8516eeb5edd91bda6",
+      "source": "firmware/source/spectrum_one_routine_251d67.aeon.s"
+    },
+    {
+      "name": "routine_25256d",
+      "address": "0x25256d",
+      "size": 880,
+      "original_code_sha256": "074dbea8105acfddc3b9f7e7b9f9603ebcacbe6186faa7d112d3a3e30fa14901",
+      "source": "firmware/source/spectrum_one_routine_25256d.aeon.s"
+    },
+    {
+      "name": "routine_2528dd",
+      "address": "0x2528dd",
+      "size": 58,
+      "original_code_sha256": "808533cf8dc375ff458b94f7624004bd6f304766387593d39ebc259f5c43f5d2",
+      "source": "firmware/source/spectrum_one_routine_2528dd.aeon.s"
+    },
+    {
+      "name": "routine_252917",
+      "address": "0x252917",
+      "size": 891,
+      "original_code_sha256": "4846b8e9a4d2757e715bb36f95d95acc18349edd3bb9f8ee0e30041483a28a72",
+      "source": "firmware/source/spectrum_one_routine_252917.aeon.s"
+    },
+    {
+      "name": "routine_252d17",
+      "address": "0x252d17",
+      "size": 56,
+      "original_code_sha256": "6bdb06b8f491833ba93354ef8e78cfaaaec756030bfd10bfb3e94b38ab9b7dc8",
+      "source": "firmware/source/spectrum_one_routine_252d17.aeon.s"
+    },
+    {
+      "name": "routine_252d4f",
+      "address": "0x252d4f",
+      "size": 68,
+      "original_code_sha256": "c2eac02f0478d83fa852aab1e5dec2e5bf4d80e0b2cec1694800c08045bd9285",
+      "source": "firmware/source/spectrum_one_routine_252d4f.aeon.s"
+    },
+    {
+      "name": "routine_252d93",
+      "address": "0x252d93",
+      "size": 56,
+      "original_code_sha256": "05105c070857e03166f7a04496c3b8a2f5d3c84f9d28a7dc3324907e29ac28bc",
+      "source": "firmware/source/spectrum_one_routine_252d93.aeon.s"
+    },
+    {
+      "name": "routine_252dcb",
+      "address": "0x252dcb",
+      "size": 85,
+      "original_code_sha256": "3faea45eb41156171e44d25249612cd160a09bacc90a9b3741ea75a272ecd370",
+      "source": "firmware/source/spectrum_one_routine_252dcb.aeon.s"
+    },
+    {
+      "name": "routine_252e20",
+      "address": "0x252e20",
+      "size": 184,
+      "original_code_sha256": "5a022739751e724649e05facf65b72a92e51be07e9e1ad345344baddcebdc36d",
+      "source": "firmware/source/spectrum_one_routine_252e20.aeon.s"
+    },
+    {
+      "name": "routine_252efc",
+      "address": "0x252efc",
+      "size": 72,
+      "original_code_sha256": "880bdf8a74e2f7a1be16b2aab2b7966f1b8b13980d9490be414b5665c164b270",
+      "source": "firmware/source/spectrum_one_routine_252efc.aeon.s"
+    },
+    {
+      "name": "routine_252f44",
+      "address": "0x252f44",
+      "size": 165,
+      "original_code_sha256": "37a7d4f07976b80337888c30bd740a27e3e7333989b9956789bf2de17224749d",
+      "source": "firmware/source/spectrum_one_routine_252f44.aeon.s"
+    },
+    {
+      "name": "routine_252fe9",
+      "address": "0x252fe9",
+      "size": 1169,
+      "original_code_sha256": "653af0d59335bb55c9e7b0ecbf3115b453f6a3f8fd46b3a744e3760757ffc55c",
+      "source": "firmware/source/spectrum_one_routine_252fe9.aeon.s"
+    },
+    {
+      "name": "routine_25347a",
+      "address": "0x25347a",
+      "size": 333,
+      "original_code_sha256": "1aa5e1208a894d713efc55498cc9153014429abe8fc3d473424701bc1ab39dda",
+      "source": "firmware/source/spectrum_one_routine_25347a.aeon.s"
+    },
+    {
+      "name": "routine_253c6f",
+      "address": "0x253c6f",
+      "size": 294,
+      "original_code_sha256": "821d6ff5c42a34c72d34f5210442cc064f3ed498645281ac7124d3cd344d16a1",
+      "source": "firmware/source/spectrum_one_routine_253c6f.aeon.s"
+    },
+    {
+      "name": "routine_253ffc",
+      "address": "0x253ffc",
+      "size": 191,
+      "original_code_sha256": "40a2c6e5362959729ff654c876c6b0ceff8e4526d7b00d716f1e02a192ed655b",
+      "source": "firmware/source/spectrum_one_routine_253ffc.aeon.s"
+    },
+    {
+      "name": "routine_25430b",
+      "address": "0x25430b",
+      "size": 114,
+      "original_code_sha256": "df746ea2d50023f88b61e6f55be5b087c966201abfff5abebfd711e275c34628",
+      "source": "firmware/source/spectrum_one_routine_25430b.aeon.s"
+    },
+    {
+      "name": "routine_25437d",
+      "address": "0x25437d",
+      "size": 221,
+      "original_code_sha256": "b7f8f4d696b8dbb4e808c9d14de743b065902fa03076b97aa7edb63dcaad1673",
+      "source": "firmware/source/spectrum_one_routine_25437d.aeon.s"
+    },
+    {
+      "name": "routine_25445a",
+      "address": "0x25445a",
+      "size": 578,
+      "original_code_sha256": "47ab1edf81d47aa4612a024ca9a2407d187e335ca69e699cf4770af352da3cb5",
+      "source": "firmware/source/spectrum_one_routine_25445a.aeon.s"
+    },
+    {
+      "name": "routine_25469c",
+      "address": "0x25469c",
+      "size": 980,
+      "original_code_sha256": "f2d85e3d08f5906708c13a79ee1c688d9a5091fd00f3b15c877baa31b6ecf409",
+      "source": "firmware/source/spectrum_one_routine_25469c.aeon.s"
+    },
+    {
+      "name": "routine_26062f",
+      "address": "0x26062f",
+      "size": 22,
+      "original_code_sha256": "6b5d2ea959cf0f556a627ef60563ecf07d2c3a958266e703f6a48eaa46101aec",
+      "source": "firmware/source/spectrum_one_routine_26062f.aeon.s"
+    },
+    {
+      "name": "routine_260673",
+      "address": "0x260673",
+      "size": 433,
+      "original_code_sha256": "a6f955cba3e2701e4150ba10f348dbfffee0230d9cd2448d525a13f125b4448a",
+      "source": "firmware/source/spectrum_one_routine_260673.aeon.s"
+    },
+    {
+      "name": "routine_260faa",
+      "address": "0x260faa",
+      "size": 1133,
+      "original_code_sha256": "a28e8d5baf2cc8419ceac0a03f49f0dc6e7519a5efa350583b00952841ba3c96",
+      "source": "firmware/source/spectrum_one_routine_260faa.aeon.s"
+    },
+    {
+      "name": "routine_261417",
+      "address": "0x261417",
+      "size": 146,
+      "original_code_sha256": "1e23b903ba2dd9af44be374d60c583a321261253f24488d236227c5d88f28879",
+      "source": "firmware/source/spectrum_one_routine_261417.aeon.s"
+    },
+    {
+      "name": "routine_261abd",
+      "address": "0x261abd",
+      "size": 185,
+      "original_code_sha256": "3c6fbf47ada0599dcf72e53db8347f1aa4e2cad049235548e50df0cfc24452b5",
+      "source": "firmware/source/spectrum_one_routine_261abd.aeon.s"
+    },
+    {
+      "name": "routine_262b8a",
+      "address": "0x262b8a",
+      "size": 75,
+      "original_code_sha256": "70ae840404b48159be80904c182d4fc5013e148e117ed4690d230a5233196ad1",
+      "source": "firmware/source/spectrum_one_routine_262b8a.aeon.s"
+    },
+    {
+      "name": "routine_262bfa",
+      "address": "0x262bfa",
+      "size": 35,
+      "original_code_sha256": "9c70bdca5da941a342bbcf222b923aee2532eb924f887a5103ea74b980aaec5f",
+      "source": "firmware/source/spectrum_one_routine_262bfa.aeon.s"
+    },
+    {
+      "name": "routine_262c1d",
+      "address": "0x262c1d",
+      "size": 37,
+      "original_code_sha256": "73879579fa2c0526a7b68cd6ae6492d98d9729c59150341429580d31a74ab1f8",
+      "source": "firmware/source/spectrum_one_routine_262c1d.aeon.s"
+    },
+    {
+      "name": "routine_262c42",
+      "address": "0x262c42",
+      "size": 37,
+      "original_code_sha256": "5d43a5108a5dcce97873759db2657c132e2a24855822eed6c8ee879a9ff3feb5",
+      "source": "firmware/source/spectrum_one_routine_262c42.aeon.s"
+    },
+    {
+      "name": "routine_262c67",
+      "address": "0x262c67",
+      "size": 35,
+      "original_code_sha256": "122b6fd9144ec292c062ee2e6fde0549c1cd9f70ef67d54ee864752360e64d28",
+      "source": "firmware/source/spectrum_one_routine_262c67.aeon.s"
+    },
+    {
+      "name": "routine_265650",
+      "address": "0x265650",
+      "size": 39,
+      "original_code_sha256": "8b411631af8cb598f1564fe15b7cc5613d7018484b6a13aab43d97e35735c6e9",
+      "source": "firmware/source/spectrum_one_routine_265650.aeon.s"
+    },
+    {
+      "name": "routine_26691b",
+      "address": "0x26691b",
+      "size": 64,
+      "original_code_sha256": "66a56685abf4a34216734f5d6afd9fd181fa72034b656318781970b603a4ffbd",
+      "source": "firmware/source/spectrum_one_routine_26691b.aeon.s"
+    },
+    {
+      "name": "routine_26695b",
+      "address": "0x26695b",
+      "size": 143,
+      "original_code_sha256": "94ff71037d3702b574761aa1c5d2284fc27e9a5aa7cff46feb8f0fa68349a75c",
+      "source": "firmware/source/spectrum_one_routine_26695b.aeon.s"
+    },
+    {
+      "name": "routine_2675e6",
+      "address": "0x2675e6",
+      "size": 624,
+      "original_code_sha256": "8c4a864cda053d9a91f94e02282ce3afbde1eb214cf6b7b95764340c81543872",
+      "source": "firmware/source/spectrum_one_routine_2675e6.aeon.s"
+    },
+    {
+      "name": "routine_2686be",
+      "address": "0x2686be",
+      "size": 9,
+      "original_code_sha256": "ceb83278abe894fe61f8bd4abe9ea201edb4a6cb404c0a09083c4a094980bd87",
+      "source": "firmware/source/spectrum_one_routine_2686be.aeon.s"
+    },
+    {
+      "name": "routine_2693a8",
+      "address": "0x2693a8",
+      "size": 259,
+      "original_code_sha256": "022b8f4418188e36e7e34d37702e20b96a040f7d20c58fa8bfbf805340a1a6fc",
+      "source": "firmware/source/spectrum_one_routine_2693a8.aeon.s"
+    },
+    {
+      "name": "routine_26a06e",
+      "address": "0x26a06e",
+      "size": 9,
+      "original_code_sha256": "56c8e0015c59da236a2cc638a1bf875eb9d4d2afacfe96dde130e297a36e7e79",
+      "source": "firmware/source/spectrum_one_routine_26a06e.aeon.s"
+    },
+    {
+      "name": "routine_26a077",
+      "address": "0x26a077",
+      "size": 1113,
+      "original_code_sha256": "7283b0ffe220a2631fe9b18d5281f9e7f2f93748dc4c4086017e3fd0cec26eab",
+      "source": "firmware/source/spectrum_one_routine_26a077.aeon.s"
+    },
+    {
+      "name": "routine_271d1a",
+      "address": "0x271d1a",
+      "size": 60,
+      "original_code_sha256": "0544cdf72934cacfd611dd38837a8d67b85cd9a87c220fb6ed20bceaeea8aadf",
+      "source": "firmware/source/spectrum_one_routine_271d1a.aeon.s"
+    },
+    {
+      "name": "routine_271d56",
+      "address": "0x271d56",
+      "size": 121,
+      "original_code_sha256": "22cc352acaf4b22b8f01babe03ac751ac27c24385c2280e0f9670cbfd4531928",
+      "source": "firmware/source/spectrum_one_routine_271d56.aeon.s"
+    },
+    {
+      "name": "routine_279cbd",
+      "address": "0x279cbd",
+      "size": 4,
+      "original_code_sha256": "623ec64fa7a45afb4609a4fdad13aa14130d2568f686a589afa251dcbb175014",
+      "source": "firmware/source/spectrum_one_routine_279cbd.aeon.s"
+    },
+    {
+      "name": "routine_279cc1",
+      "address": "0x279cc1",
+      "size": 4,
+      "original_code_sha256": "623ec64fa7a45afb4609a4fdad13aa14130d2568f686a589afa251dcbb175014",
+      "source": "firmware/source/spectrum_one_routine_279cc1.aeon.s"
+    },
+    {
+      "name": "routine_279cc5",
+      "address": "0x279cc5",
+      "size": 4,
+      "original_code_sha256": "623ec64fa7a45afb4609a4fdad13aa14130d2568f686a589afa251dcbb175014",
+      "source": "firmware/source/spectrum_one_routine_279cc5.aeon.s"
+    },
+    {
+      "name": "routine_27ba56",
+      "address": "0x27ba56",
+      "size": 76,
+      "original_code_sha256": "2bc26c5468020a277eb70eada7e30f73cf794c5db65b21450278242bdcc8d4a9",
+      "source": "firmware/source/spectrum_one_routine_27ba56.aeon.s"
+    },
+    {
+      "name": "routine_27baa2",
+      "address": "0x27baa2",
+      "size": 60,
+      "original_code_sha256": "41a6b4a4a6fd8100fe1ca2284fcb5a0d1ac302fd946a916e4a0b8337d0591744",
+      "source": "firmware/source/spectrum_one_routine_27baa2.aeon.s"
+    },
+    {
+      "name": "routine_27d965",
+      "address": "0x27d965",
+      "size": 15,
+      "original_code_sha256": "5b609bf2be1deb30d734ef15de1cf54fa06a2632b6f429ea6d66bc4a1b885231",
+      "source": "firmware/source/spectrum_one_routine_27d965.aeon.s"
+    },
+    {
+      "name": "routine_27d9a1",
+      "address": "0x27d9a1",
+      "size": 10,
+      "original_code_sha256": "320c7396568fa3bc4a5a3817ca3699cbdd60f38bab3f8dc3ba195c8e0a4f8bc8",
+      "source": "firmware/source/spectrum_one_routine_27d9a1.aeon.s"
+    },
+    {
+      "name": "routine_27de78",
+      "address": "0x27de78",
+      "size": 110,
+      "original_code_sha256": "6ccd3b4a6522e62cd9097d2196788d2b396c852a1247bfcfa58c97d8c5b13c65",
+      "source": "firmware/source/spectrum_one_routine_27de78.aeon.s"
+    },
+    {
+      "name": "routine_27dee6",
+      "address": "0x27dee6",
+      "size": 44,
+      "original_code_sha256": "c2a532168b1c0bc835a520b7fc240361db2d290357612a26b728e4c719d03784",
+      "source": "firmware/source/spectrum_one_routine_27dee6.aeon.s"
+    },
+    {
+      "name": "routine_27e866",
+      "address": "0x27e866",
+      "size": 55,
+      "original_code_sha256": "adc770227e6cb0139e6791ac608f25075d23631dacc4ffe016e2967b1f758ba5",
+      "source": "firmware/source/spectrum_one_routine_27e866.aeon.s"
+    },
+    {
+      "name": "routine_27e9b2",
+      "address": "0x27e9b2",
+      "size": 18,
+      "original_code_sha256": "c43dafba036e1a8c715140e2aec7818b6b7edb5c8cf9a027575ad310c55f9b7d",
+      "source": "firmware/source/spectrum_one_routine_27e9b2.aeon.s"
+    },
+    {
+      "name": "routine_27e9c4",
+      "address": "0x27e9c4",
+      "size": 34,
+      "original_code_sha256": "a65a18dd0d791d07816f8b194ef70b6e6f1a48b877b38c1e883f3aeef5c80347",
+      "source": "firmware/source/spectrum_one_routine_27e9c4.aeon.s"
+    },
+    {
+      "name": "routine_27ea14",
+      "address": "0x27ea14",
+      "size": 10,
+      "original_code_sha256": "8d9934958ab07418453983c5d6aef928563263268f8ad4e86ea75fd9c63040fd",
+      "source": "firmware/source/spectrum_one_routine_27ea14.aeon.s"
+    },
+    {
+      "name": "routine_27ea1e",
+      "address": "0x27ea1e",
+      "size": 10,
+      "original_code_sha256": "c8b29ddddd5fc5005977ccc6c02e7ffe47dc2cb55e4abe133d0448557fee1bc1",
+      "source": "firmware/source/spectrum_one_routine_27ea1e.aeon.s"
+    },
+    {
+      "name": "routine_27ea28",
+      "address": "0x27ea28",
+      "size": 18,
+      "original_code_sha256": "f0314073827a280a0f956f93477b0f25d809e437b65efd03669d313a8c728ec2",
+      "source": "firmware/source/spectrum_one_routine_27ea28.aeon.s"
+    },
+    {
+      "name": "routine_27ea3a",
+      "address": "0x27ea3a",
+      "size": 18,
+      "original_code_sha256": "d9c4021a69b8b166dcfd1c66ef4509b1ab3f1b5a455df3f5703c44fc82104c08",
+      "source": "firmware/source/spectrum_one_routine_27ea3a.aeon.s"
+    },
+    {
+      "name": "routine_27ea4c",
+      "address": "0x27ea4c",
+      "size": 15,
+      "original_code_sha256": "f3b06317083b03ecc8c2bfdc7503cfcef9fb4e8a7bb2c1423e8c8fdfa9c70314",
+      "source": "firmware/source/spectrum_one_routine_27ea4c.aeon.s"
+    },
+    {
+      "name": "routine_27ea5b",
+      "address": "0x27ea5b",
+      "size": 15,
+      "original_code_sha256": "f126a68761389ef57389057d1b445d22313496d8a0df5f603f78bac73cbf0dcf",
+      "source": "firmware/source/spectrum_one_routine_27ea5b.aeon.s"
+    },
+    {
+      "name": "routine_27ea6a",
+      "address": "0x27ea6a",
+      "size": 15,
+      "original_code_sha256": "68c2b6f750e35c056a916d81b10b4663bcaf05797bd09e6802cef90db2b74ead",
+      "source": "firmware/source/spectrum_one_routine_27ea6a.aeon.s"
+    },
+    {
+      "name": "routine_27ea79",
+      "address": "0x27ea79",
+      "size": 15,
+      "original_code_sha256": "e0edf63cfc94f528d0c7a4f81076b3f435d45d35ac18bf65bfb1114b3dcd7f9f",
+      "source": "firmware/source/spectrum_one_routine_27ea79.aeon.s"
+    },
+    {
+      "name": "routine_27ed1b",
+      "address": "0x27ed1b",
+      "size": 42,
+      "original_code_sha256": "c93c344f2dae44c75decfe86f509de9691eb3817406ed61d04be550c025916e3",
+      "source": "firmware/source/spectrum_one_routine_27ed1b.aeon.s"
+    },
+    {
+      "name": "routine_27ed45",
+      "address": "0x27ed45",
+      "size": 43,
+      "original_code_sha256": "42aa86ece8f2ba953d54d0509d7e20bac0a7861924906e26ea7e73df29e94722",
+      "source": "firmware/source/spectrum_one_routine_27ed45.aeon.s"
+    },
+    {
+      "name": "routine_27f422",
+      "address": "0x27f422",
+      "size": 38,
+      "original_code_sha256": "a4826a4cce9026f7c70a4f55bb91bb4bed3a02a8c08a7e19123f0f9a55da5295",
+      "source": "firmware/source/spectrum_one_routine_27f422.aeon.s"
+    },
+    {
+      "name": "routine_27f448",
+      "address": "0x27f448",
+      "size": 120,
+      "original_code_sha256": "a7c2d48d80a325e978808ce5eb0e16cc3f8cd97e1a61117b535b65d667ed3d83",
+      "source": "firmware/source/spectrum_one_routine_27f448.aeon.s"
+    },
+    {
+      "name": "routine_27f95e",
+      "address": "0x27f95e",
+      "size": 38,
+      "original_code_sha256": "863a7b4c675959db0850c156d374951026feb5c5d9e4ee29f035aa34849c27a9",
+      "source": "firmware/source/spectrum_one_routine_27f95e.aeon.s"
+    },
+    {
+      "name": "routine_27fad3",
+      "address": "0x27fad3",
+      "size": 236,
+      "original_code_sha256": "f0815a4c2685fe8e51ae59a02d51675499fc4c94c75513a7c98871a4d12d8df9",
+      "source": "firmware/source/spectrum_one_routine_27fad3.aeon.s"
+    },
+    {
+      "name": "routine_27fbbf",
+      "address": "0x27fbbf",
+      "size": 86,
+      "original_code_sha256": "065f14862ed81f555e6a8ccf586b20d17027845ddeb0629bf9972f3ca713be1b",
+      "source": "firmware/source/spectrum_one_routine_27fbbf.aeon.s"
+    },
+    {
+      "name": "routine_27fc15",
+      "address": "0x27fc15",
+      "size": 881,
+      "original_code_sha256": "4edc3cb2956c87983d716db3c476a0f96ce8e05bcdd1f8fc5a0b0aa6c219b45e",
+      "source": "firmware/source/spectrum_one_routine_27fc15.aeon.s"
+    },
+    {
+      "name": "routine_28eef4",
+      "address": "0x28eef4",
+      "size": 72,
+      "original_code_sha256": "5a8e208f7c33417fff8aefee7c5d48ea590fbcdb6d17c0b778012e976369f11a",
+      "source": "firmware/source/spectrum_one_routine_28eef4.aeon.s"
+    },
+    {
+      "name": "routine_2a8db2",
+      "address": "0x2a8db2",
+      "size": 1374,
+      "original_code_sha256": "d2dffbe84ee5ef58295a3d8ebd2a28cc828b1e1ae77e4e1fd37855a6038fb9ff",
+      "source": "firmware/source/spectrum_one_routine_2a8db2.aeon.s"
+    },
+    {
+      "name": "routine_2a9310",
+      "address": "0x2a9310",
+      "size": 147,
+      "original_code_sha256": "9c9669131fe8b73f57f240a7e470b3f60b90d91a5b143168eddda2bf9d7a9b41",
+      "source": "firmware/source/spectrum_one_routine_2a9310.aeon.s"
+    },
+    {
+      "name": "routine_2a93a3",
+      "address": "0x2a93a3",
+      "size": 71,
+      "original_code_sha256": "214154a6e917e2902abecaadb2eb9d69e432d81ef27765da72ac9fd56d335221",
+      "source": "firmware/source/spectrum_one_routine_2a93a3.aeon.s"
+    },
+    {
+      "name": "routine_2a9434",
+      "address": "0x2a9434",
+      "size": 53,
+      "original_code_sha256": "fcaf880bb18c7ba8b72634779883492fca88333b2d6df62c237a468ed25edf1a",
+      "source": "firmware/source/spectrum_one_routine_2a9434.aeon.s"
+    },
+    {
+      "name": "routine_2aad6a",
+      "address": "0x2aad6a",
+      "size": 86,
+      "original_code_sha256": "9f6a68064d823cc9491096c0cbdea41ec715d4eb7988902763e1b8ec7e80aa3f",
+      "source": "firmware/source/spectrum_one_routine_2aad6a.aeon.s"
+    },
+    {
+      "name": "routine_2ac288",
+      "address": "0x2ac288",
+      "size": 54,
+      "original_code_sha256": "bdcf1b052df707cebc4eefa49b356fa061fba021e05d6a6ca91adf766c97c2d1",
+      "source": "firmware/source/spectrum_one_routine_2ac288.aeon.s"
+    },
+    {
+      "name": "routine_2aca8e",
+      "address": "0x2aca8e",
+      "size": 86,
+      "original_code_sha256": "97952777c3a322979abc8f976f19221aa3ee06089ddebe78d4a45cf37d75d7a7",
+      "source": "firmware/source/spectrum_one_routine_2aca8e.aeon.s"
+    },
+    {
+      "name": "routine_2acd5b",
+      "address": "0x2acd5b",
+      "size": 365,
+      "original_code_sha256": "5517842964d8707564a96e056fc7ca31a01a2ea1f9be352b90c598ea03d6a9e2",
+      "source": "firmware/source/spectrum_one_routine_2acd5b.aeon.s"
+    },
+    {
+      "name": "routine_2acec8",
+      "address": "0x2acec8",
+      "size": 147,
+      "original_code_sha256": "09b13c699aa62f3dd0c0b0c0863170d0d076cb876411381688a6c3176b1552ab",
+      "source": "firmware/source/spectrum_one_routine_2acec8.aeon.s"
+    },
+    {
+      "name": "routine_2ad142",
+      "address": "0x2ad142",
+      "size": 35,
+      "original_code_sha256": "d0d577617fbc6acfa7535b191d29b4049df5d94a962e52151cdd9742bd168489",
+      "source": "firmware/source/spectrum_one_routine_2ad142.aeon.s"
+    },
+    {
+      "name": "routine_2ad216",
+      "address": "0x2ad216",
+      "size": 139,
+      "original_code_sha256": "c974c50a780d6197f416e00b9c3cce64701f51bf4e420de7a93ab99be92999b2",
+      "source": "firmware/source/spectrum_one_routine_2ad216.aeon.s"
+    },
+    {
+      "name": "routine_2ad2df",
+      "address": "0x2ad2df",
+      "size": 95,
+      "original_code_sha256": "689f35f2f6e19c2006933772d1e3d8c608978667afc10b10b5abf411ccbae80c",
+      "source": "firmware/source/spectrum_one_routine_2ad2df.aeon.s"
+    },
+    {
+      "name": "routine_2ad39d",
+      "address": "0x2ad39d",
+      "size": 83,
+      "original_code_sha256": "a52f2096dd96060d6c7ddd42ddd94b16ed30c5a0f27dc15e7525041cbf6ea9da",
+      "source": "firmware/source/spectrum_one_routine_2ad39d.aeon.s"
     }
   ],
   "tables": [
@@ -6572,6 +7867,330 @@
         "0x0"
       ],
       "original_data_sha256": "419c4a7cb8510650c95e0345b322f014759d7c4e084454c4ee6b720b315b73a2"
+    },
+    {
+      "name": "switch_targets_33b224",
+      "address": "0x33b224",
+      "size": 316,
+      "values": [
+        "0xa1",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0xa8",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xad",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0xe7",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0xec",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x7a",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0xbb",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x6a",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x16",
+        "0x90",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x7a",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x7e",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x3b",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x76",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0xbb",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x6a",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0xc3",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x3b",
+        "0x8f",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x64",
+        "0x8e",
+        "0x2a",
+        "0x0",
+        "0x6a",
+        "0x8f",
+        "0x2a",
+        "0x0"
+      ],
+      "original_data_sha256": "4722821a198a38e46903aa4a3530005dbda8cc37d357c98775b6b56cf40d7808"
     }
   ]
 }
