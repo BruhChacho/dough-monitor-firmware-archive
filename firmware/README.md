@@ -1,8 +1,8 @@
 # Build and edit DC9 firmware
 
 This partial source build supports Spectrum One ES07DC9 v101 rev1148. It contains
-785 assembly components totaling 171,802 code bytes, plus 21 tables totaling
-2,519 bytes. The assembly covers 7.080% of the 2,426,560-byte application.
+924 assembly components totaling 193,999 code bytes, plus 25 tables totaling
+2,987 bytes. The assembly covers 7.995% of the 2,426,560-byte application.
 The rest remains a pinned vendor binary. Builds are hardware-untested.
 
 ## Prepare a workspace
